@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Army_Assets.png">
+	<!-- Created with Adobe Animate version 18.0.1.115 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name=" army DOWN0000" x="0" y="0" width="1551" height="1272" pivotX="-893.9" pivotY="299.45" frameX="-198" frameY="0" frameWidth="1749" frameHeight="1281"/>
+	<SubTexture name=" army DOWN0001" x="0" y="0" width="1551" height="1272" frameX="-198" frameY="0" frameWidth="1749" frameHeight="1281"/>
+	<SubTexture name=" army DOWN0002" x="1551" y="0" width="1528" height="1273" frameX="-218" frameY="0" frameWidth="1749" frameHeight="1281"/>
+	<SubTexture name=" army DOWN0003" x="1551" y="0" width="1528" height="1273" frameX="-218" frameY="0" frameWidth="1749" frameHeight="1281"/>
+	<SubTexture name=" army DOWN0004" x="3079" y="0" width="1747" height="1251" frameX="0" frameY="-30" frameWidth="1749" frameHeight="1281"/>
+	<SubTexture name=" army DOWN0005" x="3079" y="0" width="1747" height="1251" frameX="0" frameY="-30" frameWidth="1749" frameHeight="1281"/>
+	<SubTexture name=" army DOWN0006" x="4826" y="0" width="1714" height="1233" frameX="-32" frameY="-48" frameWidth="1749" frameHeight="1281"/>
+	<SubTexture name=" army DOWN0007" x="4826" y="0" width="1714" height="1233" frameX="-32" frameY="-48" frameWidth="1749" frameHeight="1281"/>
+	<SubTexture name=" army LEFT0000" x="0" y="1273" width="1805" height="1296" pivotX="-833.45" pivotY="299.45" frameX="0" frameY="0" frameWidth="1806" frameHeight="1297"/>
+	<SubTexture name=" army LEFT0001" x="0" y="1273" width="1805" height="1296" frameX="0" frameY="0" frameWidth="1806" frameHeight="1297"/>
+	<SubTexture name=" army LEFT0002" x="1805" y="1273" width="1761" height="1297" frameX="-45" frameY="0" frameWidth="1806" frameHeight="1297"/>
+	<SubTexture name=" army LEFT0003" x="1805" y="1273" width="1761" height="1297" frameX="-45" frameY="0" frameWidth="1806" frameHeight="1297"/>
+	<SubTexture name=" army LEFT0004" x="1805" y="1273" width="1761" height="1297" frameX="-45" frameY="0" frameWidth="1806" frameHeight="1297"/>
+	<SubTexture name=" army LEFT0005" x="1805" y="1273" width="1761" height="1297" frameX="-45" frameY="0" frameWidth="1806" frameHeight="1297"/>
+	<SubTexture name=" army LEFT0006" x="1805" y="1273" width="1761" height="1297" frameX="-45" frameY="0" frameWidth="1806" frameHeight="1297"/>
+	<SubTexture name=" army LEFT0007" x="1805" y="1273" width="1761" height="1297" frameX="-45" frameY="0" frameWidth="1806" frameHeight="1297"/>
+	<SubTexture name=" army RIGHT0000" x="3566" y="1273" width="1615" height="1265" pivotX="-1011.75" pivotY="299.45" frameX="0" frameY="0" frameWidth="1628" frameHeight="1266"/>
+	<SubTexture name=" army RIGHT0001" x="3566" y="1273" width="1615" height="1265" frameX="0" frameY="0" frameWidth="1628" frameHeight="1266"/>
+	<SubTexture name=" army RIGHT0002" x="5181" y="1273" width="1605" height="1266" frameX="-23" frameY="0" frameWidth="1628" frameHeight="1266"/>
+	<SubTexture name=" army RIGHT0003" x="5181" y="1273" width="1605" height="1266" frameX="-23" frameY="0" frameWidth="1628" frameHeight="1266"/>
+	<SubTexture name=" army RIGHT0004" x="5181" y="1273" width="1605" height="1266" frameX="-23" frameY="0" frameWidth="1628" frameHeight="1266"/>
+	<SubTexture name=" army RIGHT0005" x="5181" y="1273" width="1605" height="1266" frameX="-23" frameY="0" frameWidth="1628" frameHeight="1266"/>
+	<SubTexture name=" army RIGHT0006" x="5181" y="1273" width="1605" height="1266" frameX="-23" frameY="0" frameWidth="1628" frameHeight="1266"/>
+	<SubTexture name=" army RIGHT0007" x="5181" y="1273" width="1605" height="1266" frameX="-23" frameY="0" frameWidth="1628" frameHeight="1266"/>
+	<SubTexture name=" army UP 0000" x="0" y="2570" width="1920" height="1358" pivotX="-808.9" pivotY="469" frameX="0" frameY="-54" frameWidth="1921" frameHeight="1413"/>
+	<SubTexture name=" army UP 0001" x="1920" y="2570" width="1907" height="1386" frameX="-13" frameY="-26" frameWidth="1921" frameHeight="1413"/>
+	<SubTexture name=" army UP 0002" x="3827" y="2570" width="1908" height="1387" frameX="-13" frameY="-26" frameWidth="1921" frameHeight="1413"/>
+	<SubTexture name=" army UP 0003" x="5735" y="2570" width="1868" height="1413" frameX="-53" frameY="0" frameWidth="1921" frameHeight="1413"/>
+	<SubTexture name=" army UP 0004" x="0" y="3983" width="1868" height="1411" frameX="-53" frameY="0" frameWidth="1921" frameHeight="1413"/>
+	<SubTexture name=" army UP 0005" x="1868" y="3983" width="1865" height="1397" frameX="-56" frameY="-14" frameWidth="1921" frameHeight="1413"/>
+	<SubTexture name=" army UP 0006" x="3733" y="3983" width="1865" height="1399" frameX="-56" frameY="-14" frameWidth="1921" frameHeight="1413"/>
+	<SubTexture name=" army UP 0007" x="3733" y="3983" width="1865" height="1399" frameX="-56" frameY="-14" frameWidth="1921" frameHeight="1413"/>
+	<SubTexture name="army IDLE0000" x="5598" y="3983" width="1622" height="1184" pivotX="-1040.85" pivotY="299.45" frameX="0" frameY="-51" frameWidth="1639" frameHeight="1236"/>
+	<SubTexture name="army IDLE0001" x="0" y="5394" width="1616" height="1217" frameX="-23" frameY="-19" frameWidth="1639" frameHeight="1236"/>
+	<SubTexture name="army IDLE0002" x="0" y="5394" width="1616" height="1217" frameX="-23" frameY="-19" frameWidth="1639" frameHeight="1236"/>
+	<SubTexture name="army IDLE0003" x="1616" y="5394" width="1573" height="1234" frameX="-26" frameY="0" frameWidth="1639" frameHeight="1236"/>
+	<SubTexture name="army IDLE0004" x="1616" y="5394" width="1573" height="1234" frameX="-26" frameY="0" frameWidth="1639" frameHeight="1236"/>
+	<SubTexture name="army IDLE0005" x="3189" y="5394" width="1572" height="1232" frameX="-27" frameY="0" frameWidth="1639" frameHeight="1236"/>
+	<SubTexture name="army IDLE0006" x="3189" y="5394" width="1572" height="1232" frameX="-27" frameY="0" frameWidth="1639" frameHeight="1236"/>
+	<SubTexture name="army IDLE0007" x="4761" y="5394" width="1569" height="1231" frameX="-30" frameY="0" frameWidth="1639" frameHeight="1236"/>
+	<SubTexture name="army IDLE0008" x="4761" y="5394" width="1569" height="1231" frameX="-30" frameY="0" frameWidth="1639" frameHeight="1236"/>
+	<SubTexture name="army IDLE0009" x="4761" y="5394" width="1569" height="1231" frameX="-30" frameY="0" frameWidth="1639" frameHeight="1236"/>
+	<SubTexture name="army IDLE0010" x="4761" y="5394" width="1569" height="1231" frameX="-30" frameY="0" frameWidth="1639" frameHeight="1236"/>
+	<SubTexture name="army IDLE0011" x="4761" y="5394" width="1569" height="1231" frameX="-30" frameY="0" frameWidth="1639" frameHeight="1236"/>
+	<SubTexture name="army IDLE0012" x="4761" y="5394" width="1569" height="1231" frameX="-30" frameY="0" frameWidth="1639" frameHeight="1236"/>
+	<SubTexture name="army IDLE0013" x="4761" y="5394" width="1569" height="1231" frameX="-30" frameY="0" frameWidth="1639" frameHeight="1236"/>
+	<SubTexture name="army IDLE0014" x="4761" y="5394" width="1569" height="1231" frameX="-30" frameY="0" frameWidth="1639" frameHeight="1236"/>
+</TextureAtlas>

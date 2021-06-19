@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="noke.png">
+	<!-- Created with Adobe Animate version 21.0.4.39603 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="noke down0000" x="0" y="0" width="499" height="675" frameX="0" frameY="-40" frameWidth="508" frameHeight="715"/>
+	<SubTexture name="noke down0001" x="504" y="0" width="498" height="703" frameX="0" frameY="-12" frameWidth="508" frameHeight="715"/>
+	<SubTexture name="noke down0002" x="1007" y="0" width="508" height="692" frameX="0" frameY="-23" frameWidth="508" frameHeight="715"/>
+	<SubTexture name="noke down0003" x="1520" y="0" width="501" height="691" frameX="0" frameY="-24" frameWidth="508" frameHeight="715"/>
+	<SubTexture name="noke down0004" x="2026" y="0" width="502" height="703" frameX="0" frameY="-12" frameWidth="508" frameHeight="715"/>
+	<SubTexture name="noke down0005" x="2533" y="0" width="501" height="715" frameX="0" frameY="0" frameWidth="508" frameHeight="715"/>
+	<SubTexture name="noke down0006" x="3039" y="0" width="501" height="715" frameX="0" frameY="0" frameWidth="508" frameHeight="715"/>
+	<SubTexture name="noke down0007" x="3545" y="0" width="501" height="715" frameX="0" frameY="0" frameWidth="508" frameHeight="715"/>
+	<SubTexture name="noke down0008" x="4051" y="0" width="501" height="715" frameX="0" frameY="0" frameWidth="508" frameHeight="715"/>
+	<SubTexture name="noke down0009" x="4557" y="0" width="501" height="715" frameX="0" frameY="0" frameWidth="508" frameHeight="715"/>
+	<SubTexture name="noke down0010" x="5063" y="0" width="501" height="715" frameX="0" frameY="0" frameWidth="508" frameHeight="715"/>
+	<SubTexture name="noke down0011" x="5569" y="0" width="500" height="691" frameX="0" frameY="-24" frameWidth="508" frameHeight="715"/>
+	<SubTexture name="noke idle0000" x="6074" y="0" width="377" height="833" frameX="0" frameY="-18" frameWidth="377" frameHeight="851"/>
+	<SubTexture name="noke idle0001" x="6456" y="0" width="377" height="834" frameX="0" frameY="-17" frameWidth="377" frameHeight="851"/>
+	<SubTexture name="noke idle0002" x="6838" y="0" width="371" height="838" frameX="-3" frameY="-13" frameWidth="377" frameHeight="851"/>
+	<SubTexture name="noke idle0003" x="7214" y="0" width="371" height="840" frameX="-3" frameY="-11" frameWidth="377" frameHeight="851"/>
+	<SubTexture name="noke idle0004" x="7590" y="0" width="367" height="842" frameX="-5" frameY="-9" frameWidth="377" frameHeight="851"/>
+	<SubTexture name="noke idle0005" x="0" y="847" width="367" height="844" frameX="-5" frameY="-7" frameWidth="377" frameHeight="851"/>
+	<SubTexture name="noke idle0006" x="372" y="847" width="363" height="849" frameX="-7" frameY="-2" frameWidth="377" frameHeight="851"/>
+	<SubTexture name="noke idle0007" x="740" y="847" width="363" height="851" frameX="-7" frameY="0" frameWidth="377" frameHeight="851"/>
+	<SubTexture name="noke idle0008" x="1108" y="847" width="359" height="851" frameX="-9" frameY="0" frameWidth="377" frameHeight="851"/>
+	<SubTexture name="noke idle0009" x="1472" y="847" width="359" height="851" frameX="-9" frameY="0" frameWidth="377" frameHeight="851"/>
+	<SubTexture name="noke idle0010" x="1836" y="847" width="355" height="846" frameX="-11" frameY="-5" frameWidth="377" frameHeight="851"/>
+	<SubTexture name="noke left0000" x="2196" y="847" width="466" height="820" frameX="-7" frameY="0" frameWidth="501" frameHeight="823"/>
+	<SubTexture name="noke left0001" x="2667" y="847" width="477" height="812" frameX="-8" frameY="-8" frameWidth="501" frameHeight="823"/>
+	<SubTexture name="noke left0002" x="3149" y="847" width="474" height="812" frameX="-17" frameY="-8" frameWidth="501" frameHeight="823"/>
+	<SubTexture name="noke left0003" x="3628" y="847" width="487" height="814" frameX="-10" frameY="-6" frameWidth="501" frameHeight="823"/>
+	<SubTexture name="noke left0004" x="4120" y="847" width="489" height="817" frameX="-4" frameY="-4" frameWidth="501" frameHeight="823"/>
+	<SubTexture name="noke left0005" x="4614" y="847" width="479" height="817" frameX="-5" frameY="-4" frameWidth="501" frameHeight="823"/>
+	<SubTexture name="noke left0006" x="5098" y="847" width="486" height="811" frameX="0" frameY="-10" frameWidth="501" frameHeight="823"/>
+	<SubTexture name="noke left0007" x="5589" y="847" width="479" height="818" frameX="-9" frameY="-3" frameWidth="501" frameHeight="823"/>
+	<SubTexture name="noke left0008" x="6073" y="847" width="482" height="813" frameX="-8" frameY="-9" frameWidth="501" frameHeight="823"/>
+	<SubTexture name="noke left0009" x="6560" y="847" width="482" height="816" frameX="-10" frameY="-6" frameWidth="501" frameHeight="823"/>
+	<SubTexture name="noke left0010" x="7047" y="847" width="488" height="818" frameX="-6" frameY="-4" frameWidth="501" frameHeight="823"/>
+	<SubTexture name="noke left0011" x="7540" y="847" width="495" height="822" frameX="-6" frameY="-1" frameWidth="501" frameHeight="823"/>
+	<SubTexture name="noke right0000" x="0" y="1703" width="575" height="759" frameX="0" frameY="0" frameWidth="578" frameHeight="759"/>
+	<SubTexture name="noke right0001" x="580" y="1703" width="573" height="756" frameX="0" frameY="-3" frameWidth="578" frameHeight="759"/>
+	<SubTexture name="noke right0002" x="1158" y="1703" width="578" height="754" frameX="0" frameY="-5" frameWidth="578" frameHeight="759"/>
+	<SubTexture name="noke right0003" x="1741" y="1703" width="572" height="755" frameX="-1" frameY="-4" frameWidth="578" frameHeight="759"/>
+	<SubTexture name="noke right0004" x="2318" y="1703" width="570" height="759" frameX="-1" frameY="0" frameWidth="578" frameHeight="759"/>
+	<SubTexture name="noke right0005" x="2893" y="1703" width="569" height="755" frameX="-1" frameY="-4" frameWidth="578" frameHeight="759"/>
+	<SubTexture name="noke right0006" x="3467" y="1703" width="568" height="759" frameX="-2" frameY="0" frameWidth="578" frameHeight="759"/>
+	<SubTexture name="noke right0007" x="4040" y="1703" width="564" height="755" frameX="-2" frameY="-4" frameWidth="578" frameHeight="759"/>
+	<SubTexture name="noke right0008" x="4609" y="1703" width="567" height="756" frameX="-2" frameY="-3" frameWidth="578" frameHeight="759"/>
+	<SubTexture name="noke right0009" x="5181" y="1703" width="560" height="758" frameX="-3" frameY="-1" frameWidth="578" frameHeight="759"/>
+	<SubTexture name="noke right0010" x="5746" y="1703" width="560" height="753" frameX="-3" frameY="-6" frameWidth="578" frameHeight="759"/>
+	<SubTexture name="noke right0011" x="6311" y="1703" width="556" height="757" frameX="-3" frameY="-2" frameWidth="578" frameHeight="759"/>
+	<SubTexture name="noke up0000" x="6872" y="1703" width="504" height="871" frameX="0" frameY="-20" frameWidth="504" frameHeight="891"/>
+	<SubTexture name="noke up0001" x="7381" y="1703" width="498" height="878" frameX="-3" frameY="-13" frameWidth="504" frameHeight="891"/>
+	<SubTexture name="noke up0002" x="0" y="2586" width="490" height="882" frameX="-7" frameY="-9" frameWidth="504" frameHeight="891"/>
+	<SubTexture name="noke up0003" x="495" y="2586" width="484" height="885" frameX="-10" frameY="-6" frameWidth="504" frameHeight="891"/>
+	<SubTexture name="noke up0004" x="984" y="2586" width="476" height="889" frameX="-14" frameY="-2" frameWidth="504" frameHeight="891"/>
+	<SubTexture name="noke up0005" x="1465" y="2586" width="476" height="888" frameX="-14" frameY="-3" frameWidth="504" frameHeight="891"/>
+	<SubTexture name="noke up0006" x="1946" y="2586" width="476" height="888" frameX="-14" frameY="-3" frameWidth="504" frameHeight="891"/>
+	<SubTexture name="noke up0007" x="2427" y="2586" width="476" height="888" frameX="-14" frameY="-3" frameWidth="504" frameHeight="891"/>
+	<SubTexture name="noke up0008" x="2908" y="2586" width="476" height="888" frameX="-14" frameY="-3" frameWidth="504" frameHeight="891"/>
+	<SubTexture name="noke up0009" x="3389" y="2586" width="476" height="888" frameX="-14" frameY="-3" frameWidth="504" frameHeight="891"/>
+	<SubTexture name="noke up0010" x="3870" y="2586" width="476" height="888" frameX="-14" frameY="-3" frameWidth="504" frameHeight="891"/>
+	<SubTexture name="noke up0011" x="4351" y="2586" width="476" height="891" frameX="-14" frameY="0" frameWidth="504" frameHeight="891"/>
+</TextureAtlas>

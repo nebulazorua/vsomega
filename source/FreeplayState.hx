@@ -41,7 +41,8 @@ class FreeplayState extends MusicBeatState
 		{
 			var data = initSonglist[i].split(" ");
 			var icon = data.splice(0,1)[0];
-			songs.push(new SongMetadata(data.join(" "), 1, icon));
+			var week = data.splice(0,1)[0];
+			songs.push(new SongMetadata(data.join(" "), Std.parseInt(week), icon));
 		}
 
 		/*

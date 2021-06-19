@@ -7,44 +7,31 @@ class HealthIcon extends FlxSprite
 	/**
 	 * Used for FreeplayState! If you use it elsewhere, prob gonna annoying
 	 */
+	public var iWidth:Float = 150;
 	public var sprTracker:FlxSprite;
 
 	public function changeCharacter(char:String){
-		loadGraphic(Paths.image('iconGrid'), true, 150, 150);
+		antialiasing=true;
+		if(char=='spirit' || char=='senpai-angry' || char=='senpai')
+			antialiasing=false;
 
-		animation.add('bf', [0, 1], 0, false, flipX);
-		animation.add('bf-car', [0, 1], 0, false, flipX);
-		animation.add('bf-christmas', [0, 1], 0, false, flipX);
-		animation.add('spooky', [2, 3], 0, false, flipX);
-		animation.add('pico', [4, 5], 0, false, flipX);
-		animation.add('mom', [6, 7], 0, false, flipX);
-		animation.add('mom-car', [6, 7], 0, false, flipX);
-		animation.add('tankman', [8, 9], 0, false, flipX);
-		animation.add('face', [10, 11], 0, false, flipX);
-		animation.add('dad', [12, 13], 0, false, flipX);
-		animation.add('bf-old', [14, 15], 0, false, flipX);
-		animation.add('gf', [16], 0, false, flipX);
-		animation.add('lizzy', [16], 0, false, flipX);
-		animation.add('parents-christmas', [17], 0, false, flipX);
-		animation.add('monster', [19, 20], 0, false, flipX);
-		animation.add('monster-christmas', [19, 20], 0, false, flipX);
-		animation.add('bf-pixel', [21, 21], 0, false, flipX);
-		animation.add('senpai', [22, 22], 0, false, flipX);
-		animation.add('senpai-angry', [22, 22], 0, false, flipX);
-		animation.add('spirit', [23, 23], 0, false, flipX);
-		animation.add('bf-neb', [24,25], 0, false, flipX);
-		if(animation.getByName(char)!=null)
-			animation.play(char);
-		else
-			animation.play("face");
+		loadGraphic(Paths.image("icons/"+char,"shared"),true,150,150);
+		animation.add("icon",[0,1,2],0,false);
+
+		animation.play("icon",true,false,1);
+		if(char=="omega" || char=="angry-omega" || char=="omegabf" || char=="flexy" || char=="omegafriendly"){
+			iWidth = width*.8;
+			centerOffsets();
+		}
+		setGraphicSize(Std.int(iWidth));
+		scrollFactor.set(1,1);
 	}
+
 	public function new(char:String = 'bf', isPlayer:Bool = false)
 	{
 		super();
-		flipX=isPlayer;
+		flipX = isPlayer;
 		changeCharacter(char);
-
-		scrollFactor.set();
 	}
 
 	override function update(elapsed:Float)

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="slash.png">
+	<!-- Created with Adobe Animate version 21.0.4.39603 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Slash0000" x="0" y="0" width="63" height="42" frameX="0" frameY="-239" frameWidth="392" frameHeight="282"/>
+	<SubTexture name="Slash0001" x="68" y="0" width="208" height="145" frameX="0" frameY="-137" frameWidth="392" frameHeight="282"/>
+	<SubTexture name="Slash0002" x="68" y="0" width="208" height="145" frameX="0" frameY="-137" frameWidth="392" frameHeight="282"/>
+	<SubTexture name="Slash0003" x="281" y="0" width="328" height="227" frameX="-64" frameY="-13" frameWidth="392" frameHeight="282"/>
+	<SubTexture name="Slash0004" x="614" y="0" width="189" height="122" frameX="-168" frameY="-31" frameWidth="392" frameHeight="282"/>
+	<SubTexture name="Slash0005" x="808" y="0" width="205" height="157" frameX="-145" frameY="-17" frameWidth="392" frameHeight="282"/>
+	<SubTexture name="Slash0006" x="0" y="232" width="213" height="175" frameX="-134" frameY="0" frameWidth="392" frameHeight="282"/>
+</TextureAtlas>

@@ -20,9 +20,9 @@ class OptionUtils
 		"Vanilla",
 		"ITG",
 		"Quaver",
-		"Judge Four",
+		"Judge Four / KadeEngine",
 		"EMFNF2",
-		"KadeDev",
+		"BSide Philly",
 		"Dream",
 	];
 	public static var ratingWindowTypes:Array<Array<Float>> = [ // TODO: make these all properly scale w/ the safeZoneOffset n shit
@@ -56,7 +56,7 @@ class OptionUtils
 			149, // bad
 			166, // shit
 		],
-		[ // KadeDev
+		[ // BSide Philly
 			300,
 			0,
 			0,

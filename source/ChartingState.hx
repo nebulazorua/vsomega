@@ -326,6 +326,7 @@ class ChartingState extends MusicBeatState
 	}
 
 	var stepperSusLength:FlxUINumericStepper;
+	var whosSingingShit:FlxUIDropDownMenu;
 
 	function addNoteUI():Void
 	{
@@ -336,10 +337,14 @@ class ChartingState extends MusicBeatState
 		stepperSusLength.value = 0;
 		stepperSusLength.name = 'note_susLength';
 
+		whosSingingShit = new FlxUIDropDownMenu(10, 100, FlxUIDropDownMenu.makeStrIdLabelArray(["bf","omega","both"], true));
+		whosSingingShit.selectedLabel = "bf";
+
 		var applyLength:FlxButton = new FlxButton(100, 10, 'Apply');
 
 		tab_group_note.add(stepperSusLength);
 		tab_group_note.add(applyLength);
+		tab_group_note.add(whosSingingShit);
 
 		UI_box.addGroup(tab_group_note);
 	}
@@ -496,7 +501,7 @@ class ChartingState extends MusicBeatState
 		FlxG.watch.addQuick('daBeat', curBeat);
 		FlxG.watch.addQuick('daStep', curStep);
 
-		if (FlxG.mouse.justPressed)
+		if (FlxG.mouse.justPressed || FlxG.mouse.justPressedRight)
 		{
 			if (FlxG.mouse.overlaps(curRenderedNotes))
 			{
@@ -526,7 +531,7 @@ class ChartingState extends MusicBeatState
 					&& FlxG.mouse.y < gridBG.y + (GRID_SIZE * _song.notes[curSection].lengthInSteps))
 				{
 					FlxG.log.add('added note');
-					addNote();
+					addNote(FlxG.mouse.justPressedRight);
 				}
 			}
 		}
@@ -986,20 +991,28 @@ class ChartingState extends MusicBeatState
 		updateGrid();
 	}
 
-	private function addNote():Void
+	private function addNote(rightClick:Bool):Void
 	{
 		var noteStrum = getStrumTime(dummyArrow.y) + sectionStartTime();
 		var noteData = Math.floor(FlxG.mouse.x / GRID_SIZE);
 		var noteSus = 0;
-		trace(noteData);
-		_song.notes[curSection].sectionNotes.push([noteStrum, noteData, noteSus]);
+		if (FlxG.keys.pressed.ALT){
+			_song.notes[curSection].sectionNotes.push([noteStrum, noteData, noteSus, false, rightClick, whosSingingShit.selectedId,false,false]);
+		}else if (FlxG.keys.pressed.ONE){
+			_song.notes[curSection].sectionNotes.push([noteStrum, noteData, noteSus, false, false, whosSingingShit.selectedId,!rightClick,rightClick]);
+		}else{
+			_song.notes[curSection].sectionNotes.push([noteStrum, noteData, noteSus, rightClick, false, whosSingingShit.selectedId,false,false]);
+		};
 
 		curSelectedNote = _song.notes[curSection].sectionNotes[_song.notes[curSection].sectionNotes.length - 1];
 
-		if (FlxG.keys.pressed.CONTROL)
-		{
-			_song.notes[curSection].sectionNotes.push([noteStrum, (noteData + 4) % 8, noteSus]);
-		}
+		if (FlxG.keys.pressed.ALT){
+			_song.notes[curSection].sectionNotes.push([noteStrum, (noteData+4)%8, noteSus, false, rightClick, whosSingingShit.selectedId,false,false]);
+		}else if (FlxG.keys.pressed.ONE){
+			_song.notes[curSection].sectionNotes.push([noteStrum, (noteData+4)%8, noteSus, false, false, whosSingingShit.selectedId,!rightClick,rightClick]);
+		}else{
+			_song.notes[curSection].sectionNotes.push([noteStrum, (noteData+4)%8, noteSus, rightClick, false, whosSingingShit.selectedId,false,false]);
+		};
 
 		trace(noteStrum);
 		trace(curSection);

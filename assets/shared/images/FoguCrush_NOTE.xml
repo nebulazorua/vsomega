@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="FoguCrush_NOTE.png">
+	<!-- Created with Adobe Animate version 21.0.5.40714 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Lightning0000" x="0" y="0" width="288" height="285"/>
+	<SubTexture name="Lightning0001" x="0" y="0" width="288" height="285"/>
+	<SubTexture name="Lightning0002" x="298" y="0" width="288" height="285"/>
+	<SubTexture name="Lightning0003" x="298" y="0" width="288" height="285"/>
+	<SubTexture name="Lightning0004" x="596" y="0" width="288" height="285"/>
+	<SubTexture name="Lightning0005" x="596" y="0" width="288" height="285"/>
+	<SubTexture name="Lightning0006" x="0" y="295" width="288" height="285"/>
+	<SubTexture name="Lightning0007" x="0" y="295" width="288" height="285"/>
+</TextureAtlas>

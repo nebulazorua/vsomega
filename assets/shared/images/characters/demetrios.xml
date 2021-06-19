@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="demetrios.png">
+	<!-- Created with Adobe Animate version 21.0.5.40714 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="demetrios alt0000" x="0" y="0" width="380" height="1192" frameX="-59" frameY="-24" frameWidth="599" frameHeight="1216"/>
+	<SubTexture name="demetrios alt0001" x="390" y="0" width="380" height="1192" frameX="-59" frameY="-24" frameWidth="599" frameHeight="1216"/>
+	<SubTexture name="demetrios alt0002" x="780" y="0" width="389" height="1146" frameX="-56" frameY="-70" frameWidth="599" frameHeight="1216"/>
+	<SubTexture name="demetrios alt0003" x="1179" y="0" width="410" height="1146" frameX="-37" frameY="-70" frameWidth="599" frameHeight="1216"/>
+	<SubTexture name="demetrios alt0004" x="1599" y="0" width="410" height="1139" frameX="-39" frameY="-77" frameWidth="599" frameHeight="1216"/>
+	<SubTexture name="demetrios alt0005" x="2019" y="0" width="427" height="1139" frameX="-43" frameY="-77" frameWidth="599" frameHeight="1216"/>
+	<SubTexture name="demetrios alt0006" x="2456" y="0" width="389" height="1190" frameX="-71" frameY="-26" frameWidth="599" frameHeight="1216"/>
+	<SubTexture name="demetrios alt0007" x="2855" y="0" width="452" height="1158" frameX="-49" frameY="-58" frameWidth="599" frameHeight="1216"/>
+	<SubTexture name="demetrios alt0008" x="3317" y="0" width="557" height="1216" frameX="-1" frameY="0" frameWidth="599" frameHeight="1216"/>
+	<SubTexture name="demetrios alt0009" x="3884" y="0" width="557" height="1216" frameX="-1" frameY="0" frameWidth="599" frameHeight="1216"/>
+	<SubTexture name="demetrios alt0010" x="4451" y="0" width="567" height="1193" frameX="0" frameY="-23" frameWidth="599" frameHeight="1216"/>
+	<SubTexture name="demetrios alt0011" x="5028" y="0" width="564" height="1193" frameX="-1" frameY="-23" frameWidth="599" frameHeight="1216"/>
+	<SubTexture name="demetrios alt0012" x="5602" y="0" width="567" height="1160" frameX="0" frameY="-56" frameWidth="599" frameHeight="1216"/>
+	<SubTexture name="demetrios alt0013" x="6179" y="0" width="564" height="1160" frameX="-1" frameY="-56" frameWidth="599" frameHeight="1216"/>
+	<SubTexture name="demetrios alt0014" x="6753" y="0" width="567" height="1163" frameX="0" frameY="-53" frameWidth="599" frameHeight="1216"/>
+	<SubTexture name="demetrios alt0015" x="7330" y="0" width="564" height="1163" frameX="-1" frameY="-53" frameWidth="599" frameHeight="1216"/>
+	<SubTexture name="demetrios alt0016" x="0" y="1226" width="567" height="1182" frameX="0" frameY="-34" frameWidth="599" frameHeight="1216"/>
+	<SubTexture name="demetrios alt0017" x="577" y="1226" width="564" height="1182" frameX="-1" frameY="-34" frameWidth="599" frameHeight="1216"/>
+	<SubTexture name="demetrios alt0018" x="1151" y="1226" width="567" height="1180" frameX="0" frameY="-36" frameWidth="599" frameHeight="1216"/>
+	<SubTexture name="demetrios alt0019" x="1728" y="1226" width="564" height="1180" frameX="-1" frameY="-36" frameWidth="599" frameHeight="1216"/>
+	<SubTexture name="demetrios alt0020" x="2302" y="1226" width="580" height="1171" frameX="0" frameY="-45" frameWidth="599" frameHeight="1216"/>
+	<SubTexture name="demetrios alt0021" x="2892" y="1226" width="581" height="1171" frameX="-1" frameY="-45" frameWidth="599" frameHeight="1216"/>
+	<SubTexture name="demetrios alt0022" x="3483" y="1226" width="595" height="1201" frameX="0" frameY="-15" frameWidth="599" frameHeight="1216"/>
+	<SubTexture name="demetrios alt0023" x="4088" y="1226" width="598" height="1201" frameX="-1" frameY="-15" frameWidth="599" frameHeight="1216"/>
+	<SubTexture name="demetrios down0000" x="4696" y="1226" width="465" height="1040" frameX="0" frameY="-23" frameWidth="466" frameHeight="1063"/>
+	<SubTexture name="demetrios down0001" x="5171" y="1226" width="464" height="1039" frameX="-2" frameY="-23" frameWidth="466" frameHeight="1063"/>
+	<SubTexture name="demetrios down0002" x="5645" y="1226" width="462" height="1039" frameX="-4" frameY="-21" frameWidth="466" frameHeight="1063"/>
+	<SubTexture name="demetrios down0003" x="6117" y="1226" width="462" height="1039" frameX="-4" frameY="-21" frameWidth="466" frameHeight="1063"/>
+	<SubTexture name="demetrios down0004" x="6589" y="1226" width="462" height="1040" frameX="-4" frameY="-20" frameWidth="466" frameHeight="1063"/>
+	<SubTexture name="demetrios down0005" x="7061" y="1226" width="462" height="1040" frameX="-4" frameY="-20" frameWidth="466" frameHeight="1063"/>
+	<SubTexture name="demetrios down0006" x="7533" y="1226" width="462" height="1043" frameX="-4" frameY="-17" frameWidth="466" frameHeight="1063"/>
+	<SubTexture name="demetrios down0007" x="0" y="2437" width="462" height="1043" frameX="-4" frameY="-17" frameWidth="466" frameHeight="1063"/>
+	<SubTexture name="demetrios down0008" x="472" y="2437" width="462" height="1049" frameX="-4" frameY="-11" frameWidth="466" frameHeight="1063"/>
+	<SubTexture name="demetrios down0009" x="944" y="2437" width="462" height="1048" frameX="-4" frameY="-12" frameWidth="466" frameHeight="1063"/>
+	<SubTexture name="demetrios down0010" x="1416" y="2437" width="462" height="1060" frameX="-4" frameY="0" frameWidth="466" frameHeight="1063"/>
+	<SubTexture name="demetrios down0011" x="1888" y="2437" width="462" height="1043" frameX="-4" frameY="-17" frameWidth="466" frameHeight="1063"/>
+	<SubTexture name="demetrios left0000" x="2360" y="2437" width="415" height="1069" frameX="0" frameY="-4" frameWidth="445" frameHeight="1073"/>
+	<SubTexture name="demetrios left0001" x="2785" y="2437" width="430" height="1069" frameX="0" frameY="-4" frameWidth="445" frameHeight="1073"/>
+	<SubTexture name="demetrios left0002" x="3225" y="2437" width="445" height="1066" frameX="0" frameY="-7" frameWidth="445" frameHeight="1073"/>
+	<SubTexture name="demetrios left0003" x="3680" y="2437" width="445" height="1066" frameX="0" frameY="-7" frameWidth="445" frameHeight="1073"/>
+	<SubTexture name="demetrios left0004" x="4135" y="2437" width="445" height="1073"/>
+	<SubTexture name="demetrios left0005" x="4590" y="2437" width="445" height="1073"/>
+	<SubTexture name="demetrios left0006" x="5045" y="2437" width="445" height="1060" frameX="0" frameY="-13" frameWidth="445" frameHeight="1073"/>
+	<SubTexture name="demetrios left0007" x="5500" y="2437" width="445" height="1060" frameX="0" frameY="-13" frameWidth="445" frameHeight="1073"/>
+	<SubTexture name="demetrios left0008" x="5955" y="2437" width="445" height="1050" frameX="0" frameY="-23" frameWidth="445" frameHeight="1073"/>
+	<SubTexture name="demetrios left0009" x="6410" y="2437" width="445" height="1050" frameX="0" frameY="-23" frameWidth="445" frameHeight="1073"/>
+	<SubTexture name="demetrios left0010" x="6865" y="2437" width="445" height="1057" frameX="0" frameY="-16" frameWidth="445" frameHeight="1073"/>
+	<SubTexture name="demetrios left0011" x="7320" y="2437" width="445" height="1057" frameX="0" frameY="-16" frameWidth="445" frameHeight="1073"/>
+	<SubTexture name="demetrios right0000" x="0" y="3520" width="576" height="1038" frameX="0" frameY="-44" frameWidth="576" frameHeight="1082"/>
+	<SubTexture name="demetrios right0001" x="0" y="3520" width="576" height="1038" frameX="0" frameY="-44" frameWidth="576" frameHeight="1082"/>
+	<SubTexture name="demetrios right0002" x="586" y="3520" width="478" height="1018" frameX="-28" frameY="-64" frameWidth="576" frameHeight="1082"/>
+	<SubTexture name="demetrios right0003" x="1074" y="3520" width="478" height="1018" frameX="-28" frameY="-64" frameWidth="576" frameHeight="1082"/>
+	<SubTexture name="demetrios right0004" x="1562" y="3520" width="497" height="1023" frameX="-16" frameY="-59" frameWidth="576" frameHeight="1082"/>
+	<SubTexture name="demetrios right0005" x="1562" y="3520" width="497" height="1023" frameX="-16" frameY="-59" frameWidth="576" frameHeight="1082"/>
+	<SubTexture name="demetrios right0006" x="2069" y="3520" width="497" height="1082" frameX="-16" frameY="0" frameWidth="576" frameHeight="1082"/>
+	<SubTexture name="demetrios right0007" x="2069" y="3520" width="497" height="1082" frameX="-16" frameY="0" frameWidth="576" frameHeight="1082"/>
+	<SubTexture name="demetrios right0008" x="2576" y="3520" width="497" height="1042" frameX="-16" frameY="-40" frameWidth="576" frameHeight="1082"/>
+	<SubTexture name="demetrios right0009" x="3083" y="3520" width="497" height="1024" frameX="-16" frameY="-58" frameWidth="576" frameHeight="1082"/>
+	<SubTexture name="demetrios right0010" x="3590" y="3520" width="497" height="1039" frameX="-16" frameY="-43" frameWidth="576" frameHeight="1082"/>
+	<SubTexture name="demetrios right0011" x="3590" y="3520" width="497" height="1039" frameX="-16" frameY="-43" frameWidth="576" frameHeight="1082"/>
+	<SubTexture name="demetrios up0000" x="4097" y="3520" width="349" height="1243" frameX="0" frameY="0" frameWidth="349" frameHeight="1244"/>
+	<SubTexture name="demetrios up0001" x="4456" y="3520" width="339" height="1128" frameX="-10" frameY="-115" frameWidth="349" frameHeight="1244"/>
+	<SubTexture name="demetrios up0002" x="4805" y="3520" width="328" height="1143" frameX="-16" frameY="-101" frameWidth="349" frameHeight="1244"/>
+	<SubTexture name="demetrios up0003" x="5143" y="3520" width="323" height="1123" frameX="-21" frameY="-121" frameWidth="349" frameHeight="1244"/>
+	<SubTexture name="demetrios up0004" x="5476" y="3520" width="320" height="1123" frameX="-21" frameY="-121" frameWidth="349" frameHeight="1244"/>
+	<SubTexture name="demetrios up0005" x="5806" y="3520" width="327" height="1130" frameX="-14" frameY="-114" frameWidth="349" frameHeight="1244"/>
+	<SubTexture name="demetrios up0006" x="5806" y="3520" width="327" height="1130" frameX="-14" frameY="-114" frameWidth="349" frameHeight="1244"/>
+	<SubTexture name="demetrios up0007" x="6143" y="3520" width="319" height="1114" frameX="-22" frameY="-130" frameWidth="349" frameHeight="1244"/>
+	<SubTexture name="demetrios up0008" x="6143" y="3520" width="319" height="1114" frameX="-22" frameY="-130" frameWidth="349" frameHeight="1244"/>
+	<SubTexture name="demetrios up0009" x="6472" y="3520" width="319" height="1111" frameX="-22" frameY="-133" frameWidth="349" frameHeight="1244"/>
+	<SubTexture name="demetrios up0010" x="6472" y="3520" width="319" height="1111" frameX="-22" frameY="-133" frameWidth="349" frameHeight="1244"/>
+	<SubTexture name="demetrios up0011" x="6801" y="3520" width="320" height="1125" frameX="-21" frameY="-119" frameWidth="349" frameHeight="1244"/>
+	<SubTexture name="idle0000" x="7131" y="3520" width="706" height="1578" frameX="0" frameY="0" frameWidth="706" frameHeight="1579"/>
+	<SubTexture name="idle0001" x="0" y="5108" width="706" height="1578" frameX="0" frameY="0" frameWidth="706" frameHeight="1579"/>
+	<SubTexture name="idle0002" x="716" y="5108" width="703" height="1579" frameX="0" frameY="0" frameWidth="706" frameHeight="1579"/>
+	<SubTexture name="idle0003" x="1429" y="5108" width="703" height="1579" frameX="0" frameY="0" frameWidth="706" frameHeight="1579"/>
+	<SubTexture name="idle0004" x="2142" y="5108" width="694" height="1579" frameX="0" frameY="0" frameWidth="706" frameHeight="1579"/>
+	<SubTexture name="idle0005" x="2846" y="5108" width="694" height="1579" frameX="0" frameY="0" frameWidth="706" frameHeight="1579"/>
+	<SubTexture name="idle0006" x="3550" y="5108" width="685" height="1578" frameX="0" frameY="0" frameWidth="706" frameHeight="1579"/>
+	<SubTexture name="idle0007" x="4245" y="5108" width="685" height="1578" frameX="0" frameY="0" frameWidth="706" frameHeight="1579"/>
+	<SubTexture name="idle0008" x="4940" y="5108" width="680" height="1578" frameX="0" frameY="0" frameWidth="706" frameHeight="1579"/>
+	<SubTexture name="idle0009" x="5630" y="5108" width="680" height="1578" frameX="0" frameY="0" frameWidth="706" frameHeight="1579"/>
+	<SubTexture name="idle0010" x="6320" y="5108" width="680" height="1576" frameX="0" frameY="0" frameWidth="706" frameHeight="1579"/>
+	<SubTexture name="idle0011" x="7010" y="5108" width="688" height="1576" frameX="0" frameY="0" frameWidth="706" frameHeight="1579"/>
+</TextureAtlas>

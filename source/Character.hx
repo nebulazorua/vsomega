@@ -18,13 +18,13 @@ class Character extends FlxSprite
 	public var curCharacter:String = 'bf';
 	public var holding:Bool=false;
 	public var disabledDance:Bool = false;
-
+	public var backupCharacter:Bool=false;
 	public var holdTimer:Float = 0;
 
-	public function new(x:Float, y:Float, ?character:String = "bf", ?isPlayer:Bool = false)
+	public function new(x:Float, y:Float, ?character:String = "bf", ?isPlayer:Bool = false, ?backup:Bool=false)
 	{
 		super(x, y);
-
+		backupCharacter=backup;
 		animOffsets = new Map<String, Array<Dynamic>>();
 		curCharacter = character;
 		this.isPlayer = isPlayer;
@@ -231,6 +231,8 @@ class Character extends FlxSprite
 				animation.addByPrefix('singRIGHTmiss', 'BF NOTE RIGHT MISS', 24, false);
 				animation.addByPrefix('singDOWNmiss', 'BF NOTE DOWN MISS', 24, false);
 				animation.addByPrefix('hey', 'BF HEY', 24, false);
+				
+				animation.addByPrefix('cut', 'BF hit', 24, false);
 
 				animation.addByPrefix('firstDeath', "BF dies", 24, false);
 				animation.addByPrefix('deathLoop', "BF Dead Loop", 24, true);
@@ -406,40 +408,35 @@ class Character extends FlxSprite
 				loadOffsets();
 
 				playAnim('idle');
-			case 'kapi':
-				frames = Paths.getSparrowAtlas('characters/kapi');
-				animation.addByPrefix('idle', 'Dad idle dance', 24, false);
-				animation.addByPrefix('singUP', 'Dad Sing Note UP', 24, false);
-				animation.addByPrefix('singRIGHT', 'Dad Sing Note RIGHT', 24, false);
-				animation.addByPrefix('singDOWN', 'Dad Sing Note DOWN', 24, false);
-				animation.addByPrefix('singLEFT', 'Dad Sing Note LEFT', 24, false);
+			case 'omega':
+				frames = Paths.getSparrowAtlas('characters/omega_assets','shared');
+				animation.addByPrefix('idle', 'Omega idle dance', 24, false);
+				animation.addByPrefix('singUP', 'Omega Sing Note UP0', 24, false);
+				animation.addByPrefix('singDOWN', 'Omega Sing Note DOWN0', 24, false);
+				animation.addByPrefix('singLEFT', 'Omega Sing Note LEFT0', 24, false);
+				animation.addByPrefix('singRIGHT', 'Omega Sing Note RIGHT0', 24, false);
 
-				animation.addByIndices('singUPHold', 'Dad Sing Note UP',[8,9,10],"", 24);
-				animation.addByIndices('singRIGHTHold', 'Dad Sing Note RIGHT',[8,9,10],"", 24);
-				animation.addByIndices('singDOWNHold', 'Dad Sing Note DOWN',[8,9,10],"", 24);
-				animation.addByIndices('singLEFTHold', 'Dad Sing Note LEFT',[8,9,10],"", 24);
+				animation.addByPrefix('singUPmiss', 'Omega Sing Note UP miss', 24, false);
+				animation.addByPrefix('singDOWNmiss', 'Omega Sing Note DOWN MISS', 24, false);
+				animation.addByPrefix('singLEFTmiss', 'Omega Sing Note LEFT Miss', 24, false);
+				animation.addByPrefix('singRIGHTmiss', 'Omega Sing Note RIGHT miss', 24, false);
 
-				animation.addByPrefix('meow', 'Dad meow', 24, false);
-				animation.addByPrefix('stare', 'Dad stare', 24, false);
+				animation.addByPrefix("grabChild","Omega Alt Note0", 24, false);
 
 				loadOffsets();
+				playAnim('idle');
+			case 'angry-omega':
+				frames = Paths.getSparrowAtlas("characters/mad_omega","shared");
+				animation.addByPrefix('idle', 'omega boss idle', 24);
+				animation.addByPrefix('singUP', 'omega boss UP', 24, false);
+				animation.addByPrefix('singDOWN', 'OMEGA FUCKING DOWN ', 24, false);
+				animation.addByPrefix('singLEFT', 'OMEGA LEFT', 24, false);
+				animation.addByPrefix('singRIGHT', 'OMEGA RIGHT', 24, false);
 
+				loadOffsets();
 				playAnim("idle");
 		default:
 			var xmlData:String = '';
-			/*if(Cache.xmlData[curCharacter]!=null){
-				xmlData=Cache.xmlData[curCharacter];
-			}else{
-				xmlData=File.getContent("assets/shared/images/characters/"+curCharacter+".xml");
-				Cache.xmlData[curCharacter]=xmlData;
-			}
-			var bitmapData:BitmapData;
-			if(FlxG.bitmap.get(curCharacter + "CharFrames")!=null){
-				bitmapData = FlxG.bitmap.get(curCharacter + "CharFrames").bitmap;
-			}else{
-				bitmapData = BitmapData.fromFile("assets/shared/images/characters/"+curCharacter+".png");
-				FlxG.bitmap.add(bitmapData,true,curCharacter+"CharFrames");
-			}*/
 
 			if(Cache.charFrames[curCharacter]!=null){
 				frames=Cache.charFrames[curCharacter];
@@ -465,7 +462,7 @@ class Character extends FlxSprite
 
 		dance();
 
-		if (isPlayer)
+		if (isPlayer && !backupCharacter)
 		{
 			flipX = !flipX;
 

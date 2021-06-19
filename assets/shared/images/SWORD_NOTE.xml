@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="SWORD_NOTE.png">
+	<!-- Created with Adobe Animate version 21.0.5.40714 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Shadow0000" x="0" y="0" width="172" height="203"/>
+	<SubTexture name="Sword0000" x="182" y="0" width="97" height="166"/>
+	<SubTexture name="spear0000" x="289" y="0" width="133" height="164"/>
+</TextureAtlas>

@@ -1,1 +1,3 @@
-gf Tutorial
+gf 1 Tutorial
+omega -1 Odd-Job
+angry-omega -1 Last-Stand

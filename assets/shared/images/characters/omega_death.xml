@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="omega_death.png">
+	<!-- Created with Adobe Animate version 21.0.4.39603 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Omega death 0000" x="0" y="0" width="494" height="788" frameX="-612" frameY="0" frameWidth="1106" frameHeight="813"/>
+	<SubTexture name="Omega death 0001" x="504" y="0" width="494" height="788" frameX="-612" frameY="0" frameWidth="1106" frameHeight="813"/>
+	<SubTexture name="Omega death 0002" x="1008" y="0" width="495" height="788" frameX="-611" frameY="0" frameWidth="1106" frameHeight="813"/>
+	<SubTexture name="Omega death 0003" x="1008" y="0" width="495" height="788" frameX="-611" frameY="0" frameWidth="1106" frameHeight="813"/>
+	<SubTexture name="Omega death 0004" x="1513" y="0" width="505" height="788" frameX="-601" frameY="0" frameWidth="1106" frameHeight="813"/>
+	<SubTexture name="Omega death 0005" x="2028" y="0" width="532" height="788" frameX="-574" frameY="0" frameWidth="1106" frameHeight="813"/>
+	<SubTexture name="Omega death 0006" x="2570" y="0" width="580" height="788" frameX="-526" frameY="0" frameWidth="1106" frameHeight="813"/>
+	<SubTexture name="Omega death 0007" x="3160" y="0" width="622" height="788" frameX="-484" frameY="0" frameWidth="1106" frameHeight="813"/>
+	<SubTexture name="Omega death 0008" x="3792" y="0" width="719" height="788" frameX="-387" frameY="0" frameWidth="1106" frameHeight="813"/>
+	<SubTexture name="Omega death 0009" x="4521" y="0" width="838" height="788" frameX="-268" frameY="0" frameWidth="1106" frameHeight="813"/>
+	<SubTexture name="Omega death 0010" x="5369" y="0" width="975" height="788" frameX="-131" frameY="0" frameWidth="1106" frameHeight="813"/>
+	<SubTexture name="Omega death 0011" x="6354" y="0" width="1077" height="813" frameX="-29" frameY="0" frameWidth="1106" frameHeight="813"/>
+	<SubTexture name="Omega death 0012" x="0" y="823" width="1098" height="792" frameX="-8" frameY="0" frameWidth="1106" frameHeight="813"/>
+	<SubTexture name="Omega death 0013" x="1108" y="823" width="1106" height="801" frameX="0" frameY="0" frameWidth="1106" frameHeight="813"/>
+	<SubTexture name="Omega death 0014" x="2224" y="823" width="1100" height="788" frameX="-6" frameY="0" frameWidth="1106" frameHeight="813"/>
+	<SubTexture name="Omega death 0015" x="3334" y="823" width="1101" height="795" frameX="-5" frameY="0" frameWidth="1106" frameHeight="813"/>
+	<SubTexture name="Omega death 0016" x="4445" y="823" width="1101" height="788" frameX="-5" frameY="0" frameWidth="1106" frameHeight="813"/>
+	<SubTexture name="Omega death 0017" x="5556" y="823" width="1101" height="801" frameX="-5" frameY="0" frameWidth="1106" frameHeight="813"/>
+	<SubTexture name="Omega death 0018" x="6667" y="823" width="1101" height="796" frameX="-5" frameY="0" frameWidth="1106" frameHeight="813"/>
+	<SubTexture name="Omega death 0019" x="0" y="1634" width="1101" height="800" frameX="-5" frameY="0" frameWidth="1106" frameHeight="813"/>
+	<SubTexture name="Omega death loop0000" x="1111" y="1634" width="1244" height="963"/>
+	<SubTexture name="Omega death loop0001" x="2365" y="1634" width="1244" height="963"/>
+	<SubTexture name="Omega death loop0002" x="2365" y="1634" width="1244" height="963"/>
+	<SubTexture name="Omega death loop0003" x="3619" y="1634" width="1244" height="963"/>
+	<SubTexture name="Omega death loop0004" x="3619" y="1634" width="1244" height="963"/>
+	<SubTexture name="Omega death loop0005" x="4873" y="1634" width="1244" height="963"/>
+	<SubTexture name="Omega death loop0006" x="4873" y="1634" width="1244" height="963"/>
+	<SubTexture name="Omega death loop0007" x="6127" y="1634" width="1244" height="963"/>
+	<SubTexture name="Omega death loop0008" x="6127" y="1634" width="1244" height="963"/>
+	<SubTexture name="Omega death loop0009" x="6127" y="1634" width="1244" height="963"/>
+	<SubTexture name="Omega death loop0010" x="6127" y="1634" width="1244" height="963"/>
+	<SubTexture name="Omega death loop0011" x="6127" y="1634" width="1244" height="963"/>
+	<SubTexture name="Omega death loop0012" x="6127" y="1634" width="1244" height="963"/>
+	<SubTexture name="Omega death loop0013" x="6127" y="1634" width="1244" height="963"/>
+	<SubTexture name="Omega death loop0014" x="6127" y="1634" width="1244" height="963"/>
+	<SubTexture name="Omega death loop0015" x="6127" y="1634" width="1244" height="963"/>
+	<SubTexture name="Omega death loop0016" x="6127" y="1634" width="1244" height="963"/>
+	<SubTexture name="Omega death loop0017" x="1111" y="1634" width="1244" height="963"/>
+	<SubTexture name="Omega death loop0018" x="2365" y="1634" width="1244" height="963"/>
+	<SubTexture name="Omega death loop0019" x="2365" y="1634" width="1244" height="963"/>
+	<SubTexture name="Omega death loop0020" x="3619" y="1634" width="1244" height="963"/>
+	<SubTexture name="Omega death loop0021" x="3619" y="1634" width="1244" height="963"/>
+	<SubTexture name="Omega death loop0022" x="4873" y="1634" width="1244" height="963"/>
+	<SubTexture name="Omega death loop0023" x="4873" y="1634" width="1244" height="963"/>
+	<SubTexture name="Omega death loop0024" x="6127" y="1634" width="1244" height="963"/>
+	<SubTexture name="Omega death loop0025" x="6127" y="1634" width="1244" height="963"/>
+	<SubTexture name="Omega death loop0026" x="6127" y="1634" width="1244" height="963"/>
+	<SubTexture name="Omega death loop0027" x="6127" y="1634" width="1244" height="963"/>
+	<SubTexture name="Omega death loop0028" x="6127" y="1634" width="1244" height="963"/>
+	<SubTexture name="Omega death loop0029" x="6127" y="1634" width="1244" height="963"/>
+	<SubTexture name="Omega death loop0030" x="6127" y="1634" width="1244" height="963"/>
+	<SubTexture name="Omega death loop0031" x="6127" y="1634" width="1244" height="963"/>
+	<SubTexture name="Omega death loop0032" x="6127" y="1634" width="1244" height="963"/>
+	<SubTexture name="Omega death retry confirm0000" x="0" y="2607" width="1244" height="963"/>
+	<SubTexture name="Omega death retry confirm0001" x="1254" y="2607" width="1244" height="963"/>
+	<SubTexture name="Omega death retry confirm0002" x="1254" y="2607" width="1244" height="963"/>
+	<SubTexture name="Omega death retry confirm0003" x="2508" y="2607" width="1244" height="963"/>
+	<SubTexture name="Omega death retry confirm0004" x="1254" y="2607" width="1244" height="963"/>
+	<SubTexture name="Omega death retry confirm0005" x="0" y="2607" width="1244" height="963"/>
+	<SubTexture name="Omega death retry confirm0006" x="0" y="2607" width="1244" height="963"/>
+	<SubTexture name="Omega death retry confirm0007" x="0" y="2607" width="1244" height="963"/>
+	<SubTexture name="Omega death retry confirm0008" x="0" y="2607" width="1244" height="963"/>
+	<SubTexture name="Omega death retry confirm0009" x="0" y="2607" width="1244" height="963"/>
+	<SubTexture name="Omega death retry confirm0010" x="0" y="2607" width="1244" height="963"/>
+	<SubTexture name="Omega death retry confirm0011" x="0" y="2607" width="1244" height="963"/>
+	<SubTexture name="Omega death retry confirm0012" x="0" y="2607" width="1244" height="963"/>
+	<SubTexture name="Omega death retry confirm0013" x="0" y="2607" width="1244" height="963"/>
+	<SubTexture name="Omega death retry confirm0014" x="0" y="2607" width="1244" height="963"/>
+	<SubTexture name="Omega death retry confirm0015" x="1111" y="1634" width="1244" height="963"/>
+	<SubTexture name="Omega death retry confirm0016" x="1111" y="1634" width="1244" height="963"/>
+	<SubTexture name="Omega death retry confirm0017" x="1111" y="1634" width="1244" height="963"/>
+	<SubTexture name="Omega death retry confirm0018" x="2365" y="1634" width="1244" height="963"/>
+	<SubTexture name="Omega death retry confirm0019" x="2365" y="1634" width="1244" height="963"/>
+	<SubTexture name="Omega death retry confirm0020" x="2365" y="1634" width="1244" height="963"/>
+	<SubTexture name="Omega death retry confirm0021" x="2365" y="1634" width="1244" height="963"/>
+	<SubTexture name="Omega death retry confirm0022" x="1111" y="1634" width="1244" height="963"/>
+	<SubTexture name="Omega death retry confirm0023" x="1111" y="1634" width="1244" height="963"/>
+	<SubTexture name="Omega death retry confirm0024" x="1111" y="1634" width="1244" height="963"/>
+	<SubTexture name="Omega death retry confirm0025" x="1111" y="1634" width="1244" height="963"/>
+	<SubTexture name="Omega death retry confirm0026" x="1111" y="1634" width="1244" height="963"/>
+	<SubTexture name="Omega death retry confirm0027" x="1111" y="1634" width="1244" height="963"/>
+	<SubTexture name="Omega death retry confirm0028" x="1111" y="1634" width="1244" height="963"/>
+	<SubTexture name="Omega death retry confirm0029" x="1111" y="1634" width="1244" height="963"/>
+	<SubTexture name="Omega death retry confirm0030" x="1111" y="1634" width="1244" height="963"/>
+	<SubTexture name="Omega death retry confirm0031" x="1111" y="1634" width="1244" height="963"/>
+	<SubTexture name="Omega death retry confirm0032" x="1111" y="1634" width="1244" height="963"/>
+</TextureAtlas>
