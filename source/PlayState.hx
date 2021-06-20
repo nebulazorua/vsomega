@@ -86,6 +86,8 @@ class PlayState extends MusicBeatState
 	private var mika:RunningChild;
 
 	private var renderedNotes:FlxTypedGroup<Note>;
+	private var opponentRenderedNotes:FlxTypedGroup<Note>;
+	private var playerRenderedNotes:FlxTypedGroup<Note>;
 	private var hittableNotes:Array<Note> = [];
 	private var unspawnNotes:Array<Note> = [];
 
@@ -166,6 +168,7 @@ class PlayState extends MusicBeatState
 	var lua:LuaVM;
 
 	var dialogue:Array<String> = ['blah blah blah', 'coolswag'];
+	var disabledHud=false;
 
 	var halloweenBG:FlxSprite;
 	var nokeTxt:FlxText;
@@ -259,10 +262,6 @@ class PlayState extends MusicBeatState
 		if (FlxG.sound.music != null)
 			FlxG.sound.music.stop();
 
-
-		if(SONG.song.toLowerCase()=='2v200')
-			currentOptions.middleScroll=true;
-
 		//lua = new LuaVM();
 		#if windows
 			luaModchartExists = FileSystem.exists(Paths.modchart(SONG.song.toLowerCase()));
@@ -299,6 +298,17 @@ class PlayState extends MusicBeatState
 		if (SONG == null)
 			SONG = Song.loadFromJson('tutorial');
 
+		if(SONG.song.toLowerCase()=='2v200' || SONG.song.toLowerCase()=='hivemind')
+			currentOptions.middleScroll=true;
+
+		if(SONG.song.toLowerCase()=='hivemind'){
+			currentOptions.downScroll=true;
+			modchart.hudVisible=false;
+			modchart.hideBF=true;
+			modchart.hideGF=true;
+			modchart.playerNoteScale=1.3;
+			modchart.opponentNoteScale=.7;
+		}
 		Conductor.mapBPMChanges(SONG);
 		Conductor.changeBPM(SONG.bpm);
 		if(SONG.song.toLowerCase()=='guardian'){
@@ -1129,6 +1139,7 @@ class PlayState extends MusicBeatState
 		};
 		add(slash);
 
+		disabledHud = modchart.hudVisible;
 		var doof:DialogueBox = new DialogueBox(false, dialogue);
 		// doof.x += 70;
 		// doof.y = FlxG.height * 0.5;
@@ -1144,7 +1155,8 @@ class PlayState extends MusicBeatState
 		strumLine.scrollFactor.set();
 
 		strumLineNotes = new FlxTypedGroup<FlxSprite>();
-		add(strumLineNotes);
+		//add(strumLineNotes);
+		//strumLineNotes.visible=false;
 
 		playerStrumLines = new FlxTypedGroup<FlxSprite>();
 		opponentStrumLines = new FlxTypedGroup<FlxSprite>();
@@ -1156,7 +1168,7 @@ class PlayState extends MusicBeatState
 		dadStrums = new FlxTypedGroup<FlxSprite>();
 
 		// startCountdown();
-
+		// TODO: Start lua shit here
 		generateSong(SONG.song);
 
 		// add(strumLine);
@@ -1278,16 +1290,15 @@ class PlayState extends MusicBeatState
 		switch(SONG.song.toLowerCase()){
 			case '2v200':
 				hpIcon = "omegabf";
-			case 'after-the-ashes':
-				hpIcon = 'omegafriendly';
 			default:
 				hpIcon = SONG.player1;
 		}
+
 		iconP1 = new HealthIcon(hpIcon, true);
 		iconP1.y = healthBar.y - (iconP1.height / 2);
 		add(iconP1);
 
-		iconP2 = new HealthIcon(SONG.player2, false);
+		iconP2 = new HealthIcon((SONG.song.toLowerCase()=='after-the-ashes' && SONG.player2=='omega')?'omegafriendly':SONG.player2, false);
 		iconP2.y = healthBar.y - (iconP2.height / 2);
 		add(iconP2);
 
@@ -1301,8 +1312,12 @@ class PlayState extends MusicBeatState
 		add(presetTxt);
 		add(scoreTxt);
 
+		playerStrums.cameras=[camHUD];
+		dadStrums.cameras=[camHUD];
 		strumLineNotes.cameras = [camHUD];
 		renderedNotes.cameras = [camHUD];
+		playerRenderedNotes.cameras = [camHUD];
+		opponentRenderedNotes.cameras = [camHUD];
 		healthBar.cameras = [camHUD];
 		healthBarBG.cameras = [camHUD];
 		iconP1.cameras = [camHUD];
@@ -1610,7 +1625,7 @@ class PlayState extends MusicBeatState
 
 	function startCountdown():Void
 	{
-		modchart.hudVisible=true;
+		modchart.hudVisible=disabledHud;
 		inCutscene = false;
 
 		generateStaticArrows(0);
@@ -1763,7 +1778,17 @@ class PlayState extends MusicBeatState
 		FlxG.sound.list.add(vocals);
 
 		renderedNotes = new FlxTypedGroup<Note>();
-		add(renderedNotes);
+		//add(renderedNotes);
+
+		opponentRenderedNotes = new FlxTypedGroup<Note>();
+		add(dadStrums);
+		add(opponentRenderedNotes);
+
+
+		playerRenderedNotes = new FlxTypedGroup<Note>();
+		add(playerStrums);
+		add(playerRenderedNotes);
+
 
 		var noteData:Array<SwagSection>;
 
@@ -1853,8 +1878,16 @@ class PlayState extends MusicBeatState
 		{
 			// FlxG.log.add(i);
 			var babyArrow:FlxSprite = new FlxSprite(0, strumLine.y);
-			if(currentOptions.middleScroll && player==0)
+			if(currentOptions.middleScroll && player==0 && SONG.song.toLowerCase()!='hivemind' )
 				babyArrow.visible=false;
+
+
+			var scale = modchart.opponentNoteScale;
+
+			if(player==1)
+				scale=modchart.playerNoteScale;
+
+			var width = Note.swagWidth*scale;
 
 			switch (curStage)
 			{
@@ -1865,29 +1898,29 @@ class PlayState extends MusicBeatState
 					babyArrow.animation.add('blue', [5]);
 					babyArrow.animation.add('purplel', [4]);
 
-					babyArrow.setGraphicSize(Std.int(babyArrow.width * daPixelZoom));
+					babyArrow.setGraphicSize(Std.int(babyArrow.width * daPixelZoom * scale ));
 					babyArrow.updateHitbox();
 					babyArrow.antialiasing = false;
 
 					switch (Math.abs(i))
 					{
 						case 0:
-							babyArrow.x += Note.swagWidth * 0;
+							babyArrow.x += width * 0;
 							babyArrow.animation.add('static', [0]);
 							babyArrow.animation.add('pressed', [4, 8], 12, false);
 							babyArrow.animation.add('confirm', [12, 16], 24, false);
 						case 1:
-							babyArrow.x += Note.swagWidth * 1;
+							babyArrow.x += width * 1;
 							babyArrow.animation.add('static', [1]);
 							babyArrow.animation.add('pressed', [5, 9], 12, false);
 							babyArrow.animation.add('confirm', [13, 17], 24, false);
 						case 2:
-							babyArrow.x += Note.swagWidth * 2;
+							babyArrow.x += width * 2;
 							babyArrow.animation.add('static', [2]);
 							babyArrow.animation.add('pressed', [6, 10], 12, false);
 							babyArrow.animation.add('confirm', [14, 18], 24, false);
 						case 3:
-							babyArrow.x += Note.swagWidth * 3;
+							babyArrow.x += width * 3;
 							babyArrow.animation.add('static', [3]);
 							babyArrow.animation.add('pressed', [7, 11], 12, false);
 							babyArrow.animation.add('confirm', [15, 19], 24, false);
@@ -1901,27 +1934,27 @@ class PlayState extends MusicBeatState
 					babyArrow.animation.addByPrefix('red', 'arrowRIGHT');
 
 					babyArrow.antialiasing = true;
-					babyArrow.setGraphicSize(Std.int(babyArrow.width * 0.7));
+					babyArrow.setGraphicSize(Std.int(babyArrow.width * 0.7 * scale));
 
 					switch (Math.abs(i))
 					{
 						case 0:
-							babyArrow.x += Note.swagWidth * 0;
+							babyArrow.x += width * 0;
 							babyArrow.animation.addByPrefix('static', 'arrowLEFT');
 							babyArrow.animation.addByPrefix('pressed', 'left press', 24, false);
 							babyArrow.animation.addByPrefix('confirm', 'left confirm', 24, false);
 						case 1:
-							babyArrow.x += Note.swagWidth * 1;
+							babyArrow.x += width * 1;
 							babyArrow.animation.addByPrefix('static', 'arrowDOWN');
 							babyArrow.animation.addByPrefix('pressed', 'down press', 24, false);
 							babyArrow.animation.addByPrefix('confirm', 'down confirm', 24, false);
 						case 2:
-							babyArrow.x += Note.swagWidth * 2;
+							babyArrow.x += width * 2;
 							babyArrow.animation.addByPrefix('static', 'arrowUP');
 							babyArrow.animation.addByPrefix('pressed', 'up press', 24, false);
 							babyArrow.animation.addByPrefix('confirm', 'up confirm', 24, false);
 						case 3:
-							babyArrow.x += Note.swagWidth * 3;
+							babyArrow.x += width * 3;
 							babyArrow.animation.addByPrefix('static', 'arrowRIGHT');
 							babyArrow.animation.addByPrefix('pressed', 'right press', 24, false);
 							babyArrow.animation.addByPrefix('confirm', 'right confirm', 24, false);
@@ -2208,6 +2241,9 @@ class PlayState extends MusicBeatState
 			lua.call("update",[elapsed]);
 		}
 
+		boyfriend.visible = !modchart.hideBF;
+		gf.visible = !modchart.hideGF;
+		dad.visible = !modchart.hideDad;
 		iconP1.visible = modchart.hudVisible;
 		iconP2.visible = modchart.hudVisible;
 		healthBar.visible = modchart.hudVisible;
@@ -2220,6 +2256,7 @@ class PlayState extends MusicBeatState
 		missesTxt.visible = modchart.hudVisible;
 		highComboTxt.visible = modchart.hudVisible;
 		scoreTxt.visible = modchart.hudVisible;
+		scoreTxt.screenCenter(X);
 		if(presetTxt!=null)
 			presetTxt.visible = modchart.hudVisible;
 
@@ -2553,6 +2590,10 @@ class PlayState extends MusicBeatState
 			{
 				var dunceNote:Note = unspawnNotes[0];
 				renderedNotes.add(dunceNote);
+				if(dunceNote.mustPress)
+					playerRenderedNotes.add(dunceNote);
+				else
+					opponentRenderedNotes.add(dunceNote);
 				hittableNotes.push(dunceNote);
 
 				var index:Int = unspawnNotes.indexOf(dunceNote);
@@ -2565,19 +2606,25 @@ class PlayState extends MusicBeatState
 		if (generatedMusic)
 		{
 			for(idx in 0...playerStrumLines.length){
+				var width = (Note.swagWidth*modchart.playerNoteScale);
 				var line = playerStrumLines.members[idx];
 				if(currentOptions.middleScroll){
 					line.screenCenter(X);
-					line.x += Note.swagWidth*(-2+idx) + playerNoteOffsets[idx][0];
+					line.x += width*(-2+idx) + playerNoteOffsets[idx][0];
 				}else{
-					line.x = (Note.swagWidth*idx) + 50 + ((FlxG.width / 2)) + playerNoteOffsets[idx][0];
+					line.x = (width*idx) + 50 + ((FlxG.width / 2)) + playerNoteOffsets[idx][0];
 				}
 				line.y = strumLine.y+playerNoteOffsets[idx][1];
 			}
 			for(idx in 0...opponentStrumLines.length){
+				var width = (Note.swagWidth*modchart.opponentNoteScale);
 				var line = opponentStrumLines.members[idx];
-
-				line.x = (Note.swagWidth*idx) + 50 +opponentNoteOffsets[idx][0];
+				if(currentOptions.middleScroll){
+					line.screenCenter(X);
+					line.x += width*(-2+idx) + opponentNoteOffsets[idx][0] ;
+				}else{
+					line.x = (width*idx) + 50 +opponentNoteOffsets[idx][0];
+				}
 				line.y = strumLine.y+opponentNoteOffsets[idx][1];
 			}
 
@@ -2626,18 +2673,23 @@ class PlayState extends MusicBeatState
 				}
 				else
 				{
-					if((daNote.mustPress || !daNote.mustPress && !currentOptions.middleScroll)){
+					if((daNote.mustPress || SONG.song.toLowerCase()=='hivemind' || !daNote.mustPress && !currentOptions.middleScroll )){
 						daNote.visible = true;
 					}
 
 					daNote.active = true;
 				}
 
-				if(!daNote.mustPress && currentOptions.middleScroll){
+				if(!daNote.mustPress && currentOptions.middleScroll && SONG.song.toLowerCase()!='hivemind'){
 					daNote.visible=false;
 				}
+				var width = Note.swagWidth;
+				if(daNote.mustPress)
+					width*=modchart.playerNoteScale;
+				else
+					width*=modchart.opponentNoteScale;
 
-				var brr = strumLine.y + Note.swagWidth/2;
+				var brr = strumLine.y + width/2;
 				if(currentOptions.downScroll){
 					daNote.y = (strumLine.y + 0.45 * (Conductor.songPosition - daNote.strumTime) * FlxMath.roundDecimal(SONG.speed, 2));
 					if(daNote.isSustainNote){
@@ -3111,8 +3163,10 @@ class PlayState extends MusicBeatState
 				}
 
 				switch(daRating){
+					case 'epic':
+						numScore.color = 0x75f0d9;
 					case 'sick':
-						numScore.color = 0x00ffff;
+						numScore.color = 0xfcba03;
 					case 'good':
 						numScore.color = 0x14cc00;
 					case 'bad':

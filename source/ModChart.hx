@@ -12,6 +12,11 @@ class ModChart {
   public var playerNotesFollowReceptors=true;
   public var opponentNotesFollowReceptors=true;
   public var hudVisible=true;
+  public var hideBF=false;
+  public var hideGF=false;
+  public var hideDad=false;
+  public var playerNoteScale:Float=1;
+  public var opponentNoteScale:Float=1;
   public var opponentHPDrain:Float = 0;
 
   public function new(playState:PlayState){

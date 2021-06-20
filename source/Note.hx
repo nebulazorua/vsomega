@@ -35,7 +35,7 @@ class Note extends FlxSprite
 	public var isGlitch:Bool=false;
 	public var isShield:Bool=false;
 	public var isDischarge:Bool=false;
-	public var whoSingsShit:String = '';
+	public var whoSingsShit:String = '0';
 
 	public var noteScore:Float = 1;
 
@@ -45,22 +45,25 @@ class Note extends FlxSprite
 	public static var BLUE_NOTE:Int = 1;
 	public static var RED_NOTE:Int = 3;
 
-	public function new(strumTime:Float, noteData:Int, ?prevNote:Note, ?gottaHitNote:Bool=false, ?sustainNote:Bool = false, ?sword:Bool = false, ?glitch:Bool = false, ?singingShit:String = "bf", ?shield:Bool=false,?discharge:Bool=false)
+	public function new(strumTime:Float, noteData:Int, ?prevNote:Note, ?gottaHitNote:Bool=false, ?sustainNote:Bool = false, ?sword:Bool = false, ?glitch:Bool = false, ?singingShit:String = "0", ?shield:Bool=false,?discharge:Bool=false)
 	{
 		super();
 
 		if (prevNote == null)
 			prevNote = this;
 
-		switch(whoSingsShit){
+		switch(singingShit){
 			case 'bf':
 				whoSingsShit='0';
 			case 'omega':
 				whoSingsShit='1';
 			case 'both':
 				whoSingsShit='2';
+			default:
+				whoSingsShit='0';
 		}
 		whoSingsShit = singingShit;
+		mustPress = gottaHitNote;
 		// cringe old code
 		if(sword)
 			noteType=1;
@@ -88,6 +91,7 @@ class Note extends FlxSprite
 		switch (daStage)
 		{
 			case 'school' | 'schoolEvil':
+				var scale = gottaHitNote?PlayState.currentPState.modchart.playerNoteScale:PlayState.currentPState.modchart.opponentNoteScale;
 				loadGraphic(Paths.image('weeb/pixelUI/arrows-pixels'), true, 17, 17);
 
 				animation.add('greenScroll', [6]);
@@ -110,12 +114,14 @@ class Note extends FlxSprite
 					animation.add('bluehold', [1]);
 				}
 
-				setGraphicSize(Std.int(width * PlayState.daPixelZoom));
+				setGraphicSize(Std.int(width * PlayState.daPixelZoom * scale));
 				updateHitbox();
 
 			default:
+				var scale = gottaHitNote?PlayState.currentPState.modchart.playerNoteScale:PlayState.currentPState.modchart.opponentNoteScale;
 				switch(noteType){
 					case 1:
+						var widMult = .7*scale;
 						frames = Paths.getSparrowAtlas('SWORD_NOTE');
 						var animationName = "Sword0";
 						if(PlayState.SONG.song.toLowerCase()=='curse-eternal'){ // TODO: player2 == mika
@@ -127,12 +133,13 @@ class Note extends FlxSprite
 						animation.addByPrefix('redScroll', animationName);
 						animation.addByPrefix('blueScroll', animationName);
 						animation.addByPrefix('purpleScroll', animationName);
-						setGraphicSize(Std.int(width * .7));
+						setGraphicSize(Std.int(width * widMult));
 
 						updateHitbox();
-						offset.x -= 5;
+						offset.x -= 5*scale;
 						antialiasing = true;
 					default:
+						var widMult = .7*scale;
 						frames = Paths.getSparrowAtlas('NOTE_assets');
 
 						animation.addByPrefix('greenScroll', 'green0');
@@ -150,7 +157,7 @@ class Note extends FlxSprite
 						animation.addByPrefix('redhold', 'red hold piece');
 						animation.addByPrefix('bluehold', 'blue hold piece');
 
-						setGraphicSize(Std.int(width * 0.7));
+						setGraphicSize(Std.int(width * widMult));
 						updateHitbox();
 						antialiasing = true;
 					}
@@ -182,6 +189,7 @@ class Note extends FlxSprite
 
 		if (isSustainNote && prevNote != null)
 		{
+			var scale = gottaHitNote?PlayState.currentPState.modchart.playerNoteScale:PlayState.currentPState.modchart.opponentNoteScale;
 			prevNote.holdParent=true;
 			noteScore * 0.2;
 			alpha = 0.6;
@@ -218,7 +226,7 @@ class Note extends FlxSprite
 
 
 
-			offset.x = off;
+			offset.x = off*scale;
 
 			if (prevNote.isSustainNote)
 			{
@@ -236,7 +244,9 @@ class Note extends FlxSprite
 						prevNote.animation.play('redhold');
 				}
 
-				prevNote.scale.y = Conductor.stepCrochet / 100 * prevNote.scale.y * 1.5 * FlxMath.roundDecimal(PlayState.SONG.speed,2);
+				prevNote.scale.y = (Conductor.stepCrochet / 100 * prevNote.scale.y * 1.5 * FlxMath.roundDecimal(PlayState.SONG.speed,2));
+				prevNote.scale.y+=prevNote.scale.y*(1-scale);
+
 				prevNote.updateHitbox();
 				prevNote.offset.x = offset;
 				// prevNote.setGraphicSize();

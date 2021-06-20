@@ -493,7 +493,7 @@ class Character extends FlxSprite
 				setGraphicSize(Std.int(width*1.35));
 
 			case 'thehivemind':
-				frames = Paths.getSparrowAtlas("characters/glasshouses","shared");
+				frames = Paths.getSparrowAtlas("philly/glasshouses","week3");
 				animation.addByPrefix("idle","idle",24,false);
 				animation.addByPrefix("singDOWN","down",24,false);
 				animation.addByPrefix("singUP","up",24,false);
