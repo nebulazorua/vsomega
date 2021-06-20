@@ -30,9 +30,9 @@ class RunningChild extends FlxSprite {
         if(Conductor.songPosition>=marker.start && Conductor.songPosition<marker.end+200){
           visible=false;
           @:privateAccess
-          if(PlayState.instance.dad.animation.curAnim.name!='grabChild'){
+          if(PlayState.currentPState.dad.animation.curAnim.name!='grabChild'){
             @:privateAccess
-            PlayState.instance.dad.playAnim("grabChild",true);
+            PlayState.currentPState.dad.playAnim("grabChild",true);
           }
         }else{
           visible=true;
@@ -53,9 +53,9 @@ class RunningChild extends FlxSprite {
         var endPoint = -500;
         x = FlxMath.lerp(275,endPoint,startA/endA);
         @:privateAccess
-        if(PlayState.instance.dad.animation.curAnim.name=='grabChild'){
+        if(PlayState.currentPState.dad.animation.curAnim.name=='grabChild'){
           @:privateAccess
-          PlayState.instance.dad.playAnim("idle",true);
+          PlayState.currentPState.dad.playAnim("idle",true);
         }
         // BOUNCE OFF SCREEN
       }else if(Conductor.songPosition>marker.end+700){

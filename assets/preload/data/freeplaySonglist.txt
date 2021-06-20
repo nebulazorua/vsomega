@@ -1,3 +1,17 @@
 gf 1 Tutorial
+omega -1 Mercanary
 omega -1 Odd-Job
+omega -1 Guardian
+army -1 2v200
+omega -1 After-the-Ashes
+father -1 Father-Time
 angry-omega -1 Last-Stand
+mika -1 Curse-Eternal
+
+thehivemind -1 Hivemind
+noke -1 fragmented-surreality
+merchant -1 Free-Soul
+anders -1 Oxidation
+kapi -1 New-Retro
+flexy -1 No-Arm-Shogun
+demetrios -1 57.5hz

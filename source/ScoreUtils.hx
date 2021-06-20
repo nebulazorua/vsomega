@@ -6,6 +6,7 @@ class ScoreUtils
 	public static var gradeArray:Array<String> = ["☆☆☆☆","☆☆☆","☆☆","☆","S+","S","S-","A+","A","A-","B+","B","B-","C+","C","C-","D"];
 	public static var ghostTapping:Bool=false;
 	public static var ratingStrings = [
+		"epic",
 		"sick",
 		"good",
 		"bad",
@@ -60,12 +61,14 @@ class ScoreUtils
 		var hit:Float = 0;
 		switch (rating){
 			case 'shit':
-				hit = 1-(ratingWindows[0]/Conductor.safeZoneOffset);
+				hit = 1-(ratingWindows[3]/Conductor.safeZoneOffset);
 			case 'bad':
-				hit = 1-(ratingWindows[1]/Conductor.safeZoneOffset);
-			case 'good':
 				hit = 1-(ratingWindows[2]/Conductor.safeZoneOffset);
+			case 'good':
+				hit = 1-(ratingWindows[1]/Conductor.safeZoneOffset);
 			case 'sick':
+				hit = 1-(ratingWindows[0]/Conductor.safeZoneOffset);
+			case 'epic':
 				hit = 1;
 		}
 		return hit;
@@ -79,9 +82,11 @@ class ScoreUtils
 				score = 100;
 			case 'sick':
 				score = 350;
+			case 'epic':
+				score = 500;
 		}
 		if(!ghostTapping)
-			score=Std.int(score*1.02); // TINY LIL MODIFIER
+			score=Std.int(score*1.1); // TINY LIL MODIFIER
 		return score;
 	}
 }

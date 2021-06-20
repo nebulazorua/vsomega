@@ -231,7 +231,7 @@ class Character extends FlxSprite
 				animation.addByPrefix('singRIGHTmiss', 'BF NOTE RIGHT MISS', 24, false);
 				animation.addByPrefix('singDOWNmiss', 'BF NOTE DOWN MISS', 24, false);
 				animation.addByPrefix('hey', 'BF HEY', 24, false);
-				
+
 				animation.addByPrefix('cut', 'BF hit', 24, false);
 
 				animation.addByPrefix('firstDeath', "BF dies", 24, false);
@@ -408,6 +408,23 @@ class Character extends FlxSprite
 				loadOffsets();
 
 				playAnim('idle');
+			case 'army' | 'armyRight':
+				frames = Paths.getSparrowAtlas("characters/Army_Assets","shared");
+				animation.addByPrefix('idle', 'army IDLE', 24, false);
+				animation.addByPrefix('singUP', ' army UP ', 24, false);
+				animation.addByPrefix('singDOWN', ' army DOWN', 24, false);
+				animation.addByPrefix('singLEFT', ' army LEFT', 24, false);
+				animation.addByPrefix('singRIGHT', ' army RIGHT', 24, false);
+
+				animation.addByIndices('singDOWNHold',' army DOWN',[6,7], "", 24, false);
+
+				animation.addByIndices('singDOWNRepeat',' army DOWN',[3,4,5,6,7], "", 24, false);
+				if(curCharacter!='armyRight')
+					flipX=true;
+
+				loadOffsets();
+
+				playAnim("idle");
 			case 'omega':
 				frames = Paths.getSparrowAtlas('characters/omega_assets','shared');
 				animation.addByPrefix('idle', 'Omega idle dance', 24, false);
@@ -435,16 +452,100 @@ class Character extends FlxSprite
 
 				loadOffsets();
 				playAnim("idle");
-		default:
-			var xmlData:String = '';
+			case 'noke':
+				frames = Paths.getSparrowAtlas("characters/noke","shared");
+				animation.addByPrefix('idle', 'noke idle', 24);
+				animation.addByPrefix('singUP', 'noke up', 24, false);
+				animation.addByPrefix('singDOWN', 'noke down', 24, false);
+				animation.addByPrefix('singLEFT', 'noke left', 24, false);
+				animation.addByPrefix('singRIGHT', 'noke right', 24, false);
 
-			if(Cache.charFrames[curCharacter]!=null){
-				frames=Cache.charFrames[curCharacter];
-			}else{
-				frames = FlxAtlasFrames.fromSparrow(BitmapData.fromFile("assets/shared/images/characters/"+curCharacter+".png"),File.getContent("assets/shared/images/characters/"+curCharacter+".xml"));
-				Cache.charFrames[curCharacter]=frames;
-			}
-			FlxG.bitmap.dumpCache();
+				loadOffsets();
+				playAnim("idle");
+				setGraphicSize(Std.int(width*.6));
+			case 'flexy':
+				frames = Paths.getSparrowAtlas("characters/Flexy","shared");
+				animation.addByPrefix('idle', 'flexy idle', 24, false);
+				animation.addByPrefix('singUP', 'flexy up note', 24, false);
+				animation.addByPrefix('singDOWN', 'flexy down note', 24, false);
+				animation.addByPrefix('singLEFT', 'flexy left note', 24, false);
+				animation.addByPrefix('singRIGHT', 'flexy right note', 24, false);
+
+				loadOffsets();
+				playAnim("idle");
+			case 'demetrios':
+				frames = Paths.getSparrowAtlas("characters/demetrios","shared");
+				animation.addByPrefix('idle', 'idle', 24, false);
+				animation.addByPrefix('singUP', 'demetrios up', 24, false);
+				animation.addByPrefix('singDOWN', 'demetrios down', 24, false);
+				animation.addByPrefix('singLEFT', 'demetrios left', 24, false);
+				animation.addByPrefix('singRIGHT', 'demetrios right', 24, false);
+				animation.addByPrefix('discharge', 'demetrios alt', 24, false);
+
+				animation.addByIndices('singUPHold', 'demetrios up', [11], "", 24, false);
+				animation.addByIndices('singDOWNHold', 'demetrios down', [11], "", 24, false);
+				animation.addByIndices('singLEFTHold', 'demetrios left', [11], "", 24, false);
+				animation.addByIndices('singRIGHTHold', 'demetrios right', [11], "", 24, false);
+
+				loadOffsets();
+				playAnim("idle");
+
+				setGraphicSize(Std.int(width*1.35));
+
+			case 'thehivemind':
+				frames = Paths.getSparrowAtlas("characters/glasshouses","shared");
+				animation.addByPrefix("idle","idle",24,false);
+				animation.addByPrefix("singDOWN","down",24,false);
+				animation.addByPrefix("singUP","up",24,false);
+				animation.addByPrefix("singLEFT","left",24,false);
+				animation.addByPrefix("singRIGHT","right",24,false);
+
+				loadOffsets();
+				playAnim("idle");
+			case 'kapi':
+				frames = Paths.getSparrowAtlas("characters/emokapi","shared");
+				animation.addByPrefix("idle","kapi idle",24,false);
+				animation.addByPrefix("singUP","kapi up",24,false);
+				animation.addByPrefix("singDOWN","kapi down",24,false);
+				animation.addByPrefix("singLEFT","kapi left",24,false);
+				animation.addByPrefix("singRIGHT","kapi right",24,false);
+
+				loadOffsets();
+				setGraphicSize(Std.int(width*.9) );
+
+				playAnim("idle");
+			case 'anders':
+				frames = Paths.getSparrowAtlas("characters/AndersFromTheAndersMod","shared");
+				animation.addByPrefix("idle","anders_f_idle",24,false);
+				animation.addByPrefix("singUP","anders_f_up_note",24,false);
+				animation.addByPrefix("singDOWN","anders_f_down_note",24,false);
+				animation.addByPrefix("singLEFT","anders_f_left_note",24,false);
+				animation.addByPrefix("singRIGHT","anders_f_right_note",24,false);
+
+				loadOffsets();
+
+				playAnim("idle");
+			case 'merchant':
+				frames = Paths.getSparrowAtlas("characters/merchant","shared");
+				animation.addByPrefix("idle","merchant idle",24,false);
+				animation.addByPrefix("singUP","merchant up",24,false);
+				animation.addByPrefix("singDOWN","merchant down",24,false);
+				animation.addByPrefix("singLEFT","merchant left",24,false);
+				animation.addByPrefix("singRIGHT","merchant right",24,false);
+				loadOffsets();
+
+				playAnim("idle");
+
+			default:
+				var xmlData:String = '';
+
+				if(Cache.charFrames[curCharacter]!=null){
+					frames=Cache.charFrames[curCharacter];
+				}else{
+					frames = FlxAtlasFrames.fromSparrow(BitmapData.fromFile("assets/shared/images/characters/"+curCharacter+".png"),File.getContent("assets/shared/images/characters/"+curCharacter+".xml"));
+					Cache.charFrames[curCharacter]=frames;
+				}
+				FlxG.bitmap.dumpCache();
 
 
 
@@ -558,8 +659,11 @@ class Character extends FlxSprite
 
 			var dadVar:Float = 4;
 
-			if (curCharacter == 'dad')
-				dadVar = 6.1;
+			switch(curCharacter){
+				case 'dad' | 'omega' | 'angry-omega' | 'father':
+					dadVar = 6.1;
+			}
+
 			if (holdTimer >= Conductor.stepCrochet * dadVar * 0.001)
 			{
 				dance();
@@ -573,6 +677,9 @@ class Character extends FlxSprite
 			case 'gf':
 				if (animation.curAnim.name == 'hairFall' && animation.curAnim.finished)
 					playAnim('danceRight');
+			case 'bf':
+				if (animation.curAnim.name == 'cut' && animation.curAnim.finished)
+					playAnim('idle');
 		}
 
 		super.update(elapsed);
@@ -588,17 +695,23 @@ class Character extends FlxSprite
 		if (!debugMode && !disabledDance)
 		{
 			holding=false;
-			if(animation.getByName("idle")!=null)
-				playAnim("idle");
-			else if (animation.getByName("danceRight")!=null && animation.getByName("danceLeft")!=null){
-				if (!animation.curAnim.name.startsWith('hair'))
-				{
-					danced = !danced;
+			switch(curCharacter){
+			case 'bf':
+				if(animation.curAnim.name!='cut')
+				playAnim('idle');
+			default:
+				if(animation.getByName("idle")!=null)
+					playAnim("idle");
+				else if (animation.getByName("danceRight")!=null && animation.getByName("danceLeft")!=null){
+					if (!animation.curAnim.name.startsWith('hair'))
+					{
+						danced = !danced;
 
-					if (danced)
-						playAnim('danceRight');
-					else
-						playAnim('danceLeft');
+						if (danced)
+							playAnim('danceRight');
+						else
+							playAnim('danceLeft');
+					}
 				}
 			}
 		}

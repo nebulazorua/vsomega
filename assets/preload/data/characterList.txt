@@ -15,4 +15,7 @@ bf-pixel
 senpai
 senpai-angry
 spirit
+omega
+angry-omega
+noke
 bf-neb

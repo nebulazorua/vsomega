@@ -27,42 +27,49 @@ class OptionUtils
 	];
 	public static var ratingWindowTypes:Array<Array<Float>> = [ // TODO: make these all properly scale w/ the safeZoneOffset n shit
 		[ // Vanilla
+			22, // epic
 			32, // sick
 			123, // good
 			148, // bad
 			166, // shit
 		],
 		[ // ITG
+			21.5, // epic
 			43, // sick
 			102, // good
 			135, // bad
 			180,
 		],
 		[ // Quaver
+			18, // epic
 			43, // sick
 			76, // good
 			127, // bad
 			164,
 		],
 		[ // Judge 4
+			22.5, // epic
 			45, // sick
 			90, // good
 			135, // bad
 			180, // shit
 		],
 		[ // EMFNF2
+			25, // epic
 			50, // sick
 			124, // good
 			149, // bad
 			166, // shit
 		],
 		[ // BSide Philly
+			0,
 			300,
 			0,
 			0,
 			300,
 		],
 		[ // All sick
+			0,
 			166,
 			0,
 			0,
@@ -144,6 +151,8 @@ class Options
 	public var picoShaders:Bool = true;
 	public var picoCamshake:Bool = true;
 	public var senpaiShaders:Bool = true;
+
+	public var hitSound:Bool = false;
 
 	public function loadOptions(){
 

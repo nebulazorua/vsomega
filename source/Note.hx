@@ -35,6 +35,7 @@ class Note extends FlxSprite
 	public var isGlitch:Bool=false;
 	public var isShield:Bool=false;
 	public var isDischarge:Bool=false;
+	public var whoSingsShit:String = '';
 
 	public var noteScore:Float = 1;
 
@@ -51,6 +52,15 @@ class Note extends FlxSprite
 		if (prevNote == null)
 			prevNote = this;
 
+		switch(whoSingsShit){
+			case 'bf':
+				whoSingsShit='0';
+			case 'omega':
+				whoSingsShit='1';
+			case 'both':
+				whoSingsShit='2';
+		}
+		whoSingsShit = singingShit;
 		// cringe old code
 		if(sword)
 			noteType=1;
@@ -120,6 +130,7 @@ class Note extends FlxSprite
 						setGraphicSize(Std.int(width * .7));
 
 						updateHitbox();
+						offset.x -= 5;
 						antialiasing = true;
 					default:
 						frames = Paths.getSparrowAtlas('NOTE_assets');
@@ -163,7 +174,10 @@ class Note extends FlxSprite
 		switch(noteType){
 			case 1:
 				isSustainNote=false;
+			default:
+
 		}
+
 		// trace(prevNote);
 
 		if (isSustainNote && prevNote != null)
@@ -233,31 +247,51 @@ class Note extends FlxSprite
 	override function update(elapsed:Float)
 	{
 		super.update(elapsed);
+		if(!beingCharted){
+			if (mustPress)
+			{
+				if ((noteType==1 || noteType==2) && strumTime<Conductor.songPosition-20 || strumTime < Conductor.songPosition - Conductor.safeZoneOffset && !wasGoodHit)
+					tooLate = true;
 
-		if (mustPress)
-		{
-			// The * 0.5 is so that it's easier to hit them too late, instead of too early
-				if (strumTime > Conductor.songPosition - (Conductor.safeZoneOffset * 1.5)
-					&& strumTime < Conductor.songPosition + (Conductor.safeZoneOffset * 1))
+				if(!tooLate){
+					switch(noteType){
+						case 2: // glitch notes
+							if (strumTime > Conductor.songPosition - Conductor.safeZoneOffset*.75
+								&& strumTime < Conductor.songPosition + (Conductor.safeZoneOffset * .5))
+								canBeHit = true;
+							else
+								canBeHit = false;
+
+						default: // all others
+							if(isSustainNote){
+								if (strumTime > Conductor.songPosition - Conductor.safeZoneOffset*.25
+									&& strumTime < Conductor.songPosition + Conductor.safeZoneOffset)
+									canBeHit = true;
+								else
+									canBeHit = false;
+							}else{
+								if (strumTime > Conductor.songPosition - (Conductor.safeZoneOffset * 1.5)
+									&& strumTime < Conductor.songPosition + (Conductor.safeZoneOffset * 1))
+									canBeHit = true;
+								else
+									canBeHit = false;
+							}
+					}
+				}
+				if(tooLate)
+					canBeHit=false;
+			}
+			else
+			{
+				if (strumTime <= Conductor.songPosition && noteType!=1 && noteType!=2)
 					canBeHit = true;
-				else
-					canBeHit = false;
+			}
 
-
-
-			if (strumTime < Conductor.songPosition - Conductor.safeZoneOffset && !wasGoodHit)
-				tooLate = true;
-		}
-		else
-		{
-			if (strumTime <= Conductor.songPosition)
-				canBeHit = true;
-		}
-
-		if (tooLate)
-		{
-			if (alpha > 0.3)
-				alpha = 0.3;
+			if (tooLate)
+			{
+				if (alpha > 0.3)
+					alpha = 0.3;
+			}
 		}
 	}
 }
