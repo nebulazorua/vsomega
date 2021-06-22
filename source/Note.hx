@@ -141,10 +141,10 @@ class Note extends FlxSprite
 					case 2:
 						var widMult = .7*scale;
 						frames = Paths.getSparrowAtlas("GLITCH_NOTE");
-						animation.addByPrefix('purpleScroll', 'glitchRIGHT0', 24);
-						animation.addByPrefix('greenScroll', 'glitchUP0', 24);
-						animation.addByPrefix('redScroll', 'glitchLEFT0', 24);
-						animation.addByPrefix('blueScroll', 'glitchDOWN0', 24);
+						animation.addByPrefix('purpleScroll', 'glitchRIGHT0', 24, true);
+						animation.addByPrefix('greenScroll', 'glitchUP0', 24, true);
+						animation.addByPrefix('redScroll', 'glitchLEFT0', 24, true);
+						animation.addByPrefix('blueScroll', 'glitchDOWN0', 24, true);
 
 						animation.addByPrefix('purplehold', 'glitch sus0', 24);
 						animation.addByPrefix('greenhold', 'glitch sus0', 24);
@@ -288,6 +288,10 @@ class Note extends FlxSprite
 
 			if(noteType==2 || PlayState.curStage.startsWith("school")){
 				alpha = 1;
+			}
+
+			if(noteType==2){
+				off = width/4;
 			}
 			offset.x = off;
 

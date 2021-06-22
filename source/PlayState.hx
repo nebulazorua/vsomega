@@ -307,9 +307,8 @@ class PlayState extends MusicBeatState
 
 		if(SONG.song.toLowerCase()=='hivemind'){
 			currentOptions.downScroll=true;
+			currentOptions.ratingInHUD=true;
 			modchart.hudVisible=false;
-			modchart.hideBF=true;
-			modchart.hideGF=true;
 			modchart.playerNoteScale=1.3;
 			modchart.opponentNoteScale=.7;
 		}
@@ -980,7 +979,7 @@ class PlayState extends MusicBeatState
 		{
 			case 'gf':
 				dad.setPosition(gf.x, gf.y);
-				gf.visible = false;
+				gf.visible=false;
 				if (isStoryMode)
 				{
 					camPos.x += 600;
@@ -1015,6 +1014,10 @@ class PlayState extends MusicBeatState
 				dad.y += 300;
 			case 'parents-christmas':
 				dad.x -= 500;
+			case 'noke':
+				dad.y += dad.height/2;
+				dad.y -= 5;
+				dad.x += dad.width/2;
 			case 'senpai':
 				dad.x += 50;
 				dad.y += 500;
@@ -1099,8 +1102,11 @@ class PlayState extends MusicBeatState
 		if (curStage == 'limo')
 			add(limo);
 
-		if(curStage=='omegafield')
+		if(curStage=='omegafield' || curStage=='void')
 			gf.visible=false;
+
+		if(curStage=='void')
+			boyfriend.visible=false;
 
 		add(dad);
 		add(armyRight);
@@ -2233,9 +2239,6 @@ class PlayState extends MusicBeatState
 			lua.call("update",[elapsed]);
 		}
 
-		boyfriend.visible = !modchart.hideBF;
-		gf.visible = !modchart.hideGF;
-		dad.visible = !modchart.hideDad;
 		iconP1.visible = modchart.hudVisible;
 		iconP2.visible = modchart.hudVisible;
 		healthBar.visible = modchart.hudVisible;
@@ -3154,11 +3157,11 @@ class PlayState extends MusicBeatState
 			if (!curStage.startsWith('school'))
 			{
 				numScore.antialiasing = true;
-				numScore.y += 100;
 				numScore.setGraphicSize(Std.int(numScore.width * 0.5));
 			}
 			else
 			{
+				numScore.y += 50;
 				numScore.setGraphicSize(Std.int(numScore.width * 6));
 			}
 			numScore.updateHitbox();
@@ -3198,10 +3201,12 @@ class PlayState extends MusicBeatState
 				numScore.screenCenter();
 				numScore.x = coolText.x + (32 * daLoop) - 25;
 				numScore.y += 130;
+				if(curStage.startsWith("school")){
+					numScore.y += 50;
+				}
 				if(i=='point'){
 					if(!curStage.startsWith("school")){
 						numScore.x += 25;
-						numScore.y += 100;
 					}else{
 						numScore.y += 35;
 						numScore.x += 24;

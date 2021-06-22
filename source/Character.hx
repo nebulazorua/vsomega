@@ -470,14 +470,19 @@ class Character extends FlxSprite
 			case 'noke':
 				frames = Paths.getSparrowAtlas("characters/noke","shared");
 				animation.addByPrefix('idle', 'noke idle', 24);
-				animation.addByPrefix('singUP', 'noke up', 24, false);
-				animation.addByPrefix('singDOWN', 'noke down', 24, false);
-				animation.addByPrefix('singLEFT', 'noke left', 24, false);
-				animation.addByPrefix('singRIGHT', 'noke right', 24, false);
+				animation.addByPrefix('singUP', 'noke up', 24, true);
+				animation.addByPrefix('singDOWN', 'noke down', 24, true);
+				animation.addByPrefix('singLEFT', 'noke left', 24, true);
+				animation.addByPrefix('singRIGHT', 'noke right', 24, true);
+
+				animation.addByPrefix('singUPHHold', 'noke up', 24, true);
+				animation.addByPrefix('singDOWNHold', 'noke down', 24, true);
+				animation.addByPrefix('singLEFTHold', 'noke left', 24, true);
+				animation.addByPrefix('singRIGHTHold', 'noke right', 24, true);
 
 				loadOffsets();
 				playAnim("idle");
-				setGraphicSize(Std.int(width*.6));
+				setGraphicSize(Std.int((width*2)*.6));
 			case 'flexy':
 				frames = Paths.getSparrowAtlas("characters/Flexy","shared");
 				animation.addByPrefix('idle', 'flexy idle', 24, false);
