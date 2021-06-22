@@ -101,9 +101,9 @@ class Character extends FlxSprite
 			case 'gf-pixel':
 				tex = Paths.getSparrowAtlas('characters/gfPixel','shared');
 				frames = tex;
-				animation.addByIndices('singUP', 'GF IDLE', [2], "", 24, false);
-				animation.addByIndices('danceLeft', 'GF IDLE', [30, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], "", 24, false);
-				animation.addByIndices('danceRight', 'GF IDLE', [15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29], "", 24, false);
+				animation.addByIndices('singUP', 'GF Pixel', [0], "", 24, false);
+				animation.addByIndices('danceLeft', 'GF Pixel', [4,5,4,5,4,5,4,5,4,5,4,1,1,1,1], "", 24, false);
+				animation.addByIndices('danceRight', 'GF Pixel', [10,11,10,11,10,11,10,11,10,11,10,1,1,1,1], "", 24, false);
 
 				loadOffsets();
 				playAnim('danceRight');
@@ -307,17 +307,17 @@ class Character extends FlxSprite
 				flipX = true;
 			case 'bf-pixel':
 				frames = Paths.getSparrowAtlas('characters/bfPixel','shared');
-				animation.addByPrefix('idle', 'BF IDLE', 24, false);
-				animation.addByPrefix('singUP', 'BF UP NOTE', 24, false);
-				animation.addByPrefix('singLEFT', 'BF LEFT NOTE', 24, false);
-				animation.addByPrefix('singRIGHT', 'BF RIGHT NOTE', 24, false);
-				animation.addByPrefix('singDOWN', 'BF DOWN NOTE', 24, false);
-				animation.addByPrefix('singUPmiss', 'BF UP MISS', 24, false);
-				animation.addByPrefix('singLEFTmiss', 'BF LEFT MISS', 24, false);
-				animation.addByPrefix('singRIGHTmiss', 'BF RIGHT MISS', 24, false);
-				animation.addByPrefix('singDOWNmiss', 'BF DOWN MISS', 24, false);
+				animation.addByPrefix('idle', 'idle', 24, false);
+				animation.addByPrefix('singUP', 'up0', 24, false);
+				animation.addByPrefix('singLEFT', 'left0', 24, false);
+				animation.addByPrefix('singRIGHT', 'right0', 24, false);
+				animation.addByPrefix('singDOWN', 'down0', 24, false);
+				animation.addByPrefix('singUPmiss', 'up MISS', 24, false);
+				animation.addByPrefix('singLEFTmiss', 'left MISS', 24, false);
+				animation.addByPrefix('singRIGHTmiss', 'right MISS', 24, false);
+				animation.addByPrefix('singDOWNmiss', 'down MISS', 24, false);
 
-				setGraphicSize(Std.int(width * 6));
+				setGraphicSize(Std.int(width * PlayState.daPixelZoom));
 				updateHitbox();
 				loadOffsets();
 				playAnim('idle');
@@ -343,10 +343,25 @@ class Character extends FlxSprite
 				updateHitbox();
 				antialiasing = false;
 				flipX = true;
+			case 'bf-FUCKING-DIES':
+				frames = Paths.getSparrowAtlas('characters/BFFUCKINGDIES','shared');
+				animation.addByPrefix('singUP', "BF Dies", 24, false);
+				animation.addByPrefix('firstDeath', "BF Dies", 24, false);
+				animation.addByPrefix('deathLoop', "Retry Loop", 24, true);
+				animation.addByPrefix('deathConfirm', "RETRY CONFIRM", 24, false);
+				animation.play('firstDeath');
+
+				loadOffsets();
+				playAnim('firstDeath');
+				// pixel bullshit
+				setGraphicSize(Std.int(width * 6));
+				updateHitbox();
+				antialiasing = false;
+				flipX = true;
 
 			case 'senpai':
-				frames = Paths.getSparrowAtlas('characters/senpai','shared');
-				animation.addByPrefix('idle', 'Senpai Idle', 24, false);
+				frames = Paths.getSparrowAtlas('characters/Senpai_Assets','shared');
+				animation.addByPrefix('idle', 'SENPAI Idle', 24, false);
 				animation.addByPrefix('singUP', 'SENPAI UP NOTE', 24, false);
 				animation.addByPrefix('singLEFT', 'SENPAI LEFT NOTE', 24, false);
 				animation.addByPrefix('singRIGHT', 'SENPAI RIGHT NOTE', 24, false);
@@ -355,36 +370,36 @@ class Character extends FlxSprite
 				loadOffsets();
 				playAnim('idle');
 
-				setGraphicSize(Std.int(width * 6));
+				setGraphicSize(Std.int(width * PlayState.daPixelZoom * 1.25));
 				updateHitbox();
 
 				antialiasing = false;
 			case 'senpai-angry':
-				frames = Paths.getSparrowAtlas('characters/senpai','shared');
-				animation.addByPrefix('idle', 'Angry Senpai Idle', 24, false);
-				animation.addByPrefix('singUP', 'Angry Senpai UP NOTE', 24, false);
-				animation.addByPrefix('singLEFT', 'Angry Senpai LEFT NOTE', 24, false);
-				animation.addByPrefix('singRIGHT', 'Angry Senpai RIGHT NOTE', 24, false);
-				animation.addByPrefix('singDOWN', 'Angry Senpai DOWN NOTE', 24, false);
+				frames = Paths.getSparrowAtlas('characters/Senpai_Assets','shared');
+				animation.addByPrefix('idle', 'ANGRY SENPAI Idle', 24, false);
+				animation.addByPrefix('singUP', 'ANGRY SENPAI UP NOTE', 24, false);
+				animation.addByPrefix('singLEFT', 'ANGRY SENPAI LEFT NOTE', 24, false);
+				animation.addByPrefix('singRIGHT', 'ANGRY SENPAI RIGHT NOTE', 24, false);
+				animation.addByPrefix('singDOWN', 'ANGRY SENPAI DOWN NOTE', 24, false);
 
 				loadOffsets();
 				playAnim('idle');
 
-				setGraphicSize(Std.int(width * 6));
+				setGraphicSize(Std.int(width * PlayState.daPixelZoom * 1.25));
 				updateHitbox();
 
 				antialiasing = false;
 
 			case 'spirit':
-				frames = Paths.getPackerAtlas('characters/spirit','shared');
-				animation.addByPrefix('idle', "idle spirit_", 24, false);
-				animation.addByPrefix('singUP', "up_", 24, false);
-				animation.addByPrefix('singRIGHT', "right_", 24, false);
-				animation.addByPrefix('singLEFT', "left_", 24, false);
-				animation.addByPrefix('singDOWN', "spirit down_", 24, false);
+				frames = Paths.getSparrowAtlas('characters/Spirit_Assets','shared');
+				animation.addByPrefix('idle', "idle0", 24, false);
+				animation.addByPrefix('singUP', "up0", 24, false);
+				animation.addByPrefix('singRIGHT', "right0", 24, false);
+				animation.addByPrefix('singLEFT', "left0", 24, false);
+				animation.addByPrefix('singDOWN', "down0", 24, false);
 
 				loadOffsets();
-				setGraphicSize(Std.int(width * 6));
+				setGraphicSize(Std.int(width * PlayState.daPixelZoom));
 				updateHitbox();
 
 				playAnim('idle');
@@ -480,7 +495,7 @@ class Character extends FlxSprite
 				animation.addByPrefix('singDOWN', 'demetrios down', 24, false);
 				animation.addByPrefix('singLEFT', 'demetrios left', 24, false);
 				animation.addByPrefix('singRIGHT', 'demetrios right', 24, false);
-				animation.addByPrefix('discharge', 'demetrios alt', 24, false);
+				animation.addByIndices('discharge', 'demetrios alt', [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,17,18,19,20,21,22,23], '', 24, false);
 
 				animation.addByIndices('singUPHold', 'demetrios up', [11], "", 24, false);
 				animation.addByIndices('singDOWNHold', 'demetrios down', [11], "", 24, false);
@@ -640,13 +655,11 @@ class Character extends FlxSprite
 
 	override function update(elapsed:Float)
 	{
-		if(holding)
-			animation.curAnim.curFrame=0;
 
 		if (!isPlayer)
 		{
 			if(animation.getByName('${animation.curAnim.name}Hold')!=null){
-				animation.paused=false;
+				holding=false;
 				if(animation.curAnim.name.startsWith("sing") && !animation.curAnim.name.endsWith("Hold") && animation.curAnim.finished){
 					playAnim(animation.curAnim.name + "Hold",true);
 				}
@@ -680,9 +693,15 @@ class Character extends FlxSprite
 			case 'bf':
 				if (animation.curAnim.name == 'cut' && animation.curAnim.finished)
 					playAnim('idle');
+			case 'demetrios':
+				if (animation.curAnim.name == 'discharge' && animation.curAnim.finished)
+					playAnim('idle');
 		}
 
 		super.update(elapsed);
+
+		if(holding)
+			animation.curAnim.curFrame=0;
 	}
 
 	private var danced:Bool = false;
@@ -698,7 +717,10 @@ class Character extends FlxSprite
 			switch(curCharacter){
 			case 'bf':
 				if(animation.curAnim.name!='cut')
-				playAnim('idle');
+					playAnim('idle');
+			case 'demetrios':
+				if(animation.curAnim.name!='discharge')
+					playAnim('idle');
 			default:
 				if(animation.getByName("idle")!=null)
 					playAnim("idle");

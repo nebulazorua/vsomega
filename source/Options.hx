@@ -152,6 +152,7 @@ class Options
 	public var picoCamshake:Bool = true;
 	public var senpaiShaders:Bool = true;
 
+	public var freeplayPreview:Bool = true;
 	public var hitSound:Bool = false;
 
 	public function loadOptions(){

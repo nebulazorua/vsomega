@@ -19,7 +19,7 @@ class HealthIcon extends FlxSprite
 		animation.add("icon",[0,1,2],0,false);
 
 		animation.play("icon",true,false,1);
-		if(char=="omega" || char=="angry-omega" || char=="omegabf" || char=="flexy" || char=="omegafriendly"){
+		if(char=="omega" || char=="angry-omega" || char=="omegabf" || char=="flexy" || char=="omegafriendly" || char=="senpai" || char=="senpai-angry" || char=="spirit" || char=="bf-pixel"){
 			iWidth = width*.8;
 			centerOffsets();
 		}

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="tabi.png">
+	<!-- Created with Adobe Animate version 21.0.4.39603 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="tabi0000" x="0" y="0" width="748" height="876" frameX="0" frameY="-57" frameWidth="748" frameHeight="933"/>
+	<SubTexture name="tabi0001" x="0" y="0" width="748" height="876" frameX="0" frameY="-57" frameWidth="748" frameHeight="933"/>
+	<SubTexture name="tabi0002" x="753" y="0" width="744" height="884" frameX="-2" frameY="-49" frameWidth="748" frameHeight="933"/>
+	<SubTexture name="tabi0003" x="753" y="0" width="744" height="884" frameX="-2" frameY="-49" frameWidth="748" frameHeight="933"/>
+	<SubTexture name="tabi0004" x="0" y="889" width="724" height="925" frameX="-12" frameY="-8" frameWidth="748" frameHeight="933"/>
+	<SubTexture name="tabi0005" x="0" y="889" width="724" height="925" frameX="-12" frameY="-8" frameWidth="748" frameHeight="933"/>
+	<SubTexture name="tabi0006" x="729" y="889" width="692" height="933" frameX="-28" frameY="0" frameWidth="748" frameHeight="933"/>
+	<SubTexture name="tabi0007" x="729" y="889" width="692" height="933" frameX="-28" frameY="0" frameWidth="748" frameHeight="933"/>
+	<SubTexture name="tabi0008" x="729" y="889" width="692" height="933" frameX="-28" frameY="0" frameWidth="748" frameHeight="933"/>
+	<SubTexture name="tabi0009" x="729" y="889" width="692" height="933" frameX="-28" frameY="0" frameWidth="748" frameHeight="933"/>
+	<SubTexture name="tabi0010" x="729" y="889" width="692" height="933" frameX="-28" frameY="0" frameWidth="748" frameHeight="933"/>
+	<SubTexture name="tabi0011" x="0" y="0" width="748" height="876" frameX="0" frameY="-57" frameWidth="748" frameHeight="933"/>
+</TextureAtlas>

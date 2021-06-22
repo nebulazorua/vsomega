@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="girlfriend bg.png">
+	<!-- Created with Adobe Animate version 21.0.4.39603 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="gf0000" x="0" y="0" width="307" height="475" frameX="-24" frameY="0" frameWidth="338" frameHeight="475"/>
+	<SubTexture name="gf0001" x="0" y="0" width="307" height="475" frameX="-24" frameY="0" frameWidth="338" frameHeight="475"/>
+	<SubTexture name="gf0002" x="0" y="0" width="307" height="475" frameX="-24" frameY="0" frameWidth="338" frameHeight="475"/>
+	<SubTexture name="gf0003" x="0" y="0" width="307" height="475" frameX="-24" frameY="0" frameWidth="338" frameHeight="475"/>
+	<SubTexture name="gf0004" x="312" y="0" width="324" height="471" frameX="-7" frameY="-4" frameWidth="338" frameHeight="475"/>
+	<SubTexture name="gf0005" x="312" y="0" width="324" height="471" frameX="-7" frameY="-4" frameWidth="338" frameHeight="475"/>
+	<SubTexture name="gf0006" x="641" y="0" width="335" height="471" frameX="0" frameY="-4" frameWidth="338" frameHeight="475"/>
+	<SubTexture name="gf0007" x="641" y="0" width="335" height="471" frameX="0" frameY="-4" frameWidth="338" frameHeight="475"/>
+	<SubTexture name="gf0008" x="981" y="0" width="338" height="471" frameX="0" frameY="-4" frameWidth="338" frameHeight="475"/>
+	<SubTexture name="gf0009" x="981" y="0" width="338" height="471" frameX="0" frameY="-4" frameWidth="338" frameHeight="475"/>
+	<SubTexture name="gf0010" x="1324" y="0" width="336" height="473" frameX="0" frameY="-2" frameWidth="338" frameHeight="475"/>
+	<SubTexture name="gf0011" x="1324" y="0" width="336" height="473" frameX="0" frameY="-2" frameWidth="338" frameHeight="475"/>
+	<SubTexture name="gf0012" x="1665" y="0" width="336" height="473" frameX="0" frameY="-2" frameWidth="338" frameHeight="475"/>
+	<SubTexture name="gf0013" x="0" y="480" width="336" height="473" frameX="0" frameY="-2" frameWidth="338" frameHeight="475"/>
+	<SubTexture name="gf0014" x="0" y="480" width="336" height="473" frameX="0" frameY="-2" frameWidth="338" frameHeight="475"/>
+	<SubTexture name="gf0015" x="0" y="480" width="336" height="473" frameX="0" frameY="-2" frameWidth="338" frameHeight="475"/>
+	<SubTexture name="gf0016" x="0" y="480" width="336" height="473" frameX="0" frameY="-2" frameWidth="338" frameHeight="475"/>
+	<SubTexture name="gf0017" x="0" y="480" width="336" height="473" frameX="0" frameY="-2" frameWidth="338" frameHeight="475"/>
+	<SubTexture name="gf0018" x="0" y="480" width="336" height="473" frameX="0" frameY="-2" frameWidth="338" frameHeight="475"/>
+	<SubTexture name="gf0019" x="341" y="480" width="336" height="473" frameX="0" frameY="-2" frameWidth="338" frameHeight="475"/>
+	<SubTexture name="gf0020" x="682" y="480" width="336" height="473" frameX="0" frameY="-2" frameWidth="338" frameHeight="475"/>
+	<SubTexture name="gf0021" x="682" y="480" width="336" height="473" frameX="0" frameY="-2" frameWidth="338" frameHeight="475"/>
+	<SubTexture name="gf0022" x="682" y="480" width="336" height="473" frameX="0" frameY="-2" frameWidth="338" frameHeight="475"/>
+	<SubTexture name="gf0023" x="682" y="480" width="336" height="473" frameX="0" frameY="-2" frameWidth="338" frameHeight="475"/>
+</TextureAtlas>

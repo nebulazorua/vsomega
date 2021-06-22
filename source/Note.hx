@@ -92,7 +92,7 @@ class Note extends FlxSprite
 		{
 			case 'school' | 'schoolEvil':
 				var scale = gottaHitNote?PlayState.currentPState.modchart.playerNoteScale:PlayState.currentPState.modchart.opponentNoteScale;
-				loadGraphic(Paths.image('weeb/pixelUI/arrows-pixels'), true, 17, 17);
+				loadGraphic(Paths.image('weeb/pixelUI/arrows-pixels'), true, 16, 16);
 
 				animation.add('greenScroll', [6]);
 				animation.add('redScroll', [7]);
@@ -114,7 +114,7 @@ class Note extends FlxSprite
 					animation.add('bluehold', [1]);
 				}
 
-				setGraphicSize(Std.int(width * PlayState.daPixelZoom * scale));
+				setGraphicSize(Std.int(width * 6 * scale));
 				updateHitbox();
 
 			default:
@@ -136,7 +136,67 @@ class Note extends FlxSprite
 						setGraphicSize(Std.int(width * widMult));
 
 						updateHitbox();
-						offset.x -= 5*scale;
+						offset.x -= 10*scale;
+						antialiasing = true;
+					case 2:
+						var widMult = .7*scale;
+						frames = Paths.getSparrowAtlas("GLITCH_NOTE");
+						animation.addByPrefix('purpleScroll', 'glitchRIGHT0', 24);
+						animation.addByPrefix('greenScroll', 'glitchUP0', 24);
+						animation.addByPrefix('redScroll', 'glitchLEFT0', 24);
+						animation.addByPrefix('blueScroll', 'glitchDOWN0', 24);
+
+						animation.addByPrefix('purplehold', 'glitch sus0', 24);
+						animation.addByPrefix('greenhold', 'glitch sus0', 24);
+						animation.addByPrefix('redhold', 'glitch sus0', 24);
+						animation.addByPrefix('bluehold', 'glitch sus0', 24);
+
+						animation.addByPrefix('purpleholdend', 'glitch sus end', 24);
+						animation.addByPrefix('greenholdend', 'glitch sus end', 24);
+						animation.addByPrefix('redholdend', 'glitch sus end', 24);
+						animation.addByPrefix('blueholdend', 'glitch sus end', 24);
+
+						setGraphicSize(Std.int(width * widMult));
+						updateHitbox();
+						antialiasing = true;
+					case 3:
+						var widMult = .7*scale;
+						isSustainNote=false;
+						if(PlayState.SONG.player2=='merchant' ){
+							frames = Paths.getSparrowAtlas('Gold_notes');
+
+							animation.addByPrefix('greenScroll', 'green0');
+							animation.addByPrefix('redScroll', 'red0');
+							animation.addByPrefix('blueScroll', 'blue0');
+							animation.addByPrefix('purpleScroll', 'purple0');
+							setGraphicSize(Std.int(width * widMult));
+							updateHitbox();
+							antialiasing = true;
+						}else{
+							frames = Paths.getSparrowAtlas('SHIELD_NOTE');
+
+							animation.addByPrefix('greenScroll', 'Shield Note0');
+							animation.addByPrefix('redScroll', 'Shield Note0');
+							animation.addByPrefix('blueScroll', 'Shield Note0');
+							animation.addByPrefix('purpleScroll', 'Shield Note0');
+							setGraphicSize(Std.int(width * widMult));
+							updateHitbox();
+							antialiasing = true;
+						}
+					case 4:
+						isSustainNote=false;
+						var widMult = .7*scale;
+						frames = Paths.getSparrowAtlas('FoguCrush_NOTE');
+
+						animation.addByPrefix('greenScroll', 'Lightning0');
+						animation.addByPrefix('redScroll', 'Lightning0');
+						animation.addByPrefix('blueScroll', 'Lightning0');
+						animation.addByPrefix('purpleScroll', 'Lightning0');
+
+
+						setGraphicSize(Std.int(width * widMult));
+						offset.x += (width*widMult)/2 - 13.8;
+						offset.y += (width*widMult)/2 - 13;
 						antialiasing = true;
 					default:
 						var widMult = .7*scale;
@@ -192,7 +252,8 @@ class Note extends FlxSprite
 			var scale = gottaHitNote?PlayState.currentPState.modchart.playerNoteScale:PlayState.currentPState.modchart.opponentNoteScale;
 			prevNote.holdParent=true;
 			noteScore * 0.2;
-			alpha = 0.6;
+			if(!PlayState.curStage.startsWith("school"))
+				alpha = 0.6;
 
 			//var off = -width;
 			var off = -width/4;
@@ -220,13 +281,15 @@ class Note extends FlxSprite
 			//off -= width / 2;
 			//x -= width / 2;
 			if (PlayState.curStage.startsWith('school'))
-				off -= 36.5;
+				off -= 34;
 			else
 				off -= 2;
 
 
-
-			offset.x = off*scale;
+			if(noteType==2 || PlayState.curStage.startsWith("school")){
+				alpha = 1;
+			}
+			offset.x = off;
 
 			if (prevNote.isSustainNote)
 			{
@@ -256,7 +319,6 @@ class Note extends FlxSprite
 
 	override function update(elapsed:Float)
 	{
-		super.update(elapsed);
 		if(!beingCharted){
 			if (mustPress)
 			{
@@ -266,16 +328,25 @@ class Note extends FlxSprite
 				if(!tooLate){
 					switch(noteType){
 						case 2: // glitch notes
-							if (strumTime > Conductor.songPosition - Conductor.safeZoneOffset*.75
-								&& strumTime < Conductor.songPosition + (Conductor.safeZoneOffset * .5))
-								canBeHit = true;
-							else
-								canBeHit = false;
+							if(isSustainNote){
+								if (strumTime > Conductor.songPosition - 25
+									&& strumTime < Conductor.songPosition + 50)
+									canBeHit = true;
+								else
+									canBeHit = false;
+							}else{
+								if (strumTime > Conductor.songPosition - Conductor.safeZoneOffset*.75
+									&& strumTime < Conductor.songPosition + (Conductor.safeZoneOffset * .5))
+									canBeHit = true;
+								else
+									canBeHit = false;
+							}
+
 
 						default: // all others
 							if(isSustainNote){
-								if (strumTime > Conductor.songPosition - Conductor.safeZoneOffset*.25
-									&& strumTime < Conductor.songPosition + Conductor.safeZoneOffset)
+								if (strumTime > Conductor.songPosition - 80
+									&& strumTime < Conductor.songPosition + 60)
 									canBeHit = true;
 								else
 									canBeHit = false;
@@ -297,11 +368,12 @@ class Note extends FlxSprite
 					canBeHit = true;
 			}
 
-			if (tooLate)
+			if (tooLate && !PlayState.curStage.startsWith("school"))
 			{
 				if (alpha > 0.3)
 					alpha = 0.3;
 			}
 		}
+		super.update(elapsed);
 	}
 }

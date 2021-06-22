@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="anders my beloved.png">
+	<!-- Created with Adobe Animate version 21.0.4.39603 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="anders my lover0000" x="0" y="0" width="405" height="368" frameX="0" frameY="0" frameWidth="421" frameHeight="380"/>
+	<SubTexture name="anders my lover0001" x="0" y="0" width="405" height="368" frameX="0" frameY="0" frameWidth="421" frameHeight="380"/>
+	<SubTexture name="anders my lover0002" x="0" y="0" width="405" height="368" frameX="0" frameY="0" frameWidth="421" frameHeight="380"/>
+	<SubTexture name="anders my lover0003" x="0" y="0" width="405" height="368" frameX="0" frameY="0" frameWidth="421" frameHeight="380"/>
+	<SubTexture name="anders my lover0004" x="410" y="0" width="405" height="362" frameX="0" frameY="-12" frameWidth="421" frameHeight="380"/>
+	<SubTexture name="anders my lover0005" x="410" y="0" width="405" height="362" frameX="0" frameY="-12" frameWidth="421" frameHeight="380"/>
+	<SubTexture name="anders my lover0006" x="820" y="0" width="417" height="356" frameX="0" frameY="-24" frameWidth="421" frameHeight="380"/>
+	<SubTexture name="anders my lover0007" x="820" y="0" width="417" height="356" frameX="0" frameY="-24" frameWidth="421" frameHeight="380"/>
+	<SubTexture name="anders my lover0008" x="1242" y="0" width="421" height="352" frameX="0" frameY="-24" frameWidth="421" frameHeight="380"/>
+	<SubTexture name="anders my lover0009" x="1242" y="0" width="421" height="352" frameX="0" frameY="-24" frameWidth="421" frameHeight="380"/>
+	<SubTexture name="anders my lover0010" x="0" y="373" width="413" height="360" frameX="0" frameY="-16" frameWidth="421" frameHeight="380"/>
+	<SubTexture name="anders my lover0011" x="0" y="373" width="413" height="360" frameX="0" frameY="-16" frameWidth="421" frameHeight="380"/>
+	<SubTexture name="anders my lover0012" x="418" y="373" width="413" height="376" frameX="0" frameY="0" frameWidth="421" frameHeight="380"/>
+	<SubTexture name="anders my lover0013" x="418" y="373" width="413" height="376" frameX="0" frameY="0" frameWidth="421" frameHeight="380"/>
+	<SubTexture name="anders my lover0014" x="418" y="373" width="413" height="376" frameX="0" frameY="0" frameWidth="421" frameHeight="380"/>
+	<SubTexture name="anders my lover0015" x="418" y="373" width="413" height="376" frameX="0" frameY="0" frameWidth="421" frameHeight="380"/>
+	<SubTexture name="anders my lover0016" x="418" y="373" width="413" height="376" frameX="0" frameY="0" frameWidth="421" frameHeight="380"/>
+	<SubTexture name="anders my lover0017" x="418" y="373" width="413" height="376" frameX="0" frameY="0" frameWidth="421" frameHeight="380"/>
+	<SubTexture name="anders my lover0018" x="418" y="373" width="413" height="376" frameX="0" frameY="0" frameWidth="421" frameHeight="380"/>
+	<SubTexture name="anders my lover0019" x="418" y="373" width="413" height="376" frameX="0" frameY="0" frameWidth="421" frameHeight="380"/>
+	<SubTexture name="anders my lover0020" x="418" y="373" width="413" height="376" frameX="0" frameY="0" frameWidth="421" frameHeight="380"/>
+	<SubTexture name="anders my lover0021" x="418" y="373" width="413" height="376" frameX="0" frameY="0" frameWidth="421" frameHeight="380"/>
+	<SubTexture name="anders my lover0022" x="418" y="373" width="413" height="376" frameX="0" frameY="0" frameWidth="421" frameHeight="380"/>
+	<SubTexture name="anders my lover0023" x="418" y="373" width="413" height="376" frameX="0" frameY="0" frameWidth="421" frameHeight="380"/>
+</TextureAtlas>

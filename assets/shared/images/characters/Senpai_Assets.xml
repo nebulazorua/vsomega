@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Senpai_Assets.png">
+	<!-- Created with Adobe Animate version 21.0.4.39603 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="ANGRY SENPAI DOWN NOTE0000" x="0" y="0" width="8" height="12"/>
+	<SubTexture name="ANGRY SENPAI DOWN NOTE0001" x="0" y="0" width="8" height="12"/>
+	<SubTexture name="ANGRY SENPAI DOWN NOTE0002" x="13" y="0" width="8" height="12"/>
+	<SubTexture name="ANGRY SENPAI DOWN NOTE0003" x="13" y="0" width="8" height="12"/>
+	<SubTexture name="ANGRY SENPAI Idle0000" x="26" y="0" width="8" height="12"/>
+	<SubTexture name="ANGRY SENPAI Idle0001" x="26" y="0" width="8" height="12"/>
+	<SubTexture name="ANGRY SENPAI Idle0002" x="39" y="0" width="8" height="12"/>
+	<SubTexture name="ANGRY SENPAI Idle0003" x="39" y="0" width="8" height="12"/>
+	<SubTexture name="ANGRY SENPAI Idle0004" x="52" y="0" width="8" height="12"/>
+	<SubTexture name="ANGRY SENPAI Idle0005" x="52" y="0" width="8" height="12"/>
+	<SubTexture name="ANGRY SENPAI Idle0006" x="52" y="0" width="8" height="12"/>
+	<SubTexture name="ANGRY SENPAI Idle0007" x="52" y="0" width="8" height="12"/>
+	<SubTexture name="ANGRY SENPAI Idle0008" x="65" y="0" width="8" height="12"/>
+	<SubTexture name="ANGRY SENPAI Idle0009" x="65" y="0" width="8" height="12"/>
+	<SubTexture name="ANGRY SENPAI Idle0010" x="78" y="0" width="8" height="12"/>
+	<SubTexture name="ANGRY SENPAI Idle0011" x="78" y="0" width="8" height="12"/>
+	<SubTexture name="ANGRY SENPAI LEFT NOTE0000" x="91" y="0" width="8" height="12"/>
+	<SubTexture name="ANGRY SENPAI LEFT NOTE0001" x="91" y="0" width="8" height="12"/>
+	<SubTexture name="ANGRY SENPAI LEFT NOTE0002" x="104" y="0" width="8" height="12"/>
+	<SubTexture name="ANGRY SENPAI LEFT NOTE0003" x="104" y="0" width="8" height="12"/>
+	<SubTexture name="ANGRY SENPAI RIGHT NOTE0000" x="117" y="0" width="8" height="12"/>
+	<SubTexture name="ANGRY SENPAI RIGHT NOTE0001" x="117" y="0" width="8" height="12"/>
+	<SubTexture name="ANGRY SENPAI RIGHT NOTE0002" x="0" y="17" width="8" height="12"/>
+	<SubTexture name="ANGRY SENPAI RIGHT NOTE0003" x="0" y="17" width="8" height="12"/>
+	<SubTexture name="ANGRY SENPAI UP NOTE0000" x="13" y="17" width="8" height="12"/>
+	<SubTexture name="ANGRY SENPAI UP NOTE0001" x="13" y="17" width="8" height="12"/>
+	<SubTexture name="ANGRY SENPAI UP NOTE0002" x="26" y="17" width="8" height="12"/>
+	<SubTexture name="ANGRY SENPAI UP NOTE0003" x="26" y="17" width="8" height="12"/>
+	<SubTexture name="SENPAI DOWN NOTE0000" x="39" y="17" width="8" height="12"/>
+	<SubTexture name="SENPAI DOWN NOTE0001" x="39" y="17" width="8" height="12"/>
+	<SubTexture name="SENPAI DOWN NOTE0002" x="52" y="17" width="8" height="12"/>
+	<SubTexture name="SENPAI DOWN NOTE0003" x="52" y="17" width="8" height="12"/>
+	<SubTexture name="SENPAI Idle0000" x="65" y="17" width="8" height="12"/>
+	<SubTexture name="SENPAI Idle0001" x="65" y="17" width="8" height="12"/>
+	<SubTexture name="SENPAI Idle0002" x="78" y="17" width="8" height="12"/>
+	<SubTexture name="SENPAI Idle0003" x="78" y="17" width="8" height="12"/>
+	<SubTexture name="SENPAI Idle0004" x="91" y="17" width="8" height="12"/>
+	<SubTexture name="SENPAI Idle0005" x="91" y="17" width="8" height="12"/>
+	<SubTexture name="SENPAI Idle0006" x="91" y="17" width="8" height="12"/>
+	<SubTexture name="SENPAI Idle0007" x="91" y="17" width="8" height="12"/>
+	<SubTexture name="SENPAI Idle0008" x="104" y="17" width="8" height="12"/>
+	<SubTexture name="SENPAI Idle0009" x="104" y="17" width="8" height="12"/>
+	<SubTexture name="SENPAI Idle0010" x="117" y="17" width="8" height="12"/>
+	<SubTexture name="SENPAI Idle0011" x="117" y="17" width="8" height="12"/>
+	<SubTexture name="SENPAI LEFT NOTE0000" x="0" y="34" width="8" height="12"/>
+	<SubTexture name="SENPAI LEFT NOTE0001" x="0" y="34" width="8" height="12"/>
+	<SubTexture name="SENPAI LEFT NOTE0002" x="13" y="34" width="8" height="12"/>
+	<SubTexture name="SENPAI LEFT NOTE0003" x="13" y="34" width="8" height="12"/>
+	<SubTexture name="SENPAI RIGHT NOTE0000" x="26" y="34" width="8" height="12"/>
+	<SubTexture name="SENPAI RIGHT NOTE0001" x="26" y="34" width="8" height="12"/>
+	<SubTexture name="SENPAI RIGHT NOTE0002" x="39" y="34" width="8" height="12"/>
+	<SubTexture name="SENPAI RIGHT NOTE0003" x="39" y="34" width="8" height="12"/>
+	<SubTexture name="SENPAI UP NOTE0000" x="52" y="34" width="8" height="12"/>
+	<SubTexture name="SENPAI UP NOTE0001" x="52" y="34" width="8" height="12"/>
+	<SubTexture name="SENPAI UP NOTE0002" x="65" y="34" width="8" height="12"/>
+	<SubTexture name="SENPAI UP NOTE0003" x="65" y="34" width="8" height="12"/>
+</TextureAtlas>
