@@ -898,7 +898,7 @@ class ChartingState extends MusicBeatState
  			var daStrumTime = i[0];
  			var daSus = i[2];
 
- 			var note:Note = new Note(daStrumTime, daNoteInfo % 4, null, false, false, i[3], i[4], i[5], i[6], i[7]);
+ 			var note:Note = new Note(daStrumTime, daNoteInfo % 4, null, false, false, i[3], i[4], i[5], i[6], i[7], i[8]);
  			note.rawNoteData = daNoteInfo;
  			note.sustainLength = daSus;
  			note.beingCharted = true;
@@ -920,7 +920,7 @@ class ChartingState extends MusicBeatState
  				var sus = [];
  				for (susNote in 0...Math.floor(daSus))
  				{
- 					var sustainNote:Note = new Note(daStrumTime + (Conductor.stepCrochet * susNote) + Conductor.stepCrochet, daNoteInfo % 4, oldNote, false, true, i[3], i[4], i[5], i[6], i[7]);
+ 					var sustainNote:Note = new Note(daStrumTime + (Conductor.stepCrochet * susNote) + Conductor.stepCrochet, daNoteInfo % 4, oldNote, false, true, i[3], i[4], i[5], i[6], i[7], i[8]);
  					sustainNote.rawNoteData = daNoteInfo;
  					sustainNote.beingCharted = true;
  					sustainNote.setGraphicSize(GRID_SIZE, GRID_SIZE);
@@ -934,7 +934,7 @@ class ChartingState extends MusicBeatState
  				}
  				for(i in curRenderedSustains){
 					switch(i.noteType){
-						case 0:
+						default:
 		 					if(i.animation.curAnim.name.endsWith("end") ){
 		 						if(PlayState.curStage.startsWith("school")){
 		 							i.setGraphicSize(Std.int(GRID_SIZE*.35), Std.int(GRID_SIZE*.35));
@@ -1035,11 +1035,15 @@ class ChartingState extends MusicBeatState
 		var noteData = Math.floor(FlxG.mouse.x / GRID_SIZE);
 		var noteSus = 0;
 		if (FlxG.keys.pressed.ALT){
-			_song.notes[curSection].sectionNotes.push([noteStrum, noteData, noteSus, false, rightClick, whosSingingShit.selectedId,false,false]);
+			_song.notes[curSection].sectionNotes.push([noteStrum, noteData, noteSus, false, rightClick, whosSingingShit.selectedId,false,false,0]);
 		}else if (FlxG.keys.pressed.ONE){
-			_song.notes[curSection].sectionNotes.push([noteStrum, noteData, noteSus, false, false, whosSingingShit.selectedId,!rightClick,rightClick]);
+			_song.notes[curSection].sectionNotes.push([noteStrum, noteData, noteSus, false, false, whosSingingShit.selectedId,!rightClick,rightClick,0]);
+		}else if(FlxG.keys.pressed.TWO){
+			_song.notes[curSection].sectionNotes.push([noteStrum, noteData, noteSus, false, false, whosSingingShit.selectedId,false,false,rightClick==false?5:0]);
+		}else if(FlxG.keys.pressed.THREE){
+			_song.notes[curSection].sectionNotes.push([noteStrum, noteData, noteSus, false, false, whosSingingShit.selectedId,false,false,rightClick==false?6:7]);
 		}else{
-			_song.notes[curSection].sectionNotes.push([noteStrum, noteData, noteSus, rightClick, false, whosSingingShit.selectedId,false,false]);
+			_song.notes[curSection].sectionNotes.push([noteStrum, noteData, noteSus, rightClick, false, whosSingingShit.selectedId,false,false,0]);
 		};
 
 		curSelectedNote = _song.notes[curSection].sectionNotes[_song.notes[curSection].sectionNotes.length - 1];
@@ -1049,6 +1053,8 @@ class ChartingState extends MusicBeatState
 				_song.notes[curSection].sectionNotes.push([noteStrum, (noteData+4)%8, noteSus, false, rightClick, whosSingingShit.selectedId,false,false]);
 			}else if (FlxG.keys.pressed.ONE){
 				_song.notes[curSection].sectionNotes.push([noteStrum, (noteData+4)%8, noteSus, false, false, whosSingingShit.selectedId,!rightClick,rightClick]);
+			}else if(FlxG.keys.pressed.TWO){
+				_song.notes[curSection].sectionNotes.push([noteStrum, (noteData+4)%8, noteSus, false, false, whosSingingShit.selectedId,false,false,rightClick==false?5:0]);
 			}else{
 				_song.notes[curSection].sectionNotes.push([noteStrum, (noteData+4)%8, noteSus, rightClick, false, whosSingingShit.selectedId,false,false]);
 			};

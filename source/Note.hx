@@ -45,7 +45,7 @@ class Note extends FlxSprite
 	public static var BLUE_NOTE:Int = 1;
 	public static var RED_NOTE:Int = 3;
 
-	public function new(strumTime:Float, noteData:Int, ?prevNote:Note, ?gottaHitNote:Bool=false, ?sustainNote:Bool = false, ?sword:Bool = false, ?glitch:Bool = false, ?singingShit:String = "0", ?shield:Bool=false,?discharge:Bool=false)
+	public function new(strumTime:Float, noteData:Int, ?prevNote:Note, ?gottaHitNote:Bool=false, ?sustainNote:Bool = false, ?sword:Bool = false, ?glitch:Bool = false, ?singingShit:String = "0", ?shield:Bool=false,?discharge:Bool=false,?type:Int=0)
 	{
 		super();
 
@@ -76,6 +76,10 @@ class Note extends FlxSprite
 
 		if(discharge)
 			noteType=4;
+
+		if(type!=0 && noteType==0){
+			noteType=type;
+		}
 		this.prevNote = prevNote;
 		isSustainNote = sustainNote;
 
@@ -87,11 +91,12 @@ class Note extends FlxSprite
 		this.noteData = noteData;
 
 		var daStage:String = PlayState.curStage;
+		var scale = gottaHitNote?PlayState.currentPState.modchart.playerNoteScale:PlayState.currentPState.modchart.opponentNoteScale;
 
 		switch (daStage)
 		{
 			case 'school' | 'schoolEvil':
-				var scale = gottaHitNote?PlayState.currentPState.modchart.playerNoteScale:PlayState.currentPState.modchart.opponentNoteScale;
+
 				loadGraphic(Paths.image('weeb/pixelUI/arrows-pixels'), true, 16, 16);
 
 				animation.add('greenScroll', [6]);
@@ -118,7 +123,6 @@ class Note extends FlxSprite
 				updateHitbox();
 
 			default:
-				var scale = gottaHitNote?PlayState.currentPState.modchart.playerNoteScale:PlayState.currentPState.modchart.opponentNoteScale;
 				switch(noteType){
 					case 1:
 						var widMult = .7*scale;
@@ -197,6 +201,68 @@ class Note extends FlxSprite
 						setGraphicSize(Std.int(width * widMult));
 						offset.x += (width*widMult)/2 - 13.8;
 						offset.y += (width*widMult)/2 - 13;
+						antialiasing = true;
+					case 5: // torch
+						isSustainNote=false;
+						var widMult = .6*scale;
+						frames = Paths.getSparrowAtlas('TORCHES');
+
+						animation.addByPrefix('greenScroll', 'green0');
+						animation.addByPrefix('redScroll', 'red0');
+						animation.addByPrefix('blueScroll', 'blue0');
+						animation.addByPrefix('purpleScroll', 'purple0');
+						setGraphicSize(Std.int(width * widMult));
+						offset.x += (width*widMult)/2 - 13.8;
+						offset.y += (height*widMult)/2 + 16;
+						antialiasing = true;
+					case 6: // gem
+						var widMult = .7*scale;
+						if(isSustainNote){
+							frames = Paths.getSparrowAtlas('NOTE_assets');
+
+							animation.addByPrefix('greenScroll', 'green0');
+							animation.addByPrefix('redScroll', 'red0');
+							animation.addByPrefix('blueScroll', 'blue0');
+							animation.addByPrefix('purpleScroll', 'purple0');
+
+							animation.addByPrefix('purpleholdend', 'pruple end hold');
+							animation.addByPrefix('greenholdend', 'green hold end');
+							animation.addByPrefix('redholdend', 'red hold end');
+							animation.addByPrefix('blueholdend', 'blue hold end');
+
+							animation.addByPrefix('purplehold', 'purple hold piece');
+							animation.addByPrefix('greenhold', 'green hold piece');
+							animation.addByPrefix('redhold', 'red hold piece');
+							animation.addByPrefix('bluehold', 'blue hold piece');
+						}else{
+							frames = Paths.getSparrowAtlas('GEMS');
+
+							animation.addByPrefix('greenScroll', 'green0');
+							animation.addByPrefix('redScroll', 'red0');
+							animation.addByPrefix('blueScroll', 'blue0');
+							animation.addByPrefix('purpleScroll', 'purple0');
+						}
+						setGraphicSize(Std.int(width * widMult));
+						if(!isSustainNote){
+							offset.x += (width*widMult)/2 - 30;
+							offset.y += 13;
+						}else
+							updateHitbox();
+						antialiasing = true;
+
+
+					case 7: // gem
+						isSustainNote=false;
+						var widMult = .7*scale;
+						frames = Paths.getSparrowAtlas('BLACKGEMS');
+
+						animation.addByPrefix('greenScroll', 'green0');
+						animation.addByPrefix('redScroll', 'red0');
+						animation.addByPrefix('blueScroll', 'blue0');
+						animation.addByPrefix('purpleScroll', 'purple0');
+						setGraphicSize(Std.int(width * widMult));
+						offset.x += (width*widMult)/2 - 30;
+						offset.y += 13;
 						antialiasing = true;
 					default:
 						var widMult = .7*scale;
@@ -293,7 +359,7 @@ class Note extends FlxSprite
 			if(noteType==2){
 				off = width/4;
 			}
-			offset.x = off;
+			offset.x = off*scale;
 
 			if (prevNote.isSustainNote)
 			{
@@ -326,7 +392,7 @@ class Note extends FlxSprite
 		if(!beingCharted){
 			if (mustPress)
 			{
-				if ((noteType==1 || noteType==2) && strumTime<Conductor.songPosition-20 || strumTime < Conductor.songPosition - Conductor.safeZoneOffset && !wasGoodHit)
+				if ((noteType==1 || noteType==2 || noteType==5) && strumTime<Conductor.songPosition-20 || strumTime < Conductor.songPosition - Conductor.safeZoneOffset && !wasGoodHit)
 					tooLate = true;
 
 				if(!tooLate){
@@ -345,8 +411,12 @@ class Note extends FlxSprite
 								else
 									canBeHit = false;
 							}
-
-
+						case 5: // torch
+							if (strumTime > Conductor.songPosition - Conductor.safeZoneOffset*1
+								&& strumTime < Conductor.songPosition + (Conductor.safeZoneOffset * .75))
+								canBeHit = true;
+							else
+								canBeHit = false;
 						default: // all others
 							if(isSustainNote){
 								if (strumTime > Conductor.songPosition - 80

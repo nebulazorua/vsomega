@@ -187,6 +187,9 @@ class PlayState extends MusicBeatState
 	var discharging:Bool = false;
 	var dischargeHP:Float = 1;
 
+	var burnTimer:Float = 0;
+	var burnTicks:Float = .25;
+
 	var phillyCityLights:FlxTypedGroup<FlxSprite>;
 	var lightFadeShader:BuildingEffect;
 	var vcrDistortionHUD:VCRDistortionEffect;
@@ -441,6 +444,8 @@ class PlayState extends MusicBeatState
 	                          halloweenBG.animation.addByPrefix('lightning', 'halloweem bg lightning strike', 24, false);
 	                          halloweenBG.animation.play('idle');
 	                          halloweenBG.antialiasing = true;
+														halloweenBG.setGraphicSize(Std.int(halloweenBG.width*1.57));
+														halloweenBG.updateHitbox();
 	                          add(halloweenBG);
 
 		                  isHalloween = true;
@@ -1104,6 +1109,9 @@ class PlayState extends MusicBeatState
 
 		if(curStage=='omegafield' || curStage=='void')
 			gf.visible=false;
+
+		if(SONG.song.toLowerCase()=='salem')
+			burnTicks=.1;
 
 		if(curStage=='void')
 			boyfriend.visible=false;
@@ -1817,7 +1825,7 @@ class PlayState extends MusicBeatState
 				else
 					oldNote = null;
 
-				var swagNote:Note = new Note(daStrumTime, daNoteData, oldNote, gottaHitNote, false, songNotes[3], songNotes[4], songNotes[5],songNotes[6],songNotes[7]);
+				var swagNote:Note = new Note(daStrumTime, daNoteData, oldNote, gottaHitNote, false, songNotes[3], songNotes[4], songNotes[5],songNotes[6],songNotes[7],songNotes[8]);
 
 				swagNote.sustainLength = songNotes[2];
 				swagNote.scrollFactor.set(0, 0);
@@ -1832,7 +1840,7 @@ class PlayState extends MusicBeatState
 				{
 					oldNote = unspawnNotes[Std.int(unspawnNotes.length - 1)];
 
-					var sustainNote:Note = new Note(daStrumTime + (Conductor.stepCrochet * susNote) + Conductor.stepCrochet, daNoteData, oldNote, gottaHitNote, true, songNotes[3],songNotes[4], songNotes[5],songNotes[6],songNotes[7]);
+					var sustainNote:Note = new Note(daStrumTime + (Conductor.stepCrochet * susNote) + Conductor.stepCrochet, daNoteData, oldNote, gottaHitNote, true, songNotes[3],songNotes[4], songNotes[5],songNotes[6],songNotes[7],songNotes[8]);
 					sustainNote.scrollFactor.set();
 					unspawnNotes.push(sustainNote);
 
@@ -2148,6 +2156,8 @@ class PlayState extends MusicBeatState
 		}
 	}
 
+	var burnTicker:Float = 0;
+	var salemBurnTicker:Float = 0;
 	override public function update(elapsed:Float)
 	{
 		#if !debug
@@ -2257,6 +2267,27 @@ class PlayState extends MusicBeatState
 
 
 		super.update(elapsed);
+		if(burnTimer>0){
+			// TODO: Animation?
+			burnTimer-=elapsed;
+			burnTicker+=elapsed;
+			if(burnTimer<0)burnTimer=0;
+			if(burnTicker>=burnTicks){
+				burnTicker-=burnTicks;
+				health-=.05;
+			}
+		}
+
+		if(SONG.song.toLowerCase()=='salem'){
+			salemBurnTicker+=elapsed;
+			if(salemBurnTicker>=.3){
+				salemBurnTicker-=.3;
+				if(health>.01){
+					health-=.01;
+				}
+			}
+		}
+
 		if(discharging){
 			gf.playAnim("scared",true);
 			var damage = 2*elapsed;
@@ -2842,7 +2873,12 @@ class PlayState extends MusicBeatState
 								camHUD.shake(.01,.4);
 								FlxG.sound.play(Paths.sound('discharge'), 1);
 							});
+						}else if (daNote.noteType==6){
+							health-=.015;
+						}else if (daNote.noteType==7){
+							health=.01;
 						}
+
 
 						if((dadDir==-1 || daNote.noteData<dadDir || anim=='discharge') && dadAnim!='discharge' ){
 							dadDir=daNote.noteData;
@@ -2907,6 +2943,9 @@ class PlayState extends MusicBeatState
 					{
 						trace("miss");
 						if(!daNote.isSustainNote){
+							if(daNote.noteType==6){
+								health -= 1.99;
+							}
 							noteMiss(daNote.noteData);
 						}else{
 							combo=0;
@@ -3522,6 +3561,8 @@ class PlayState extends MusicBeatState
 					swordNoteHit(note);
 				case 2:
 					health=-1;
+				case 5:
+					torchNoteHit(note);
 				default:
 					goodNoteHit(note);
 			}
@@ -3643,6 +3684,44 @@ class PlayState extends MusicBeatState
 			}
 		}
 
+	function torchNoteHit(note:Note):Void
+		{
+
+			if (!note.wasGoodHit)
+			{
+				if (!note.isSustainNote)
+				{
+					combo=0;
+
+					if(combo>highestCombo)
+						highestCombo=combo;
+
+					highComboTxt.text = "Highest Combo: " + highestCombo;
+				}
+				if(SONG.song.toLowerCase()=='salem'){
+					if(burnTimer<=0)
+						burnTimer=1;
+					else
+						burnTimer+=1;
+				}else{
+					if(burnTimer<=0)
+						burnTimer=2;
+					else
+						burnTimer+=.25;
+				}
+
+				FlxG.sound.play(Paths.sound('TorchSFX'), 1);
+
+				misses++;
+
+				note.wasGoodHit = true;
+				vocals.volume = 0;
+
+				updateAccuracy();
+				missesTxt.text = "Miss: " + misses;
+			}
+		}
+
 	function goodNoteHit(note:Note):Void
 	{
 		if (!note.isSustainNote)
@@ -3677,10 +3756,12 @@ class PlayState extends MusicBeatState
 		}
 
 
-		if (note.noteData >= 0)
-			health += 0.023;
+		if (note.noteType ==6)
+			health += 0.04;
+		else if(note.noteType==7)
+			health = .01;
 		else
-			health += 0.004;
+			health += 0.023;
 
 		previousHealth=health;
 		if(luaModchartExists && lua!=null)
