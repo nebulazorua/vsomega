@@ -96,6 +96,8 @@ class PlayState extends MusicBeatState
 	private var curSection:Int = 0;
 
 	private var camFollow:FlxObject;
+	private var aCamFollow:FlxObject;
+
 	public var currentOptions:Options;
 
 	private static var prevCamFollow:FlxObject;
@@ -211,6 +213,18 @@ class PlayState extends MusicBeatState
 	var grpLimoDancers:FlxTypedGroup<BackgroundDancer>;
 	var fastCar:FlxSprite;
 
+	var anders:FlxSprite; // flecy
+	var racistgfwtf:FlxSprite; // ditto
+	var carol:FlxSprite; // ditto
+	var kfc:FlxSprite; // ditto
+
+	var vietnamFlashbacks=false; // IM NOT FINISHED YET
+
+	var daKing:FlxSprite; // merchant
+	var tabi:FlxSprite; // ditto
+	var garlo:FlxSprite; // ditto
+	var myBeloved:FlxSprite; // ditto
+	var fgShops:FlxSprite; // ditto
 	var curseEternalVignette:FlxSprite; // man i hate curse eternal
 	// not because its bad but because im a little bitch and cant take it :(
 	var upperBoppers:FlxSprite;
@@ -712,11 +726,6 @@ class PlayState extends MusicBeatState
                      fg.setGraphicSize(Std.int(311*6),Std.int(161*6));
                      // fg.updateHitbox();
                      add(fg);
-
-                     wiggleShit.effectType = WiggleEffectType.DREAMY;
-                     wiggleShit.waveAmplitude = 0.01;
-                     wiggleShit.waveFrequency = 60;
-                     wiggleShit.waveSpeed = 0.8;
 		          }
 							case 'hivemind':
 								curStage = 'void';
@@ -833,6 +842,137 @@ class PlayState extends MusicBeatState
 							fg.scrollFactor.set(1,1);
 							fg.active = false;
 							add(fg);
+						case 'no-arm-shogun':
+							defaultCamZoom = .4;
+							curStage='dojo';
+							var bg:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('japan/bg'));
+							bg.setGraphicSize(Std.int(bg.width*1));
+							bg.screenCenter(XY);
+							bg.antialiasing = true;
+							bg.y -= 200;
+							bg.scrollFactor.set(1, 1);
+							bg.active = false;
+							add(bg);
+
+						 	anders = new FlxSprite(0, 0);
+							anders.frames = Paths.getSparrowAtlas("japan/anders");
+							anders.animation.addByPrefix("idle","anders my lover",24,false);
+							anders.setGraphicSize(Std.int(anders.width*1));
+							anders.screenCenter(XY);
+							anders.x += 850;
+							anders.y -= 1050;
+							anders.antialiasing = true;
+							anders.scrollFactor.set(1, 1);
+							add(anders);
+
+							racistgfwtf = new FlxSprite(0, 0);
+							racistgfwtf.frames = Paths.getSparrowAtlas("japan/gf");
+							racistgfwtf.animation.addByPrefix("idle","gf",24,false);
+							racistgfwtf.setGraphicSize(Std.int(racistgfwtf.width*1.25));
+							racistgfwtf.screenCenter(XY);
+							racistgfwtf.flipX = true;
+							racistgfwtf.x += 1450;
+							racistgfwtf.y += 335;
+							racistgfwtf.antialiasing = true;
+							racistgfwtf.scrollFactor.set(1, 1);
+							add(racistgfwtf);
+
+							carol = new FlxSprite(0, 0);
+							carol.frames = Paths.getSparrowAtlas("japan/carol");
+							carol.animation.addByPrefix("idle","carol",24,false);
+							carol.setGraphicSize(Std.int(carol.width*1.25));
+							carol.screenCenter(XY);
+							carol.flipX = true;
+							carol.x -= 1650;
+							carol.y += 235;
+							carol.antialiasing = true;
+							carol.scrollFactor.set(1, 1);
+							add(carol);
+
+							kfc = new FlxSprite(375, 200);
+							kfc.frames = Paths.getSparrowAtlas("japan/kfcman");
+							kfc.animation.addByPrefix("idle","colonel s(anders) and friend",24,false);
+							kfc.setGraphicSize(Std.int(kfc.width*1));
+							//kfc.screenCenter(XY);
+							kfc.x -= 0;
+							kfc.y += 0;
+							kfc.antialiasing = true;
+							kfc.scrollFactor.set(1, 1);
+							add(kfc);
+						case 'free-soul':
+							// TODO: settings
+							try{
+								wiggleShit.effectType = WiggleEffectType.WAVY;
+								wiggleShit.waveAmplitude = 0.01;
+								wiggleShit.waveFrequency = 40;
+								wiggleShit.waveSpeed = 1;
+								camHUD.setFilters([new ShaderFilter(wiggleShit.shader)]);
+							}catch(e:Any){
+								trace("NO OPENFL WTF???? NO COOL EFFECTS :(");
+							}
+							curStage='drugmart';
+							defaultCamZoom=.7;
+							var bg:FlxSprite = new FlxSprite(-182, -311).loadGraphic(Paths.image('drugmarket/bg'));
+							bg.setGraphicSize(Std.int(bg.width*1));
+							bg.antialiasing = true;
+							bg.scrollFactor.set(1, 1);
+							bg.active = false;
+							add(bg);
+
+							var bgShop:FlxSprite = new FlxSprite(-182, -316).loadGraphic(Paths.image('drugmarket/shop-backs'));
+							bgShop.setGraphicSize(Std.int(bgShop.width*1));
+							bgShop.antialiasing = true;
+							bgShop.scrollFactor.set(1, 1);
+							bgShop.active = false;
+							add(bgShop);
+
+							daKing = new FlxSprite(975,-600);
+							daKing.frames = Paths.getSparrowAtlas("drugmarket/bk");
+							daKing.animation.addByPrefix("idle","bk",24,false);
+							daKing.setGraphicSize(Std.int(daKing.width*.5));
+							daKing.antialiasing = true;
+							daKing.scrollFactor.set(1, 1);
+							add(daKing);
+
+							myBeloved = new FlxSprite(825, -200);
+							myBeloved.frames = Paths.getSparrowAtlas("drugmarket/anders");
+							myBeloved.animation.addByPrefix("idle","anders",24,false);
+							myBeloved.setGraphicSize(Std.int(myBeloved.width*.5));
+							myBeloved.antialiasing = true;
+							myBeloved.scrollFactor.set(1, 1);
+							add(myBeloved);
+
+							tabi = new FlxSprite(-185, -325);
+							tabi.frames = Paths.getSparrowAtlas("drugmarket/tabi");
+							tabi.animation.addByPrefix("idle","tabi",24,false);
+							tabi.setGraphicSize(Std.int(tabi.width*.5));
+							tabi.antialiasing = true;
+							tabi.scrollFactor.set(1, 1);
+							add(tabi);
+
+							var bgShops:FlxSprite = new FlxSprite(-182, -310).loadGraphic(Paths.image('drugmarket/bg-shops-w-hand'));
+							bgShops.setGraphicSize(Std.int(bgShops.width*1));
+							bgShops.antialiasing = true;
+							bgShops.scrollFactor.set(1, 1);
+							bgShops.active = false;
+							add(bgShops);
+
+
+							garlo = new FlxSprite(1400, -500);
+							garlo.frames = Paths.getSparrowAtlas("drugmarket/garlo");
+							garlo.animation.addByPrefix("idle","garlo",24,false);
+							garlo.setGraphicSize(Std.int(garlo.width*.5));
+							garlo.antialiasing = true;
+							garlo.scrollFactor.set(1, 1);
+							add(garlo);
+
+							fgShops = new FlxSprite(-182, -308).loadGraphic(Paths.image('drugmarket/fg-red-blue-store'));
+							fgShops.setGraphicSize(Std.int(fgShops.width*1));
+							fgShops.antialiasing = true;
+							fgShops.scrollFactor.set(1.1, 1.1);
+							fgShops.active = false;
+
+
 						case 'new-retro':
 							defaultCamZoom = .7;
 							curStage = 'apocalypse';
@@ -1059,7 +1199,7 @@ class PlayState extends MusicBeatState
 		goldOverlay.alpha = 0;
 		goldOverlay.screenCenter(XY);
 		goldOverlay.active = false;
-		goldOverlay.cameras = [camHUD];
+		goldOverlay.cameras = [pauseHUD];
 		add(goldOverlay);
 
 		switch (curStage)
@@ -1110,8 +1250,10 @@ class PlayState extends MusicBeatState
 				dad.y += 175;
 			case 'flexy':
 				dad.y += 200;
+				camPos.set(dad.getGraphicMidpoint().x + 300, dad.getGraphicMidpoint().y - 250);
 			case 'merchant':
 				dad.y += 225;
+				camPos.set(dad.getGraphicMidpoint().x + 375, dad.getGraphicMidpoint().y - 250);
 			case 'omega':
 				dad.x -= 100;
 				mika.x -= 100;
@@ -1120,7 +1262,6 @@ class PlayState extends MusicBeatState
 				dad.x -= 250;
 				mika.x -= 250;
 				camPos.set(dad.getGraphicMidpoint().x + 300, dad.getGraphicMidpoint().y);
-
 			case "spooky":
 				dad.y += 150;
 			case 'demetrios':
@@ -1143,6 +1284,7 @@ class PlayState extends MusicBeatState
 				dad.y -= 5;
 				dad.x += dad.width/2;
 				mika.x += dad.width/2;
+				camPos.set(dad.getGraphicMidpoint().x + 300, dad.getGraphicMidpoint().y);
 			case 'senpai':
 				dad.x += 50;
 				dad.y += 500;
@@ -1191,6 +1333,12 @@ class PlayState extends MusicBeatState
 				boyfriend.x += 90;
 				gf.y -= 50;
 				dad.x -= 195;
+			case 'dojo':
+				dad.x -= 100;
+				boyfriend.x += 100;
+
+				dad.y += 135;
+				boyfriend.y += 135;
 			case 'mallEvil':
 				boyfriend.x += 320;
 				dad.y -= 80;
@@ -1215,6 +1363,10 @@ class PlayState extends MusicBeatState
 				dad.y -= 245;
 			case 'elevator':
 				boyfriend.x += 100;
+			case 'drugmart':
+				boyfriend.x += 175;
+				gf.scrollFactor.set(1,1);
+				gf.y -= 150;
 			case 'omegafield':
 				if(SONG.song.toLowerCase()=='2v200'){
 					boyfriend.x -= 150;
@@ -1249,7 +1401,7 @@ class PlayState extends MusicBeatState
 			add(glowCage1);
 		}
 
-		if(curStage=='omegafield' || curStage=='void')
+		if(curStage=='omegafield' || curStage=='void' || curStage=='dojo')
 			gf.visible=false;
 
 		if(SONG.song.toLowerCase()=='salem')
@@ -1283,13 +1435,17 @@ class PlayState extends MusicBeatState
 			add(cage2);
 			add(glowCage2);
 			add(labOverlay);
+		}else if(curStage=='drugmart'){
+			add(fgShops);
+
 		}
 
 		curseEternalVignette = new FlxSprite().loadGraphic(Paths.image("vignette"));
 		curseEternalVignette.alpha=0;
 		curseEternalVignette.setGraphicSize(FlxG.width,FlxG.height);
 		curseEternalVignette.scrollFactor.set();
-		curseEternalVignette.cameras=[camHUD];
+		curseEternalVignette.screenCenter();
+		curseEternalVignette.cameras=[pauseHUD];
 
 		slash = new FlxSprite(boyfriend.x,boyfriend.y);
 		slash.frames = Paths.getSparrowAtlas('slash');
@@ -1341,8 +1497,9 @@ class PlayState extends MusicBeatState
 		// add(strumLine);
 
 		camFollow = new FlxObject(0, 0, 1, 1);
-
+		aCamFollow = new FlxObject(0,0,1,1);
 		camFollow.setPosition(camPos.x, camPos.y);
+		aCamFollow.setPosition(camPos.x,camPos.y);
 
 		if (prevCamFollow != null)
 		{
@@ -1352,7 +1509,7 @@ class PlayState extends MusicBeatState
 
 		add(camFollow);
 
-		FlxG.camera.follow(camFollow, LOCKON, 0.01);
+		FlxG.camera.follow(aCamFollow, LOCKON, 0.01);
 		// FlxG.camera.setScrollBounds(0, FlxG.width, 0, FlxG.height);
 		FlxG.camera.zoom = defaultCamZoom;
 		FlxG.camera.focusOn(camFollow.getPosition());
@@ -2329,7 +2486,7 @@ class PlayState extends MusicBeatState
 	var burnTicker:Float = 0;
 	var salemBurnTicker:Float = 0;
 	var shittyDischargeTimer:Float=0;
-
+	var gvTime:Float = 0;
 	override public function update(elapsed:Float)
 	{
 		#if !debug
@@ -2456,7 +2613,19 @@ class PlayState extends MusicBeatState
 		if(presetTxt!=null)
 			presetTxt.visible = modchart.hudVisible;
 
-
+		if(vietnamFlashbacks){
+			gvTime+=elapsed;
+			camHUD.x = 8*Math.cos(gvTime*2);
+			camHUD.y = 16*Math.cos(gvTime*4);
+			// TODO: toggle
+			aCamFollow.x = camFollow.x + 4*Math.cos(gvTime*2);
+			aCamFollow.y = camFollow.y + 12*Math.cos(gvTime*4);
+		}else{
+			camHUD.x = FlxMath.lerp(camHUD.x, 0, 0.1);
+			camHUD.y = FlxMath.lerp(camHUD.y, 0, 0.1);
+			aCamFollow.x = camFollow.x;
+			aCamFollow.y = camFollow.y;
+		}
 		super.update(elapsed);
 		if(burnTimer>0){
 			// TODO: Animation?
@@ -2667,6 +2836,10 @@ class PlayState extends MusicBeatState
 								camFollow.x = boyfriend.getMidpoint().x + 150;
 								camFollow.y = boyfriend.getMidpoint().y - 300;
 							}
+						case 'flexy':
+							camFollow.y = dad.getMidpoint().y - 350;
+						case 'merchant':
+							camFollow.x = dad.getMidpoint().x + 380;
 						case 'anders':
 							camFollow.y = dad.getMidpoint().y - 35;
 						case 'kapi':
@@ -2713,6 +2886,10 @@ class PlayState extends MusicBeatState
 							}
 						case 'lab':
 							camFollow.setPosition(boyfriend.getMidpoint().x - 175,boyfriend.getMidpoint().y - 150);
+						case 'drugmart':
+							camFollow.setPosition(boyfriend.getMidpoint().x - 175,boyfriend.getMidpoint().y - 200);
+						case 'dojo':
+							camFollow.setPosition(boyfriend.getMidpoint().x - 150,boyfriend.getMidpoint().y - 500);
 					}
 
 					if(boyfriend.curCharacter=='bf-pixel' && SONG.song.toLowerCase()=='father-time'){
@@ -4097,6 +4274,11 @@ class PlayState extends MusicBeatState
 			resyncVocals();
 		}
 
+		if(SONG.song.toLowerCase()=='free-soul' ){
+			if(curStep==672 || curStep==736)
+				vietnamFlashbacks=!vietnamFlashbacks;
+		}
+
 		if(dad.curCharacter=='angry-fucking-child' && SONG.song.toLowerCase()=='curse-eternal'){
 			switch(curStep){
 				case 1447 | 1476 | 1482 | 1490 | 1492 | 1498 | 1501 | 1510 | 1512 | 1526 | 1535 | 1545 | 1549 | 1550:
@@ -4203,6 +4385,18 @@ class PlayState extends MusicBeatState
 				upperBoppers.animation.play('bop', true);
 				bottomBoppers.animation.play('bop', true);
 				santa.animation.play('idle', true);
+			case 'dojo':
+				if(curBeat%2==0){
+					anders.animation.play("idle",true);
+					racistgfwtf.animation.play("idle",true);
+					carol.animation.play("idle",true);
+					kfc.animation.play("idle",true);
+				}
+			case 'drugmart':
+				daKing.animation.play("idle",true);
+				tabi.animation.play("idle",true);
+				myBeloved.animation.play("idle",true);
+				garlo.animation.play("idle",true);
 
 			case 'limo':
 				grpLimoDancers.forEach(function(dancer:BackgroundDancer)

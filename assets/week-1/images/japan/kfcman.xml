@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="colonel sanders fight.png">
+	<!-- Created with Adobe Animate version 21.0.4.39603 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="colonel s(anders) and friend0000" x="5" y="5" width="779" height="621" frameX="-18" frameY="0" frameWidth="805" frameHeight="621"/>
+	<SubTexture name="colonel s(anders) and friend0001" x="5" y="5" width="779" height="621" frameX="-18" frameY="0" frameWidth="805" frameHeight="621"/>
+	<SubTexture name="colonel s(anders) and friend0002" x="5" y="5" width="779" height="621" frameX="-18" frameY="0" frameWidth="805" frameHeight="621"/>
+	<SubTexture name="colonel s(anders) and friend0003" x="5" y="5" width="779" height="621" frameX="-18" frameY="0" frameWidth="805" frameHeight="621"/>
+	<SubTexture name="colonel s(anders) and friend0004" x="794" y="5" width="790" height="614" frameX="-12" frameY="-7" frameWidth="805" frameHeight="621"/>
+	<SubTexture name="colonel s(anders) and friend0005" x="794" y="5" width="790" height="614" frameX="-12" frameY="-7" frameWidth="805" frameHeight="621"/>
+	<SubTexture name="colonel s(anders) and friend0006" x="1594" y="5" width="797" height="611" frameX="-8" frameY="-10" frameWidth="805" frameHeight="621"/>
+	<SubTexture name="colonel s(anders) and friend0007" x="1594" y="5" width="797" height="611" frameX="-8" frameY="-10" frameWidth="805" frameHeight="621"/>
+	<SubTexture name="colonel s(anders) and friend0008" x="2401" y="5" width="800" height="613" frameX="0" frameY="-8" frameWidth="805" frameHeight="621"/>
+	<SubTexture name="colonel s(anders) and friend0009" x="2401" y="5" width="800" height="613" frameX="0" frameY="-8" frameWidth="805" frameHeight="621"/>
+	<SubTexture name="colonel s(anders) and friend0010" x="3211" y="5" width="796" height="613" frameX="-1" frameY="-8" frameWidth="805" frameHeight="621"/>
+	<SubTexture name="colonel s(anders) and friend0011" x="5" y="636" width="796" height="613" frameX="-1" frameY="-8" frameWidth="805" frameHeight="621"/>
+	<SubTexture name="colonel s(anders) and friend0012" x="811" y="636" width="791" height="616" frameX="-6" frameY="-5" frameWidth="805" frameHeight="621"/>
+	<SubTexture name="colonel s(anders) and friend0013" x="1612" y="636" width="791" height="616" frameX="-6" frameY="-5" frameWidth="805" frameHeight="621"/>
+	<SubTexture name="colonel s(anders) and friend0014" x="2413" y="636" width="785" height="618" frameX="-10" frameY="-3" frameWidth="805" frameHeight="621"/>
+	<SubTexture name="colonel s(anders) and friend0015" x="2413" y="636" width="785" height="618" frameX="-10" frameY="-3" frameWidth="805" frameHeight="621"/>
+	<SubTexture name="colonel s(anders) and friend0016" x="3208" y="636" width="785" height="619" frameX="-10" frameY="-2" frameWidth="805" frameHeight="621"/>
+	<SubTexture name="colonel s(anders) and friend0017" x="5" y="1265" width="785" height="619" frameX="-10" frameY="-2" frameWidth="805" frameHeight="621"/>
+	<SubTexture name="colonel s(anders) and friend0018" x="800" y="1265" width="785" height="619" frameX="-10" frameY="-2" frameWidth="805" frameHeight="621"/>
+	<SubTexture name="colonel s(anders) and friend0019" x="1595" y="1265" width="785" height="619" frameX="-10" frameY="-2" frameWidth="805" frameHeight="621"/>
+	<SubTexture name="colonel s(anders) and friend0020" x="2390" y="1265" width="785" height="619" frameX="-10" frameY="-2" frameWidth="805" frameHeight="621"/>
+	<SubTexture name="colonel s(anders) and friend0021" x="2390" y="1265" width="785" height="619" frameX="-10" frameY="-2" frameWidth="805" frameHeight="621"/>
+	<SubTexture name="colonel s(anders) and friend0022" x="2390" y="1265" width="785" height="619" frameX="-10" frameY="-2" frameWidth="805" frameHeight="621"/>
+	<SubTexture name="colonel s(anders) and friend0023" x="2390" y="1265" width="785" height="619" frameX="-10" frameY="-2" frameWidth="805" frameHeight="621"/>
+</TextureAtlas>
