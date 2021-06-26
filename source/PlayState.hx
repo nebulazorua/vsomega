@@ -4229,7 +4229,7 @@ class PlayState extends MusicBeatState
 					phillyCityLights.members[curLight].alpha = 1;
 					if(currentOptions.picoShaders && lightFadeShader!=null)
 						lightFadeShader.setAlpha(0);
-
+				}
 
 				if (curBeat % 8 == 4 && FlxG.random.bool(30) && !trainMoving && trainCooldown > 8)
 				{
