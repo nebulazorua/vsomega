@@ -850,7 +850,7 @@ class PlayState extends MusicBeatState
 							ground.x -=40;
 							ground.y +=470;
 							ground.antialiasing = true;
-							ground.scrollFactor.set(.4,1);
+							ground.scrollFactor.set(.4,.4);
 							ground.active = false;
 							add(ground);
 
@@ -869,7 +869,7 @@ class PlayState extends MusicBeatState
 							chars.y += 180;
 							chars.y += 320;
 							chars.antialiasing = true;
-							chars.scrollFactor.set(.5,.5);
+							chars.scrollFactor.set(.5,.4);
 							chars.active = false;
 							add(chars);
 
