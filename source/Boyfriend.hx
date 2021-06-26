@@ -34,6 +34,9 @@ class Boyfriend extends Character
 
 			if (animation.curAnim.name == 'firstDeath' && animation.curAnim.finished)
 			{
+				if(curCharacter=='bf-FUCKING-DIES' && !FlxG.save.data.seenLastStandOmegaGameOver)
+					FlxG.save.data.seenLastStandOmegaGameOver=true;
+				
 				playAnim('deathLoop');
 			}
 		}

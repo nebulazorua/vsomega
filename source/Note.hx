@@ -29,6 +29,7 @@ class Note extends FlxSprite
 	public var rawNoteData:Int = 0; // for charting shit and thats it LOL
 	public var holdParent:Bool=false;
 	public var noteType:Int = 0;
+	public var canMiss:Bool=false;
 	public var beingCharted:Bool=false;
 
 	public var isSword:Bool = false;
@@ -54,14 +55,15 @@ class Note extends FlxSprite
 
 		switch(singingShit){
 			case 'bf':
-				whoSingsShit='0';
+				singingShit='0';
 			case 'omega':
-				whoSingsShit='1';
+				singingShit='1';
 			case 'both':
-				whoSingsShit='2';
+				singingShit='2';
 			default:
-				whoSingsShit='0';
+				singingShit='0';
 		}
+
 		whoSingsShit = singingShit;
 		mustPress = gottaHitNote;
 		// cringe old code
@@ -125,6 +127,7 @@ class Note extends FlxSprite
 			default:
 				switch(noteType){
 					case 1:
+						canMiss=true;
 						var widMult = .7*scale;
 						frames = Paths.getSparrowAtlas('SWORD_NOTE');
 						var animationName = "Sword0";
@@ -143,6 +146,7 @@ class Note extends FlxSprite
 						offset.x -= 10*scale;
 						antialiasing = true;
 					case 2:
+						canMiss=true;
 						var widMult = .7*scale;
 						frames = Paths.getSparrowAtlas("GLITCH_NOTE");
 						animation.addByPrefix('purpleScroll', 'glitchRIGHT0', 24, true);
@@ -164,6 +168,7 @@ class Note extends FlxSprite
 						updateHitbox();
 						antialiasing = true;
 					case 3:
+						canMiss=true;
 						var widMult = .7*scale;
 						isSustainNote=false;
 						if(PlayState.SONG.player2=='merchant' ){
@@ -203,6 +208,7 @@ class Note extends FlxSprite
 						offset.y += (width*widMult)/2 - 13;
 						antialiasing = true;
 					case 5: // torch
+						canMiss=true;
 						isSustainNote=false;
 						var widMult = .6*scale;
 						frames = Paths.getSparrowAtlas('TORCHES');

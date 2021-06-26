@@ -1,7 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<TextureAtlas imagePath="Helicopter_KapiBG.png">
-	<!-- Created with Adobe Animate version 21.0.4.39603 -->
-	<!-- http://www.adobe.com/products/animate.html -->
-	<SubTexture name="Heli0000" x="0" y="0" width="288" height="186"/>
-	<SubTexture name="Heli0001" x="0" y="196" width="288" height="186"/>
-</TextureAtlas>

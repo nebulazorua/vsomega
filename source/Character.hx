@@ -239,8 +239,14 @@ class Character extends FlxSprite
 				animation.addByPrefix('deathConfirm', "BF Dead confirm", 24, false);
 
 				animation.addByPrefix('scared', 'BF idle shaking', 24);
+				var scaredFrames=[];
+				for(i in 0...24){
+					scaredFrames.push(i%3);
+				}
+				animation.addByIndices('dischargeScared', 'BF idle shaking', scaredFrames, "", 24, false);
 
 				loadOffsets();
+				addOffset("dischargeScared",animOffsets.get("scared")[0],animOffsets.get("scared")[1]);
 				playAnim('idle');
 
 				flipX = true;
@@ -345,18 +351,16 @@ class Character extends FlxSprite
 				flipX = true;
 			case 'bf-FUCKING-DIES':
 				frames = Paths.getSparrowAtlas('characters/BFFUCKINGDIES','shared');
-				animation.addByPrefix('singUP', "BF Dies", 24, false);
-				animation.addByPrefix('firstDeath', "BF Dies", 24, false);
-				animation.addByPrefix('deathLoop', "Retry Loop", 24, true);
-				animation.addByPrefix('deathConfirm', "RETRY CONFIRM", 24, false);
+				animation.addByPrefix('singUP', "BF dies", 24, false);
+				animation.addByPrefix('firstDeath', "BF dies", 24, false);
+				animation.addByPrefix('deathLoop', "BF Dead Loop", 24, true);
+				animation.addByPrefix('deathConfirm', "BF Dead confirm", 24, false);
 				animation.play('firstDeath');
 
 				loadOffsets();
 				playAnim('firstDeath');
-				// pixel bullshit
-				setGraphicSize(Std.int(width * 6));
 				updateHitbox();
-				antialiasing = false;
+				antialiasing = true;
 				flipX = true;
 
 			case 'senpai':
@@ -493,6 +497,32 @@ class Character extends FlxSprite
 
 				loadOffsets();
 				playAnim("idle");
+
+			case 'mika':
+				frames = Paths.getSparrowAtlas("characters/mika_passive_assets","shared");
+				animation.addByPrefix('idle', 'CHILD idle passive', 24, false);
+				animation.addByPrefix('singUP', 'CHILD up passive', 24, false);
+				animation.addByPrefix('singDOWN', 'CHILD down passive', 24, false);
+				animation.addByPrefix('singLEFT', 'CHILD left passive', 24, false);
+				animation.addByPrefix('singRIGHT', 'CHILD right passive', 24, false);
+
+				loadOffsets();
+				playAnim("idle");
+			case 'angry-fucking-child':
+				frames = Paths.getSparrowAtlas("characters/mika_agressive","shared");
+				animation.addByPrefix('idle', 'CHILD idle', 24, false);
+				animation.addByPrefix('singUP', 'CHILD up', 24, false);
+				animation.addByPrefix('singDOWN', 'CHILD down', 24, false);
+				animation.addByPrefix('singLEFT', 'CHILD left', 24, false);
+				animation.addByPrefix('singRIGHT', 'CHILD right', 24, false);
+				animation.addByIndices('cry', 'CHILD down', [0,1,2,3,4,5,6,7,8], "", 16, false);
+
+				loadOffsets();
+				addOffset("cry",animOffsets.get("singDOWN")[0],animOffsets.get("singDOWN")[1]);
+
+
+				playAnim("idle");
+
 			case 'demetrios':
 				frames = Paths.getSparrowAtlas("characters/demetrios","shared");
 				animation.addByPrefix('idle', 'idle', 24, false);
@@ -696,7 +726,7 @@ class Character extends FlxSprite
 				if (animation.curAnim.name == 'hairFall' && animation.curAnim.finished)
 					playAnim('danceRight');
 			case 'bf':
-				if (animation.curAnim.name == 'cut' && animation.curAnim.finished)
+				if ((animation.curAnim.name == 'cut' || animation.curAnim.name=="dischargeScared") && animation.curAnim.finished)
 					playAnim('idle');
 			case 'demetrios':
 				if (animation.curAnim.name == 'discharge' && animation.curAnim.finished)
@@ -721,11 +751,15 @@ class Character extends FlxSprite
 			holding=false;
 			switch(curCharacter){
 			case 'bf':
-				if(animation.curAnim.name!='cut')
+				if(animation.curAnim.name!='cut' && animation.curAnim.name!='dischargeScared')
+					playAnim('idle');
+			case 'angry-fucking-child':
+				if(animation.curAnim.name!='cry')
 					playAnim('idle');
 			case 'demetrios':
 				if(animation.curAnim.name!='discharge')
 					playAnim('idle');
+
 			default:
 				if(animation.getByName("idle")!=null)
 					playAnim("idle");

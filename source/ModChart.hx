@@ -44,6 +44,22 @@ class ModChart {
     playState.camGame.setFilters(newCamEffects);
   }
 
+  public function clearCamEffects(){
+    for(i in camShaders){
+      camShaders.remove(i);
+    }
+    @:privateAccess
+    playState.camGame.setFilters([]);
+  }
+
+  public function clearHUDEffects(){
+    for(i in hudShaders){
+      hudShaders.remove(i);
+    }
+    @:privateAccess
+    playState.camHUD.setFilters([]);
+  }
+
   public function addHudEffect(effect:ShaderEffect){
     hudShaders.push(effect);
     var newCamEffects:Array<BitmapFilter>=[];

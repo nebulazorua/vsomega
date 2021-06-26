@@ -16,6 +16,7 @@ class GameOverSubstate extends MusicBeatSubstate
 
 	public function new(x:Float, y:Float)
 	{
+		PlayState.currentPState.modchart.clearCamEffects();
 		var daStage = PlayState.curStage;
 		var daBf:String = '';
 		switch (daStage)
@@ -28,6 +29,11 @@ class GameOverSubstate extends MusicBeatSubstate
 				daBf = 'bf-pixel-dead';
 			default:
 				daBf = 'bf';
+		}
+
+		if(PlayState.SONG.song.toLowerCase()=='last-stand'){
+			daBf = 'bf-FUCKING-DIES';
+			stageSuffix='-omega';
 		}
 
 		super();
@@ -55,7 +61,7 @@ class GameOverSubstate extends MusicBeatSubstate
 	{
 		super.update(elapsed);
 
-		if (controls.ACCEPT)
+		if (controls.ACCEPT && (bf.curCharacter!='bf-FUCKING-DIES' || FlxG.save.data.seenLastStandOmegaGameOver))
 		{
 			endBullshit();
 		}

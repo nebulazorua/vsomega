@@ -124,10 +124,10 @@ class RainShader extends FlxShader // https://www.shadertoy.com/view/WldGRl
 
       vec2 ruv = uv / vec2(iResolution.x/iResolution.y,1.0);
 
-      uv = (ruv * 1.3 - 1.0) *  vec2(iResolution.x/iResolution.y,1.0);
-      vec2 st =  -uv * vec2(.5+(ruv.y+1.0)*0.5, .06)+vec2(iTime*.2-ruv.y*.1, iTime*.2);
+      uv = (ruv * 1.5 - 1.0) *  vec2(iResolution.x/iResolution.y,1.0);
+      vec2 st =  -uv * vec2(1.0+(ruv.y+1.0)*0.5, .04)+vec2(iTime*.2-ruv.y*.1, iTime*.2);
       float f = flixel_texture2D(iChannel0, st).y * flixel_texture2D(iChannel0, st*.773).x * 1.55;
-      f = clamp(pow(abs(f), 64.0) * 3.0, 0.0, (ruv.y+.4)*.14);
+      f = clamp(pow(abs(f), 12.0) * 3.0, 0.0, (ruv.y+.4)*.14);
       vec3 col;
       col += vec3(f,f,f)*2.;
 

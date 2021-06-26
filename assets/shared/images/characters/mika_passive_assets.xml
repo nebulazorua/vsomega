@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="mika_passive_assets.png">
+	<!-- Created with Adobe Animate version 18.0.1.115 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="CHILD down passive0000" x="5" y="5" width="376" height="346" pivotX="-381.85" pivotY="-110.7" frameX="0" frameY="-14" frameWidth="376" frameHeight="361"/>
+	<SubTexture name="CHILD down passive0001" x="381" y="5" width="365" height="355" frameX="-6" frameY="-6" frameWidth="376" frameHeight="361"/>
+	<SubTexture name="CHILD down passive0002" x="381" y="5" width="365" height="355" frameX="-6" frameY="-6" frameWidth="376" frameHeight="361"/>
+	<SubTexture name="CHILD down passive0003" x="746" y="5" width="359" height="361" frameX="-9" frameY="0" frameWidth="376" frameHeight="361"/>
+	<SubTexture name="CHILD down passive0004" x="746" y="5" width="359" height="361" frameX="-9" frameY="0" frameWidth="376" frameHeight="361"/>
+	<SubTexture name="CHILD down passive0005" x="746" y="5" width="359" height="361" frameX="-9" frameY="0" frameWidth="376" frameHeight="361"/>
+	<SubTexture name="CHILD down passive0006" x="746" y="5" width="359" height="361" frameX="-9" frameY="0" frameWidth="376" frameHeight="361"/>
+	<SubTexture name="CHILD down passive0007" x="746" y="5" width="359" height="361" frameX="-9" frameY="0" frameWidth="376" frameHeight="361"/>
+	<SubTexture name="CHILD down passive0008" x="746" y="5" width="359" height="361" frameX="-9" frameY="0" frameWidth="376" frameHeight="361"/>
+	<SubTexture name="CHILD down passive0009" x="746" y="5" width="359" height="361" frameX="-9" frameY="0" frameWidth="376" frameHeight="361"/>
+	<SubTexture name="CHILD down passive0010" x="746" y="5" width="359" height="361" frameX="-9" frameY="0" frameWidth="376" frameHeight="361"/>
+	<SubTexture name="CHILD down passive0011" x="746" y="5" width="359" height="361" frameX="-9" frameY="0" frameWidth="376" frameHeight="361"/>
+	<SubTexture name="CHILD down passive0012" x="746" y="5" width="359" height="361" frameX="-9" frameY="0" frameWidth="376" frameHeight="361"/>
+	<SubTexture name="CHILD down passive0013" x="746" y="5" width="359" height="361" frameX="-9" frameY="0" frameWidth="376" frameHeight="361"/>
+	<SubTexture name="CHILD down passive0014" x="746" y="5" width="359" height="361" frameX="-9" frameY="0" frameWidth="376" frameHeight="361"/>
+	<SubTexture name="CHILD idle passive0000" x="1105" y="5" width="251" height="491" pivotX="-589.15" pivotY="17.95" frameX="0" frameY="-9" frameWidth="251" frameHeight="501"/>
+	<SubTexture name="CHILD idle passive0001" x="1105" y="5" width="251" height="491" frameX="0" frameY="-9" frameWidth="251" frameHeight="501"/>
+	<SubTexture name="CHILD idle passive0002" x="1356" y="5" width="248" height="494" frameX="-3" frameY="-6" frameWidth="251" frameHeight="501"/>
+	<SubTexture name="CHILD idle passive0003" x="1356" y="5" width="248" height="494" frameX="-3" frameY="-6" frameWidth="251" frameHeight="501"/>
+	<SubTexture name="CHILD idle passive0004" x="1604" y="5" width="238" height="499" frameX="-9" frameY="-2" frameWidth="251" frameHeight="501"/>
+	<SubTexture name="CHILD idle passive0005" x="1604" y="5" width="238" height="499" frameX="-9" frameY="-2" frameWidth="251" frameHeight="501"/>
+	<SubTexture name="CHILD idle passive0006" x="5" y="504" width="237" height="501" frameX="-10" frameY="0" frameWidth="251" frameHeight="501"/>
+	<SubTexture name="CHILD idle passive0007" x="5" y="504" width="237" height="501" frameX="-10" frameY="0" frameWidth="251" frameHeight="501"/>
+	<SubTexture name="CHILD idle passive0008" x="5" y="504" width="237" height="501" frameX="-10" frameY="0" frameWidth="251" frameHeight="501"/>
+	<SubTexture name="CHILD idle passive0009" x="5" y="504" width="237" height="501" frameX="-10" frameY="0" frameWidth="251" frameHeight="501"/>
+	<SubTexture name="CHILD idle passive0010" x="5" y="504" width="237" height="501" frameX="-10" frameY="0" frameWidth="251" frameHeight="501"/>
+	<SubTexture name="CHILD idle passive0011" x="5" y="504" width="237" height="501" frameX="-10" frameY="0" frameWidth="251" frameHeight="501"/>
+	<SubTexture name="CHILD idle passive0012" x="1356" y="5" width="248" height="494" frameX="-3" frameY="-6" frameWidth="251" frameHeight="501"/>
+	<SubTexture name="CHILD idle passive0013" x="1356" y="5" width="248" height="494" frameX="-3" frameY="-6" frameWidth="251" frameHeight="501"/>
+	<SubTexture name="CHILD left passive0000" x="242" y="504" width="246" height="497" pivotX="-446.2" pivotY="17.95" frameX="-2" frameY="-4" frameWidth="248" frameHeight="501"/>
+	<SubTexture name="CHILD left passive0001" x="488" y="504" width="247" height="500" frameX="-1" frameY="-1" frameWidth="248" frameHeight="501"/>
+	<SubTexture name="CHILD left passive0002" x="488" y="504" width="247" height="500" frameX="-1" frameY="-1" frameWidth="248" frameHeight="501"/>
+	<SubTexture name="CHILD left passive0003" x="735" y="504" width="248" height="501"/>
+	<SubTexture name="CHILD left passive0004" x="735" y="504" width="248" height="501"/>
+	<SubTexture name="CHILD left passive0005" x="735" y="504" width="248" height="501"/>
+	<SubTexture name="CHILD left passive0006" x="735" y="504" width="248" height="501"/>
+	<SubTexture name="CHILD left passive0007" x="735" y="504" width="248" height="501"/>
+	<SubTexture name="CHILD left passive0008" x="735" y="504" width="248" height="501"/>
+	<SubTexture name="CHILD left passive0009" x="735" y="504" width="248" height="501"/>
+	<SubTexture name="CHILD left passive0010" x="735" y="504" width="248" height="501"/>
+	<SubTexture name="CHILD left passive0011" x="735" y="504" width="248" height="501"/>
+	<SubTexture name="CHILD left passive0012" x="735" y="504" width="248" height="501"/>
+	<SubTexture name="CHILD left passive0013" x="735" y="504" width="248" height="501"/>
+	<SubTexture name="CHILD left passive0014" x="735" y="504" width="248" height="501"/>
+	<SubTexture name="CHILD right passive0000" x="983" y="504" width="405" height="487" pivotX="-1424.25" pivotY="47.65" frameX="0" frameY="-9" frameWidth="405" frameHeight="497"/>
+	<SubTexture name="CHILD right passive0001" x="1388" y="504" width="403" height="493" frameX="-1" frameY="-4" frameWidth="405" frameHeight="497"/>
+	<SubTexture name="CHILD right passive0002" x="1388" y="504" width="403" height="493" frameX="-1" frameY="-4" frameWidth="405" frameHeight="497"/>
+	<SubTexture name="CHILD right passive0003" x="5" y="1005" width="403" height="497" frameX="-1" frameY="0" frameWidth="405" frameHeight="497"/>
+	<SubTexture name="CHILD right passive0004" x="5" y="1005" width="403" height="497" frameX="-1" frameY="0" frameWidth="405" frameHeight="497"/>
+	<SubTexture name="CHILD right passive0005" x="5" y="1005" width="403" height="497" frameX="-1" frameY="0" frameWidth="405" frameHeight="497"/>
+	<SubTexture name="CHILD right passive0006" x="5" y="1005" width="403" height="497" frameX="-1" frameY="0" frameWidth="405" frameHeight="497"/>
+	<SubTexture name="CHILD right passive0007" x="5" y="1005" width="403" height="497" frameX="-1" frameY="0" frameWidth="405" frameHeight="497"/>
+	<SubTexture name="CHILD right passive0008" x="5" y="1005" width="403" height="497" frameX="-1" frameY="0" frameWidth="405" frameHeight="497"/>
+	<SubTexture name="CHILD right passive0009" x="5" y="1005" width="403" height="497" frameX="-1" frameY="0" frameWidth="405" frameHeight="497"/>
+	<SubTexture name="CHILD right passive0010" x="5" y="1005" width="403" height="497" frameX="-1" frameY="0" frameWidth="405" frameHeight="497"/>
+	<SubTexture name="CHILD right passive0011" x="5" y="1005" width="403" height="497" frameX="-1" frameY="0" frameWidth="405" frameHeight="497"/>
+	<SubTexture name="CHILD right passive0012" x="5" y="1005" width="403" height="497" frameX="-1" frameY="0" frameWidth="405" frameHeight="497"/>
+	<SubTexture name="CHILD right passive0013" x="5" y="1005" width="403" height="497" frameX="-1" frameY="0" frameWidth="405" frameHeight="497"/>
+	<SubTexture name="CHILD right passive0014" x="5" y="1005" width="403" height="497" frameX="-1" frameY="0" frameWidth="405" frameHeight="497"/>
+	<SubTexture name="CHILD up passive0000" x="408" y="1005" width="277" height="496" pivotX="-581.95" pivotY="12.05" frameX="0" frameY="-2" frameWidth="277" frameHeight="498"/>
+	<SubTexture name="CHILD up passive0001" x="685" y="1005" width="276" height="497" frameX="-1" frameY="-1" frameWidth="277" frameHeight="498"/>
+	<SubTexture name="CHILD up passive0002" x="685" y="1005" width="276" height="497" frameX="-1" frameY="-1" frameWidth="277" frameHeight="498"/>
+	<SubTexture name="CHILD up passive0003" x="961" y="1005" width="276" height="498" frameX="-1" frameY="0" frameWidth="277" frameHeight="498"/>
+	<SubTexture name="CHILD up passive0004" x="961" y="1005" width="276" height="498" frameX="-1" frameY="0" frameWidth="277" frameHeight="498"/>
+	<SubTexture name="CHILD up passive0005" x="961" y="1005" width="276" height="498" frameX="-1" frameY="0" frameWidth="277" frameHeight="498"/>
+	<SubTexture name="CHILD up passive0006" x="961" y="1005" width="276" height="498" frameX="-1" frameY="0" frameWidth="277" frameHeight="498"/>
+	<SubTexture name="CHILD up passive0007" x="961" y="1005" width="276" height="498" frameX="-1" frameY="0" frameWidth="277" frameHeight="498"/>
+	<SubTexture name="CHILD up passive0008" x="961" y="1005" width="276" height="498" frameX="-1" frameY="0" frameWidth="277" frameHeight="498"/>
+	<SubTexture name="CHILD up passive0009" x="961" y="1005" width="276" height="498" frameX="-1" frameY="0" frameWidth="277" frameHeight="498"/>
+	<SubTexture name="CHILD up passive0010" x="961" y="1005" width="276" height="498" frameX="-1" frameY="0" frameWidth="277" frameHeight="498"/>
+	<SubTexture name="CHILD up passive0011" x="961" y="1005" width="276" height="498" frameX="-1" frameY="0" frameWidth="277" frameHeight="498"/>
+	<SubTexture name="CHILD up passive0012" x="961" y="1005" width="276" height="498" frameX="-1" frameY="0" frameWidth="277" frameHeight="498"/>
+	<SubTexture name="CHILD up passive0013" x="961" y="1005" width="276" height="498" frameX="-1" frameY="0" frameWidth="277" frameHeight="498"/>
+	<SubTexture name="CHILD up passive0014" x="961" y="1005" width="276" height="498" frameX="-1" frameY="0" frameWidth="277" frameHeight="498"/>
+</TextureAtlas>
