@@ -2464,6 +2464,7 @@ class PlayState extends MusicBeatState
 	private var paused:Bool = false;
 	var startedCountdown:Bool = false;
 	var canPause:Bool = true;
+	var disconnected=false;
 
 	function truncateFloat( number : Float, precision : Int): Float {
 		var num = number;
@@ -2474,7 +2475,8 @@ class PlayState extends MusicBeatState
 
 	var disconnectTextTimer:Float = 0;
 	function NokeDisconnect(){
-		if(nokeTxt.text!="RECONNECTED"){
+		if(!disconnected){
+			disconnected=true;
 			if(curStage=='elevator'){
 				nokeFl.alpha=0;
 				nokeBG.alpha=0;
@@ -2491,7 +2493,8 @@ class PlayState extends MusicBeatState
 	}
 
 	function NokeReconnect(){
-		if(nokeTxt.text!="RECONNECTED"){
+		if(disconnected){
+			disconnected=false;
 			if(curStage=='elevator'){
 				nokeFl.alpha=1;
 				nokeBG.alpha=1;
@@ -3221,11 +3224,13 @@ class PlayState extends MusicBeatState
 
 						switch (anim)
 						{
-							case 'singUP${altAnim}' | 'singDOWN${altAnim}':
+							case 'singUP' | 'singDOWN' | 'singDOWN-alt' | 'singUP-alt':
+								trace("DISCONNECT");
 								if(dad.curCharacter=='noke'){
 									NokeDisconnect();
 								}
 							default:
+								trace("RECONNECT");
 								if(dad.curCharacter=='noke'){
 									NokeReconnect();
 								}
@@ -3847,7 +3852,7 @@ class PlayState extends MusicBeatState
 			else if(boyfriend.curCharacter == 'parasite' || boyfriend.curCharacter == 'vase')
 				bfVar=10;
 
-			if (boyfriend.holdTimer > Conductor.stepCrochet * bfVar * 0.001 && !up && !down && !right && !left)
+			if (boyfriend.holdTimer > Conductor.stepCrochet * bfVar * 0.001 && !holdArray.contains(true))
 			{
 				if (boyfriend.animation.curAnim.name.startsWith('sing') && !boyfriend.animation.curAnim.name.endsWith('miss'))
 				{
@@ -3856,7 +3861,7 @@ class PlayState extends MusicBeatState
 			}
 
 
-			if (omega.holdTimer >= Conductor.stepCrochet * bfVar * 0.001 && !up && !down && !right && !left)
+			if (omega.holdTimer >= Conductor.stepCrochet * bfVar * 0.001 && !holdArray.contains(true))
 			{
 				if (omega.animation.curAnim.name.startsWith('sing') && !omega.animation.curAnim.name.endsWith('miss'))
 				{
@@ -4344,6 +4349,12 @@ class PlayState extends MusicBeatState
 		{
 			boyfriend.dance();
 		}
+
+		if (!omega.animation.curAnim.name.startsWith("sing"))
+		{
+			omega.dance();
+		}
+
 
 		if (curBeat % 8 == 7 && curSong == 'Bopeebo')
 		{
