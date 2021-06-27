@@ -116,6 +116,7 @@ class PlayState extends MusicBeatState
 	public var dadLua:LuaCharacter;
 	public var gfLua:LuaCharacter;
 	public var bfLua:LuaCharacter;
+	public static var keyAmount:Int = 4;
 
 	public static var mikaShit:Array<MikaRunAnimMarker> = [];
 
@@ -145,18 +146,24 @@ class PlayState extends MusicBeatState
 	public var playerNoteOffsets:Array<Array<Float>> = [
 		[0,0], // left
 		[0,0], // down
-		[0,0], // up
-		[0,0]// right
+		[0,0], // up / right (6K)
+		[0,0],// right / left(6K)
+		[0,0], // up (6K)
+		[0,0], // right (6K)
 	];
 
 	public var opponentNoteOffsets:Array<Array<Float>> = [
 		[0,0], // left
 		[0,0], // down
-		[0,0], // up
-		[0,0] // right
+		[0,0], // up / right (6K)
+		[0,0],// right / left(6K)
+		[0,0], // up (6K)
+		[0,0], // right (6K)
 	];
 
 	public var playerNoteAlpha:Array<Float>=[
+		1,
+		1,
 		1,
 		1,
 		1,
@@ -167,8 +174,12 @@ class PlayState extends MusicBeatState
 		1,
 		1,
 		1,
+		1,
+		1,
 		1
 	];
+	var singAnims = ["singLEFT","singDOWN","singUP","singRIGHT"];
+
 	var lua:LuaVM;
 
 	var dialogue:Array<String> = ['blah blah blah', 'coolswag'];
@@ -293,6 +304,8 @@ class PlayState extends MusicBeatState
 		if (FlxG.sound.music != null)
 			FlxG.sound.music.stop();
 
+		controls.setKeyboardScheme(Custom,true);
+
 		//lua = new LuaVM();
 		#if windows
 			luaModchartExists = FileSystem.exists(Paths.modchart(SONG.song.toLowerCase()));
@@ -331,6 +344,8 @@ class PlayState extends MusicBeatState
 
 		if(SONG.song.toLowerCase()=='2v200' || SONG.song.toLowerCase()=='hivemind')
 			currentOptions.middleScroll=true;
+		if(SONG.song.toLowerCase()=='2v200')
+			controls.setKeyboardScheme(SixK,true);
 
 		if(SONG.song.toLowerCase()=='hivemind'){
 			currentOptions.downScroll=true;
@@ -341,36 +356,6 @@ class PlayState extends MusicBeatState
 		}
 		Conductor.mapBPMChanges(SONG);
 		Conductor.changeBPM(SONG.bpm);
-		if(SONG.song.toLowerCase()=='guardian'){
-			for (i in 0...SONG.notes.length){
-				if(SONG.notes[i].altAnim){
-					var notes = SONG.notes[i].sectionNotes;
-					var startStrum = -1;
-					var endStrum = 0;
-
-					for(note in notes){
-						var hit = SONG.notes[i].mustHitSection;
-						if(note[1]>3){
-							hit=!hit;
-						}
-						if(hit==false && startStrum==-1){
-							startStrum=note[0];
-						}
-						if(hit==false){
-							endStrum=note[0];
-						}
-					}
-					mikaShit.push(
-						{
-							start: startStrum,
-							end: endStrum
-						}
-					);
-				}
-			}
-		}
-
-		mikaShit.sort((a,b)->Std.int(a.start - b.start));
 
 		switch (SONG.song.toLowerCase())
 		{
@@ -1469,6 +1454,48 @@ class PlayState extends MusicBeatState
 		doof.scrollFactor.set();
 		doof.finishThing = startCountdown;
 
+		if(SONG.song.toLowerCase()=='2v200')
+			keyAmount=6;
+		else
+			keyAmount=4;
+
+		if(keyAmount==6){
+			singAnims = ["singLEFT","singDOWN","singRIGHT","singLEFT","singUP","singRIGHT"];
+		}
+		modchart.playerNoteScale *= 4/keyAmount;
+
+		if(SONG.song.toLowerCase()=='guardian'){
+			for (i in 0...SONG.notes.length){
+				if(SONG.notes[i].altAnim){
+					var notes = SONG.notes[i].sectionNotes;
+					var startStrum = -1;
+					var endStrum = 0;
+
+					for(note in notes){
+						var hit = SONG.notes[i].mustHitSection;
+						if(note[1]>keyAmount-1){
+							hit=!hit;
+						}
+						if(hit==false && startStrum==-1){
+							startStrum=note[0];
+						}
+						if(hit==false){
+							endStrum=note[0];
+						}
+					}
+					mikaShit.push(
+						{
+							start: startStrum,
+							end: endStrum
+						}
+					);
+				}
+			}
+		}
+
+		mikaShit.sort((a,b)->Std.int(a.start - b.start));
+
+
 		Conductor.songPosition = -5000;
 
 		strumLine = new FlxSprite(0, 50).makeGraphic(FlxG.width, 10);
@@ -2130,10 +2157,10 @@ class PlayState extends MusicBeatState
 			for (songNotes in section.sectionNotes)
 			{
 				var daStrumTime:Float = songNotes[0] + currentOptions.noteOffset;
-				var daNoteData:Int = Std.int(songNotes[1] % 4);
+				var daNoteData:Int = Std.int(songNotes[1] % keyAmount);
 				var gottaHitNote:Bool = section.mustHitSection;
 
-				if (songNotes[1] > 3)
+				if (songNotes[1] > keyAmount-1)
 				{
 					gottaHitNote = !section.mustHitSection;
 				}
@@ -2202,7 +2229,7 @@ class PlayState extends MusicBeatState
 
 	private function generateStaticArrows(player:Int):Void
 	{
-		for (i in 0...4)
+		for (i in 0...keyAmount)
 		{
 			// FlxG.log.add(i);
 			var babyArrow:FlxSprite = new FlxSprite(0, strumLine.y);
@@ -2232,22 +2259,22 @@ class PlayState extends MusicBeatState
 
 					switch (Math.abs(i))
 					{
-						case 0:
+						case 0: // left
 							babyArrow.x += width * 0;
 							babyArrow.animation.add('static', [0]);
 							babyArrow.animation.add('confirm', [8], 12, false);
 							babyArrow.animation.add('pressed', [12], 24, false);
-						case 1:
+						case 1: // down
 							babyArrow.x += width * 1;
 							babyArrow.animation.add('static', [1]);
 							babyArrow.animation.add('confirm', [9], 12, false);
 							babyArrow.animation.add('pressed', [13], 24, false);
-						case 2:
+						case 2: // up
 							babyArrow.x += width * 2;
 							babyArrow.animation.add('static', [2]);
 							babyArrow.animation.add('confirm', [10], 12, false);
 							babyArrow.animation.add('pressed', [14], 24, false);
-						case 3:
+						case 3: // right
 							babyArrow.x += width * 3;
 							babyArrow.animation.add('static', [3]);
 							babyArrow.animation.add('confirm', [11], 12, false);
@@ -2255,38 +2282,34 @@ class PlayState extends MusicBeatState
 					}
 
 				default:
-					babyArrow.frames = Paths.getSparrowAtlas('NOTE_assets');
+					if(keyAmount==6){
+						babyArrow.frames = Paths.getSparrowAtlas('6K_NOTE_assets');
+					}else{
+						babyArrow.frames = Paths.getSparrowAtlas('NOTE_assets');
+					}
+
 					babyArrow.animation.addByPrefix('green', 'arrowUP');
 					babyArrow.animation.addByPrefix('blue', 'arrowDOWN');
 					babyArrow.animation.addByPrefix('purple', 'arrowLEFT');
 					babyArrow.animation.addByPrefix('red', 'arrowRIGHT');
+					babyArrow.animation.addByPrefix('yellow', 'arrowLEFT');
+					babyArrow.animation.addByPrefix('navy', 'arrowRIGHT');
+					babyArrow.animation.addByPrefix('lavender', 'arrowUP');
 
 					babyArrow.antialiasing = true;
 					babyArrow.setGraphicSize(Std.int(babyArrow.width * 0.7 * scale));
 
-					switch (Math.abs(i))
-					{
-						case 0:
-							babyArrow.x += width * 0;
-							babyArrow.animation.addByPrefix('static', 'arrowLEFT');
-							babyArrow.animation.addByPrefix('pressed', 'left press', 24, false);
-							babyArrow.animation.addByPrefix('confirm', 'left confirm', 24, false);
-						case 1:
-							babyArrow.x += width * 1;
-							babyArrow.animation.addByPrefix('static', 'arrowDOWN');
-							babyArrow.animation.addByPrefix('pressed', 'down press', 24, false);
-							babyArrow.animation.addByPrefix('confirm', 'down confirm', 24, false);
-						case 2:
-							babyArrow.x += width * 2;
-							babyArrow.animation.addByPrefix('static', 'arrowUP');
-							babyArrow.animation.addByPrefix('pressed', 'up press', 24, false);
-							babyArrow.animation.addByPrefix('confirm', 'up confirm', 24, false);
-						case 3:
-							babyArrow.x += width * 3;
-							babyArrow.animation.addByPrefix('static', 'arrowRIGHT');
-							babyArrow.animation.addByPrefix('pressed', 'right press', 24, false);
-							babyArrow.animation.addByPrefix('confirm', 'right confirm', 24, false);
+					var statics = ["LEFT","DOWN","UP","RIGHT"];
+					var interacts = ["left","down","up","right"];
+					if(keyAmount==6){
+						statics = ["LEFT","DOWN","RIGHT","LEFT","UP","RIGHT"];
+						interacts = ["left","down","right","left2","up","right2"];
 					}
+					var key = Std.int(Math.abs(i));
+					babyArrow.x += width*key;
+					babyArrow.animation.addByPrefix("static","arrow"+statics[key]);
+					babyArrow.animation.addByPrefix("pressed",interacts[key] + " press",24,false);
+					babyArrow.animation.addByPrefix("confirm",interacts[key] + " confirm",24,false);
 			}
 
 			babyArrow.updateHitbox();
@@ -2451,7 +2474,7 @@ class PlayState extends MusicBeatState
 
 	var disconnectTextTimer:Float = 0;
 	function NokeDisconnect(){
-		if(nokeTxt.visible){
+		if(nokeTxt.text!="RECONNECTED"){
 			if(curStage=='elevator'){
 				nokeFl.alpha=0;
 				nokeBG.alpha=0;
@@ -2468,7 +2491,7 @@ class PlayState extends MusicBeatState
 	}
 
 	function NokeReconnect(){
-		if(!nokeTxt.visible){
+		if(nokeTxt.text!="RECONNECTED"){
 			if(curStage=='elevator'){
 				nokeFl.alpha=1;
 				nokeBG.alpha=1;
@@ -3021,7 +3044,7 @@ class PlayState extends MusicBeatState
 				var line = playerStrumLines.members[idx];
 				if(currentOptions.middleScroll){
 					line.screenCenter(X);
-					line.x += width*(-2+idx) + playerNoteOffsets[idx][0];
+					line.x += width*(-(keyAmount/2) +idx) + playerNoteOffsets[idx][0];
 				}else{
 					line.x = (width*idx) + 50 + ((FlxG.width / 2)) + playerNoteOffsets[idx][0];
 				}
@@ -3041,17 +3064,17 @@ class PlayState extends MusicBeatState
 
 			for (idx in 0...strumLineNotes.length){
 				var note = strumLineNotes.members[idx];
-				var offset = opponentNoteOffsets[idx%4];
-				var strumLine = opponentStrumLines.members[idx%4];
-				var alpha = opponentRefNotes.members[idx%4].alpha;
-				var angle = opponentRefNotes.members[idx%4].angle;
-				if(idx>3){
-					offset = playerNoteOffsets[idx%4];
-					strumLine = playerStrumLines.members[idx%4];
-					alpha = refNotes.members[idx%4].alpha;
-					angle = refNotes.members[idx%4].angle;
+				var offset = opponentNoteOffsets[idx%keyAmount];
+				var strumLine = opponentStrumLines.members[idx%keyAmount];
+				var alpha = opponentRefNotes.members[idx%keyAmount].alpha;
+				var angle = opponentRefNotes.members[idx%keyAmount].angle;
+				if(idx>keyAmount-1){
+					offset = playerNoteOffsets[idx%keyAmount];
+					strumLine = playerStrumLines.members[idx%keyAmount];
+					alpha = refNotes.members[idx%keyAmount].alpha;
+					angle = refNotes.members[idx%keyAmount].angle;
 				}
-				if(modchart.opponentNotesFollowReceptors && idx>3 || idx<=3 && modchart.playerNotesFollowReceptors){
+				if(modchart.opponentNotesFollowReceptors && idx>keyAmount-1 || idx<=keyAmount-1 && modchart.playerNotesFollowReceptors){
 					note.x = strumLine.x;
 					note.y = strumLine.y;
 				}else{
@@ -3182,7 +3205,7 @@ class PlayState extends MusicBeatState
 						//if(!daNote.isSustainNote){
 
 						var anim = "";
-						switch (Math.abs(daNote.noteData))
+						/*switch (Math.abs(daNote.noteData))
 						{
 							case 0:
 								anim='singLEFT' + altAnim;
@@ -3192,23 +3215,17 @@ class PlayState extends MusicBeatState
 								anim='singUP' + altAnim;
 							case 3:
 								anim='singRIGHT' + altAnim;
-						}
+						}*/
 
-						switch (Math.abs(daNote.noteData))
+						anim = singAnims[daNote.noteData] + altAnim;
+
+						switch (anim)
 						{
-							case 2:
+							case 'singUP${altAnim}' | 'singDOWN${altAnim}':
 								if(dad.curCharacter=='noke'){
 									NokeDisconnect();
 								}
-							case 3:
-								if(dad.curCharacter=='noke'){
-									NokeReconnect();
-								}
-							case 1:
-								if(dad.curCharacter=='noke'){
-									NokeDisconnect();
-								}
-							case 0:
+							default:
 								if(dad.curCharacter=='noke'){
 									NokeReconnect();
 								}
@@ -3748,7 +3765,16 @@ class PlayState extends MusicBeatState
 		var holdArray:Array<Bool> = [left,down,up,right];
 		var controlArray:Array<Bool> = [leftP, downP, upP, rightP];
 
-		if((left || right || up || down) && generatedMusic ){
+		if(keyAmount==6){
+			var right2 = controls.RIGHT2;
+			var left2 = controls.LEFT2;
+			var right2P = controls.RIGHT2_P;
+			var left2P = controls.LEFT2_P;
+
+			holdArray = [left,down,right,left2,up,right2];
+			controlArray  = [leftP,downP,rightP,left2P,upP,right2P];
+		}
+		if(holdArray.contains(true) && generatedMusic ){
 			var hitting=[];
 			var beenHit=[];
 			for(daNote in hittableNotes){
@@ -3759,12 +3785,12 @@ class PlayState extends MusicBeatState
 
 		};
 
-		if ((upP || rightP || downP || leftP) && generatedMusic)
+		if (controlArray.contains(true) && generatedMusic)
 			{
 				var possibleNotes:Array<Note> = [];
 				var ignoreList = [];
 				var what = [];
-				var checkDirAgain=[false,false,false,false];
+				var checkDirAgain=[false,false,false,false,false,false];
 				for(daNote in hittableNotes){
 					if(daNote.canBeHit && daNote.mustPress && !daNote.tooLate && !daNote.wasGoodHit && !daNote.isSustainNote){
 						if(ignoreList.contains(daNote.noteData)){
@@ -3880,50 +3906,18 @@ class PlayState extends MusicBeatState
 
 		FlxG.sound.play(Paths.soundRandom('missnote', 1, 3), FlxG.random.float(0.3, 0.6));
 
+		var anim = singAnims[direction] + "miss";
 		if(note!=null){
-			trace(note.whoSingsShit);
 			note.whoSingsShit = note.whoSingsShit==null?"0":note.whoSingsShit;
-			switch (note.noteData)
-			{
-				case 2:
-					if(note.whoSingsShit=='0' || note.whoSingsShit=='2')
-						boyfriend.playAnim('singUPmiss', true);
+			if(note.whoSingsShit=='0' || note.whoSingsShit == '2')
+				boyfriend.playAnim(anim,true);
 
-					if(note.whoSingsShit=='1' || note.whoSingsShit=='2')
-						omega.playAnim('singUPmiss',true);
-
-				case 3:
-					if(note.whoSingsShit=='0' || note.whoSingsShit=='2')
-						boyfriend.playAnim('singRIGHTmiss', true);
-
-					if(note.whoSingsShit=='1' || note.whoSingsShit=='2')
-						omega.playAnim('singRIGHTmiss',true);
-				case 1:
-					if(note.whoSingsShit=='0' || note.whoSingsShit=='2')
-						boyfriend.playAnim('singDOWNmiss', true);
-
-					if(note.whoSingsShit=='1' || note.whoSingsShit=='2')
-						omega.playAnim('singDOWNmiss',true);
-				case 0:
-					if(note.whoSingsShit=='0' || note.whoSingsShit=='2')
-						boyfriend.playAnim('singLEFTmiss', true);
-
-					if(note.whoSingsShit=='1' || note.whoSingsShit=='2')
-						omega.playAnim('singLEFTmiss',true);
-			}
+			if(note.whoSingsShit=='1' || note.whoSingsShit == '2')
+				omega.playAnim(anim,true);
 		}else{
-			switch (direction)
-			{
-				case 0:
-					boyfriend.playAnim('singLEFTmiss', true);
-				case 1:
-					boyfriend.playAnim('singDOWNmiss', true);
-				case 2:
-					boyfriend.playAnim('singUPmiss', true);
-				case 3:
-					boyfriend.playAnim('singRIGHTmiss', true);
-			}
+			boyfriend.playAnim(anim);
 		}
+
 
 		updateAccuracy();
 
@@ -4098,7 +4092,7 @@ class PlayState extends MusicBeatState
 				goldOverlayTween.cancel();
 			goldOverlayTween = FlxTween.tween(goldOverlay, {alpha: 0}, .25);
 		}
-		var strumLine = playerStrumLines.members[note.noteData%4];
+		var strumLine = playerStrumLines.members[note.noteData%keyAmount];
 
 
 		if(luaModchartExists && lua!=null){
@@ -4119,18 +4113,7 @@ class PlayState extends MusicBeatState
 			lua.setGlobalVar("health",health);
 
 		//if(!note.isSustainNote){
-		var anim = "";
-		switch (note.noteData)
-		{
-		case 0:
-			anim='singLEFT';
-		case 1:
-			anim='singDOWN';
-		case 2:
-			anim='singUP';
-		case 3:
-			anim='singRIGHT';
-		}
+		var anim = singAnims[note.noteData];
 
 		if(note.whoSingsShit=='0' || note.whoSingsShit=='2'){
 			var canHold = note.isSustainNote && boyfriend.animation.getByName(anim+"Hold")!=null;

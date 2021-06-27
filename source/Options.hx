@@ -108,6 +108,28 @@ class OptionUtils
 		}
 	}
 
+	public static function get6KIdx(control:Control){
+		var idx = 0;
+		switch (control){
+			case Control.LEFT:
+				idx = 0;
+			case Control.DOWN:
+				idx = 1;
+			case Control.RIGHT:
+				idx = 2;
+			case Control.LEFT2:
+				idx = 3;
+			case Control.UP:
+				idx = 4;
+			case Control.RIGHT2:
+				idx = 5;
+			case Control.RESET:
+				idx = 6;
+			default:
+		}
+		return idx;
+	}
+
 	public static function getKIdx(control:Control){
 		var idx = 0;
 		switch (control){
@@ -125,14 +147,20 @@ class OptionUtils
 		}
 		return idx;
 	}
+
 	public static function getKey(control:Control){
 		return options.controls[getKIdx(control)];
+	}
+
+	public static function getsixKey(control:Control){
+		return options.controlsSixK[get6KIdx(control)];
 	}
 }
 
 class Options
 {
 	public var controls:Array<FlxKey> = [FlxKey.A,FlxKey.S,FlxKey.K,FlxKey.L,FlxKey.R];
+	public var controlsSixK:Array<FlxKey> = [FlxKey.A,FlxKey.S,FlxKey.D,FlxKey.J,FlxKey.K,FlxKey.L,FlxKey.R];
 	public var ghosttapping:Bool = false;
 	public var failForMissing:Bool = false;
 	public var loadModcharts:Bool = true;
@@ -478,12 +506,21 @@ class ControlOption extends Option
 	private var controls:Controls;
 	private var key:FlxKey;
 	public var forceUpdate=false;
-	public function new(controls:Controls,controlType:Control){
+	public var sixK=false;
+	public function new(controls:Controls,controlType:Control,sixK:Bool){
 		super();
 		this.controlType=controlType;
 		this.controls=controls;
-		key=OptionUtils.getKey(controlType);
-		name='${controlType} : ${OptionUtils.getKey(controlType).toString()}';
+		this.sixK=sixK;
+
+		if(sixK){
+			key=OptionUtils.getsixKey(controlType);
+			name='${controlType} : ${OptionUtils.getsixKey(controlType).toString()}';
+		}else{
+			key=OptionUtils.getKey(controlType);
+			name='${controlType} : ${OptionUtils.getKey(controlType).toString()}';
+		}
+
 	};
 
 	public override function keyPressed(pressed:FlxKey){
@@ -495,13 +532,22 @@ class ControlOption extends Option
 			};
 		};
 		if(pressed!=ESCAPE){
-			OptionUtils.options.controls[OptionUtils.getKIdx(controlType)]=pressed;
+			if(sixK)
+				OptionUtils.options.controlsSixK[OptionUtils.get6KIdx(controlType)]=pressed;
+			else
+				OptionUtils.options.controls[OptionUtils.getKIdx(controlType)]=pressed;
+
+
 			key=pressed;
+
 		}
-		name='${controlType} : ${OptionUtils.getKey(controlType).toString()}';
+		if(sixK)
+			name='${controlType} : ${OptionUtils.getsixKey(controlType).toString()}';
+		else
+			name='${controlType} : ${OptionUtils.getKey(controlType).toString()}';
 		if(pressed!=-1){
 			trace("epic style " + pressed.toString() );
-			controls.setKeyboardScheme(Custom,true);
+			controls.setKeyboardScheme(Solo,true);
 			allowMultiKeyInput=false;
 			return true;
 		}

@@ -19,13 +19,20 @@ enum abstract Action(String) to String from String
 	var LEFT = "left";
 	var RIGHT = "right";
 	var DOWN = "down";
+	var LEFT2 = "left2";
+	var RIGHT2 = "right2";
 	var UP_P = "up-press";
 	var LEFT_P = "left-press";
 	var RIGHT_P = "right-press";
+	var LEFT2_P = "left2-press";
+	var RIGHT2_P = "right2-press";
+
 	var DOWN_P = "down-press";
 	var UP_R = "up-release";
 	var LEFT_R = "left-release";
 	var RIGHT_R = "right-release";
+	var LEFT2_R = "left2-release";
+	var RIGHT2_R = "right2-release";
 	var DOWN_R = "down-release";
 	var ACCEPT = "accept";
 	var BACK = "back";
@@ -41,13 +48,19 @@ abstract Action(String) to String from String
 	var LEFT = "left";
 	var RIGHT = "right";
 	var DOWN = "down";
+	var LEFT2 = "left2";
+	var RIGHT2 = "right2";
 	var UP_P = "up-press";
 	var LEFT_P = "left-press";
 	var RIGHT_P = "right-press";
+	var LEFT2_P = "left2-press";
+	var RIGHT2_P = "right2-press";
 	var DOWN_P = "down-press";
 	var UP_R = "up-release";
 	var LEFT_R = "left-release";
 	var RIGHT_R = "right-release";
+	var LEFT2_R = "left2-release";
+	var RIGHT2_R = "right2-release";
 	var DOWN_R = "down-release";
 	var ACCEPT = "accept";
 	var BACK = "back";
@@ -74,6 +87,8 @@ enum Control
 	LEFT;
 	RIGHT;
 	DOWN;
+	LEFT2;
+	RIGHT2;
 	RESET;
 	ACCEPT;
 	BACK;
@@ -87,6 +102,7 @@ enum KeyboardScheme
 	Duo(first:Bool);
 	None;
 	Custom;
+	SixK;
 }
 
 /**
@@ -98,15 +114,21 @@ class Controls extends FlxActionSet
 	var _up = new FlxActionDigital(Action.UP);
 	var _left = new FlxActionDigital(Action.LEFT);
 	var _right = new FlxActionDigital(Action.RIGHT);
+	var _left2 = new FlxActionDigital(Action.LEFT2);
+	var _right2 = new FlxActionDigital(Action.RIGHT2);
 	var _down = new FlxActionDigital(Action.DOWN);
 	var _upP = new FlxActionDigital(Action.UP_P);
 	var _leftP = new FlxActionDigital(Action.LEFT_P);
 	var _rightP = new FlxActionDigital(Action.RIGHT_P);
+	var _left2P = new FlxActionDigital(Action.LEFT2_P);
+	var _right2P = new FlxActionDigital(Action.RIGHT2_P);
 	var _downP = new FlxActionDigital(Action.DOWN_P);
 	var _upR = new FlxActionDigital(Action.UP_R);
 	var _leftR = new FlxActionDigital(Action.LEFT_R);
 	var _rightR = new FlxActionDigital(Action.RIGHT_R);
 	var _downR = new FlxActionDigital(Action.DOWN_R);
+	var _left2R = new FlxActionDigital(Action.LEFT2_R);
+	var _right2R = new FlxActionDigital(Action.RIGHT2_R);
 	var _accept = new FlxActionDigital(Action.ACCEPT);
 	var _back = new FlxActionDigital(Action.BACK);
 	var _pause = new FlxActionDigital(Action.PAUSE);
@@ -207,6 +229,37 @@ class Controls extends FlxActionSet
 	inline function get_CHEAT()
 		return _cheat.check();
 
+	public var LEFT2_R(get, never):Bool;
+
+	inline function get_LEFT2_R()
+		return _left2R.check();
+
+	public var RIGHT2_R(get, never):Bool;
+
+	inline function get_RIGHT2_R()
+		return _right2R.check();
+
+	public var LEFT2_P(get, never):Bool;
+
+	inline function get_LEFT2_P()
+		return _left2P.check();
+
+	public var RIGHT2_P(get, never):Bool;
+
+	inline function get_RIGHT2_P()
+		return _right2P.check();
+
+	public var LEFT2(get, never):Bool;
+
+	inline function get_LEFT2()
+		return _left2.check();
+
+	public var RIGHT2(get, never):Bool;
+
+	inline function get_RIGHT2()
+		return _right2.check();
+
+
 	#if (haxe >= "4.0.0")
 	public function new(name, scheme = None)
 	{
@@ -215,14 +268,20 @@ class Controls extends FlxActionSet
 		add(_up);
 		add(_left);
 		add(_right);
+		add(_left2);
+		add(_right2);
 		add(_down);
 		add(_upP);
 		add(_leftP);
 		add(_rightP);
+		add(_left2P);
+		add(_right2P);
 		add(_downP);
 		add(_upR);
 		add(_leftR);
 		add(_rightR);
+		add(_left2R);
+		add(_right2R);
 		add(_downR);
 		add(_accept);
 		add(_back);
@@ -243,14 +302,20 @@ class Controls extends FlxActionSet
 		add(_up);
 		add(_left);
 		add(_right);
+		add(_left2);
+		add(_right2);
 		add(_down);
 		add(_upP);
 		add(_leftP);
 		add(_rightP);
+		add(_left2P);
+		add(_right2P);
 		add(_downP);
 		add(_upR);
 		add(_leftR);
 		add(_rightR);
+		add(_left2R);
+		add(_right2R);
 		add(_downR);
 		add(_accept);
 		add(_back);
@@ -306,6 +371,8 @@ class Controls extends FlxActionSet
 			case DOWN: _down;
 			case LEFT: _left;
 			case RIGHT: _right;
+			case LEFT2: _left2;
+			case RIGHT2: _right2;
 			case ACCEPT: _accept;
 			case BACK: _back;
 			case PAUSE: _pause;
@@ -342,6 +409,15 @@ class Controls extends FlxActionSet
 				func(_right, PRESSED);
 				func(_rightP, JUST_PRESSED);
 				func(_rightR, JUST_RELEASED);
+			case LEFT2:
+				func(_left2, PRESSED);
+				func(_left2P, JUST_PRESSED);
+				func(_left2R, JUST_RELEASED);
+			case RIGHT2:
+				func(_right2, PRESSED);
+				func(_right2P, JUST_PRESSED);
+				func(_right2R, JUST_RELEASED);
+
 			case DOWN:
 				func(_down, PRESSED);
 				func(_downP, JUST_PRESSED);
@@ -498,10 +574,10 @@ class Controls extends FlxActionSet
 		switch (scheme)
 		{
 			case Solo:
-				inline bindKeys(Control.UP, [K, FlxKey.UP]);
+				inline bindKeys(Control.UP, [W, FlxKey.UP]);
 				inline bindKeys(Control.DOWN, [S, FlxKey.DOWN]);
 				inline bindKeys(Control.LEFT, [A, FlxKey.LEFT]);
-				inline bindKeys(Control.RIGHT, [L, FlxKey.RIGHT]);
+				inline bindKeys(Control.RIGHT, [D, FlxKey.RIGHT]);
 				inline bindKeys(Control.ACCEPT, [Z, SPACE, ENTER]);
 				inline bindKeys(Control.BACK, [BACKSPACE, ESCAPE]);
 				inline bindKeys(Control.PAUSE, [P, ENTER, ESCAPE]);
@@ -509,19 +585,30 @@ class Controls extends FlxActionSet
 			case Duo(true): // nothing
 			case Duo(false): // nothing
 			case None: // nothing
+			case SixK:
+				inline bindKeys(Control.UP, [FlxKey.UP]);
+				inline bindKeys(Control.DOWN, [FlxKey.DOWN]);
+				inline bindKeys(Control.LEFT, [FlxKey.LEFT]);
+				inline bindKeys(Control.RIGHT, [FlxKey.RIGHT]);
+				for (i in [Control.LEFT,Control.DOWN,Control.RIGHT,Control.LEFT2,Control.UP,Control.RIGHT2,Control.RESET]){
+					inline bindKeys(i,[OptionUtils.getsixKey(i)]);
+				}
+
+				inline bindKeys(Control.ACCEPT, [Z, SPACE, ENTER]);
+				inline bindKeys(Control.BACK, [BACKSPACE, ESCAPE]);
+				inline bindKeys(Control.PAUSE, [P, ENTER, ESCAPE]);
 			case Custom:
 				inline bindKeys(Control.UP, [FlxKey.UP]);
 				inline bindKeys(Control.DOWN, [FlxKey.DOWN]);
 				inline bindKeys(Control.LEFT, [FlxKey.LEFT]);
 				inline bindKeys(Control.RIGHT, [FlxKey.RIGHT]);
-				for (i in [Control.LEFT,Control.DOWN,Control.UP,Control.RIGHT]){
+				for (i in [Control.LEFT,Control.DOWN,Control.UP,Control.RIGHT,Control.RESET]){
 					inline bindKeys(i,[OptionUtils.getKey(i)]);
 				}
 
 				inline bindKeys(Control.ACCEPT, [Z, SPACE, ENTER]);
 				inline bindKeys(Control.BACK, [BACKSPACE, ESCAPE]);
 				inline bindKeys(Control.PAUSE, [P, ENTER, ESCAPE]);
-				inline bindKeys(Control.RESET, [R]);
 		}
 	}
 

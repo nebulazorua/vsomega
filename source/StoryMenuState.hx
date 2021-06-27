@@ -73,6 +73,7 @@ class StoryMenuState extends MusicBeatState
 
 	override function create()
 	{
+		controls.setKeyboardScheme(Solo,true);
 		transIn = FlxTransitionableState.defaultTransIn;
 		transOut = FlxTransitionableState.defaultTransOut;
 

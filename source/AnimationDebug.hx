@@ -40,7 +40,7 @@ class AnimationDebug extends FlxState
 	var camFollow:FlxObject;
 	var camHUD:FlxCamera;
 	var camGame:FlxCamera;
-
+	var player:FlxUICheckBox;
 	public function new(daAnim:String = 'spooky')
 	{
 		super();
@@ -81,6 +81,18 @@ class AnimationDebug extends FlxState
 		});
 		cumfart.selectedLabel = daAnim;
 
+		player = new FlxUICheckBox(175, 50, null, null, "flipX", 100);
+		player.checked = false;
+		player.callback = function()
+		{
+			//=check_use_hit.checked;
+			if(dad!=null)
+				dad.flipX=player.checked;
+
+			if(bf!=null)
+				bf.flipX=player.checked;
+		};
+
 		dumbTexts = new FlxTypedGroup<FlxText>();
 		add(dumbTexts);
 
@@ -95,6 +107,7 @@ class AnimationDebug extends FlxState
 		camGame.follow(camFollow);
 
 		UI_box.add(cumfart);
+		UI_box.add(player);
 		displayCharacter(daAnim);
 
 		super.create();
@@ -128,7 +141,7 @@ class AnimationDebug extends FlxState
 			layeringbullshit.add(dad);
 
 			char = dad;
-			dad.flipX = false;
+			dad.flipX = player.checked;
 		}
 		else
 		{
@@ -138,7 +151,7 @@ class AnimationDebug extends FlxState
 			layeringbullshit.add(bf);
 
 			char = bf;
-			bf.flipX = false;
+			bf.flipX = player.checked;
 		}
 
 		genBoyOffsets();

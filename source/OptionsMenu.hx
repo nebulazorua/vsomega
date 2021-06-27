@@ -23,11 +23,22 @@ class OptionsMenu extends MusicBeatState
 	private var defCat:OptionCategory = new OptionCategory("Default",[
 		new OptionCategory("Gameplay",[
 			new OptionCategory("Controls",[
-				new ControlOption(controls,Control.LEFT),
-				new ControlOption(controls,Control.DOWN),
-				new ControlOption(controls,Control.UP),
-				new ControlOption(controls,Control.RIGHT),
-				new ControlOption(controls,Control.RESET),
+				new OptionCategory("4K",[
+					new ControlOption(controls,Control.LEFT,false),
+					new ControlOption(controls,Control.DOWN,false),
+					new ControlOption(controls,Control.UP,false),
+					new ControlOption(controls,Control.RIGHT,false),
+					new ControlOption(controls,Control.RESET,false),
+				]),
+				new OptionCategory("6K",[
+					new ControlOption(controls,Control.LEFT,true),
+					new ControlOption(controls,Control.DOWN,true),
+					new ControlOption(controls,Control.RIGHT,true),
+					new ControlOption(controls,Control.LEFT2,true),
+					new ControlOption(controls,Control.UP,true),
+					new ControlOption(controls,Control.RIGHT2,true),
+					new ControlOption(controls,Control.RESET,true),
+				]),
 			]),
 			new OptionCategory("Modifiers",[
 				new ToggleOption("failForMissing","Sudden Death"),

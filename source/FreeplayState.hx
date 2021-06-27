@@ -36,6 +36,7 @@ class FreeplayState extends MusicBeatState
 
 	override function create()
 	{
+		controls.setKeyboardScheme(Solo,true);
 		var initSonglist = CoolUtil.coolTextFile(Paths.txt('freeplaySonglist'));
 
 		for (i in 0...initSonglist.length)
@@ -46,13 +47,13 @@ class FreeplayState extends MusicBeatState
 			songs.push(new SongMetadata(data.join(" "), Std.parseInt(week), icon));
 		}
 
-		/*
+		
 			if (FlxG.sound.music != null)
 			{
 				if (!FlxG.sound.music.playing)
 					FlxG.sound.playMusic(Paths.music('freakyMenu'));
 			}
-		 */
+
 
 		#if desktop
 		// Updating Discord Rich Presence
