@@ -74,19 +74,16 @@ class OptionsMenu extends MusicBeatState
 
 	override function create()
 	{
+		persistentDraw=true;
+		persistentUpdate=true;
 		#if desktop
 		// Updating Discord Rich Presence
 		DiscordClient.changePresence("Changing options", null);
 		#end
 		category=defCat;
-		var menuBG:FlxSprite = new FlxSprite().loadGraphic(Paths.image("menuDesat"));
-
-		menuBG.color = 0xFFa271de;
-		menuBG.setGraphicSize(Std.int(menuBG.width * 1.1));
-		menuBG.updateHitbox();
-		menuBG.screenCenter();
-		menuBG.antialiasing = true;
-		add(menuBG);
+		var portal:FlxSprite = new FlxSprite(0,-80).loadGraphic(Paths.image("spaceshit"));
+		portal.antialiasing=true;
+		add(portal);
 
 		optionText = new FlxTypedGroup<Option>();
 		add(optionText);

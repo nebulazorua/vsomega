@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="King.png">
+	<!-- Created with Adobe Animate version 20.0.0.17400 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="King Down0000" x="39" y="39" width="740" height="641" frameX="0" frameY="-26" frameWidth="740" frameHeight="667"/>
+	<SubTexture name="King Down0001" x="854" y="39" width="697" height="654" frameX="-11" frameY="-13" frameWidth="740" frameHeight="667"/>
+	<SubTexture name="King Down0002" x="1626" y="39" width="663" height="667" frameX="-21" frameY="0" frameWidth="740" frameHeight="667"/>
+	<SubTexture name="King Down0003" x="1626" y="39" width="663" height="667" frameX="-21" frameY="0" frameWidth="740" frameHeight="667"/>
+	<SubTexture name="King Down0004" x="1626" y="39" width="663" height="667" frameX="-21" frameY="0" frameWidth="740" frameHeight="667"/>
+	<SubTexture name="King Down0005" x="1626" y="39" width="663" height="667" frameX="-21" frameY="0" frameWidth="740" frameHeight="667"/>
+	<SubTexture name="King Idle0000" x="2364" y="39" width="479" height="840" frameX="0" frameY="0" frameWidth="546" frameHeight="840"/>
+	<SubTexture name="King Idle0001" x="2364" y="39" width="479" height="840" frameX="0" frameY="0" frameWidth="546" frameHeight="840"/>
+	<SubTexture name="King Idle0002" x="2918" y="39" width="477" height="834" frameX="-1" frameY="-2" frameWidth="546" frameHeight="840"/>
+	<SubTexture name="King Idle0003" x="2918" y="39" width="477" height="834" frameX="-1" frameY="-2" frameWidth="546" frameHeight="840"/>
+	<SubTexture name="King Idle0004" x="3470" y="39" width="487" height="831" frameX="-7" frameY="-5" frameWidth="546" frameHeight="840"/>
+	<SubTexture name="King Idle0005" x="3470" y="39" width="487" height="831" frameX="-7" frameY="-5" frameWidth="546" frameHeight="840"/>
+	<SubTexture name="King Idle0006" x="39" y="954" width="519" height="827" frameX="-14" frameY="-9" frameWidth="546" frameHeight="840"/>
+	<SubTexture name="King Idle0007" x="39" y="954" width="519" height="827" frameX="-14" frameY="-9" frameWidth="546" frameHeight="840"/>
+	<SubTexture name="King Idle0008" x="633" y="954" width="531" height="825" frameX="-15" frameY="-11" frameWidth="546" frameHeight="840"/>
+	<SubTexture name="King Idle0009" x="633" y="954" width="531" height="825" frameX="-15" frameY="-11" frameWidth="546" frameHeight="840"/>
+	<SubTexture name="King Idle0010" x="633" y="954" width="531" height="825" frameX="-15" frameY="-11" frameWidth="546" frameHeight="840"/>
+	<SubTexture name="King Idle0011" x="633" y="954" width="531" height="825" frameX="-15" frameY="-11" frameWidth="546" frameHeight="840"/>
+	<SubTexture name="King Idle0012" x="633" y="954" width="531" height="825" frameX="-15" frameY="-11" frameWidth="546" frameHeight="840"/>
+	<SubTexture name="King Idle0013" x="633" y="954" width="531" height="825" frameX="-15" frameY="-11" frameWidth="546" frameHeight="840"/>
+	<SubTexture name="King Left0000" x="1239" y="954" width="1273" height="861" frameX="0" frameY="-1" frameWidth="1273" frameHeight="862"/>
+	<SubTexture name="King Left0001" x="2587" y="954" width="1266" height="861" frameX="-7" frameY="-1" frameWidth="1273" frameHeight="862"/>
+	<SubTexture name="King Left0002" x="39" y="1890" width="1257" height="862" frameX="-16" frameY="0" frameWidth="1273" frameHeight="862"/>
+	<SubTexture name="King Left0003" x="39" y="1890" width="1257" height="862" frameX="-16" frameY="0" frameWidth="1273" frameHeight="862"/>
+	<SubTexture name="King Left0004" x="39" y="1890" width="1257" height="862" frameX="-16" frameY="0" frameWidth="1273" frameHeight="862"/>
+	<SubTexture name="King Left0005" x="39" y="1890" width="1257" height="862" frameX="-16" frameY="0" frameWidth="1273" frameHeight="862"/>
+	<SubTexture name="King Right0000" x="1371" y="1890" width="502" height="972"/>
+	<SubTexture name="King Right0001" x="1948" y="1890" width="478" height="952" frameX="-24" frameY="-20" frameWidth="502" frameHeight="972"/>
+	<SubTexture name="King Right0002" x="2501" y="1890" width="463" height="929" frameX="-39" frameY="-43" frameWidth="502" frameHeight="972"/>
+	<SubTexture name="King Right0003" x="2501" y="1890" width="463" height="929" frameX="-39" frameY="-43" frameWidth="502" frameHeight="972"/>
+	<SubTexture name="King Right0004" x="2501" y="1890" width="463" height="929" frameX="-39" frameY="-43" frameWidth="502" frameHeight="972"/>
+	<SubTexture name="King Right0005" x="2501" y="1890" width="463" height="929" frameX="-39" frameY="-43" frameWidth="502" frameHeight="972"/>
+	<SubTexture name="King Up0000" x="3039" y="1890" width="511" height="832" frameX="-25" frameY="0" frameWidth="560" frameHeight="832"/>
+	<SubTexture name="King Up0001" x="39" y="2937" width="540" height="830" frameX="-14" frameY="-2" frameWidth="560" frameHeight="832"/>
+	<SubTexture name="King Up0002" x="654" y="2937" width="560" height="828" frameX="0" frameY="-4" frameWidth="560" frameHeight="832"/>
+	<SubTexture name="King Up0003" x="654" y="2937" width="560" height="828" frameX="0" frameY="-4" frameWidth="560" frameHeight="832"/>
+	<SubTexture name="King Up0004" x="654" y="2937" width="560" height="828" frameX="0" frameY="-4" frameWidth="560" frameHeight="832"/>
+	<SubTexture name="King Up0005" x="654" y="2937" width="560" height="828" frameX="0" frameY="-4" frameWidth="560" frameHeight="832"/>
+</TextureAtlas>

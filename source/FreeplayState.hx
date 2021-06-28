@@ -13,7 +13,9 @@ import flixel.text.FlxText;
 import flixel.util.FlxColor;
 import lime.utils.Assets;
 import Options;
-
+import flixel.util.FlxTimer;
+import flixel.tweens.FlxEase;
+import flixel.tweens.FlxTween;
 using StringTools;
 
 class FreeplayState extends MusicBeatState
@@ -36,6 +38,8 @@ class FreeplayState extends MusicBeatState
 
 	override function create()
 	{
+		persistentDraw=true;
+		persistentUpdate=true;
 		controls.setKeyboardScheme(Solo,true);
 		var initSonglist = CoolUtil.coolTextFile(Paths.txt('freeplaySonglist'));
 
@@ -47,7 +51,7 @@ class FreeplayState extends MusicBeatState
 			songs.push(new SongMetadata(data.join(" "), Std.parseInt(week), icon));
 		}
 
-		
+
 			if (FlxG.sound.music != null)
 			{
 				if (!FlxG.sound.music.playing)
@@ -57,7 +61,7 @@ class FreeplayState extends MusicBeatState
 
 		#if desktop
 		// Updating Discord Rich Presence
-		DiscordClient.changePresence("In the Menus", null);
+		DiscordClient.changePresence("Freeplay", null);
 		#end
 
 		var isDebug:Bool = false;
@@ -88,8 +92,9 @@ class FreeplayState extends MusicBeatState
 
 		// LOAD CHARACTERS
 
-		var bg:FlxSprite = new FlxSprite().loadGraphic(Paths.image('menuBGBlue'));
-		add(bg);
+		var portal:FlxSprite = new FlxSprite(0,-80).loadGraphic(Paths.image("spaceshit"));
+		portal.antialiasing=true;
+		add(portal);
 
 		grpSongs = new FlxTypedGroup<Alphabet>();
 		add(grpSongs);
@@ -97,8 +102,13 @@ class FreeplayState extends MusicBeatState
 		for (i in 0...songs.length)
 		{
 			var songText:Alphabet = new Alphabet(0, (70 * i) + 30, songs[i].songName.split("-").join(" "), true, false);
+			songText.alpha=0;
+			songText.wantedA=0;
 			songText.isMenuItem = true;
 			songText.targetY = i;
+			songText.gotoTargetPosition();
+			songText.x = -125;
+			songText.ID=i;
 			grpSongs.add(songText);
 
 			var icon:HealthIcon = new HealthIcon(songs[i].songCharacter);
@@ -112,7 +122,23 @@ class FreeplayState extends MusicBeatState
 			// DONT PUT X IN THE FIRST PARAMETER OF new ALPHABET() !!
 			// songText.screenCenter(X);
 		}
+		new FlxTimer().start(.1, function(tmr:FlxTimer){
 
+			grpSongs.forEach( function(song:Alphabet){
+				song.isMenuItem = false;
+				song.x = -(FlxG.width+song.width);
+				song.calculateWantedXY();
+				FlxTween.tween(song, {x:song.wantedX,alpha:1}, 0.5, {
+					ease: FlxEase.backOut,
+					startDelay: 0.05 + (0.05 * song.ID),
+					onComplete:function(br){
+						song.alpha=1;
+						song.wantedA=1;
+						song.isMenuItem = true;
+					}
+				});
+			});
+		});
 		scoreText = new FlxText(FlxG.width * 0.7, 5, 0, "", 32);
 		// scoreText.autoSize = false;
 		scoreText.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, RIGHT);
@@ -304,11 +330,13 @@ class FreeplayState extends MusicBeatState
 			bullShit++;
 
 			item.alpha = 0.6;
+			item.wantedA = .6;
 			// item.setGraphicSize(Std.int(item.width * 0.8));
 
 			if (item.targetY == 0)
 			{
 				item.alpha = 1;
+				item.wantedA = 1;
 				// item.setGraphicSize(Std.int(item.width));
 			}
 		}

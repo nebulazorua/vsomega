@@ -31,9 +31,10 @@ class GameOverSubstate extends MusicBeatSubstate
 				daBf = 'bf';
 		}
 
-		if(PlayState.SONG.song.toLowerCase()=='last-stand'){
-			daBf = 'bf-FUCKING-DIES';
-			stageSuffix='-omega';
+		switch(PlayState.SONG.song.toLowerCase()){
+			case 'last-stand' | 'dishonor':
+				daBf = 'bf-FUCKING-DIES';
+				stageSuffix='-omega';
 		}
 
 		super();

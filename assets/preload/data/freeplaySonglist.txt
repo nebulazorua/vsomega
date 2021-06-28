@@ -1,6 +1,6 @@
 gf 1 Tutorial
 gf -1 Prelude
-mika -1 Dishonor
+king -1 Dishonor
 omega -1 Mercenary
 omega -1 Odd-Job
 omega -1 Guardian

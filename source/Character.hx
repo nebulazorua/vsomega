@@ -411,7 +411,7 @@ class Character extends FlxSprite
 				antialiasing = false;
 
 			case 'parents-christmas':
-				frames = Paths.getSparrowAtlas('characters/mom_dad_christmas_assets');
+				frames = Paths.getSparrowAtlas('characters/mom_dad_christmas_assets','shared');
 				animation.addByPrefix('idle', 'Parent Christmas Idle', 24, false);
 				animation.addByPrefix('singUP', 'Parent Up Note Dad', 24, false);
 				animation.addByPrefix('singDOWN', 'Parent Down Note Dad', 24, false);
@@ -487,6 +487,17 @@ class Character extends FlxSprite
 				loadOffsets();
 				playAnim("idle");
 				setGraphicSize(Std.int((width*2)*.6));
+			case 'king':
+				frames = Paths.getSparrowAtlas("characters/King","shared");
+				animation.addByPrefix('idle', 'King Idle', 24, false);
+				animation.addByPrefix('singUP', 'King Up', 24, false);
+				animation.addByPrefix('singDOWN', 'King Down', 24, false);
+				animation.addByPrefix('singLEFT', 'King Left', 24, false);
+				animation.addByPrefix('singRIGHT', 'King Right', 24, false);
+				flipX=true;
+				loadOffsets();
+				playAnim("idle");
+
 			case 'flexy':
 				frames = Paths.getSparrowAtlas("characters/Flexy","shared");
 				animation.addByPrefix('idle', 'flexy idle', 24, false);
@@ -723,7 +734,7 @@ class Character extends FlxSprite
 		switch (curCharacter)
 		{
 			case 'gf':
-				if (animation.curAnim.name == 'hairFall' && animation.curAnim.finished)
+				if ((animation.curAnim.name == 'hairFall' || animation.curAnim.name=='cheer') && animation.curAnim.finished)
 					playAnim('danceRight');
 			case 'bf':
 				if ((animation.curAnim.name == 'cut' || animation.curAnim.name=="dischargeScared") && animation.curAnim.finished)
@@ -764,7 +775,7 @@ class Character extends FlxSprite
 				if(animation.getByName("idle")!=null)
 					playAnim("idle");
 				else if (animation.getByName("danceRight")!=null && animation.getByName("danceLeft")!=null){
-					if (!animation.curAnim.name.startsWith('hair'))
+					if (!animation.curAnim.name.startsWith('hair') && animation.curAnim.name!='cheer')
 					{
 						danced = !danced;
 

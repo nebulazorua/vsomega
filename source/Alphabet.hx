@@ -22,6 +22,7 @@ class Alphabet extends FlxSpriteGroup
 	public var isMenuItem:Bool = false;
 	public var wantedX:Float = 0;
 	public var wantedY:Float = 0;
+	public var wantedA:Float = 1;
 	public var offsetX:Float = 90;
 
 	public var text:String = "";
@@ -271,7 +272,7 @@ class Alphabet extends FlxSpriteGroup
 			calculateWantedXY();
 			x = FlxMath.lerp(x, wantedX, 0.16);
 			y = FlxMath.lerp(y, wantedY, 0.16);
-
+			alpha = FlxMath.lerp(alpha, wantedA, 0.16);
 		}
 
 		super.update(elapsed);

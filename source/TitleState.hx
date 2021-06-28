@@ -28,6 +28,7 @@ import flixel.util.FlxTimer;
 import io.newgrounds.NG;
 import lime.app.Application;
 import openfl.Assets;
+import sys.FileSystem;
 
 using StringTools;
 
@@ -53,9 +54,17 @@ class TitleState extends MusicBeatState
 
 		OptionUtils.bindSave();
 		OptionUtils.loadOptions(OptionUtils.options);
-		
+
 
 		PlayerSettings.init();
+		FlxG.bitmap.add(Paths.getPreloadPath('images/MainMenuShit.png'));
+		FlxG.bitmap.add(Paths.getPreloadPath('images/FNF_main_menu_assets.png'));
+		FlxG.bitmap.add(Paths.getPreloadPath('images/spaceshit.png'));
+		/*for(file in FileSystem.readDirectory(FileSystem.absolutePath("assets/shared/images/characters"))){
+			if(file.endsWith('.png'))
+				FlxG.bitmap.add(Paths.image("characters/" + file.replace(".png",""),"shared"));
+		}*/
+		// TODO: MAKE THIS IN A LOADING SCREEN!!!
 
 		curWacky = FlxG.random.getObject(getIntroTextShit());
 
@@ -109,7 +118,6 @@ class TitleState extends MusicBeatState
 	}
 
 	var logoBl:FlxSprite;
-	var gfDance:FlxSprite;
 	var danceLeft:Bool = false;
 	var titleText:FlxSprite;
 
@@ -151,21 +159,28 @@ class TitleState extends MusicBeatState
 		// bg.updateHitbox();
 		add(bg);
 
-		logoBl = new FlxSprite(-150, -100);
+		logoBl = new FlxSprite(-125, -75);
 		logoBl.frames = Paths.getSparrowAtlas('logoBumpin');
 		logoBl.antialiasing = true;
 		logoBl.animation.addByPrefix('bump', 'logo bumpin', 24);
+		logoBl.setGraphicSize(Std.int(logoBl.width*.8));
 		logoBl.animation.play('bump');
+		logoBl.centerOffsets();
 		logoBl.updateHitbox();
 		// logoBl.screenCenter();
 		// logoBl.color = FlxColor.BLACK;
+		var portal:FlxSprite = new FlxSprite(0,-80).loadGraphic(Paths.image("spaceshit"));
+		portal.antialiasing=true;
+		add(portal);
+		var noGravityFuckYou:FlxSprite = new FlxSprite(FlxG.width * 0.4, FlxG.height * 0.07);
+		noGravityFuckYou.frames = Paths.getSparrowAtlas("MainMenuShit");
+		noGravityFuckYou.animation.addByPrefix("idle","TitleCard_loop",16);
+		noGravityFuckYou.setGraphicSize(Std.int(noGravityFuckYou.width*.5));
+		noGravityFuckYou.antialiasing=true;
+		noGravityFuckYou.animation.play("idle");
+		noGravityFuckYou.updateHitbox();
+		add(noGravityFuckYou);
 
-		gfDance = new FlxSprite(FlxG.width * 0.4, FlxG.height * 0.07);
-		gfDance.frames = Paths.getSparrowAtlas('gfDanceTitle');
-		gfDance.animation.addByIndices('danceLeft', 'gfDance', [30, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], "", 24, false);
-		gfDance.animation.addByIndices('danceRight', 'gfDance', [15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29], "", 24, false);
-		gfDance.antialiasing = true;
-		add(gfDance);
 		add(logoBl);
 
 		titleText = new FlxSprite(100, FlxG.height * 0.8);
@@ -283,7 +298,7 @@ class TitleState extends MusicBeatState
 				//NGio.unlockMedal(61034);
 			#end
 
-			titleText.animation.play('press');
+			titleText.animation.play('press',true);
 
 			FlxG.camera.flash(FlxColor.WHITE, 1);
 			FlxG.sound.play(Paths.sound('confirmMenu'), 0.7);
@@ -296,20 +311,6 @@ class TitleState extends MusicBeatState
 				// Check if version is outdated
 
 				var version:String = "v" + Application.current.meta.get('version');
-
-				/*if (version.trim() != NGio.GAME_VER_NUMS.trim() && !OutdatedSubState.leftState)
-				{
-					FlxG.switchState(new OutdatedSubState());
-					trace('OLD VERSION!');
-					trace('old ver');
-					trace(version.trim());
-					trace('cur ver');
-					trace(NGio.GAME_VER_NUMS.trim());
-				}
-				else
-				{
-					FlxG.switchState(new MainMenuState());
-				}*/
 				FlxG.switchState(new MainMenuState());
 			});
 			// FlxG.sound.play(Paths.music('titleShoot'), 0.7);
@@ -358,12 +359,6 @@ class TitleState extends MusicBeatState
 		super.beatHit();
 
 		logoBl.animation.play('bump');
-		danceLeft = !danceLeft;
-
-		if (danceLeft)
-			gfDance.animation.play('danceRight');
-		else
-			gfDance.animation.play('danceLeft');
 
 		FlxG.log.add(curBeat);
 

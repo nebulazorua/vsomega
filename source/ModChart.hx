@@ -18,6 +18,10 @@ class ModChart {
   public var playerNoteScale:Float=1;
   public var opponentNoteScale:Float=1;
   public var opponentHPDrain:Float = 0;
+  public var noteHPGain:Float = .023;
+  public var gemHPGain:Float = .04;
+  public var healthGain:Bool=true;
+  public var susHeal:Bool=true;
 
   public function new(playState:PlayState){
     this.playState=playState;

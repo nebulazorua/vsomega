@@ -38,6 +38,7 @@ class Note extends FlxSprite
 	public var isShield:Bool=false;
 	public var isDischarge:Bool=false;
 	public var whoSingsShit:String = '0';
+	public var susOffset:Float = 0;
 
 	public var noteScore:Float = 1;
 
@@ -151,7 +152,6 @@ class Note extends FlxSprite
 						setGraphicSize(Std.int((width * widMult)*scale));
 
 						updateHitbox();
-						offset.x -= 10*scale;
 						antialiasing = true;
 					case 2:
 						canMiss=true;
@@ -237,8 +237,9 @@ class Note extends FlxSprite
 
 
 						setGraphicSize(Std.int((width * widMult)*scale));
-						offset.x += (width*widMult)/2 - 13.8;
-						offset.y += (width*widMult)/2 - 13;
+						updateHitbox();
+						//offset.x += (width*widMult)/2 - 13.8;
+						//offset.y += (width*widMult)/2 - 13;
 						antialiasing = true;
 					case 5: // torch
 						canMiss=true;
@@ -255,8 +256,9 @@ class Note extends FlxSprite
 						animation.addByPrefix('lavenderScroll', 'green0');
 						animation.addByPrefix('yellowScroll', 'purple0');
 						setGraphicSize(Std.int((width * widMult)*scale));
-						offset.x += (width*widMult)/2 - 13.8;
-						offset.y += (height*widMult)/2 + 16;
+						//offset.x += (width*widMult)/2 - 13.8;
+						//offset.y += (height*widMult)/2 + 16;
+						updateHitbox();
 						antialiasing = true;
 					case 6: // gem
 						var widMult = .7;
@@ -318,15 +320,16 @@ class Note extends FlxSprite
 							animation.addByPrefix('yellowScroll', 'purple0');
 						}
 						setGraphicSize(Std.int((width * widMult)*scale));
-						if(!isSustainNote){
+						/*if(!isSustainNote){
 							offset.x += (width*widMult)/2 - 30;
 							offset.y += 13;
 						}else
-							updateHitbox();
+							updateHitbox();*/
+						updateHitbox();
 						antialiasing = true;
 
 
-					case 7: // gem
+					case 7: // black gem
 						isSustainNote=false;
 						var widMult = .7;
 						frames = Paths.getSparrowAtlas('BLACKGEMS');
@@ -340,8 +343,9 @@ class Note extends FlxSprite
 						animation.addByPrefix('lavenderScroll', 'green0');
 						animation.addByPrefix('yellowScroll', 'purple0');
 						setGraphicSize(Std.int((width * widMult)*scale));
-						offset.x += (width*widMult)/2 - 30;
-						offset.y += 13;
+						updateHitbox();
+						//offset.x += (width*widMult)/2 - 30;
+						//offset.y += 13;
 						antialiasing = true;
 					default:
 						var widMult = .7;
@@ -397,12 +401,12 @@ class Note extends FlxSprite
 					}
 		}
 
-		var animNames = ["purpleScroll","blueScroll","greenScroll","redScroll"];
+		var names = ["purple","blue","green","red"];
 		if(PlayState.keyAmount==6){
-			animNames=["purpleScroll","blueScroll","redScroll","yellowScroll","lavenderScroll","navyScroll"];
+			names=["purple","blue","red","yellow","lavender","navy"];
 		}
-		x += swagWidth*noteData;
-		animation.play(animNames[noteData]);
+		x += (swagWidth*scale)*noteData;
+		animation.play(names[noteData] + "Scroll");
 		switch(noteType){
 			case 1:
 				isSustainNote=false;
@@ -420,53 +424,41 @@ class Note extends FlxSprite
 			if(!PlayState.curStage.startsWith("school"))
 				alpha = 0.6;
 
-			var holdNames = ["purplehold","bluehold","greenhold","redhold"];
-			if(PlayState.keyAmount==6){
-				holdNames=["purplehold","bluehold","redhold","yellowhold","lavenderhold","navyhold"];
-			}
-
-			//var off = -width;
-			var off = -width/4;
-			//x+=width/2;
+			susOffset = width/2;
 			lastSustainPiece=true;
 
-			animation.play(holdNames[noteData]+"end");
+			animation.play(names[noteData]+"holdend");
 
 			updateHitbox();
 
 			if(PlayState.currentPState.currentOptions.downScroll){
-				flipY=true;
+				this.scale.y *= -1;
 			}
 
-			//off -= width / 2;
-			//x -= width / 2;
+			susOffset -= width/ 2;
 			if (PlayState.curStage.startsWith('school'))
-				off -= 34;
+				susOffset += 30*scale;
 			else
-				off -= 2;
+				susOffset +=1;
 
 
 			if(noteType==2 || PlayState.curStage.startsWith("school")){
 				alpha = 1;
 			}
 
-			if(noteType==2){
-				off = width/4;
-			}
-			offset.x = off*scale;
+			offset.x *= scale;
+			offset.y *= scale;
 
 			if (prevNote.isSustainNote)
 			{
 				prevNote.lastSustainPiece=false;
-				var offset = prevNote.offset.x;
-				prevNote.animation.play(holdNames[noteData]);
+				prevNote.animation.play(names[noteData]+"hold");
 
-				prevNote.scale.y = (Conductor.stepCrochet / 100 * prevNote.scale.y * 1.5 * FlxMath.roundDecimal(PlayState.SONG.speed,2));
-				prevNote.scale.y+=prevNote.scale.y*(1-scale);
+				prevNote.scale.y *= Conductor.stepCrochet / 100 * 1.5 * FlxMath.roundDecimal(PlayState.SONG.speed,2) * (1/scale);
 
 				prevNote.updateHitbox();
-				prevNote.offset.x = offset;
-				// prevNote.setGraphicSize();
+				prevNote.offset.x *= scale;
+				prevNote.offset.y *= scale;
 			}
 		}
 	}

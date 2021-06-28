@@ -500,9 +500,9 @@ class ChartingState extends MusicBeatState
 		if(noteAmount==6){
 			UI_box.x = FlxG.width / 2 + 200;
 			UI_box.y = 20;
-			bpmTxt.y = 50;
-		}else{
 			bpmTxt.y = 50 + UI_box.height;
+		}else{
+			bpmTxt.y = 50;
 			UI_box.x = FlxG.width / 2;
 			UI_box.y = 20;
 		}
@@ -568,20 +568,26 @@ class ChartingState extends MusicBeatState
 		}
 
 		curRenderedNotes.forEach(function(note:Note){
-			if(note.strumTime<=Conductor.songPosition && note.noteType==0){
-				if(note.color==0xFFFFFF){
+			switch(note.whoSingsShit){
+				case '0':
+					note.color = 0xFFFFFF;
+				case '1':
+					note.color = FlxColor.PURPLE;
+				case '2':
+					note.color = FlxColor.CYAN;
+			}
+			if(note.strumTime<=Conductor.songPosition){
+				if(!note.wasGoodHit){
+					note.wasGoodHit=true;
 					if(useHitSounds){
-						if(note.rawNoteData<=3)
+						if(note.rawNoteData<=3 && note.noteType!=1 && note.noteType!=2)
 							FlxG.sound.play(Paths.sound('Normal_Hit'),3);
-
 					}
 
-					note.color = 0xAAAAAA;
+					note.color.brightness *= .5;
 				}
-
-			}else{
-				note.color = 0xFFFFFF;
-			}
+			}else
+				note.wasGoodHit=false;
 		});
 
 		if (FlxG.mouse.x > gridBG.x
@@ -808,13 +814,16 @@ class ChartingState extends MusicBeatState
 						daNum++;
 				}*/
 
-				FlxG.sound.music.time = sectionStartTime();
+				FlxG.sound.music.time = sectionStartTime()-.001;
 				vocals.time = FlxG.sound.music.time;
 				updateCurStep();
 			}
 
 			updateGrid();
 			updateSectionUI();
+			for(i in curRenderedNotes){
+				i.wasGoodHit=false;
+			}
 		}
 	}
 
@@ -927,6 +936,9 @@ class ChartingState extends MusicBeatState
  			note.beingCharted = true;
  			note.setGraphicSize(GRID_SIZE, GRID_SIZE);
  			note.updateHitbox();
+			if(daStrumTime<Conductor.songPosition){
+				note.wasGoodHit=true;
+			}
  			oldNote=note;
 
  			note.x = Math.floor(daNoteInfo * GRID_SIZE);

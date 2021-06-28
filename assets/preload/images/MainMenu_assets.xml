@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="MainMenu_assets.png">
+	<!-- Created with Adobe Animate version 21.0.4.39603 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Credits0000" x="0" y="0" width="340" height="153"/>
+	<SubTexture name="Freeplay0000" x="345" y="0" width="342" height="153"/>
+	<SubTexture name="Options0000" x="0" y="158" width="340" height="153"/>
+	<SubTexture name="Skins0000" x="345" y="158" width="124" height="127"/>
+	<SubTexture name="achievements0000" x="474" y="158" width="124" height="127"/>
+	<SubTexture name="arrow left0000" x="345" y="316" width="50" height="97"/>
+	<SubTexture name="arrow push left0000" x="400" y="316" width="50" height="97"/>
+	<SubTexture name="arrow push right0000" x="455" y="316" width="50" height="97"/>
+	<SubTexture name="arrow right0000" x="510" y="316" width="50" height="97"/>
+	<SubTexture name="codes0000" x="603" y="158" width="124" height="127"/>
+	<SubTexture name="equipment0000" x="732" y="158" width="124" height="127"/>
+	<SubTexture name="story0000" x="0" y="316" width="340" height="153"/>
+</TextureAtlas>

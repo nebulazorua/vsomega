@@ -24,7 +24,7 @@ kapi
 demetrios
 anders
 army
-armyRight
+king
 flexy
 merchant
 bf-neb
