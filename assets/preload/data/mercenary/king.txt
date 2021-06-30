@@ -17,9 +17,4 @@ I’ll ask around, just, don’t go anywhere.
 [dialoguesound:soundbytes/queen]Yes, out west, where dangerous beasts reside…
 [dialoguesound:soundbytes/king]Such as the Ursiapes.
 [dialoguesound:soundbytes/queen]Such violent creatures...
-[dialoguesound:soundbytes/king]I trust that you, a young, odd looking boy, can retrieve our daughter, even though I’ve known you for less than 5 minutes. Can I trust you with that?
-[dialogueshadow:#588ee0][dialoguesound:soundbytes/bf]Beep!
-[dialoguesound:soundbytes/king]Then be on your way! The sake of our daughter rests on your oddly small shoulders!
-[goto:kingquarters/k_7][dialoguesound:soundbytes/bf]Beep bop!
-[goto:kingquarters/k_8]
-[gotoscene:mercenary/cutscene]
+[rightpos:-50,0][rightbgalpha:0][righttxtalpha:.2][righttxtcolor:#000000][leftinvis][skipleft][decision:Yes|mercenary/kingEnd,No|dishonor/YOUFUCKEDUP][dialoguesound:soundbytes/king]I trust that you, a young, odd looking boy, can retrieve our daughter, even though I’ve known you for less than 5 minutes. Can I trust you with that?

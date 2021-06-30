@@ -1,0 +1,2 @@
+[goto:black]Help the stranger?
+[decision:Help the stranger|2v200/cutscene,Help the army|last-stand/cutscene]

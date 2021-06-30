@@ -1,0 +1,7 @@
+[music:Heartbreak][goto:sadnesscombat/B2_1][nofade]
+[goto:sadnesscombat/B2_2][nofade][shake:1,0.1][sound:bodyDrop]
+[goto:sadnesscombat/B2_3][nofade]
+[goto:sadnesscombat/B2_4][nofade][dialoguesound:soundbytes/mika]Mister, no!
+[nofade][goto:sadnesscombat/B2_5][nofade]How could you? Mister was just protecting me from mommy and daddy..
+[nofade][goto:sadnesscombat/B2_6][shake:1,0.1]He was protecting me from meanies like you!
+[nofade][goto:sadnesscombat/B2_7]I won't let you hurt him anymore!

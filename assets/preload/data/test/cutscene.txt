@@ -1,5 +1,1 @@
-[goto:Pre_1][music:freakyMenu]Suck my cock
-[goto:merc/1_7][nofade][shake:25,1][dialoguesound:soundbytes/bf]ok
-[dialoguesound:soundbytes/queen]FUCK
-[goto:kingquarters/k_8]
-[gotoscene:test/cutscene]
+[goto:black][decision:Yes|odd-job/cutscene,No|mercenary/cutscene]Help?

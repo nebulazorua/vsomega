@@ -12,7 +12,8 @@ import flixel.util.FlxColor;
 import flixel.util.FlxTimer;
 import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
-
+import flixel.math.FlxMath;
+import flixel.addons.transition.FlxTransitionableState;
 using StringTools;
 
 typedef CutsceneData =
@@ -33,6 +34,10 @@ class Cutscene extends FlxSpriteGroup {
   var cutsceneCamera:FlxCamera;
   var ereg = new EReg("\\[(.*?)\\]","ig");
   var dialogueBox:CutsceneDialogueBox;
+  var currentLeft = '';
+  var skipLeft=false;
+  var currentRight = '';
+
   public var finishThing:Void->Void;
   public function new (data:Array<String>){
     super();
@@ -54,6 +59,15 @@ class Cutscene extends FlxSpriteGroup {
     fader.setGraphicSize(Std.int(fader.width*(1+(1-FlxG.camera.zoom))));
     add(fader);
 
+    dialogueBox.leftCallback = function() {
+      dialogueBox.unsetDecision();
+      resetCutscene(CoolUtil.coolTextFile(Paths.txt(currentLeft)));
+    }
+
+    dialogueBox.rightCallback = function() {
+      dialogueBox.unsetDecision();
+      resetCutscene(CoolUtil.coolTextFile(Paths.txt(currentRight)));
+    }
 
     resetCutscene(data);
   }
@@ -64,6 +78,7 @@ class Cutscene extends FlxSpriteGroup {
 
     parseData();
     currentCutscene=cutscene[0];
+    canSkip=false;
     nextCutscene(true);
   }
 
@@ -71,8 +86,10 @@ class Cutscene extends FlxSpriteGroup {
     var gotoNext = FlxG.keys.justPressed.ENTER;
     if(gotoNext){
       if(dialogueBox.finishedTyping){
-        if(canSkip){
+        if(canSkip && !dialogueBox.inDecision){
           nextCutscene();
+        }else if(canSkip && skipLeft){
+          dialogueBox.leftCallback();
         }
       }else
         dialogueBox.skipDialogue();
@@ -81,6 +98,7 @@ class Cutscene extends FlxSpriteGroup {
   }
 
   function endCutscene(?fade:Bool){
+    canSkip=false;
     if(fade){
       if(FlxG.sound.music.playing)
         FlxG.sound.music.fadeOut(.25, 0);
@@ -97,14 +115,28 @@ class Cutscene extends FlxSpriteGroup {
   }
 
   function nextCutscene(?dontUpdateCurrent=false){
-    if(cutscene.length==1){
+    if(dontUpdateCurrent==false){
+      cutscene.shift();
+    }
+    if(cutscene.length==0){
       endCutscene(true);
     }else{
-      if(!canSkip)return
       if(dontUpdateCurrent==false){
-        cutscene.shift();
         currentCutscene=cutscene[0];
       }
+      var newCutsceneData:Null<Array<String>>=null;
+      for(action in currentCutscene.actions){
+        if(action.startsWith("gotoscene:")){
+          var name = action.replace("gotoscene:","");
+          newCutsceneData = CoolUtil.coolTextFile(Paths.txt(name));
+          break;
+        }
+      }
+      if(newCutsceneData!=null){
+        resetCutscene(newCutsceneData);
+        return;
+      }
+
       if(currentCutscene.image!='' && currentCutscene.image!=null){
         if(currentCutscene.fadeInto){
           canSkip=false;
@@ -132,7 +164,7 @@ class Cutscene extends FlxSpriteGroup {
 
   function updateGraphic(){
     var dialogueSpeed = .04;
-    var newCutsceneData:Null<Array<String>>=null;
+    var hasDecision=false;
     for(action in currentCutscene.actions){
       if(action.startsWith("shake:")){
         var data = action.replace("shake:","").split(",");
@@ -141,12 +173,7 @@ class Cutscene extends FlxSpriteGroup {
         cutsceneCamera.shake(intensity,duration);
       }else if(action.startsWith("sound:")){
         var name = action.replace("sound:","");
-        // add volume arg? idk,,,
         FlxG.sound.play(Paths.sound(name), 0.6);
-      }else if(action.startsWith("gotoscene:")){
-        var name = action.replace("gotoscene:","");
-        newCutsceneData = CoolUtil.coolTextFile(Paths.txt(name));
-        break;
       }else if(action.startsWith("dialoguespeed:")){
         dialogueSpeed = Std.parseFloat(action.replace("dialoguespeed:",""));
       }else if(action.startsWith('dialogueshadow:')){
@@ -154,21 +181,82 @@ class Cutscene extends FlxSpriteGroup {
       }else if(action.startsWith('dialoguesound:')){
         var name = action.replace("dialoguesound:","");
         dialogueBox.setTypeSound(name);
+      }else if(action.startsWith('decision:') && !hasDecision){
+        hasDecision=true;
+        var shit = action.replace("decision:","");
+        var decisions = shit.split(",");
+        var leftshit = decisions[0].split("|");
+        var left = leftshit[0];
+        var leftCutscene = leftshit[1];
+
+        var rightshit = decisions[1].split("|");
+        var right = rightshit[0];
+        var rightCutscene = rightshit[1];
+
+        currentLeft=leftCutscene;
+        currentRight=rightCutscene;
+        dialogueBox.setDecision(left,right);
+      }else if(action.startsWith('changesong:')){
+        var data = action.replace("changesong:","").split(",");
+        var name = data[0];
+        var diff = Std.parseInt(data[1]);
+        var week = Std.parseInt(data[2]);
+
+        var poop:String = Highscore.formatSong(name, diff);
+  			PlayState.SONG = Song.loadFromJson(poop, name);
+        PlayState.storyDifficulty=diff;
+  			PlayState.isStoryMode = false;
+  			PlayState.storyWeek = week;
+      }else if(action.startsWith('setstory:')){
+        var names = action.replace("setstory:","").split(",");
+        //PlayState.storyPlaylist.push(name);
+        var name = names[0];
+        var difficulty:String = "";
+
+				if (PlayState.storyDifficulty == 0)
+					difficulty = '-easy';
+
+				if (PlayState.storyDifficulty == 2)
+					difficulty = '-hard';
+
+        PlayState.SONG = Song.loadFromJson(name + difficulty, name);
+        FlxG.sound.music.stop();
+        PlayState.storyPlaylist=names;
+      }else if(action.startsWith('rightpos:')){
+        var data = action.replace("rightpos:","").split(",");
+        dialogueBox.rightDecision.x = Std.parseFloat(data[0]);
+        dialogueBox.rightDecision.y = Std.parseFloat(data[1]);
+      }else if(action.startsWith('leftpos:')){
+        var data = action.replace("leftpos:","").split(",");
+        dialogueBox.leftDecision.x = Std.parseFloat(data[0]);
+        dialogueBox.leftDecision.y = Std.parseFloat(data[1]);
+      }else if(action.startsWith('rightbgalpha:')){
+        var a = action.replace("rightbgalpha:","");
+        dialogueBox.rightDecision.alpha = Std.parseFloat(a);
+      }else if(action.startsWith('righttxtalpha:')){
+        var a = action.replace("righttxtalpha:","");
+        dialogueBox.rightDecisionTxt.alpha = Std.parseFloat(a);
+      }else if(action.startsWith('righttxtcolor:')){
+        var c = action.replace("righttxtcolor:","");
+        dialogueBox.rightDecisionTxt.color = FlxColor.fromString(c);
       }else if(action.startsWith("music:")){
         var name = action.replace("music:","");
         if(FlxG.sound.music!=null && FlxG.sound.music.playing)
           FlxG.sound.music.fadeOut(.25, 0);
         new FlxTimer().start(.25, function(tmr:FlxTimer){
           FlxG.sound.playMusic(Paths.music(name),0);
-          FlxG.sound.music.fadeIn(.25, 0, 1);
+          FlxG.sound.music.fadeIn(.25, 0, .7);
         });
       }
     }
 
-    if(newCutsceneData!=null){
-      resetCutscene(newCutsceneData);
-      return;
-    }
+    skipLeft = currentCutscene.actions.contains("skipleft");
+
+    if(currentCutscene.actions.contains("leftinvis") && dialogueBox.leftDecision.visible)
+      dialogueBox.leftDecision.visible=false;
+
+    if(currentCutscene.actions.contains("rightinvis") && dialogueBox.rightDecision.visible)
+      dialogueBox.rightDecision.visible=false;
 
     if(currentCutscene.image!='' && currentCutscene.image!=null){
       image.loadGraphic(Paths.image("cutscenes/" + currentCutscene.image) );
@@ -179,10 +267,16 @@ class Cutscene extends FlxSpriteGroup {
     }
     if(currentCutscene.text.replace(' ','')==''){
       dialogueBox.visible=false;
+      dialogueBox.setText("",dialogueSpeed);
     }else{
       dialogueBox.visible=true;
       dialogueBox.setText(currentCutscene.text,dialogueSpeed);
     }
+
+    if(hasDecision==false)
+      dialogueBox.unsetDecision();
+    else
+      dialogueBox.visible=true;
   }
 
   function parseData(){

@@ -21,13 +21,24 @@ using StringTools;
 class StoryMenuState extends MusicBeatState
 {
 	var scoreText:FlxText;
-	var cameos = [
+	public static var cameos = [
 		"New-Retro", // Kapi
 		"57.5hz", // Demi
 		"Free-Soul", // Merch
 		"No-Arm-Shogun", // Flexy
-		"Fragmented-Surreality" // Noke
+		"Fragmented-Surreality", // Noke
+		"Oxidation" // Anders
 	];
+	public static var cameoCharacters = [
+		"kapi",
+		"demetrios",
+		"merchant",
+		"flexy",
+		"noke",
+		"anders"
+	];
+
+	var encounterableCameos=[];
 	public static var baseCameoChance:Int = 10;
 	public static var cameoAttempts:Int = 0;
 	var weekData:Array<Dynamic> = [
@@ -38,7 +49,7 @@ class StoryMenuState extends MusicBeatState
 		['Satin-Panties', "High", "Milf"],
 		['Cocoa', 'Eggnog', 'Monster', 'Winter-Horrorland'],
 		['Senpai', 'Roses', 'Thorns'],
-		['Mercenary','Odd-Job',"Guardian"]
+		['Curse-Eternal']
 	];
 	var curDifficulty:Int = 1;
 
@@ -91,13 +102,20 @@ class StoryMenuState extends MusicBeatState
 
 		if(FlxG.save.data.cameos!=null){
 			var sex:Array<String> = FlxG.save.data.cameos;
+			var cringe:Array<String>=[];
 			if(!FlxG.save.data.cameos.contains("Oxidation")){
-				for(cam in sex){
-					cameos.remove(cam);
+				for(c in cameos){
+					if(!sex.contains(c)){
+						cringe.push(c);
+					}
 				}
+			}else{
+				cringe=cameos;
 			}
-			if(cameos.length==0 || FlxG.save.data.cameos.contains("Oxidation")){
-				cameos.push("Oxidation");
+			encounterableCameos=cringe;
+			encounterableCameos.remove("Oxidation");
+			if(encounterableCameos.length==0 || FlxG.save.data.cameos.contains("Oxidation")){
+				encounterableCameos.push("Oxidation");
 			}
 		}
 
@@ -371,7 +389,7 @@ class StoryMenuState extends MusicBeatState
 			if(FlxG.random.bool(baseCameoChance+(cameoAttempts*10)) || cameoAttempts>5 && !FlxG.save.data.hasGottenACameo){
 				FlxG.save.data.hasGottenACameo=true;
 				cameoAttempts=0;
-				var cameo = cameos[FlxG.random.int(0,cameos.length)];
+				var cameo = encounterableCameos[FlxG.random.int(0,encounterableCameos.length)];
 				if(FlxG.save.data.cameos==null){
 					FlxG.save.data.cameos=[];
 				}
@@ -408,11 +426,10 @@ class StoryMenuState extends MusicBeatState
 			new FlxTimer().start(1, function(tmr:FlxTimer)
 			{
 				if(curWeek==7 && !hasCameo){
-					LoadingState.loadAndSwitchState(new CutsceneState(CoolUtil.coolTextFile(Paths.txt('mercenary/pre')),new PlayState()));
+					LoadingState.loadAndSwitchState(new CutsceneState(CoolUtil.coolTextFile(Paths.txt('curse-eternal/cutscene')),new PlayState()));
 				}else{
 					LoadingState.loadAndSwitchState(new PlayState(), true);
 				}
-
 			});
 		}
 	}

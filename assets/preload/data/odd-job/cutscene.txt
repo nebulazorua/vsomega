@@ -1,0 +1,9 @@
+[goto:blowjob/2_1][music:Swordsman][dialoguesound:soundbytes/omega]Offer me whatever you want, but you can't have her. I'm not letting you take her back there.
+I've risked everything for this kid. She's like family.
+[dialoguesound:soundbytes/mika]M-mister?
+[dialoguesound:soundbytes/omega]Kid, what are you doing? Get behind me!
+[dialoguesound:soundbytes/mika]I don’t wanna go, Mister…
+[dialoguesound:soundbytes/omega]Don't worry. you aren't leaving me.
+[goto:blowjob/2_2]You hear that?
+I won’t let you take her back there.
+There’s no chance in hell.

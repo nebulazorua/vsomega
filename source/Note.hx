@@ -260,6 +260,8 @@ class Note extends FlxSprite
 						//offset.y += (height*widMult)/2 + 16;
 						updateHitbox();
 						antialiasing = true;
+						offset.x += 4;
+						offset.y += (height/4)+8;
 					case 6: // gem
 						var widMult = .7;
 						if(isSustainNote){

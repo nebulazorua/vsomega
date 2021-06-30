@@ -37,6 +37,7 @@ class MainMenuState extends MusicBeatState
 	#end
 
 	var tinyButtons:Array<String> = ["codes","equipment","Skins","achievements"];
+	var fatherTimeButton:FlxSprite;
 
 	var camFollow:FlxObject;
 
@@ -61,6 +62,26 @@ class MainMenuState extends MusicBeatState
 		portal.antialiasing=true;
 		portal.setGraphicSize(Std.int(portal.width*1.05));
 		add(portal);
+
+		if(FlxG.save.data.daddyTimeTime){
+			FlxG.save.data.daddyTimeTime=false;
+			FlxG.save.data.foundFatherTime=true;
+			FlxG.mouse.visible=true;
+			var paper:FlxSprite = new FlxSprite(0,0).loadGraphic(Paths.image("paperBG"));
+			paper.scrollFactor.set(.01,.01);
+			paper.screenCenter(XY);
+			paper.antialiasing=true;
+			add(paper);
+
+			fatherTimeButton = new FlxSprite().makeGraphic(200,200,FlxColor.RED);
+			fatherTimeButton.setPosition(1100,500);
+			fatherTimeButton.offset.x = 0;
+			fatherTimeButton.offset.y = 0;
+			fatherTimeButton.alpha=0;
+			fatherTimeButton.centerOrigin();
+			fatherTimeButton.scrollFactor.set(.01,.01);
+			add(fatherTimeButton);
+		}
 
 		camFollow = new FlxObject(0, 0, 1, 1);
 		add(camFollow);
@@ -159,27 +180,27 @@ class MainMenuState extends MusicBeatState
 		{
 			case 'story':
 				dismissItems();
-
+				FlxG.mouse.visible=false;
 				new FlxTimer().start(.5, function(tmr:FlxTimer){
 					FlxG.switchState(new StoryMenuState());
 				});
 				trace("Story Menu Selected");
 			case 'freeplay':
 				dismissItems();
-
+				FlxG.mouse.visible=false;
 				new FlxTimer().start(.5, function(tmr:FlxTimer){
 					FlxG.switchState(new FreeplayState());
 				});
 				trace("Freeplay Menu Selected");
 			case 'options':
 				dismissItems();
-
+				FlxG.mouse.visible=false;
 				new FlxTimer().start(.5, function(tmr:FlxTimer){
 					FlxG.switchState(new OptionsMenu());
 				});
 			case 'credits':
 				dismissItems();
-				
+				FlxG.mouse.visible=false;
 				new FlxTimer().start(.5, function(tmr:FlxTimer){
 					FlxG.switchState(new CreditsState());
 				});
@@ -191,6 +212,12 @@ class MainMenuState extends MusicBeatState
 		if (FlxG.sound.music.volume < 0.8)
 		{
 			FlxG.sound.music.volume += 0.5 * FlxG.elapsed;
+		}
+
+		if(fatherTimeButton!=null){
+			if(FlxG.mouse.overlaps(fatherTimeButton) && FlxG.mouse.justPressed){
+				LoadingState.loadAndSwitchState(new CutsceneState(CoolUtil.coolTextFile(Paths.txt('father-time/found')),new PlayState()));
+			}
 		}
 
 		if (!selectedSomethin && usable)

@@ -69,7 +69,9 @@ class OptionsMenu extends MusicBeatState
 		new OptionCategory("Cutscenes",[
 			new CutsceneOption("Intro","introCutscene"),
 			new CutsceneOption("Week Intro","mercenary/pre"),
-			new CutsceneOption("Merc","mercenary/cutscene"),
+			new CutsceneOption("Mercenary","mercenary/cutscene"),
+			new CutsceneOption("Odd Job","odd-job/cutscene"),
+			new CutsceneOption("Guardian","guardian/cutscene"),
 			new CutsceneOption("Test","test/cutscene"),
 		])
 	]);

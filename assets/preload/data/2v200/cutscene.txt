@@ -1,0 +1,15 @@
+[setstory:2v200,After-the-Ashes][goto:2v200/G1_1][music:Dynamic Duo][dialoguesound:soundbytes/bf]Beep be bo! Skadap doop!
+[dialoguesound:soundbytes/omega]So you've come to your senses.
+[goto:2v200/G1_2][nofade]You see why I won't let them take her back, why I can't let them take her back.
+[dialoguesound:soundbytes/bf]Bedoop!
+[dialoguesound:soundbytes/omega]Then let's do this. 
+I can see the army on the horizon, I hope you're ready for this.
+[goto:2v200/G1_3]Mika?
+[dialoguesound:soundbytes/mika]Yes mister?
+[dialoguesound:soundbytes/omega]Hurry, into the mountain. Get what we came all this way for. Let's clear your curse.
+[dialoguesound:soundbytes/mika]Yes mister!
+[dialoguesound:soundbytes/omega]And you! Eldritch demon woman! Go with her, just incase
+[goto:2v200/G1_4][dialoguesound:soundbytes/gf]On it!
+Stay safe, okay?
+[dialoguesound:soundbytes/bf]Bedoop!
+[nofade][shake:1,0.1][goto:2v200/G1_5][dialoguesound:soundbytes/omega]Alright, lets go.

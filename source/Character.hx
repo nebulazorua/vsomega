@@ -122,6 +122,19 @@ class Character extends FlxSprite
 				loadOffsets();
 
 				playAnim('idle');
+			case 'father':
+				// DAD ANIMATION LOADING CODE
+				tex = Paths.getSparrowAtlas('characters/FATHER_TIME','shared');
+				frames = tex;
+				animation.addByPrefix('idle', "Dad idle dance", 24, false);
+				animation.addByPrefix('singUP', "Dad Sing note UP", 24, false);
+				animation.addByPrefix('singDOWN', "Dad Sing Note DOWN", 24, false);
+				animation.addByPrefix('singLEFT', 'dad sing note right', 24, false);
+				animation.addByPrefix('singRIGHT', 'Dad Sing Note LEFT', 24, false);
+
+				loadOffsets();
+
+				playAnim('idle');
 			case 'spooky':
 				tex = Paths.getSparrowAtlas('characters/spooky_kids_assets','shared');
 				frames = tex;
@@ -143,8 +156,6 @@ class Character extends FlxSprite
 				animation.addByPrefix('singUP', "Mom Up Pose", 24, false);
 				animation.addByPrefix('singDOWN', "MOM DOWN POSE", 24, false);
 				animation.addByPrefix('singLEFT', 'Mom Left Pose', 24, false);
-				// ANIMATION IS CALLED MOM LEFT POSE BUT ITS FOR THE RIGHT
-				// CUZ DAVE IS DUMB!
 				animation.addByPrefix('singRIGHT', 'Mom Pose Left', 24, false);
 
 				loadOffsets();

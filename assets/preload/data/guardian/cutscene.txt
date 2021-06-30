@@ -1,0 +1,12 @@
+[goto:childprotectiveservices/1][music:Defender][dialoguesound:soundbytes/omega]You don't get it, you don’t know the full story. You don't know what she's been through, what THEY’RE LIKE.
+[goto:childprotectiveservices/2]They locked her away. Alone. Afraid.
+[goto:childprotectiveservices/3][nofade]They did THAT to a CHILD.
+[goto:childprotectiveservices/4]And for what? Because some stupid prophecy said that she was cursed? What sort of parenting IS that?
+[goto:childprotectiveservices/5][nofade][dialoguesound:soundbytes/bf]Bop?
+[goto:childprotectiveservices/6][dialoguesound:soundbytes/omega]It's not too late. You can help me. I can tell that you're powerful.
+An army approaches from the east, with the same end goal that you have.
+They're going to try and take her, to lock her up once again.
+I doubt that I would be able to take them all out, but if we worked together, we could protect her.
+[goto:childprotectiveservices/7][nofade]But if you're still set on taking her back yourself.
+Be it for fame or riches.
+Just know that I will NOT go down without a fight.

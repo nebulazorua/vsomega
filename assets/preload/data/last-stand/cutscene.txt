@@ -1,0 +1,14 @@
+[setstory:Last-Stand,Curse-Eternal][goto:laststand/1][music:Heartbeat][dialoguesound:soundbytes/omega]So I guess it’s come down to this, huh?
+[dialoguesound:soundbytes/bf]Be skoo dap!
+[dialoguesound:soundbytes/omega]I gave you a chance! I tried to reason with you!
+[goto:laststand/2][nofade]I have this sword for a reason, y'know.
+[goto:laststand/3][nofade]And I guess that if being intimidating isn't enough to deter you.
+[goto:laststand/4][nofade]I'm just gonna have to use it.
+[goto:laststand/5][nofade]C'mon kid, lets take this rat down.
+[goto:laststand/6][nofade][dialoguesound:soundbytes/mika]You got it mister!
+[dialoguesound:soundbytes/gf]Not so fast!
+[dialoguesound:soundbytes/bf][dialoguespeed:0.02]Beep bop!
+[dialoguesound:soundbytes/gf][goto:laststand/7]I told you not to go anywhere!
+But when I came back to get you, you were gone!
+You're lucky that the captain of the guard heard the King and Queen sending you off here!
+[goto:laststand/8][nofade]I don't know why I let you out of my sight, you're always getting in trouble without me.

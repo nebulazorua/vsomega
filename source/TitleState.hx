@@ -307,10 +307,18 @@ class TitleState extends MusicBeatState
 
 			new FlxTimer().start(2, function(tmr:FlxTimer)
 			{
-				// Check if version is outdated
+				if(FlxG.save.data.hasPlayedOmegaMod!=true){
+					FlxG.save.data.hasPlayedOmegaMod=true;
+					var poop:String = Highscore.formatSong("prelude", 2);
+					PlayState.SONG = Song.loadFromJson(poop, "prelude");
+					PlayState.isStoryMode = true;
+					PlayState.storyDifficulty = 2;
+					PlayState.storyWeek = -1;
+					LoadingState.loadAndSwitchState(new PlayState());
+				}else{
+					FlxG.switchState(new MainMenuState());
+				}
 
-				var version:String = "v" + Application.current.meta.get('version');
-				FlxG.switchState(new MainMenuState());
 			});
 			// FlxG.sound.play(Paths.music('titleShoot'), 0.7);
 		}
@@ -379,7 +387,7 @@ class TitleState extends MusicBeatState
 			case 9:
 
 				createCoolText([curWacky[0]]);
-			// credTextShit.visible = true;
+
 			case 11:
 				addMoreText(curWacky[1]);
 

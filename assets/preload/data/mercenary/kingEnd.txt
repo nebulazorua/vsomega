@@ -1,0 +1,4 @@
+[dialoguesound:soundbytes/king]Then be on your way! The sake of our daughter rests on your oddly small shoulders!
+[goto:kingquarters/k_7][dialoguesound:soundbytes/bf]Beep bop!
+[goto:kingquarters/k_8]
+[gotoscene:mercenary/cutscene]

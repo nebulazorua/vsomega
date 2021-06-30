@@ -48,6 +48,7 @@ class RunningChild extends FlxSprite {
 	          x = FlxMath.lerp(450,endPoint,startA/endA);
 	        }
 	      }else if(Conductor.songPosition>=marker.start && Conductor.songPosition<marker.end+500){
+					visible=false;
 	        @:privateAccess
 	        if(PlayState.currentPState.dad.animation.curAnim.name=='grabChild'){
 	          @:privateAccess

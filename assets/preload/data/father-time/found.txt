@@ -1,0 +1,14 @@
+[music:Confrontation][changesong:Father-Time,2,-1][setstory:Father-Time][goto:daddyclock/1][dialoguesound:soundbytes/bf]Boop be bap ske doop bippidy boo bop ska!!
+[nofade][goto:daddyclock/2][dialoguesound:soundbytes/gf]Woah, boyfriend, langua-
+[goto:daddyclock/3][dialoguesound:soundbytes/daddy][nofade][shake:2,.2][nofade]Fuck.
+[goto:daddyclock/4][nofade][dialoguesound:soundbytes/gf][shake:1,.1]DAD?!?
+[goto:daddyclock/5][nofade][dialoguesound:soundbytes/daddy]This wasn't the plan..
+[nofade][dialoguesound:soundbytes/gf]What plan?
+[nofade][dialoguesound:soundbytes/daddy]Listen, sweetie, I'm trying to do what's best for you.
+And what's best for you just so happens to involve the brutal assassination of your boyfriend.
+[goto:daddyclock/6][nofade][dialoguesound:soundbytes/gf]Oh my god, DAD, you're STILL going on about that?
+[goto:daddyclock/7][dialoguesound:soundbytes/daddy]I guess hitmen from all eras are incompetent.
+But that's fine.
+If you want something done right.
+[goto:daddyclock/8][dialoguesound:soundbytes/daddy][nofade][shake:2,.2]...You gotta do it yourself!
+[goto:daddyclock/9]

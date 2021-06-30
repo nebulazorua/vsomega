@@ -1,5 +1,5 @@
 [goto:merc/1_1][music:Swordsman]
-[goto:merc/1_2][dialoguesound:soundbytes/bf]Beep!
+[goto:merc/1_2][dialoguesound:soundbytes/bf][nofade]Beep!
 [goto:merc/1_3][dialoguesound:soundbytes/omega]Kid, get behind me.
 Identify yourself! Friend or foe?
 [dialoguesound:soundbytes/bf]Beep

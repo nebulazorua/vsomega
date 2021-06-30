@@ -20,6 +20,8 @@ using StringTools;
 
 class FreeplayState extends MusicBeatState
 {
+	public static var unlockables=['2v200','After-the-Ashes','Father-Time','Last-Stand','Curse-Eternal','Dishonor'];
+	public static var unlockableChars = ['army','omega','father','angry-omega','mika','king'];
 	var songs:Array<SongMetadata> = [];
 
 	var selector:FlxText;
@@ -87,6 +89,41 @@ class FreeplayState extends MusicBeatState
 
 		if (StoryMenuState.weekUnlocked[6] || isDebug)
 			addWeek(['Senpai', 'Roses', 'Thorns'], 6, ['senpai', 'senpai', 'spirit']);
+
+		var omegaWeek=['Mercenary','Odd-Job','Guardian'];
+		var omegaCharacters=['omega','omega','omega'];
+		if(FlxG.save.data.unlockedOmegaSongs==null){
+			FlxG.save.data.unlockedOmegaSongs=[];
+		}
+		if(FlxG.save.data.cameos==null){
+			FlxG.save.data.cameos=[];
+		}
+		var encounteredCameos:Array<String> = FlxG.save.data.cameos;
+		var unlockedSongs:Array<String> = FlxG.save.data.unlockedOmegaSongs;
+
+		var cameos = StoryMenuState.cameos;
+		var cameoChars = StoryMenuState.cameoCharacters;
+
+		for(i in 0...unlockables.length){
+			var song = unlockables[i];
+			var char = unlockableChars[i];
+			if(unlockedSongs.contains(song.toLowerCase())){
+				omegaWeek.push(song);
+				omegaCharacters.push(char);
+			}
+		}
+
+		for(i in 0...cameos.length){
+			var cameo = cameos[i];
+			var char = cameoChars[i];
+			if(encounteredCameos.contains(cameo)){
+				omegaWeek.push(cameo);
+				omegaCharacters.push(char);
+			}
+		}
+
+		addWeek(omegaWeek,-1,omegaCharacters);
+
 
 		// LOAD MUSIC
 
