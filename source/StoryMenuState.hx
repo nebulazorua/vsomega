@@ -367,6 +367,7 @@ class StoryMenuState extends MusicBeatState
 			if(curCharacter.curCharacter=='bf')
 				curCharacter.playAnim("hey",true);
 			PlayState.storyPlaylist = weekData[curWeek];
+			var hasCameo=false;
 			if(FlxG.random.bool(baseCameoChance+(cameoAttempts*10)) || cameoAttempts>5 && !FlxG.save.data.hasGottenACameo){
 				FlxG.save.data.hasGottenACameo=true;
 				cameoAttempts=0;
@@ -376,6 +377,7 @@ class StoryMenuState extends MusicBeatState
 				}
 				FlxG.save.data.cameos.push(cameo);
 				PlayState.storyPlaylist.insert(0,cameo);
+				hasCameo=true;
 			}else if(FlxG.save.data.hasGottenACameo!=true){
 				cameoAttempts++;
 			};
@@ -405,7 +407,12 @@ class StoryMenuState extends MusicBeatState
 			PlayState.campaignScore = 0;
 			new FlxTimer().start(1, function(tmr:FlxTimer)
 			{
-				LoadingState.loadAndSwitchState(new PlayState(), true);
+				if(curWeek==7 && !hasCameo){
+					LoadingState.loadAndSwitchState(new CutsceneState(CoolUtil.coolTextFile(Paths.txt('mercenary/pre')),new PlayState()));
+				}else{
+					LoadingState.loadAndSwitchState(new PlayState(), true);
+				}
+
 			});
 		}
 	}

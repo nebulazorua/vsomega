@@ -580,7 +580,7 @@ class ChartingState extends MusicBeatState
 				if(!note.wasGoodHit){
 					note.wasGoodHit=true;
 					if(useHitSounds){
-						if(note.rawNoteData<=3 && note.noteType!=1 && note.noteType!=2)
+						if(note.rawNoteData<=noteAmount-1 && note.noteType!=1 && note.noteType!=2)
 							FlxG.sound.play(Paths.sound('Normal_Hit'),3);
 					}
 

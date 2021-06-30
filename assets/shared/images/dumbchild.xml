@@ -1,23 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TextureAtlas imagePath="Omega_Mika_Alt_assets.png">
-	<!-- Created with Adobe Animate version 21.0.4.39603 -->
+<TextureAtlas imagePath="mika_alt_assets.png">
+	<!-- Created with Adobe Animate version 18.0.1.115 -->
 	<!-- http://www.adobe.com/products/animate.html -->
-	<SubTexture name="bounce child0000" x="0" y="0" width="342" height="317" frameX="-16" frameY="0" frameWidth="377" frameHeight="486"/>
-	<SubTexture name="bounce child0001" x="352" y="0" width="350" height="310" frameX="-11" frameY="-19" frameWidth="377" frameHeight="486"/>
-	<SubTexture name="bounce child0002" x="352" y="0" width="350" height="310" frameX="-11" frameY="-19" frameWidth="377" frameHeight="486"/>
-	<SubTexture name="bounce child0003" x="712" y="0" width="349" height="308" frameX="-14" frameY="-61" frameWidth="377" frameHeight="486"/>
-	<SubTexture name="bounce child0004" x="712" y="0" width="349" height="308" frameX="-14" frameY="-61" frameWidth="377" frameHeight="486"/>
-	<SubTexture name="bounce child0005" x="1071" y="0" width="349" height="308" frameX="-14" frameY="-173" frameWidth="377" frameHeight="486"/>
-	<SubTexture name="bounce child0006" x="1071" y="0" width="349" height="308" frameX="-14" frameY="-173" frameWidth="377" frameHeight="486"/>
-	<SubTexture name="bounce child0007" x="1430" y="0" width="377" height="294" frameX="0" frameY="-192" frameWidth="377" frameHeight="486"/>
-	<SubTexture name="bounce child0008" x="0" y="327" width="305" height="317" frameX="-36" frameY="-115" frameWidth="377" frameHeight="486"/>
-	<SubTexture name="run child0000" x="315" y="327" width="410" height="433" frameX="0" frameY="-2" frameWidth="443" frameHeight="453"/>
-	<SubTexture name="run child0001" x="735" y="327" width="398" height="437" frameX="-9" frameY="-2" frameWidth="443" frameHeight="453"/>
-	<SubTexture name="run child0002" x="1143" y="327" width="379" height="438" frameX="-39" frameY="-2" frameWidth="443" frameHeight="453"/>
-	<SubTexture name="run child0003" x="1143" y="327" width="379" height="438" frameX="-39" frameY="-2" frameWidth="443" frameHeight="453"/>
-	<SubTexture name="run child0004" x="1532" y="327" width="358" height="444" frameX="-70" frameY="-1" frameWidth="443" frameHeight="453"/>
-	<SubTexture name="run child0005" x="0" y="781" width="329" height="445" frameX="-114" frameY="0" frameWidth="443" frameHeight="453"/>
-	<SubTexture name="run child0006" x="339" y="781" width="308" height="445" frameX="-135" frameY="0" frameWidth="443" frameHeight="453"/>
-	<SubTexture name="run child0007" x="657" y="781" width="320" height="453" frameX="-118" frameY="0" frameWidth="443" frameHeight="453"/>
-	<SubTexture name="run child0008" x="657" y="781" width="320" height="453" frameX="-118" frameY="0" frameWidth="443" frameHeight="453"/>
+	<SubTexture name="child going zoom0000" x="5" y="5" width="366" height="229" pivotX="351.35" pivotY="7.45" frameX="-2" frameY="-1" frameWidth="368" frameHeight="230"/>
+	<SubTexture name="child going zoom0001" x="5" y="5" width="366" height="229" frameX="-2" frameY="-1" frameWidth="368" frameHeight="230"/>
+	<SubTexture name="child going zoom0002" x="371" y="5" width="366" height="227" frameX="-2" frameY="-1" frameWidth="368" frameHeight="230"/>
+	<SubTexture name="child going zoom0003" x="371" y="5" width="366" height="227" frameX="-2" frameY="-1" frameWidth="368" frameHeight="230"/>
+	<SubTexture name="child going zoom0004" x="5" y="234" width="368" height="230"/>
+	<SubTexture name="child going zoom0005" x="5" y="234" width="368" height="230"/>
+	<SubTexture name="child going zoom0006" x="373" y="234" width="368" height="228" frameX="0" frameY="0" frameWidth="368" frameHeight="230"/>
+	<SubTexture name="child going zoom0007" x="373" y="234" width="368" height="228" frameX="0" frameY="0" frameWidth="368" frameHeight="230"/>
+	<SubTexture name="run child0000" x="5" y="464" width="417" height="422" pivotX="357.8" pivotY="204.65" frameX="-3" frameY="0" frameWidth="423" frameHeight="440"/>
+	<SubTexture name="run child0001" x="5" y="464" width="417" height="422" frameX="-3" frameY="0" frameWidth="423" frameHeight="440"/>
+	<SubTexture name="run child0002" x="422" y="464" width="418" height="423" frameX="-3" frameY="-4" frameWidth="423" frameHeight="440"/>
+	<SubTexture name="run child0003" x="422" y="464" width="418" height="423" frameX="-3" frameY="-4" frameWidth="423" frameHeight="440"/>
+	<SubTexture name="run child0004" x="5" y="887" width="420" height="433" frameX="-3" frameY="-7" frameWidth="423" frameHeight="440"/>
+	<SubTexture name="run child0005" x="5" y="887" width="420" height="433" frameX="-3" frameY="-7" frameWidth="423" frameHeight="440"/>
+	<SubTexture name="run child0006" x="425" y="887" width="421" height="426" frameX="-2" frameY="-9" frameWidth="423" frameHeight="440"/>
+	<SubTexture name="run child0007" x="425" y="887" width="421" height="426" frameX="-2" frameY="-9" frameWidth="423" frameHeight="440"/>
+	<SubTexture name="run child0008" x="5" y="1320" width="422" height="419" frameX="0" frameY="-3" frameWidth="423" frameHeight="440"/>
+	<SubTexture name="run child0009" x="5" y="1320" width="422" height="419" frameX="0" frameY="-3" frameWidth="423" frameHeight="440"/>
 </TextureAtlas>

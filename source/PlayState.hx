@@ -68,6 +68,7 @@ class PlayState extends MusicBeatState
 
 	public static var curStage:String = '';
 	public static var SONG:SwagSong;
+	public static var didIntro:Bool = false;
 	public static var isStoryMode:Bool = false;
 	public static var storyWeek:Int = 0;
 	public static var storyPlaylist:Array<String> = [];
@@ -304,7 +305,7 @@ class PlayState extends MusicBeatState
 		currentOptions = OptionUtils.options.clone();
 		ScoreUtils.ratingWindows = OptionUtils.ratingWindowTypes[currentOptions.ratingWindow];
 		ScoreUtils.ghostTapping = currentOptions.ghosttapping;
-		Conductor.safeZoneOffset = ScoreUtils.ratingWindows[3]; // same as shit ms
+		Conductor.safeZoneOffset = ScoreUtils.ratingWindows[ScoreUtils.ratingWindows.length-1]; // same as shit ms
 		if (FlxG.sound.music != null)
 			FlxG.sound.music.stop();
 
@@ -364,6 +365,11 @@ class PlayState extends MusicBeatState
 			modchart.playerNoteScale=1.3;
 			modchart.opponentNoteScale=.7;
 		}
+
+		if(SONG.song.toLowerCase()=='curse-eternal'){
+			modchart.hudVisible=false;
+		}
+
 		Conductor.mapBPMChanges(SONG);
 		Conductor.changeBPM(SONG.bpm);
 
@@ -1548,7 +1554,7 @@ class PlayState extends MusicBeatState
 		}
 
 		mikaShit.sort((a,b)->Std.int(a.start - b.start));
-
+		mikaRun.schedule = mikaShit;
 
 		Conductor.songPosition = -5000;
 
@@ -1839,12 +1845,12 @@ class PlayState extends MusicBeatState
 
 			if(lua!=null && luaModchartExists)
 				lua.call("init",[]);
-
-
 		}
 
-		if (isStoryMode)
+
+		if (isStoryMode && !didIntro)
 		{
+			didIntro=true;
 			switch (curSong.toLowerCase())
 			{
 				case "winter-horrorland":
@@ -2070,7 +2076,6 @@ class PlayState extends MusicBeatState
 			}
 
 			switch (swagCounter)
-
 			{
 				case 0:
 					FlxG.sound.play(Paths.sound('intro3'), 0.6);
@@ -3270,12 +3275,10 @@ class PlayState extends MusicBeatState
 					switch (anim)
 					{
 						case 'singUP' | 'singDOWN' | 'singDOWN-alt' | 'singUP-alt':
-							trace("DISCONNECT");
 							if(dad.curCharacter=='noke'){
 								NokeDisconnect();
 							}
 						default:
-							trace("RECONNECT");
 							if(dad.curCharacter=='noke'){
 								NokeReconnect();
 							}
@@ -3466,6 +3469,7 @@ class PlayState extends MusicBeatState
 
 	function endSong():Void
 	{
+		didIntro=false;
 		canPause = false;
 		FlxG.sound.music.volume = 0;
 		vocals.volume = 0;
@@ -3542,8 +3546,13 @@ class PlayState extends MusicBeatState
 
 				PlayState.SONG = Song.loadFromJson(PlayState.storyPlaylist[0].toLowerCase() + difficulty, PlayState.storyPlaylist[0]);
 				FlxG.sound.music.stop();
+				switch(PlayState.SONG.song.toLowerCase()){
+					case 'mercenary':
+						LoadingState.loadAndSwitchState(new CutsceneState(CoolUtil.coolTextFile(Paths.txt('mercenary/pre')),new PlayState()));
+					default:
+						LoadingState.loadAndSwitchState(new PlayState());
+				}
 
-				LoadingState.loadAndSwitchState(new PlayState());
 				Cache.Clear();
 			}
 		}

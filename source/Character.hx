@@ -457,7 +457,8 @@ class Character extends FlxSprite
 				animation.addByPrefix('singLEFTmiss', 'Omega Sing Note LEFT Miss', 24, false);
 				animation.addByPrefix('singRIGHTmiss', 'Omega Sing Note RIGHT miss', 24, false);
 
-				animation.addByPrefix("grabChild","Omega Alt Note0", 24, false);
+				animation.addByIndices("grabChild","Omega Alt Note0", [1,2,3,4,5,6,7,8,9,10], "", 24, false);
+				animation.addByIndices("throwChild","Omega Alt Note0", [11,12,13,14,15,16,17,18,19,20,21,22,23,24,25], "", 32, false);
 
 				loadOffsets();
 				playAnim('idle');
@@ -739,6 +740,9 @@ class Character extends FlxSprite
 			case 'bf':
 				if ((animation.curAnim.name == 'cut' || animation.curAnim.name=="dischargeScared") && animation.curAnim.finished)
 					playAnim('idle');
+			case 'omega':
+				if (animation.curAnim.name == 'throwChild' && animation.curAnim.finished)
+					playAnim('idle');
 			case 'demetrios':
 				if (animation.curAnim.name == 'discharge' && animation.curAnim.finished)
 					playAnim('idle');
@@ -770,7 +774,9 @@ class Character extends FlxSprite
 			case 'demetrios':
 				if(animation.curAnim.name!='discharge')
 					playAnim('idle');
-
+			case 'omega':
+				if(animation.curAnim.name!='throwChild' && animation.curAnim.name!='grabChild')
+					playAnim('idle');
 			default:
 				if(animation.getByName("idle")!=null)
 					playAnim("idle");
@@ -791,6 +797,9 @@ class Character extends FlxSprite
 
 	public function playAnim(AnimName:String, Force:Bool = false, Reversed:Bool = false, Frame:Int = 0):Void
 	{
+		if(animation.curAnim!=null && AnimName!='grabChild' && AnimName!='throwChild' && (animation.curAnim.name=='grabChild' || animation.curAnim.name=='throwChild') && AnimName!='idle')
+			return;
+
 		if(AnimName.endsWith("miss") && animation.getByName(AnimName)==null ){
 			AnimName = AnimName.substring(0,AnimName.length-4);
 		}

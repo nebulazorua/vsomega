@@ -1,0 +1,20 @@
+[goto:preweek/1][music:Dearest][dialoguesound:soundbytes/daddy]Stupid prepubecent looking little twat... I'll show him.
+[goto:preweek/2]Every time I've tried to get rid of him..
+[goto:preweek/3]He ends up making FRIENDS with them-
+[goto:preweek/4]
+[goto:preweek/5]Even my wife?! What the hell is wrong with this family?!
+[goto:preweek/6]There's gotta be someone who can handle the job, elsewhere
+[goto:preweek/7]
+[goto:preweek/8]Another let down.
+[goto:preweek/9]All these people are useless, what do I even pay them for!?
+[goto:preweek/10]Why is it that every single person in this era is incompetant?
+[goto:preweek/11][nofade][shake:2,0.2][sound:dumbassDDFuckingDies]Ow!
+[goto:preweek/12]Hmm.. there's no one in THIS era.
+[dialoguespeed:0.08]But what about a different one...?
+[goto:preweek/13]Hm, this could-
+No, wait, they only murdered the french aristocracy...
+[goto:preweek/14][nofade][shake:0.5,0.1]
+[goto:preweek/15]Perfect.
+[goto:preweek/16]
+[goto:preweek/17][nofade][shake:2,0.3][sound:portalOpen]
+[goto:preweek/18][nofade]

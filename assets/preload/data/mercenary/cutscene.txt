@@ -1,0 +1,15 @@
+[goto:merc/1_1][music:Swordsman]
+[goto:merc/1_2][dialoguesound:soundbytes/bf]Beep!
+[goto:merc/1_3][dialoguesound:soundbytes/omega]Kid, get behind me.
+Identify yourself! Friend or foe?
+[dialoguesound:soundbytes/bf]Beep
+[dialoguesound:soundbytes/omega]Alright, there's a language gap here, I can work with that.
+What are you here for?
+[goto:merc/1_4][nofade][dialoguesound:soundbytes/bf]Beep bap
+[dialoguesound:soundbytes/omega]... You want the kid.
+[goto:merc/1_5][nofade]Why am I not surprised.
+Look, you aren't the first person they've sent
+[goto:merc/1_6][nofade]And I doubt you'll be the last
+[goto:merc/1_7][nofade][shake:1,0.1]I've got a job to do, and that's to keep her safe
+And trust me.
+[dialoguespeed:0.05]I'm pretty damn good at it.

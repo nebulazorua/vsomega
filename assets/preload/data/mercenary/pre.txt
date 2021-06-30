@@ -1,0 +1,7 @@
+[goto:Pre_1][music:Firefly][dialogueshadow:#ae86db][dialoguesound:soundbytes/omega]We've been walking a while, are you feeling tired?
+[dialogueshadow:#84b8e8][dialoguesound:soundbytes/mika]A little bit, yeah.
+[dialogueshadow:#ae86db][dialoguesound:soundbytes/omega]If you'd like, you could ride on my shoulder the rest of the way.
+[dialogueshadow:#84b8e8][dialoguesound:soundbytes/mika]No thanks, Mister, I think I'll be okay.
+[dialogueshadow:#ae86db][dialoguesound:soundbytes/omega]You sure? I don't mind it, y'know
+[dialogueshadow:#84b8e8][dialoguesound:soundbytes/mika]I'm sure! We're almost there anyways, right?
+[gotoscene:mercenary/king]

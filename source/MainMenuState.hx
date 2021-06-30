@@ -166,19 +166,20 @@ class MainMenuState extends MusicBeatState
 				trace("Story Menu Selected");
 			case 'freeplay':
 				dismissItems();
+
 				new FlxTimer().start(.5, function(tmr:FlxTimer){
 					FlxG.switchState(new FreeplayState());
 				});
 				trace("Freeplay Menu Selected");
-
 			case 'options':
 				dismissItems();
+
 				new FlxTimer().start(.5, function(tmr:FlxTimer){
 					FlxG.switchState(new OptionsMenu());
 				});
 			case 'credits':
 				dismissItems();
-				dismissItems();
+				
 				new FlxTimer().start(.5, function(tmr:FlxTimer){
 					FlxG.switchState(new CreditsState());
 				});

@@ -65,6 +65,12 @@ class OptionsMenu extends MusicBeatState
 				new ToggleOption("picoCamshake","Week 3 cam shake"),
 				new ToggleOption("senpaiShaders","Week 6 shaders"),
 			])
+		]),
+		new OptionCategory("Cutscenes",[
+			new CutsceneOption("Intro","introCutscene"),
+			new CutsceneOption("Week Intro","mercenary/pre"),
+			new CutsceneOption("Merc","mercenary/cutscene"),
+			new CutsceneOption("Test","test/cutscene"),
 		])
 	]);
 

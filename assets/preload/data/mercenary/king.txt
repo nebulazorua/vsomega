@@ -1,0 +1,25 @@
+[goto:kingquarters/k_1][music:Your Highness][sound:portalClose][dialogueshadow:#f54295][dialoguesound:soundbytes/gf]Ow… what did you do this time?
+[dialogueshadow:#588ee0][dialoguesound:soundbytes/bf]Bop!
+[goto:kingquarters/k_2][dialogueshadow:#f54295][dialoguesound:soundbytes/gf]Well, guess we gotta find a way out of this, don’t we
+I’ll ask around, just, don’t go anywhere.
+[dialogueshadow:#000000][goto:kingquarters/k_3][dialoguesound:soundbytes/queen]Oh dear, what can we do? All the mercenaries we sent out have failed.
+[goto:kingquarters/k_4][dialoguesound:soundbytes/king]We'll have to resort to the royal army, it may be the only way to get her back.
+[dialoguesound:soundbytes/queen]And if we don't?
+[dialoguespeed:0.05][dialoguesound:soundbytes/king]Then the world is doomed as we know it.
+[nofade][goto:kingquarters/k_5][dialoguesound:soundbytes/queen]Oh! A young lad! Perhaps this complete stranger that we’ve never met before could be the answer to all our problems!
+[dialoguesound:soundbytes/king]Yes! How convenient!
+[dialoguesound:soundbytes/queen]Almost as convenient as the time that you got a discount Priest from Headslist!
+[dialoguesound:soundbytes/king]Oh yes! That was very convenient indeed!
+[dialogueshadow:#588ee0][dialoguesound:soundbytes/bf]Beep.
+[dialogueshadow:#000000][dialoguesound:soundbytes/queen]Oh! How rude of me! Dearest, could you explain to the boy the situation? He's obviously interested in helping.
+[dialoguesound:soundbytes/king]Of course, Dear.
+[goto:kingquarters/k_6]You see, boy, our only daughter was kidnapped! We believe that she’s being taken to the mountains out west.
+[dialoguesound:soundbytes/queen]Yes, out west, where dangerous beasts reside…
+[dialoguesound:soundbytes/king]Such as the Ursiapes.
+[dialoguesound:soundbytes/queen]Such violent creatures...
+[dialoguesound:soundbytes/king]I trust that you, a young, odd looking boy, can retrieve our daughter, even though I’ve known you for less than 5 minutes. Can I trust you with that?
+[dialogueshadow:#588ee0][dialoguesound:soundbytes/bf]Beep!
+[dialoguesound:soundbytes/king]Then be on your way! The sake of our daughter rests on your oddly small shoulders!
+[goto:kingquarters/k_7][dialoguesound:soundbytes/bf]Beep bop!
+[goto:kingquarters/k_8]
+[gotoscene:mercenary/cutscene]

@@ -204,6 +204,20 @@ class Options
 	}
 }
 
+class CutsceneOption extends Option
+{
+	private var cutscenePath:String;
+	public function new(name:String,path:String){
+		super();
+		cutscenePath=path;
+		this.name=name;
+	}
+	public override function accept(){
+		FlxG.sound.music.fadeOut(.25, 0);
+		FlxG.switchState(new CutsceneState(CoolUtil.coolTextFile(Paths.txt(cutscenePath)),new OptionsMenu()));
+		return false;
+	}
+}
 class StateOption extends Option
 {
 	private var state:FlxState;
