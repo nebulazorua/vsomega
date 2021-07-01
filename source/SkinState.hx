@@ -39,6 +39,11 @@ class SkinState extends MusicBeatState {
   var lastAnimTimer:Float = 0;
 
   override function create(){
+    for(idx in 0...skins.length){
+      unlockedSkins.push(skins[idx]);
+      unlockedNames.push(skinNames[idx]);
+      unlockedDescs.push(skinDescs[idx]);
+    }
     var bg = new FlxSprite().loadGraphic(Paths.image("equipBG"));
     bg.antialiasing=true;
     bg.updateHitbox();
@@ -51,6 +56,28 @@ class SkinState extends MusicBeatState {
       add(char);
       characters.push(char);
     }
+    var ui_tex = Paths.getSparrowAtlas('campaign_menu_UI_assets');
+
+    leftArrow = new FlxSprite(0,300);
+    leftArrow.screenCenter(X);
+    leftArrow.x -= 300;
+    leftArrow.y += 125;
+    leftArrow.frames = ui_tex;
+    leftArrow.animation.addByPrefix('idle', "arrow left");
+    leftArrow.animation.addByPrefix('press', "arrow push left");
+    leftArrow.animation.play('idle');
+    add(leftArrow);
+
+    rightArrow = new FlxSprite(0, leftArrow.y);
+    rightArrow.screenCenter(X);
+    rightArrow.x += 300;
+    rightArrow.y += 125;
+    rightArrow.frames = ui_tex;
+    rightArrow.animation.addByPrefix('idle', 'arrow right');
+    rightArrow.animation.addByPrefix('press', "arrow push right", 24, false);
+    rightArrow.animation.play('idle');
+    add(rightArrow);
+
     Conductor.changeBPM(102);
     Conductor.songPosition = FlxG.sound.music.time;
     super.create();

@@ -46,7 +46,7 @@ class AnimationDebug extends FlxState
 	var camGame:FlxCamera;
 	var player:FlxUICheckBox;
 	var _file:FileReference;
-
+	var ghostBF:Character;
 	private function saveLevel()
 	{
 		var data:String = '';
@@ -139,11 +139,7 @@ class AnimationDebug extends FlxState
 		player.checked = false;
 		player.callback = function()
 		{
-			if(dad!=null)
-				dad.flipX=player.checked;
-
-			if(bf!=null)
-				bf.flipX=player.checked;
+			char.flipX=player.checked;
 		};
 
 		var saveButton:FlxButton = new FlxButton(100, 125, "Save", function()
@@ -168,6 +164,13 @@ class AnimationDebug extends FlxState
 		camFollow.screenCenter();
 		add(camFollow);
 		camGame.follow(camFollow);
+
+		ghostBF = new Character(0, 0);
+		ghostBF.alpha = .5;
+		ghostBF.screenCenter();
+		ghostBF.debugMode = true;
+		
+		layeringbullshit.add(ghostBF);
 
 		displayCharacter(daAnim);
 
@@ -252,6 +255,7 @@ class AnimationDebug extends FlxState
 	override function update(elapsed:Float)
 	{
 		textAnim.text = char.animation.curAnim.name;
+		ghostBF.flipX = char.flipX;
 
 		if (FlxG.keys.justPressed.ESCAPE)
 		{
@@ -304,7 +308,7 @@ class AnimationDebug extends FlxState
 		if (FlxG.keys.justPressed.S || FlxG.keys.justPressed.W || FlxG.keys.justPressed.SPACE)
 		{
 			char.playAnim(animList[curAnim]);
-
+			ghostBF.playAnim(animList[curAnim]);
 			updateTexts();
 			genBoyOffsets(false);
 		}
