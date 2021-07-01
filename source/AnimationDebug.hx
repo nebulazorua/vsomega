@@ -116,12 +116,16 @@ class AnimationDebug extends FlxState
 		layeringbullshit = new FlxTypedGroup<FlxSprite>();
 		add(layeringbullshit);
 
-		UI_box = new FlxUITabMenu(null,[{name:"",label:""}],false);
+		UI_box = new FlxUITabMenu(null,[{name:"Character",label:"Character"}],false);
 		UI_box.cameras = [camHUD];
 		UI_box.resize(300, 200);
 		UI_box.x = (FlxG.width / 2) + 250;
 		UI_box.y = 20;
 		add(UI_box);
+
+		var characterTab = new FlxUI(null, UI_box);
+		characterTab.name = "Character";
+
 		var characters:Array<String> = CoolUtil.coolTextFile(Paths.txt('characterList'));
 
 		var cumfart = new FlxUIDropDownMenu(50, 50, FlxUIDropDownMenu.makeStrIdLabelArray(characters, true), function(character:String)
@@ -147,6 +151,10 @@ class AnimationDebug extends FlxState
 			saveLevel();
 		});
 
+		characterTab.add(cumfart);
+		characterTab.add(player);
+		characterTab.add(saveButton);
+		UI_box.addGroup(characterTab);
 		dumbTexts = new FlxTypedGroup<FlxText>();
 		dumbTexts.cameras = [camHUD];
 		add(dumbTexts);
@@ -161,9 +169,6 @@ class AnimationDebug extends FlxState
 		add(camFollow);
 		camGame.follow(camFollow);
 
-		UI_box.add(cumfart);
-		UI_box.add(player);
-		UI_box.add(saveButton);
 		displayCharacter(daAnim);
 
 		super.create();

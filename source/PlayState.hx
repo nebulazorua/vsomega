@@ -1288,7 +1288,7 @@ class PlayState extends MusicBeatState
 		if (curStage == 'limo')
 			gfVersion = 'gf-car';
 
-		if(SkinState.selectedSkin=='bf-neb')
+		if(SkinState.selectedSkin=='bf-neb' || StoryMenuState.cameos.contains(SONG.song) && FlxG.random.int(5000)==0)
 			gfVersion = 'lizzy';
 
 		gf = new Character(400, 130, gfVersion);
@@ -1482,8 +1482,17 @@ class PlayState extends MusicBeatState
 			var evilTrail = new FlxTrail(dad, null, 4, 24, 0.3, 0.069);
 			add(evilTrail);
 		}
-		if(SONG.player1=='bf-neb')
-			boyfriend.y -= 75;
+		switch(boyfriend.curCharacter){
+			case 'bf-neb':
+				boyfriend.y -= 75;
+			case 'naikaze':
+				boyfriend.y -= 90;
+			case 'bfside':
+				boyfriend.y -= 120;
+			case 'babyvase':
+				boyfriend.y -= 110;
+		}
+
 
 		add(gf);
 
@@ -1676,7 +1685,7 @@ class PlayState extends MusicBeatState
 		var p2Color = 0xFFFF0000; // TODO: GIVE EVERYONE CUSTOM HP BAR COLOURS!!!
 		// AND MAKE IT BETTER WITH A NOTEPAD FILE OR SOMETHING!!
 
-		switch(SONG.player1){
+		switch(boyfriend.curCharacter){
 			case 'bf-neb':
 				p1Color = 0xFF9534EB;
 			case 'bf' | 'bf-car' | 'bf-pixel' | 'bf-christmas':
@@ -1753,12 +1762,12 @@ class PlayState extends MusicBeatState
 			presetTxt.visible=true;
 		}
 
-		var hpIcon = SONG.player1;
+		var hpIcon = boyfriend.curCharacter;
 		switch(SONG.song.toLowerCase()){
 			case '2v200':
 				hpIcon = "omegabf";
 			default:
-				hpIcon = SONG.player1;
+				hpIcon = boyfriend.curCharacter;
 		}
 
 		iconP1 = new HealthIcon(hpIcon, true);
@@ -2721,14 +2730,6 @@ class PlayState extends MusicBeatState
 			FlxTween.tween(glowCage2, {alpha: 0}, .1);
 		}
 
-		if (FlxG.keys.justPressed.NINE)
-		{
-			if (iconP1.animation.curAnim.name == 'bf-old')
-				iconP1.animation.play(SONG.player1);
-			else
-				iconP1.animation.play('bf-old');
-		}
-
 		disconnectTextTimer+=elapsed;
 		if(disconnectTextTimer>.5 && dad.curCharacter=='noke'){
 			nokeTxt.visible=false;
@@ -2745,6 +2746,17 @@ class PlayState extends MusicBeatState
 					dad.y = gf.y
 				else
 					dad.y = -760-25*Math.sin(timer);
+
+				switch(boyfriend.curCharacter){
+					case 'bf-neb':
+						boyfriend.y -= 75;
+					case 'naikaze':
+						boyfriend.y -= 90;
+					case 'bfside':
+						boyfriend.y -= 120;
+					case 'babyvase':
+						boyfriend.y -= 110;
+				}
 
 				var nextXBG = void1.x+(elapsed*256);
 				var nextXBG2 = void2.x+(elapsed*256);
@@ -3559,7 +3571,7 @@ class PlayState extends MusicBeatState
 							if(daNote.noteType==7){
 								health -= 1.99;
 							}
-							noteMiss(daNote.noteData);
+							noteMiss(daNote.noteData,daNote);
 						}else{
 							combo=0;
 							misses++;
@@ -4478,7 +4490,7 @@ class PlayState extends MusicBeatState
 					vietnamFlashbacks=!vietnamFlashbacks;
 			case 'dishonor':
 				if(curStep==2048 || curStep==1024){
-					modchart.opponentHPDrain=.0125;
+					modchart.opponentHPDrain=.015;
 					modchart.noteHPGain = .03;
 					modchart.susHeal=true;
 				}else if(curStep==1280){

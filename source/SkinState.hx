@@ -24,11 +24,16 @@ import Options;
 class SkinState extends MusicBeatState {
   public static var selectedSkin = 'bf';
   public static var skins = ["bf","naikaze","mikeeey","tgr","erderi","babyvase","bfside","bf-neb"];
-  public static var skinNames = ["Default","Naikaze","Mikeeey","TheGhostReaper","Erderi the Fox","Fun-sized Vase","Fun-sized Brightside","Nebby"];
-  public var unlockedSkins:Array<String> = ["bf","mikeeey","tgr"];
-  public var unlockedNames:Array<String> = ["Default","Mikeeey","TheGhostReaper"];
+  public static var skinNames = ["Boyfriend.XML","Naikaze","Mikeeey","TheGhostReaper","Erderi the Fox","Fun-sized Vase","Fun-sized Brightside","Nebby"];
+  public static var skinDescs = ["Funky lil' man","Literal god","Mikey with 3 e's","idk","furry","Don't you throw stones in glass houses","Brigthbsied my beloved","Stupid Cocksleeve Zorua"];
+  public var unlockedSkins:Array<String> = [];
+  public var unlockedNames:Array<String> = [];
+  public var unlockedDescs:Array<String> = [];
   public var characters:Array<Character> = [];
   public var selectedIdx:Int = 0;
+
+  var leftArrow:FlxSprite;
+  var rightArrow:FlxSprite;
 
   var selectedTimer:Float = 0;
   var lastAnimTimer:Float = 0;

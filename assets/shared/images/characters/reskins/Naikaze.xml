@@ -1,0 +1,269 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Pinkguy_hope.png">
+	<!-- Created with Adobe Animate version 18.0.1.115 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="BF DEAD Loop0000" x="0" y="0" width="257" height="497" pivotX="-158.45" pivotY="-995.75"/>
+	<SubTexture name="BF DEAD Loop0001" x="257" y="0" width="257" height="497"/>
+	<SubTexture name="BF DEAD Loop0002" x="257" y="0" width="257" height="497"/>
+	<SubTexture name="BF DEAD Loop0003" x="514" y="0" width="257" height="497"/>
+	<SubTexture name="BF DEAD Loop0004" x="514" y="0" width="257" height="497"/>
+	<SubTexture name="BF DEAD Loop0005" x="771" y="0" width="257" height="497"/>
+	<SubTexture name="BF DEAD Loop0006" x="771" y="0" width="257" height="497"/>
+	<SubTexture name="BF DEAD Loop0007" x="1028" y="0" width="257" height="497"/>
+	<SubTexture name="BF DEAD Loop0008" x="1028" y="0" width="257" height="497"/>
+	<SubTexture name="BF DEAD Loop0009" x="1028" y="0" width="257" height="497"/>
+	<SubTexture name="BF DEAD Loop0010" x="1028" y="0" width="257" height="497"/>
+	<SubTexture name="BF DEAD Loop0011" x="1028" y="0" width="257" height="497"/>
+	<SubTexture name="BF DEAD Loop0012" x="1028" y="0" width="257" height="497"/>
+	<SubTexture name="BF DEAD Loop0013" x="1028" y="0" width="257" height="497"/>
+	<SubTexture name="BF DEAD Loop0014" x="1028" y="0" width="257" height="497"/>
+	<SubTexture name="BF DEAD Loop0015" x="1028" y="0" width="257" height="497"/>
+	<SubTexture name="BF DEAD Loop0016" x="1028" y="0" width="257" height="497"/>
+	<SubTexture name="BF DEAD Loop0017" x="0" y="0" width="257" height="497"/>
+	<SubTexture name="BF DEAD Loop0018" x="257" y="0" width="257" height="497"/>
+	<SubTexture name="BF DEAD Loop0019" x="257" y="0" width="257" height="497"/>
+	<SubTexture name="BF DEAD Loop0020" x="514" y="0" width="257" height="497"/>
+	<SubTexture name="BF DEAD Loop0021" x="514" y="0" width="257" height="497"/>
+	<SubTexture name="BF DEAD Loop0022" x="771" y="0" width="257" height="497"/>
+	<SubTexture name="BF DEAD Loop0023" x="771" y="0" width="257" height="497"/>
+	<SubTexture name="BF DEAD Loop0024" x="1028" y="0" width="257" height="497"/>
+	<SubTexture name="BF DEAD Loop0025" x="1028" y="0" width="257" height="497"/>
+	<SubTexture name="BF DEAD Loop0026" x="1028" y="0" width="257" height="497"/>
+	<SubTexture name="BF DEAD Loop0027" x="1028" y="0" width="257" height="497"/>
+	<SubTexture name="BF DEAD Loop0028" x="1028" y="0" width="257" height="497"/>
+	<SubTexture name="BF DEAD Loop0029" x="1028" y="0" width="257" height="497"/>
+	<SubTexture name="BF DEAD Loop0030" x="1028" y="0" width="257" height="497"/>
+	<SubTexture name="BF DEAD Loop0031" x="1028" y="0" width="257" height="497"/>
+	<SubTexture name="BF DEAD Loop0032" x="1028" y="0" width="257" height="497"/>
+	<SubTexture name="BF DEAD Loop0033" x="1028" y="0" width="257" height="497"/>
+	<SubTexture name="BF Dead confirm0000" x="1285" y="0" width="257" height="497" pivotX="-129.9" pivotY="-945.3" frameX="-29" frameY="-50" frameWidth="331" frameHeight="547"/>
+	<SubTexture name="BF Dead confirm0001" x="1542" y="0" width="291" height="517" frameX="-20" frameY="-30" frameWidth="331" frameHeight="547"/>
+	<SubTexture name="BF Dead confirm0002" x="1833" y="0" width="291" height="547" frameX="-20" frameY="0" frameWidth="331" frameHeight="547"/>
+	<SubTexture name="BF Dead confirm0003" x="2124" y="0" width="291" height="517" frameX="-20" frameY="-30" frameWidth="331" frameHeight="547"/>
+	<SubTexture name="BF Dead confirm0004" x="2415" y="0" width="291" height="517" frameX="-20" frameY="-30" frameWidth="331" frameHeight="547"/>
+	<SubTexture name="BF Dead confirm0005" x="2706" y="0" width="291" height="517" frameX="-20" frameY="-30" frameWidth="331" frameHeight="547"/>
+	<SubTexture name="BF Dead confirm0006" x="2997" y="0" width="291" height="517" frameX="-20" frameY="-30" frameWidth="331" frameHeight="547"/>
+	<SubTexture name="BF Dead confirm0007" x="3288" y="0" width="291" height="517" frameX="-20" frameY="-30" frameWidth="331" frameHeight="547"/>
+	<SubTexture name="BF Dead confirm0008" x="3579" y="0" width="291" height="517" frameX="-20" frameY="-30" frameWidth="331" frameHeight="547"/>
+	<SubTexture name="BF Dead confirm0009" x="0" y="547" width="291" height="517" frameX="-20" frameY="-30" frameWidth="331" frameHeight="547"/>
+	<SubTexture name="BF Dead confirm0010" x="291" y="547" width="291" height="517" frameX="-20" frameY="-30" frameWidth="331" frameHeight="547"/>
+	<SubTexture name="BF Dead confirm0011" x="582" y="547" width="291" height="517" frameX="-20" frameY="-30" frameWidth="331" frameHeight="547"/>
+	<SubTexture name="BF Dead confirm0012" x="873" y="547" width="293" height="517" frameX="-19" frameY="-30" frameWidth="331" frameHeight="547"/>
+	<SubTexture name="BF Dead confirm0013" x="1166" y="547" width="297" height="517" frameX="-17" frameY="-30" frameWidth="331" frameHeight="547"/>
+	<SubTexture name="BF Dead confirm0014" x="1463" y="547" width="303" height="517" frameX="-14" frameY="-30" frameWidth="331" frameHeight="547"/>
+	<SubTexture name="BF Dead confirm0015" x="1766" y="547" width="307" height="517" frameX="-12" frameY="-30" frameWidth="331" frameHeight="547"/>
+	<SubTexture name="BF Dead confirm0016" x="2073" y="547" width="313" height="517" frameX="-9" frameY="-30" frameWidth="331" frameHeight="547"/>
+	<SubTexture name="BF Dead confirm0017" x="2386" y="547" width="315" height="517" frameX="-8" frameY="-30" frameWidth="331" frameHeight="547"/>
+	<SubTexture name="BF Dead confirm0018" x="2701" y="547" width="319" height="517" frameX="-6" frameY="-30" frameWidth="331" frameHeight="547"/>
+	<SubTexture name="BF Dead confirm0019" x="3020" y="547" width="323" height="517" frameX="-4" frameY="-30" frameWidth="331" frameHeight="547"/>
+	<SubTexture name="BF Dead confirm0020" x="3343" y="547" width="325" height="517" frameX="-3" frameY="-30" frameWidth="331" frameHeight="547"/>
+	<SubTexture name="BF Dead confirm0021" x="3668" y="547" width="327" height="517" frameX="-2" frameY="-30" frameWidth="331" frameHeight="547"/>
+	<SubTexture name="BF Dead confirm0022" x="0" y="1064" width="329" height="517" frameX="-1" frameY="-30" frameWidth="331" frameHeight="547"/>
+	<SubTexture name="BF Dead confirm0023" x="329" y="1064" width="329" height="517" frameX="-1" frameY="-30" frameWidth="331" frameHeight="547"/>
+	<SubTexture name="BF Dead confirm0024" x="329" y="1064" width="329" height="517" frameX="0" frameY="-30" frameWidth="331" frameHeight="547"/>
+	<SubTexture name="BF Dead confirm0025" x="329" y="1064" width="329" height="517" frameX="0" frameY="-30" frameWidth="331" frameHeight="547"/>
+	<SubTexture name="BF Dead confirm0026" x="329" y="1064" width="329" height="517" frameX="0" frameY="-30" frameWidth="331" frameHeight="547"/>
+	<SubTexture name="BF Dead confirm0027" x="329" y="1064" width="329" height="517" frameX="0" frameY="-30" frameWidth="331" frameHeight="547"/>
+	<SubTexture name="BF Dead confirm0028" x="329" y="1064" width="329" height="517" frameX="0" frameY="-30" frameWidth="331" frameHeight="547"/>
+	<SubTexture name="BF Dead confirm0029" x="329" y="1064" width="329" height="517" frameX="0" frameY="-30" frameWidth="331" frameHeight="547"/>
+	<SubTexture name="BF Dead confirm0030" x="329" y="1064" width="329" height="517" frameX="0" frameY="-30" frameWidth="331" frameHeight="547"/>
+	<SubTexture name="BF Dead confirm0031" x="329" y="1064" width="329" height="517" frameX="0" frameY="-30" frameWidth="331" frameHeight="547"/>
+	<SubTexture name="BF Dead confirm0032" x="329" y="1064" width="329" height="517" frameX="0" frameY="-30" frameWidth="331" frameHeight="547"/>
+	<SubTexture name="BF Dead confirm0033" x="329" y="1064" width="329" height="517" frameX="0" frameY="-30" frameWidth="331" frameHeight="547"/>
+	<SubTexture name="BF HEY!!0000" x="658" y="1064" width="325" height="492" pivotX="-328.5" pivotY="193.3" frameX="0" frameY="-11" frameWidth="325" frameHeight="503"/>
+	<SubTexture name="BF HEY!!0001" x="658" y="1064" width="325" height="492" frameX="0" frameY="-11" frameWidth="325" frameHeight="503"/>
+	<SubTexture name="BF HEY!!0002" x="983" y="1064" width="310" height="503" frameX="-4" frameY="0" frameWidth="325" frameHeight="503"/>
+	<SubTexture name="BF HEY!!0003" x="983" y="1064" width="310" height="503" frameX="-4" frameY="0" frameWidth="325" frameHeight="503"/>
+	<SubTexture name="BF HEY!!0004" x="983" y="1064" width="310" height="503" frameX="-4" frameY="0" frameWidth="325" frameHeight="503"/>
+	<SubTexture name="BF HEY!!0005" x="983" y="1064" width="310" height="503" frameX="-4" frameY="0" frameWidth="325" frameHeight="503"/>
+	<SubTexture name="BF HEY!!0006" x="983" y="1064" width="310" height="503" frameX="-4" frameY="0" frameWidth="325" frameHeight="503"/>
+	<SubTexture name="BF HEY!!0007" x="983" y="1064" width="310" height="503" frameX="-4" frameY="0" frameWidth="325" frameHeight="503"/>
+	<SubTexture name="BF HEY!!0008" x="983" y="1064" width="310" height="503" frameX="-4" frameY="0" frameWidth="325" frameHeight="503"/>
+	<SubTexture name="BF HEY!!0009" x="983" y="1064" width="310" height="503" frameX="-4" frameY="0" frameWidth="325" frameHeight="503"/>
+	<SubTexture name="BF dies0000" x="1293" y="1064" width="290" height="497" pivotX="-89.85" pivotY="-995.75" frameX="-36" frameY="0" frameWidth="326" frameHeight="497"/>
+	<SubTexture name="BF dies0001" x="1583" y="1064" width="326" height="497"/>
+	<SubTexture name="BF dies0002" x="1583" y="1064" width="326" height="497"/>
+	<SubTexture name="BF dies0003" x="1909" y="1064" width="324" height="497" frameX="-2" frameY="0" frameWidth="326" frameHeight="497"/>
+	<SubTexture name="BF dies0004" x="2233" y="1064" width="324" height="497" frameX="-2" frameY="0" frameWidth="326" frameHeight="497"/>
+	<SubTexture name="BF dies0005" x="2557" y="1064" width="324" height="497" frameX="-2" frameY="0" frameWidth="326" frameHeight="497"/>
+	<SubTexture name="BF dies0006" x="2881" y="1064" width="324" height="497" frameX="-2" frameY="0" frameWidth="326" frameHeight="497"/>
+	<SubTexture name="BF dies0007" x="3205" y="1064" width="257" height="497" frameX="-69" frameY="0" frameWidth="326" frameHeight="497"/>
+	<SubTexture name="BF dies0008" x="3205" y="1064" width="257" height="497" frameX="-69" frameY="0" frameWidth="326" frameHeight="497"/>
+	<SubTexture name="BF dies0009" x="3205" y="1064" width="257" height="497" frameX="-69" frameY="0" frameWidth="326" frameHeight="497"/>
+	<SubTexture name="BF dies0010" x="3205" y="1064" width="257" height="497" frameX="-69" frameY="0" frameWidth="326" frameHeight="497"/>
+	<SubTexture name="BF dies0011" x="3205" y="1064" width="257" height="497" frameX="-69" frameY="0" frameWidth="326" frameHeight="497"/>
+	<SubTexture name="BF dies0012" x="3205" y="1064" width="257" height="497" frameX="-69" frameY="0" frameWidth="326" frameHeight="497"/>
+	<SubTexture name="BF dies0013" x="3205" y="1064" width="257" height="497" frameX="-69" frameY="0" frameWidth="326" frameHeight="497"/>
+	<SubTexture name="BF dies0014" x="3205" y="1064" width="257" height="497" frameX="-69" frameY="0" frameWidth="326" frameHeight="497"/>
+	<SubTexture name="BF dies0015" x="3205" y="1064" width="257" height="497" frameX="-69" frameY="0" frameWidth="326" frameHeight="497"/>
+	<SubTexture name="BF dies0016" x="3205" y="1064" width="257" height="497" frameX="-69" frameY="0" frameWidth="326" frameHeight="497"/>
+	<SubTexture name="BF dies0017" x="3205" y="1064" width="257" height="497" frameX="-69" frameY="0" frameWidth="326" frameHeight="497"/>
+	<SubTexture name="BF dies0018" x="3205" y="1064" width="257" height="497" frameX="-69" frameY="0" frameWidth="326" frameHeight="497"/>
+	<SubTexture name="BF dies0019" x="3205" y="1064" width="257" height="497" frameX="-69" frameY="0" frameWidth="326" frameHeight="497"/>
+	<SubTexture name="BF dies0020" x="3205" y="1064" width="257" height="497" frameX="-69" frameY="0" frameWidth="326" frameHeight="497"/>
+	<SubTexture name="BF dies0021" x="3205" y="1064" width="257" height="497" frameX="-69" frameY="0" frameWidth="326" frameHeight="497"/>
+	<SubTexture name="BF dies0022" x="3205" y="1064" width="257" height="497" frameX="-69" frameY="0" frameWidth="326" frameHeight="497"/>
+	<SubTexture name="BF dies0023" x="3205" y="1064" width="257" height="497" frameX="-69" frameY="0" frameWidth="326" frameHeight="497"/>
+	<SubTexture name="BF dies0024" x="3205" y="1064" width="257" height="497" frameX="-69" frameY="0" frameWidth="326" frameHeight="497"/>
+	<SubTexture name="BF dies0025" x="3205" y="1064" width="257" height="497" frameX="-69" frameY="0" frameWidth="326" frameHeight="497"/>
+	<SubTexture name="BF dies0026" x="3205" y="1064" width="257" height="497" frameX="-69" frameY="0" frameWidth="326" frameHeight="497"/>
+	<SubTexture name="BF dies0027" x="3205" y="1064" width="257" height="497" frameX="-69" frameY="0" frameWidth="326" frameHeight="497"/>
+	<SubTexture name="BF dies0028" x="3205" y="1064" width="257" height="497" frameX="-69" frameY="0" frameWidth="326" frameHeight="497"/>
+	<SubTexture name="BF dies0029" x="3205" y="1064" width="257" height="497" frameX="-69" frameY="0" frameWidth="326" frameHeight="497"/>
+	<SubTexture name="BF dies0030" x="3205" y="1064" width="257" height="497" frameX="-69" frameY="0" frameWidth="326" frameHeight="497"/>
+	<SubTexture name="BF dies0031" x="3205" y="1064" width="257" height="497" frameX="-69" frameY="0" frameWidth="326" frameHeight="497"/>
+	<SubTexture name="BF dies0032" x="3205" y="1064" width="257" height="497" frameX="-69" frameY="0" frameWidth="326" frameHeight="497"/>
+	<SubTexture name="BF dies0033" x="3205" y="1064" width="257" height="497" frameX="-69" frameY="0" frameWidth="326" frameHeight="497"/>
+	<SubTexture name="BF dies0034" x="3462" y="1064" width="257" height="497" frameX="-69" frameY="0" frameWidth="326" frameHeight="497"/>
+	<SubTexture name="BF dies0035" x="3462" y="1064" width="257" height="497" frameX="-69" frameY="0" frameWidth="326" frameHeight="497"/>
+	<SubTexture name="BF dies0036" x="3719" y="1064" width="257" height="497" frameX="-69" frameY="0" frameWidth="326" frameHeight="497"/>
+	<SubTexture name="BF dies0037" x="3462" y="1064" width="257" height="497" frameX="-69" frameY="0" frameWidth="326" frameHeight="497"/>
+	<SubTexture name="BF dies0038" x="0" y="1581" width="257" height="497" frameX="-69" frameY="0" frameWidth="326" frameHeight="497"/>
+	<SubTexture name="BF dies0039" x="257" y="1581" width="257" height="497" frameX="-69" frameY="0" frameWidth="326" frameHeight="497"/>
+	<SubTexture name="BF dies0040" x="514" y="1581" width="257" height="497" frameX="-69" frameY="0" frameWidth="326" frameHeight="497"/>
+	<SubTexture name="BF dies0041" x="771" y="1581" width="257" height="497" frameX="-69" frameY="0" frameWidth="326" frameHeight="497"/>
+	<SubTexture name="BF dies0042" x="1028" y="1581" width="257" height="497" frameX="-69" frameY="0" frameWidth="326" frameHeight="497"/>
+	<SubTexture name="BF dies0043" x="1285" y="1581" width="257" height="497" frameX="-69" frameY="0" frameWidth="326" frameHeight="497"/>
+	<SubTexture name="BF dies0044" x="1542" y="1581" width="257" height="497" frameX="-69" frameY="0" frameWidth="326" frameHeight="497"/>
+	<SubTexture name="BF dies0045" x="1799" y="1581" width="257" height="497" frameX="-69" frameY="0" frameWidth="326" frameHeight="497"/>
+	<SubTexture name="BF dies0046" x="2056" y="1581" width="257" height="497" frameX="-69" frameY="0" frameWidth="326" frameHeight="497"/>
+	<SubTexture name="BF dies0047" x="2313" y="1581" width="257" height="497" frameX="-69" frameY="0" frameWidth="326" frameHeight="497"/>
+	<SubTexture name="BF dies0048" x="2570" y="1581" width="257" height="497" frameX="-69" frameY="0" frameWidth="326" frameHeight="497"/>
+	<SubTexture name="BF dies0049" x="2827" y="1581" width="257" height="497" frameX="-69" frameY="0" frameWidth="326" frameHeight="497"/>
+	<SubTexture name="BF dies0050" x="3084" y="1581" width="257" height="497" frameX="-69" frameY="0" frameWidth="326" frameHeight="497"/>
+	<SubTexture name="BF dies0051" x="3341" y="1581" width="257" height="497" frameX="-69" frameY="0" frameWidth="326" frameHeight="497"/>
+	<SubTexture name="BF dies0052" x="3598" y="1581" width="257" height="497" frameX="-69" frameY="0" frameWidth="326" frameHeight="497"/>
+	<SubTexture name="BF dies0053" x="0" y="2078" width="257" height="497" frameX="-69" frameY="0" frameWidth="326" frameHeight="497"/>
+	<SubTexture name="BF dies0054" x="0" y="2078" width="257" height="497" frameX="-69" frameY="0" frameWidth="326" frameHeight="497"/>
+	<SubTexture name="BF dies0055" x="0" y="2078" width="257" height="497" frameX="-69" frameY="0" frameWidth="326" frameHeight="497"/>
+	<SubTexture name="BF dies0056" x="0" y="2078" width="257" height="497" frameX="-69" frameY="0" frameWidth="326" frameHeight="497"/>
+	<SubTexture name="BF dies0057" x="257" y="2078" width="257" height="497" frameX="-69" frameY="0" frameWidth="326" frameHeight="497"/>
+	<SubTexture name="BF hit copy0000" x="514" y="2078" width="250" height="458" pivotX="-1" pivotY="24.15" frameX="-25" frameY="-48" frameWidth="354" frameHeight="507"/>
+	<SubTexture name="BF hit copy0001" x="764" y="2078" width="238" height="471" frameX="-34" frameY="-34" frameWidth="354" frameHeight="507"/>
+	<SubTexture name="BF hit copy0002" x="1002" y="2078" width="266" height="506" frameX="-25" frameY="0" frameWidth="354" frameHeight="507"/>
+	<SubTexture name="BF hit copy0003" x="1002" y="2078" width="266" height="506" frameX="-25" frameY="0" frameWidth="354" frameHeight="507"/>
+	<SubTexture name="BF hit copy0004" x="1268" y="2078" width="350" height="498" frameX="-3" frameY="-9" frameWidth="354" frameHeight="507"/>
+	<SubTexture name="BF hit copy0005" x="1268" y="2078" width="350" height="498" frameX="-3" frameY="-9" frameWidth="354" frameHeight="507"/>
+	<SubTexture name="BF hit copy0006" x="1618" y="2078" width="351" height="503" frameX="-1" frameY="-3" frameWidth="354" frameHeight="507"/>
+	<SubTexture name="BF hit copy0007" x="1618" y="2078" width="351" height="503" frameX="-1" frameY="-3" frameWidth="354" frameHeight="507"/>
+	<SubTexture name="BF hit copy0008" x="1969" y="2078" width="354" height="497" frameX="0" frameY="-9" frameWidth="354" frameHeight="507"/>
+	<SubTexture name="BF hit copy0009" x="1969" y="2078" width="354" height="497" frameX="0" frameY="-9" frameWidth="354" frameHeight="507"/>
+	<SubTexture name="BF hit copy0010" x="1969" y="2078" width="354" height="497" frameX="0" frameY="-9" frameWidth="354" frameHeight="507"/>
+	<SubTexture name="BF hit copy0011" x="1969" y="2078" width="354" height="497" frameX="0" frameY="-9" frameWidth="354" frameHeight="507"/>
+	<SubTexture name="BF hit copy0012" x="1969" y="2078" width="354" height="497" frameX="0" frameY="-9" frameWidth="354" frameHeight="507"/>
+	<SubTexture name="BF hit copy0013" x="1969" y="2078" width="354" height="497" frameX="0" frameY="-9" frameWidth="354" frameHeight="507"/>
+	<SubTexture name="BF hit copy0014" x="1969" y="2078" width="354" height="497" frameX="0" frameY="-9" frameWidth="354" frameHeight="507"/>
+	<SubTexture name="BF hit copy0015" x="1969" y="2078" width="354" height="497" frameX="0" frameY="-9" frameWidth="354" frameHeight="507"/>
+	<SubTexture name="BF hit copy0016" x="1969" y="2078" width="354" height="497" frameX="0" frameY="-9" frameWidth="354" frameHeight="507"/>
+	<SubTexture name="Naikaze Sing Note DOWN0000" x="2323" y="2078" width="230" height="474" pivotX="-27.55" pivotY="-4.9" frameX="0" frameY="-8" frameWidth="230" frameHeight="482"/>
+	<SubTexture name="Naikaze Sing Note DOWN0001" x="2323" y="2078" width="230" height="474" frameX="0" frameY="-8" frameWidth="230" frameHeight="482"/>
+	<SubTexture name="Naikaze Sing Note DOWN0002" x="2553" y="2078" width="228" height="482" frameX="-1" frameY="0" frameWidth="230" frameHeight="482"/>
+	<SubTexture name="Naikaze Sing Note DOWN0003" x="2553" y="2078" width="228" height="482" frameX="-1" frameY="0" frameWidth="230" frameHeight="482"/>
+	<SubTexture name="Naikaze Sing Note DOWN0004" x="2553" y="2078" width="228" height="482" frameX="-1" frameY="0" frameWidth="230" frameHeight="482"/>
+	<SubTexture name="Naikaze Sing Note DOWN0005" x="2553" y="2078" width="228" height="482" frameX="-1" frameY="0" frameWidth="230" frameHeight="482"/>
+	<SubTexture name="Naikaze Sing Note DOWN0006" x="2553" y="2078" width="228" height="482" frameX="-1" frameY="0" frameWidth="230" frameHeight="482"/>
+	<SubTexture name="Naikaze Sing Note DOWN0007" x="2553" y="2078" width="228" height="482" frameX="-1" frameY="0" frameWidth="230" frameHeight="482"/>
+	<SubTexture name="Naikaze Sing Note DOWN0008" x="2553" y="2078" width="228" height="482" frameX="-1" frameY="0" frameWidth="230" frameHeight="482"/>
+	<SubTexture name="Naikaze Sing Note DOWN0009" x="2553" y="2078" width="228" height="482" frameX="-1" frameY="0" frameWidth="230" frameHeight="482"/>
+	<SubTexture name="Naikaze Sing Note DOWN Miss0000" x="2781" y="2078" width="230" height="488" pivotX="-27.55" pivotY="7.25" frameX="0" frameY="-5" frameWidth="230" frameHeight="493"/>
+	<SubTexture name="Naikaze Sing Note DOWN Miss0001" x="2781" y="2078" width="230" height="488" frameX="0" frameY="-5" frameWidth="230" frameHeight="493"/>
+	<SubTexture name="Naikaze Sing Note DOWN Miss0002" x="3011" y="2078" width="229" height="493" frameX="-1" frameY="0" frameWidth="230" frameHeight="493"/>
+	<SubTexture name="Naikaze Sing Note DOWN Miss0003" x="3011" y="2078" width="229" height="493" frameX="-1" frameY="0" frameWidth="230" frameHeight="493"/>
+	<SubTexture name="Naikaze Sing Note DOWN Miss0004" x="3011" y="2078" width="229" height="493" frameX="-1" frameY="0" frameWidth="230" frameHeight="493"/>
+	<SubTexture name="Naikaze Sing Note DOWN Miss0005" x="3011" y="2078" width="229" height="493" frameX="-1" frameY="0" frameWidth="230" frameHeight="493"/>
+	<SubTexture name="Naikaze Sing Note DOWN Miss0006" x="3011" y="2078" width="229" height="493" frameX="-1" frameY="0" frameWidth="230" frameHeight="493"/>
+	<SubTexture name="Naikaze Sing Note DOWN Miss0007" x="3011" y="2078" width="229" height="493" frameX="-1" frameY="0" frameWidth="230" frameHeight="493"/>
+	<SubTexture name="Naikaze Sing Note DOWN Miss0008" x="3011" y="2078" width="229" height="493" frameX="-1" frameY="0" frameWidth="230" frameHeight="493"/>
+	<SubTexture name="Naikaze Sing Note DOWN Miss0009" x="3011" y="2078" width="229" height="493" frameX="-1" frameY="0" frameWidth="230" frameHeight="493"/>
+	<SubTexture name="Naikaze Sing Note LEFT0000" x="3240" y="2078" width="233" height="484" pivotX="39.5" pivotY="9.2" frameX="0" frameY="-7" frameWidth="248" frameHeight="491"/>
+	<SubTexture name="Naikaze Sing Note LEFT0001" x="3240" y="2078" width="233" height="484" frameX="0" frameY="-7" frameWidth="248" frameHeight="491"/>
+	<SubTexture name="Naikaze Sing Note LEFT0002" x="3473" y="2078" width="233" height="491" frameX="-15" frameY="0" frameWidth="248" frameHeight="491"/>
+	<SubTexture name="Naikaze Sing Note LEFT0003" x="3473" y="2078" width="233" height="491" frameX="-15" frameY="0" frameWidth="248" frameHeight="491"/>
+	<SubTexture name="Naikaze Sing Note LEFT0004" x="3706" y="2078" width="227" height="491" frameX="-15" frameY="0" frameWidth="248" frameHeight="491"/>
+	<SubTexture name="Naikaze Sing Note LEFT0005" x="3706" y="2078" width="227" height="491" frameX="-15" frameY="0" frameWidth="248" frameHeight="491"/>
+	<SubTexture name="Naikaze Sing Note LEFT0006" x="3706" y="2078" width="227" height="491" frameX="-15" frameY="0" frameWidth="248" frameHeight="491"/>
+	<SubTexture name="Naikaze Sing Note LEFT0007" x="3706" y="2078" width="227" height="491" frameX="-15" frameY="0" frameWidth="248" frameHeight="491"/>
+	<SubTexture name="Naikaze Sing Note LEFT0008" x="3706" y="2078" width="227" height="491" frameX="-15" frameY="0" frameWidth="248" frameHeight="491"/>
+	<SubTexture name="Naikaze Sing Note LEFT0009" x="3706" y="2078" width="227" height="491" frameX="-15" frameY="0" frameWidth="248" frameHeight="491"/>
+	<SubTexture name="Naikaze Sing Note LEFT Miss0000" x="0" y="2584" width="246" height="501" pivotX="40.8" pivotY="19.2" frameX="0" frameY="0" frameWidth="248" frameHeight="501"/>
+	<SubTexture name="Naikaze Sing Note LEFT Miss0001" x="0" y="2584" width="246" height="501" frameX="0" frameY="0" frameWidth="248" frameHeight="501"/>
+	<SubTexture name="Naikaze Sing Note LEFT Miss0002" x="246" y="2584" width="242" height="501" frameX="-6" frameY="0" frameWidth="248" frameHeight="501"/>
+	<SubTexture name="Naikaze Sing Note LEFT Miss0003" x="246" y="2584" width="242" height="501" frameX="-6" frameY="0" frameWidth="248" frameHeight="501"/>
+	<SubTexture name="Naikaze Sing Note LEFT Miss0004" x="488" y="2584" width="237" height="501" frameX="-6" frameY="0" frameWidth="248" frameHeight="501"/>
+	<SubTexture name="Naikaze Sing Note LEFT Miss0005" x="488" y="2584" width="237" height="501" frameX="-6" frameY="0" frameWidth="248" frameHeight="501"/>
+	<SubTexture name="Naikaze Sing Note LEFT Miss0006" x="488" y="2584" width="237" height="501" frameX="-6" frameY="0" frameWidth="248" frameHeight="501"/>
+	<SubTexture name="Naikaze Sing Note LEFT Miss0007" x="488" y="2584" width="237" height="501" frameX="-6" frameY="0" frameWidth="248" frameHeight="501"/>
+	<SubTexture name="Naikaze Sing Note LEFT Miss0008" x="488" y="2584" width="237" height="501" frameX="-6" frameY="0" frameWidth="248" frameHeight="501"/>
+	<SubTexture name="Naikaze Sing Note LEFT Miss0009" x="488" y="2584" width="237" height="501" frameX="-6" frameY="0" frameWidth="248" frameHeight="501"/>
+	<SubTexture name="Naikaze Sing Note Right0000" x="725" y="2584" width="245" height="476" pivotX="-14.7" pivotY="-3.8" frameX="-10" frameY="-3" frameWidth="255" frameHeight="479"/>
+	<SubTexture name="Naikaze Sing Note Right0001" x="725" y="2584" width="245" height="476" frameX="-10" frameY="-3" frameWidth="255" frameHeight="479"/>
+	<SubTexture name="Naikaze Sing Note Right0002" x="970" y="2584" width="251" height="479" frameX="0" frameY="0" frameWidth="255" frameHeight="479"/>
+	<SubTexture name="Naikaze Sing Note Right0003" x="970" y="2584" width="251" height="479" frameX="0" frameY="0" frameWidth="255" frameHeight="479"/>
+	<SubTexture name="Naikaze Sing Note Right0004" x="1221" y="2584" width="250" height="479" frameX="-1" frameY="0" frameWidth="255" frameHeight="479"/>
+	<SubTexture name="Naikaze Sing Note Right0005" x="1221" y="2584" width="250" height="479" frameX="-1" frameY="0" frameWidth="255" frameHeight="479"/>
+	<SubTexture name="Naikaze Sing Note Right0006" x="1221" y="2584" width="250" height="479" frameX="-1" frameY="0" frameWidth="255" frameHeight="479"/>
+	<SubTexture name="Naikaze Sing Note Right0007" x="1221" y="2584" width="250" height="479" frameX="-1" frameY="0" frameWidth="255" frameHeight="479"/>
+	<SubTexture name="Naikaze Sing Note Right0008" x="1221" y="2584" width="250" height="479" frameX="-1" frameY="0" frameWidth="255" frameHeight="479"/>
+	<SubTexture name="Naikaze Sing Note Right0009" x="1221" y="2584" width="250" height="479" frameX="-1" frameY="0" frameWidth="255" frameHeight="479"/>
+	<SubTexture name="Naikaze Sing Note Right Miss0000" x="1471" y="2584" width="245" height="482" pivotX="-14.7" pivotY="0" frameX="-10" frameY="0" frameWidth="263" frameHeight="482"/>
+	<SubTexture name="Naikaze Sing Note Right Miss0001" x="1471" y="2584" width="245" height="482" frameX="-10" frameY="0" frameWidth="263" frameHeight="482"/>
+	<SubTexture name="Naikaze Sing Note Right Miss0002" x="1716" y="2584" width="251" height="482" frameX="0" frameY="0" frameWidth="263" frameHeight="482"/>
+	<SubTexture name="Naikaze Sing Note Right Miss0003" x="1716" y="2584" width="251" height="482" frameX="0" frameY="0" frameWidth="263" frameHeight="482"/>
+	<SubTexture name="Naikaze Sing Note Right Miss0004" x="1967" y="2584" width="259" height="482" frameX="-4" frameY="0" frameWidth="263" frameHeight="482"/>
+	<SubTexture name="Naikaze Sing Note Right Miss0005" x="1967" y="2584" width="259" height="482" frameX="-4" frameY="0" frameWidth="263" frameHeight="482"/>
+	<SubTexture name="Naikaze Sing Note Right Miss0006" x="1967" y="2584" width="259" height="482" frameX="-4" frameY="0" frameWidth="263" frameHeight="482"/>
+	<SubTexture name="Naikaze Sing Note Right Miss0007" x="1967" y="2584" width="259" height="482" frameX="-4" frameY="0" frameWidth="263" frameHeight="482"/>
+	<SubTexture name="Naikaze Sing Note Right Miss0008" x="1967" y="2584" width="259" height="482" frameX="-4" frameY="0" frameWidth="263" frameHeight="482"/>
+	<SubTexture name="Naikaze Sing Note Right Miss0009" x="1967" y="2584" width="259" height="482" frameX="-4" frameY="0" frameWidth="263" frameHeight="482"/>
+	<SubTexture name="Naikaze Sing Note Up0000" x="2226" y="2584" width="226" height="503" pivotX="-15.45" pivotY="21.3" frameX="-6" frameY="0" frameWidth="234" frameHeight="503"/>
+	<SubTexture name="Naikaze Sing Note Up0001" x="2226" y="2584" width="226" height="503" frameX="-6" frameY="0" frameWidth="234" frameHeight="503"/>
+	<SubTexture name="Naikaze Sing Note Up0002" x="2452" y="2584" width="234" height="497" frameX="0" frameY="-6" frameWidth="234" frameHeight="503"/>
+	<SubTexture name="Naikaze Sing Note Up0003" x="2452" y="2584" width="234" height="497" frameX="0" frameY="-6" frameWidth="234" frameHeight="503"/>
+	<SubTexture name="Naikaze Sing Note Up0004" x="2686" y="2584" width="229" height="500" frameX="-4" frameY="-3" frameWidth="234" frameHeight="503"/>
+	<SubTexture name="Naikaze Sing Note Up0005" x="2686" y="2584" width="229" height="500" frameX="-4" frameY="-3" frameWidth="234" frameHeight="503"/>
+	<SubTexture name="Naikaze Sing Note Up0006" x="2686" y="2584" width="229" height="500" frameX="-4" frameY="-3" frameWidth="234" frameHeight="503"/>
+	<SubTexture name="Naikaze Sing Note Up0007" x="2686" y="2584" width="229" height="500" frameX="-4" frameY="-3" frameWidth="234" frameHeight="503"/>
+	<SubTexture name="Naikaze Sing Note Up0008" x="2686" y="2584" width="229" height="500" frameX="-4" frameY="-3" frameWidth="234" frameHeight="503"/>
+	<SubTexture name="Naikaze Sing Note Up0009" x="2686" y="2584" width="229" height="500" frameX="-4" frameY="-3" frameWidth="234" frameHeight="503"/>
+	<SubTexture name="Naikaze Sing Note Up Miss0000" x="2915" y="2584" width="232" height="520" pivotX="-13.65" pivotY="38.3" frameX="-10" frameY="0" frameWidth="242" frameHeight="520"/>
+	<SubTexture name="Naikaze Sing Note Up Miss0001" x="2915" y="2584" width="232" height="520" frameX="-10" frameY="0" frameWidth="242" frameHeight="520"/>
+	<SubTexture name="Naikaze Sing Note Up Miss0002" x="3147" y="2584" width="237" height="520" frameX="0" frameY="0" frameWidth="242" frameHeight="520"/>
+	<SubTexture name="Naikaze Sing Note Up Miss0003" x="3147" y="2584" width="237" height="520" frameX="0" frameY="0" frameWidth="242" frameHeight="520"/>
+	<SubTexture name="Naikaze Sing Note Up Miss0004" x="3384" y="2584" width="231" height="520" frameX="-6" frameY="0" frameWidth="242" frameHeight="520"/>
+	<SubTexture name="Naikaze Sing Note Up Miss0005" x="3384" y="2584" width="231" height="520" frameX="-6" frameY="0" frameWidth="242" frameHeight="520"/>
+	<SubTexture name="Naikaze Sing Note Up Miss0006" x="3384" y="2584" width="231" height="520" frameX="-6" frameY="0" frameWidth="242" frameHeight="520"/>
+	<SubTexture name="Naikaze Sing Note Up Miss0007" x="3384" y="2584" width="231" height="520" frameX="-6" frameY="0" frameWidth="242" frameHeight="520"/>
+	<SubTexture name="Naikaze Sing Note Up Miss0008" x="3384" y="2584" width="231" height="520" frameX="-6" frameY="0" frameWidth="242" frameHeight="520"/>
+	<SubTexture name="Naikaze Sing Note Up Miss0009" x="3384" y="2584" width="231" height="520" frameX="-6" frameY="0" frameWidth="242" frameHeight="520"/>
+	<SubTexture name="Naikaze idle dance0000" x="3615" y="2584" width="249" height="485" pivotX="-17.6" pivotY="10.85" frameX="-11" frameY="-7" frameWidth="273" frameHeight="492"/>
+	<SubTexture name="Naikaze idle dance0001" x="3615" y="2584" width="249" height="485" frameX="-11" frameY="-7" frameWidth="273" frameHeight="492"/>
+	<SubTexture name="Naikaze idle dance0002" x="0" y="3104" width="263" height="490" frameX="-2" frameY="-2" frameWidth="273" frameHeight="492"/>
+	<SubTexture name="Naikaze idle dance0003" x="0" y="3104" width="263" height="490" frameX="-2" frameY="-2" frameWidth="273" frameHeight="492"/>
+	<SubTexture name="Naikaze idle dance0004" x="263" y="3104" width="267" height="491" frameX="0" frameY="-1" frameWidth="273" frameHeight="492"/>
+	<SubTexture name="Naikaze idle dance0005" x="263" y="3104" width="267" height="491" frameX="0" frameY="-1" frameWidth="273" frameHeight="492"/>
+	<SubTexture name="Naikaze idle dance0006" x="263" y="3104" width="267" height="491" frameX="0" frameY="-1" frameWidth="273" frameHeight="492"/>
+	<SubTexture name="Naikaze idle dance0007" x="263" y="3104" width="267" height="491" frameX="0" frameY="-1" frameWidth="273" frameHeight="492"/>
+	<SubTexture name="Naikaze idle dance0008" x="263" y="3104" width="267" height="491" frameX="0" frameY="-1" frameWidth="273" frameHeight="492"/>
+	<SubTexture name="Naikaze idle dance0009" x="263" y="3104" width="267" height="491" frameX="0" frameY="-1" frameWidth="273" frameHeight="492"/>
+	<SubTexture name="Naikaze idle dance0010" x="263" y="3104" width="267" height="491" frameX="0" frameY="-1" frameWidth="273" frameHeight="492"/>
+	<SubTexture name="Naikaze idle dance0011" x="263" y="3104" width="267" height="491" frameX="0" frameY="-1" frameWidth="273" frameHeight="492"/>
+	<SubTexture name="Naikaze idle dance0012" x="263" y="3104" width="267" height="491" frameX="0" frameY="-1" frameWidth="273" frameHeight="492"/>
+	<SubTexture name="Naikaze idle dance0013" x="530" y="3104" width="264" height="492" frameX="-9" frameY="0" frameWidth="273" frameHeight="492"/>
+	<SubTexture name="Naikaze idle dance0014" x="530" y="3104" width="264" height="492" frameX="-9" frameY="0" frameWidth="273" frameHeight="492"/>
+	<SubTexture name="Naikaze idle dance0015" x="794" y="3104" width="266" height="491" frameX="0" frameY="-1" frameWidth="273" frameHeight="492"/>
+	<SubTexture name="Naikaze idle dance0016" x="794" y="3104" width="266" height="491" frameX="0" frameY="-1" frameWidth="273" frameHeight="492"/>
+	<SubTexture name="Naikaze idle dance0017" x="1060" y="3104" width="267" height="491" frameX="0" frameY="-1" frameWidth="273" frameHeight="492"/>
+	<SubTexture name="Naikaze idle dance0018" x="1060" y="3104" width="267" height="491" frameX="0" frameY="-1" frameWidth="273" frameHeight="492"/>
+	<SubTexture name="Naikaze idle dance0019" x="1060" y="3104" width="267" height="491" frameX="0" frameY="-1" frameWidth="273" frameHeight="492"/>
+	<SubTexture name="Naikaze idle dance0020" x="1060" y="3104" width="267" height="491" frameX="0" frameY="-1" frameWidth="273" frameHeight="492"/>
+	<SubTexture name="Naikaze idle dance0021" x="1060" y="3104" width="267" height="491" frameX="0" frameY="-1" frameWidth="273" frameHeight="492"/>
+	<SubTexture name="Naikaze idle dance0022" x="1060" y="3104" width="267" height="491" frameX="0" frameY="-1" frameWidth="273" frameHeight="492"/>
+	<SubTexture name="Naikaze idle dance0023" x="1060" y="3104" width="267" height="491" frameX="0" frameY="-1" frameWidth="273" frameHeight="492"/>
+	<SubTexture name="Naikaze idle dance0024" x="1060" y="3104" width="267" height="491" frameX="0" frameY="-1" frameWidth="273" frameHeight="492"/>
+	<SubTexture name="Naikaze idle dance0025" x="1060" y="3104" width="267" height="491" frameX="0" frameY="-1" frameWidth="273" frameHeight="492"/>
+	<SubTexture name="Naikaze idle dance0026" x="1060" y="3104" width="267" height="491" frameX="0" frameY="-1" frameWidth="273" frameHeight="492"/>
+	<SubTexture name="Naikaze idle shaking0000" x="1327" y="3104" width="235" height="473" pivotX="-394.3" pivotY="206.25" frameX="-6" frameY="-4" frameWidth="241" frameHeight="478"/>
+	<SubTexture name="Naikaze idle shaking0001" x="1562" y="3104" width="241" height="464" frameX="0" frameY="-13" frameWidth="241" frameHeight="478"/>
+	<SubTexture name="Naikaze idle shaking0002" x="1803" y="3104" width="235" height="473" frameX="-6" frameY="-4" frameWidth="241" frameHeight="478"/>
+	<SubTexture name="Naikaze idle shaking0003" x="2038" y="3104" width="240" height="478" frameX="-1" frameY="0" frameWidth="241" frameHeight="478"/>
+</TextureAtlas>
