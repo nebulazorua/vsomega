@@ -22,7 +22,7 @@ import Options;
 
 
 class SkinState extends MusicBeatState {
-  public static var selectedSkin = 'bfside';
+  public static var selectedSkin = 'bf';
   public static var skins = ["bf","naikaze","mikeeey","tgr","erderi","babyvase","bfside","bf-neb"];
   public static var skinNames = ["Boyfriend.XML","Naikaze","Mikeeey","TheGhostReaper","Erderi the Fox","Fun-sized Vase","Fun-sized Brightside","Nebby"];
   public static var skinDescs = ["Funky lil' man","Literal god","Mikey with 3 e's","idk","furry","Don't you throw stones in glass houses","Brigthbsied my beloved","Stupid Cocksleeve Zorua"];
@@ -34,7 +34,7 @@ class SkinState extends MusicBeatState {
 
   var leftArrow:FlxSprite;
   var rightArrow:FlxSprite;
-  
+
   var selectedTimer:Float = 0;
   var lastAnimTimer:Float = 0;
 
