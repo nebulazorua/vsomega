@@ -1,1 +1,12 @@
 https://github.com/nebulazorua/andromeda-engine build instructions and also https://github.com/GrowtopiaFli/openfl-haxeflixel-video-code/ instructions
+
+NOTE THAT IT'LL COMPLAIN ABOUT HIVECHARTS
+ADD A FILE NAMED "HiveCharts.hx" AND HAVE IT 
+
+```haxe
+class HiveCharts 
+{
+  public static var normal='';
+  public static var alpha='';
+}
+```
