@@ -171,10 +171,12 @@ class MainMenuState extends MusicBeatState
 
 	function gotoDecision(){
 		var daChoice:String = 'story';
-		if(curSelected>optionShit.length)
-			daChoice = tinyButtons[curSelected];
+		if(curSelected>optionShit.length-1)
+			daChoice = tinyButtons[curSelected-optionShit.length];
 		else
 			daChoice = optionShit[curSelected];
+
+		trace(curSelected,tinyButtons.length,optionShit.length);
 
 		switch (daChoice.toLowerCase() )
 		{
@@ -204,11 +206,35 @@ class MainMenuState extends MusicBeatState
 				new FlxTimer().start(.5, function(tmr:FlxTimer){
 					FlxG.switchState(new CreditsState());
 				});
-
+			case 'codes':
+				dismissItems();
+				FlxG.mouse.visible=false;
+				new FlxTimer().start(.5, function(tmr:FlxTimer){
+					FlxG.switchState(new CodeState());
+				});
+			case 'equipment':
+				dismissItems();
+				FlxG.mouse.visible=false;
+				new FlxTimer().start(.5, function(tmr:FlxTimer){
+					FlxG.switchState(new ItemState());
+				});
+			case 'skins':
+				dismissItems();
+				FlxG.mouse.visible=false;
+				new FlxTimer().start(.5, function(tmr:FlxTimer){
+					FlxG.switchState(new SkinState());
+				});
+			case 'achievements':
+				dismissItems();
+				FlxG.mouse.visible=false;
+				new FlxTimer().start(.5, function(tmr:FlxTimer){
+					FlxG.switchState(new AchievementState());
+				});
 		}
 	}
 	override function update(elapsed:Float)
 	{
+		FlxG.camera.zoom = 1;
 		if (FlxG.sound.music.volume < 0.8)
 		{
 			FlxG.sound.music.volume += 0.5 * FlxG.elapsed;

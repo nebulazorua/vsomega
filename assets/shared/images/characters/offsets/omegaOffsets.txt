@@ -1,0 +1,11 @@
+idle 0 0
+singUP 13 -12
+singRIGHT 70 0
+singLEFT 120 -95
+singDOWN 0 -12
+singUPmiss -175 5
+singRIGHTmiss 40 49
+singLEFTmiss 142 -50
+singDOWNmiss 150 -42
+grabChild 0 0
+throwChild 0 0

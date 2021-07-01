@@ -102,17 +102,36 @@ class Note extends FlxSprite
 		switch (daStage)
 		{
 			case 'school' | 'schoolEvil':
+				if(noteType==2){
+					canMiss=false;
 
-				loadGraphic(Paths.image('weeb/pixelUI/arrows-pixels'), true, 16, 16);
+					loadGraphic(Paths.image('weeb/pixelUI/arrows-pixels-glitch'), true, 16, 16);
+					animation.add('greenScroll', [2]);
+					animation.add('redScroll', [3]);
+					animation.add('blueScroll', [1]);
+					animation.add('purpleScroll', [0]);
+				}else{
+					loadGraphic(Paths.image('weeb/pixelUI/arrows-pixels'), true, 16, 16);
 
-				animation.add('greenScroll', [6]);
-				animation.add('redScroll', [7]);
-				animation.add('blueScroll', [5]);
-				animation.add('purpleScroll', [4]);
+					animation.add('greenScroll', [6]);
+					animation.add('redScroll', [7]);
+					animation.add('blueScroll', [5]);
+					animation.add('purpleScroll', [4]);
+				}
+
 
 				if (isSustainNote)
 				{
-					loadGraphic(Paths.image('weeb/pixelUI/arrowEnds'), true, 7, 6);
+					if(noteType==2)
+						loadGraphic(Paths.image('weeb/pixelUI/glitchEnds'), true, 7, 6);
+					else
+						loadGraphic(Paths.image('weeb/pixelUI/arrowEnds'), true, 7, 6);
+
+
+					animation.add('greenScroll', [6]);
+					animation.add('redScroll', [7]);
+					animation.add('blueScroll', [5]);
+					animation.add('purpleScroll', [4]);
 
 					animation.add('purpleholdend', [4]);
 					animation.add('greenholdend', [6]);
@@ -238,7 +257,7 @@ class Note extends FlxSprite
 
 						setGraphicSize(Std.int((width * widMult)*scale));
 						updateHitbox();
-						//offset.x += (width*widMult)/2 - 13.8;
+						offset.x += (width/4)+8;
 						//offset.y += (width*widMult)/2 - 13;
 						antialiasing = true;
 					case 5: // torch

@@ -1,0 +1,352 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Mini_Brightside altdeath.png">
+	<!-- Created with Adobe Animate version 21.0.7.42652 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Brighty_Down0000" x="2536" y="763" width="212" height="311" pivotX="159.35" pivotY="172.85" frameX="0" frameY="-3" frameWidth="212" frameHeight="314"/>
+	<SubTexture name="Brighty_Down0001" x="2536" y="763" width="212" height="311" frameX="0" frameY="-3" frameWidth="212" frameHeight="314"/>
+	<SubTexture name="Brighty_Down0002" x="2748" y="763" width="200" height="311" frameX="-7" frameY="0" frameWidth="212" frameHeight="314"/>
+	<SubTexture name="Brighty_Down0003" x="2748" y="763" width="200" height="311" frameX="-7" frameY="0" frameWidth="212" frameHeight="314"/>
+	<SubTexture name="Brighty_Down0004" x="2948" y="763" width="194" height="309" frameX="-13" frameY="-2" frameWidth="212" frameHeight="314"/>
+	<SubTexture name="Brighty_Down0005" x="2948" y="763" width="194" height="309" frameX="-13" frameY="-2" frameWidth="212" frameHeight="314"/>
+	<SubTexture name="Brighty_Down0006" x="2948" y="763" width="194" height="309" frameX="-13" frameY="-2" frameWidth="212" frameHeight="314"/>
+	<SubTexture name="Brighty_Down0007" x="2948" y="763" width="194" height="309" frameX="-13" frameY="-2" frameWidth="212" frameHeight="314"/>
+	<SubTexture name="Brighty_Down0008" x="2948" y="763" width="194" height="309" frameX="-13" frameY="-2" frameWidth="212" frameHeight="314"/>
+	<SubTexture name="Brighty_Down0009" x="2948" y="763" width="194" height="309" frameX="-13" frameY="-2" frameWidth="212" frameHeight="314"/>
+	<SubTexture name="Brighty_Down0010" x="2948" y="763" width="194" height="309" frameX="-13" frameY="-2" frameWidth="212" frameHeight="314"/>
+	<SubTexture name="Brighty_Down0011" x="2948" y="763" width="194" height="309" frameX="-13" frameY="-2" frameWidth="212" frameHeight="314"/>
+	<SubTexture name="Brighty_Down0012" x="2948" y="763" width="194" height="309" frameX="-13" frameY="-2" frameWidth="212" frameHeight="314"/>
+	<SubTexture name="Brighty_Down0013" x="2948" y="763" width="194" height="309" frameX="-13" frameY="-2" frameWidth="212" frameHeight="314"/>
+	<SubTexture name="Brighty_Down0014" x="3142" y="763" width="194" height="309" frameX="-13" frameY="-2" frameWidth="212" frameHeight="314"/>
+	<SubTexture name="Brighty_Down Miss0000" x="2298" y="1625" width="196" height="320" pivotX="199" pivotY="188.95" frameX="0" frameY="0" frameWidth="197" frameHeight="320"/>
+	<SubTexture name="Brighty_Down Miss0001" x="2494" y="1625" width="191" height="307" frameX="-6" frameY="-9" frameWidth="197" frameHeight="320"/>
+	<SubTexture name="Brighty_Down Miss0002" x="2494" y="1625" width="191" height="307" frameX="-6" frameY="-9" frameWidth="197" frameHeight="320"/>
+	<SubTexture name="Brighty_Down Miss0003" x="2685" y="1625" width="191" height="307" frameX="-6" frameY="-9" frameWidth="197" frameHeight="320"/>
+	<SubTexture name="Brighty_Down Miss0004" x="2685" y="1625" width="191" height="307" frameX="-6" frameY="-9" frameWidth="197" frameHeight="320"/>
+	<SubTexture name="Brighty_Down Miss0005" x="2685" y="1625" width="191" height="307" frameX="-6" frameY="-9" frameWidth="197" frameHeight="320"/>
+	<SubTexture name="Brighty_Down Miss0006" x="2685" y="1625" width="191" height="307" frameX="-6" frameY="-9" frameWidth="197" frameHeight="320"/>
+	<SubTexture name="Brighty_Down Miss0007" x="2685" y="1625" width="191" height="307" frameX="-6" frameY="-9" frameWidth="197" frameHeight="320"/>
+	<SubTexture name="Brighty_Down Miss0008" x="2685" y="1625" width="191" height="307" frameX="-6" frameY="-9" frameWidth="197" frameHeight="320"/>
+	<SubTexture name="Brighty_Down Miss0009" x="2685" y="1625" width="191" height="307" frameX="-6" frameY="-9" frameWidth="197" frameHeight="320"/>
+	<SubTexture name="Brighty_Down Miss0010" x="2685" y="1625" width="191" height="307" frameX="-6" frameY="-9" frameWidth="197" frameHeight="320"/>
+	<SubTexture name="Brighty_Down Miss0011" x="2685" y="1625" width="191" height="307" frameX="-6" frameY="-9" frameWidth="197" frameHeight="320"/>
+	<SubTexture name="Brighty_Down Miss0012" x="2685" y="1625" width="191" height="307" frameX="-6" frameY="-9" frameWidth="197" frameHeight="320"/>
+	<SubTexture name="Brighty_Down Miss0013" x="2685" y="1625" width="191" height="307" frameX="-6" frameY="-9" frameWidth="197" frameHeight="320"/>
+	<SubTexture name="Brighty_Down Miss0014" x="2685" y="1625" width="191" height="307" frameX="-6" frameY="-9" frameWidth="197" frameHeight="320"/>
+	<SubTexture name="Brighty_Down Miss0015" x="2685" y="1625" width="191" height="307" frameX="-6" frameY="-9" frameWidth="197" frameHeight="320"/>
+	<SubTexture name="Brighty_Down Miss0016" x="2685" y="1625" width="191" height="307" frameX="-6" frameY="-9" frameWidth="197" frameHeight="320"/>
+	<SubTexture name="Brighty_Down Miss0017" x="2685" y="1625" width="191" height="307" frameX="-6" frameY="-9" frameWidth="197" frameHeight="320"/>
+	<SubTexture name="Brighty_Down Miss0018" x="2685" y="1625" width="191" height="307" frameX="-6" frameY="-9" frameWidth="197" frameHeight="320"/>
+	<SubTexture name="Brighty_Down Miss0019" x="2685" y="1625" width="191" height="307" frameX="-6" frameY="-9" frameWidth="197" frameHeight="320"/>
+	<SubTexture name="Brighty_Down Miss0020" x="2685" y="1625" width="191" height="307" frameX="-6" frameY="-9" frameWidth="197" frameHeight="320"/>
+	<SubTexture name="Brighty_Down Miss0021" x="2685" y="1625" width="191" height="307" frameX="-6" frameY="-9" frameWidth="197" frameHeight="320"/>
+	<SubTexture name="Brighty_Down Miss0022" x="2685" y="1625" width="191" height="307" frameX="-6" frameY="-9" frameWidth="197" frameHeight="320"/>
+	<SubTexture name="Brighty_Down Miss0023" x="2685" y="1625" width="191" height="307" frameX="-6" frameY="-9" frameWidth="197" frameHeight="320"/>
+	<SubTexture name="Brighty_Down Miss0024" x="2685" y="1625" width="191" height="307" frameX="-6" frameY="-9" frameWidth="197" frameHeight="320"/>
+	<SubTexture name="Brighty_Down Miss0025" x="2685" y="1625" width="191" height="307" frameX="-6" frameY="-9" frameWidth="197" frameHeight="320"/>
+	<SubTexture name="Brighty_Down Miss0026" x="2685" y="1625" width="191" height="307" frameX="-6" frameY="-9" frameWidth="197" frameHeight="320"/>
+	<SubTexture name="Brighty_Down Miss0027" x="2685" y="1625" width="191" height="307" frameX="-6" frameY="-9" frameWidth="197" frameHeight="320"/>
+	<SubTexture name="Brighty_Hey0000" x="3336" y="763" width="176" height="424" pivotX="22.6" pivotY="242.25" frameX="-7" frameY="-4" frameWidth="183" frameHeight="428"/>
+	<SubTexture name="Brighty_Hey0001" x="3336" y="763" width="176" height="424" frameX="-7" frameY="-4" frameWidth="183" frameHeight="428"/>
+	<SubTexture name="Brighty_Hey0002" x="3512" y="763" width="170" height="423" frameX="-4" frameY="-3" frameWidth="183" frameHeight="428"/>
+	<SubTexture name="Brighty_Hey0003" x="3512" y="763" width="170" height="423" frameX="-4" frameY="-3" frameWidth="183" frameHeight="428"/>
+	<SubTexture name="Brighty_Hey0004" x="3682" y="763" width="174" height="426" frameX="0" frameY="0" frameWidth="183" frameHeight="428"/>
+	<SubTexture name="Brighty_Hey0005" x="3682" y="763" width="174" height="426" frameX="0" frameY="0" frameWidth="183" frameHeight="428"/>
+	<SubTexture name="Brighty_Hey0006" x="3682" y="763" width="174" height="426" frameX="0" frameY="0" frameWidth="183" frameHeight="428"/>
+	<SubTexture name="Brighty_Hey0007" x="3682" y="763" width="174" height="426" frameX="0" frameY="0" frameWidth="183" frameHeight="428"/>
+	<SubTexture name="Brighty_Hey0008" x="3682" y="763" width="174" height="426" frameX="0" frameY="0" frameWidth="183" frameHeight="428"/>
+	<SubTexture name="Brighty_Hey0009" x="3682" y="763" width="174" height="426" frameX="0" frameY="0" frameWidth="183" frameHeight="428"/>
+	<SubTexture name="Brighty_Hey0010" x="3682" y="763" width="174" height="426" frameX="0" frameY="0" frameWidth="183" frameHeight="428"/>
+	<SubTexture name="Brighty_Hey0011" x="3682" y="763" width="174" height="426" frameX="0" frameY="0" frameWidth="183" frameHeight="428"/>
+	<SubTexture name="Brighty_Hey0012" x="3682" y="763" width="174" height="426" frameX="0" frameY="0" frameWidth="183" frameHeight="428"/>
+	<SubTexture name="Brighty_Hey0013" x="3682" y="763" width="174" height="426" frameX="0" frameY="0" frameWidth="183" frameHeight="428"/>
+	<SubTexture name="Brighty_Hit0000" x="0" y="1189" width="243" height="362" pivotX="85.35" pivotY="191.9" frameX="0" frameY="-24" frameWidth="243" frameHeight="386"/>
+	<SubTexture name="Brighty_Hit0001" x="243" y="1189" width="193" height="381" frameX="-27" frameY="-4" frameWidth="243" frameHeight="386"/>
+	<SubTexture name="Brighty_Hit0002" x="243" y="1189" width="193" height="381" frameX="-27" frameY="-4" frameWidth="243" frameHeight="386"/>
+	<SubTexture name="Brighty_Hit0003" x="436" y="1189" width="163" height="383" frameX="-35" frameY="-2" frameWidth="243" frameHeight="386"/>
+	<SubTexture name="Brighty_Hit0004" x="436" y="1189" width="163" height="383" frameX="-35" frameY="-2" frameWidth="243" frameHeight="386"/>
+	<SubTexture name="Brighty_Hit0005" x="599" y="1189" width="162" height="385" frameX="-35" frameY="0" frameWidth="243" frameHeight="386"/>
+	<SubTexture name="Brighty_Hit0006" x="599" y="1189" width="162" height="385" frameX="-35" frameY="0" frameWidth="243" frameHeight="386"/>
+	<SubTexture name="Brighty_Hit0007" x="761" y="1189" width="164" height="385" frameX="-32" frameY="0" frameWidth="243" frameHeight="386"/>
+	<SubTexture name="Brighty_Hit0008" x="761" y="1189" width="164" height="385" frameX="-32" frameY="0" frameWidth="243" frameHeight="386"/>
+	<SubTexture name="Brighty_Hit0009" x="761" y="1189" width="164" height="385" frameX="-32" frameY="0" frameWidth="243" frameHeight="386"/>
+	<SubTexture name="Brighty_Hit0010" x="761" y="1189" width="164" height="385" frameX="-32" frameY="0" frameWidth="243" frameHeight="386"/>
+	<SubTexture name="Brighty_Hit0011" x="761" y="1189" width="164" height="385" frameX="-32" frameY="0" frameWidth="243" frameHeight="386"/>
+	<SubTexture name="Brighty_Hit0012" x="761" y="1189" width="164" height="385" frameX="-32" frameY="0" frameWidth="243" frameHeight="386"/>
+	<SubTexture name="Brighty_Hit0013" x="761" y="1189" width="164" height="385" frameX="-32" frameY="0" frameWidth="243" frameHeight="386"/>
+	<SubTexture name="Brighty_Hit0014" x="761" y="1189" width="164" height="385" frameX="-32" frameY="0" frameWidth="243" frameHeight="386"/>
+	<SubTexture name="Brighty_Idle0000" x="925" y="1189" width="265" height="418" pivotX="173.9" pivotY="134.7" frameX="0" frameY="-10" frameWidth="265" frameHeight="429"/>
+	<SubTexture name="Brighty_Idle0001" x="925" y="1189" width="265" height="418" frameX="0" frameY="-10" frameWidth="265" frameHeight="429"/>
+	<SubTexture name="Brighty_Idle0002" x="1190" y="1189" width="233" height="418" frameX="-23" frameY="-11" frameWidth="265" frameHeight="429"/>
+	<SubTexture name="Brighty_Idle0003" x="1190" y="1189" width="233" height="418" frameX="-23" frameY="-11" frameWidth="265" frameHeight="429"/>
+	<SubTexture name="Brighty_Idle0004" x="1423" y="1189" width="215" height="422" frameX="-33" frameY="-6" frameWidth="265" frameHeight="429"/>
+	<SubTexture name="Brighty_Idle0005" x="1423" y="1189" width="215" height="422" frameX="-33" frameY="-6" frameWidth="265" frameHeight="429"/>
+	<SubTexture name="Brighty_Idle0006" x="1638" y="1189" width="211" height="427" frameX="-36" frameY="-1" frameWidth="265" frameHeight="429"/>
+	<SubTexture name="Brighty_Idle0007" x="1638" y="1189" width="211" height="427" frameX="-36" frameY="-1" frameWidth="265" frameHeight="429"/>
+	<SubTexture name="Brighty_Idle0008" x="1849" y="1189" width="209" height="428" frameX="-37" frameY="0" frameWidth="265" frameHeight="429"/>
+	<SubTexture name="Brighty_Idle0009" x="1849" y="1189" width="209" height="428" frameX="-37" frameY="0" frameWidth="265" frameHeight="429"/>
+	<SubTexture name="Brighty_Idle0010" x="1849" y="1189" width="209" height="428" frameX="-37" frameY="0" frameWidth="265" frameHeight="429"/>
+	<SubTexture name="Brighty_Idle0011" x="1849" y="1189" width="209" height="428" frameX="-37" frameY="0" frameWidth="265" frameHeight="429"/>
+	<SubTexture name="Brighty_Idle0012" x="1849" y="1189" width="209" height="428" frameX="-37" frameY="0" frameWidth="265" frameHeight="429"/>
+	<SubTexture name="Brighty_Idle0013" x="1849" y="1189" width="209" height="428" frameX="-37" frameY="0" frameWidth="265" frameHeight="429"/>
+	<SubTexture name="Brighty_Idle Shaking0000" x="2058" y="1189" width="208" height="436" pivotX="140.05" pivotY="142.4" frameX="-4" frameY="0" frameWidth="213" frameHeight="436"/>
+	<SubTexture name="Brighty_Idle Shaking0001" x="2266" y="1189" width="213" height="436"/>
+	<SubTexture name="Brighty_Idle Shaking0002" x="2479" y="1189" width="210" height="435" frameX="-1" frameY="-1" frameWidth="213" frameHeight="436"/>
+	<SubTexture name="Brighty_Idle Shaking0003" x="2689" y="1189" width="211" height="433" frameX="-2" frameY="-3" frameWidth="213" frameHeight="436"/>
+	<SubTexture name="Brighty_Left0000" x="2900" y="1189" width="262" height="380" pivotX="15.85" pivotY="189.25" frameX="0" frameY="-4" frameWidth="274" frameHeight="384"/>
+	<SubTexture name="Brighty_Left0001" x="2900" y="1189" width="262" height="380" frameX="0" frameY="-4" frameWidth="274" frameHeight="384"/>
+	<SubTexture name="Brighty_Left0002" x="3162" y="1189" width="259" height="384" frameX="-8" frameY="0" frameWidth="274" frameHeight="384"/>
+	<SubTexture name="Brighty_Left0003" x="3162" y="1189" width="259" height="384" frameX="-8" frameY="0" frameWidth="274" frameHeight="384"/>
+	<SubTexture name="Brighty_Left0004" x="3421" y="1189" width="265" height="384" frameX="-9" frameY="0" frameWidth="274" frameHeight="384"/>
+	<SubTexture name="Brighty_Left0005" x="3686" y="1189" width="265" height="384" frameX="-9" frameY="0" frameWidth="274" frameHeight="384"/>
+	<SubTexture name="Brighty_Left0006" x="0" y="1625" width="265" height="383" frameX="-9" frameY="-1" frameWidth="274" frameHeight="384"/>
+	<SubTexture name="Brighty_Left0007" x="0" y="1625" width="265" height="383" frameX="-9" frameY="-1" frameWidth="274" frameHeight="384"/>
+	<SubTexture name="Brighty_Left0008" x="265" y="1625" width="265" height="379" frameX="-9" frameY="-5" frameWidth="274" frameHeight="384"/>
+	<SubTexture name="Brighty_Left0009" x="530" y="1625" width="265" height="379" frameX="-9" frameY="-5" frameWidth="274" frameHeight="384"/>
+	<SubTexture name="Brighty_Left0010" x="530" y="1625" width="265" height="379" frameX="-9" frameY="-5" frameWidth="274" frameHeight="384"/>
+	<SubTexture name="Brighty_Left0011" x="530" y="1625" width="265" height="379" frameX="-9" frameY="-5" frameWidth="274" frameHeight="384"/>
+	<SubTexture name="Brighty_Left0012" x="530" y="1625" width="265" height="379" frameX="-9" frameY="-5" frameWidth="274" frameHeight="384"/>
+	<SubTexture name="Brighty_Left0013" x="530" y="1625" width="265" height="379" frameX="-9" frameY="-5" frameWidth="274" frameHeight="384"/>
+	<SubTexture name="Brighty_Left0014" x="530" y="1625" width="265" height="379" frameX="-9" frameY="-5" frameWidth="274" frameHeight="384"/>
+	<SubTexture name="Brighty_Left Miss0000" x="2876" y="1625" width="255" height="381" pivotX="214" pivotY="223" frameX="-105" frameY="-29" frameWidth="419" frameHeight="463"/>
+	<SubTexture name="Brighty_Left Miss0001" x="3131" y="1625" width="237" height="387" frameX="-113" frameY="-25" frameWidth="419" frameHeight="463"/>
+	<SubTexture name="Brighty_Left Miss0002" x="3368" y="1625" width="247" height="385" frameX="-108" frameY="-28" frameWidth="419" frameHeight="463"/>
+	<SubTexture name="Brighty_Left Miss0003" x="3615" y="1625" width="247" height="394" frameX="-108" frameY="-19" frameWidth="419" frameHeight="463"/>
+	<SubTexture name="Brighty_Left Miss0004" x="0" y="2055" width="247" height="399" frameX="-108" frameY="-14" frameWidth="419" frameHeight="463"/>
+	<SubTexture name="Brighty_Left Miss0005" x="247" y="2055" width="247" height="402" frameX="-108" frameY="-11" frameWidth="419" frameHeight="463"/>
+	<SubTexture name="Brighty_Left Miss0006" x="494" y="2055" width="257" height="385" frameX="-108" frameY="-28" frameWidth="419" frameHeight="463"/>
+	<SubTexture name="Brighty_Left Miss0007" x="751" y="2055" width="296" height="385" frameX="-108" frameY="-28" frameWidth="419" frameHeight="463"/>
+	<SubTexture name="Brighty_Left Miss0008" x="1047" y="2055" width="294" height="385" frameX="-108" frameY="-28" frameWidth="419" frameHeight="463"/>
+	<SubTexture name="Brighty_Left Miss0009" x="1341" y="2055" width="302" height="385" frameX="-108" frameY="-28" frameWidth="419" frameHeight="463"/>
+	<SubTexture name="Brighty_Left Miss0010" x="1643" y="2055" width="304" height="385" frameX="-108" frameY="-28" frameWidth="419" frameHeight="463"/>
+	<SubTexture name="Brighty_Left Miss0011" x="1643" y="2055" width="304" height="385" frameX="-108" frameY="-28" frameWidth="419" frameHeight="463"/>
+	<SubTexture name="Brighty_Left Miss0012" x="1643" y="2055" width="304" height="385" frameX="-108" frameY="-28" frameWidth="419" frameHeight="463"/>
+	<SubTexture name="Brighty_Left Miss0013" x="1643" y="2055" width="304" height="385" frameX="-108" frameY="-28" frameWidth="419" frameHeight="463"/>
+	<SubTexture name="Brighty_Left Miss0014" x="1643" y="2055" width="304" height="385" frameX="-108" frameY="-28" frameWidth="419" frameHeight="463"/>
+	<SubTexture name="Brighty_Left Miss0015" x="1643" y="2055" width="304" height="385" frameX="-108" frameY="-28" frameWidth="419" frameHeight="463"/>
+	<SubTexture name="Brighty_Left Miss0016" x="1643" y="2055" width="304" height="385" frameX="-108" frameY="-28" frameWidth="419" frameHeight="463"/>
+	<SubTexture name="Brighty_Left Miss0017" x="1643" y="2055" width="304" height="385" frameX="-108" frameY="-28" frameWidth="419" frameHeight="463"/>
+	<SubTexture name="Brighty_Left Miss0018" x="1643" y="2055" width="304" height="385" frameX="-108" frameY="-28" frameWidth="419" frameHeight="463"/>
+	<SubTexture name="Brighty_Left Miss0019" x="1643" y="2055" width="304" height="385" frameX="-108" frameY="-28" frameWidth="419" frameHeight="463"/>
+	<SubTexture name="Brighty_Left Miss0020" x="1643" y="2055" width="304" height="385" frameX="-108" frameY="-28" frameWidth="419" frameHeight="463"/>
+	<SubTexture name="Brighty_Left Miss0021" x="1643" y="2055" width="304" height="385" frameX="-108" frameY="-28" frameWidth="419" frameHeight="463"/>
+	<SubTexture name="Brighty_Left Miss0022" x="1643" y="2055" width="304" height="385" frameX="-108" frameY="-28" frameWidth="419" frameHeight="463"/>
+	<SubTexture name="Brighty_Left Miss0023" x="1643" y="2055" width="304" height="385" frameX="-108" frameY="-28" frameWidth="419" frameHeight="463"/>
+	<SubTexture name="Brighty_Left Miss0024" x="1643" y="2055" width="304" height="385" frameX="-108" frameY="-28" frameWidth="419" frameHeight="463"/>
+	<SubTexture name="Brighty_Left Miss0025" x="1643" y="2055" width="304" height="385" frameX="-108" frameY="-28" frameWidth="419" frameHeight="463"/>
+	<SubTexture name="Brighty_Left Miss0026" x="1643" y="2055" width="304" height="385" frameX="-108" frameY="-28" frameWidth="419" frameHeight="463"/>
+	<SubTexture name="Brighty_Left Miss0027" x="1643" y="2055" width="304" height="385" frameX="-108" frameY="-28" frameWidth="419" frameHeight="463"/>
+	<SubTexture name="Brighty_Left Miss0028" x="1947" y="2055" width="419" height="463"/>
+	<SubTexture name="Brighty_Right0000" x="795" y="1625" width="253" height="408" pivotX="256.85" pivotY="238.95" frameX="0" frameY="-1" frameWidth="253" frameHeight="409"/>
+	<SubTexture name="Brighty_Right0001" x="795" y="1625" width="253" height="408" frameX="0" frameY="-1" frameWidth="253" frameHeight="409"/>
+	<SubTexture name="Brighty_Right0002" x="1048" y="1625" width="250" height="408" frameX="-3" frameY="0" frameWidth="253" frameHeight="409"/>
+	<SubTexture name="Brighty_Right0003" x="1048" y="1625" width="250" height="408" frameX="-3" frameY="0" frameWidth="253" frameHeight="409"/>
+	<SubTexture name="Brighty_Right0004" x="1298" y="1625" width="248" height="408" frameX="-5" frameY="0" frameWidth="253" frameHeight="409"/>
+	<SubTexture name="Brighty_Right0005" x="1298" y="1625" width="248" height="408" frameX="-5" frameY="0" frameWidth="253" frameHeight="409"/>
+	<SubTexture name="Brighty_Right0006" x="1298" y="1625" width="248" height="408" frameX="-5" frameY="0" frameWidth="253" frameHeight="409"/>
+	<SubTexture name="Brighty_Right0007" x="1298" y="1625" width="248" height="408" frameX="-5" frameY="0" frameWidth="253" frameHeight="409"/>
+	<SubTexture name="Brighty_Right0008" x="1298" y="1625" width="248" height="408" frameX="-5" frameY="0" frameWidth="253" frameHeight="409"/>
+	<SubTexture name="Brighty_Right0009" x="1298" y="1625" width="248" height="408" frameX="-5" frameY="0" frameWidth="253" frameHeight="409"/>
+	<SubTexture name="Brighty_Right0010" x="1298" y="1625" width="248" height="408" frameX="-5" frameY="0" frameWidth="253" frameHeight="409"/>
+	<SubTexture name="Brighty_Right0011" x="1298" y="1625" width="248" height="408" frameX="-5" frameY="0" frameWidth="253" frameHeight="409"/>
+	<SubTexture name="Brighty_Right0012" x="1298" y="1625" width="248" height="408" frameX="-5" frameY="0" frameWidth="253" frameHeight="409"/>
+	<SubTexture name="Brighty_Right0013" x="1298" y="1625" width="248" height="408" frameX="-5" frameY="0" frameWidth="253" frameHeight="409"/>
+	<SubTexture name="Brighty_Right0014" x="1298" y="1625" width="248" height="408" frameX="-5" frameY="0" frameWidth="253" frameHeight="409"/>
+	<SubTexture name="Brighty_Right Miss0000" x="2366" y="2055" width="248" height="406" pivotX="157.2" pivotY="219.95" frameX="0" frameY="0" frameWidth="274" frameHeight="406"/>
+	<SubTexture name="Brighty_Right Miss0001" x="2614" y="2055" width="212" height="390" frameX="-62" frameY="-14" frameWidth="274" frameHeight="406"/>
+	<SubTexture name="Brighty_Right Miss0002" x="2614" y="2055" width="212" height="390" frameX="-62" frameY="-14" frameWidth="274" frameHeight="406"/>
+	<SubTexture name="Brighty_Right Miss0003" x="2826" y="2055" width="212" height="390" frameX="-62" frameY="-14" frameWidth="274" frameHeight="406"/>
+	<SubTexture name="Brighty_Right Miss0004" x="2826" y="2055" width="212" height="390" frameX="-62" frameY="-14" frameWidth="274" frameHeight="406"/>
+	<SubTexture name="Brighty_Right Miss0005" x="3038" y="2055" width="212" height="390" frameX="-62" frameY="-14" frameWidth="274" frameHeight="406"/>
+	<SubTexture name="Brighty_Right Miss0006" x="3038" y="2055" width="212" height="390" frameX="-62" frameY="-14" frameWidth="274" frameHeight="406"/>
+	<SubTexture name="Brighty_Right Miss0007" x="3250" y="2055" width="212" height="390" frameX="-62" frameY="-14" frameWidth="274" frameHeight="406"/>
+	<SubTexture name="Brighty_Right Miss0008" x="3250" y="2055" width="212" height="390" frameX="-62" frameY="-14" frameWidth="274" frameHeight="406"/>
+	<SubTexture name="Brighty_Right Miss0009" x="3250" y="2055" width="212" height="390" frameX="-62" frameY="-14" frameWidth="274" frameHeight="406"/>
+	<SubTexture name="Brighty_Right Miss0010" x="3250" y="2055" width="212" height="390" frameX="-62" frameY="-14" frameWidth="274" frameHeight="406"/>
+	<SubTexture name="Brighty_Right Miss0011" x="3250" y="2055" width="212" height="390" frameX="-62" frameY="-14" frameWidth="274" frameHeight="406"/>
+	<SubTexture name="Brighty_Right Miss0012" x="3250" y="2055" width="212" height="390" frameX="-62" frameY="-14" frameWidth="274" frameHeight="406"/>
+	<SubTexture name="Brighty_Right Miss0013" x="3250" y="2055" width="212" height="390" frameX="-62" frameY="-14" frameWidth="274" frameHeight="406"/>
+	<SubTexture name="Brighty_Right Miss0014" x="3250" y="2055" width="212" height="390" frameX="-62" frameY="-14" frameWidth="274" frameHeight="406"/>
+	<SubTexture name="Brighty_Right Miss0015" x="3250" y="2055" width="212" height="390" frameX="-62" frameY="-14" frameWidth="274" frameHeight="406"/>
+	<SubTexture name="Brighty_Right Miss0016" x="3250" y="2055" width="212" height="390" frameX="-62" frameY="-14" frameWidth="274" frameHeight="406"/>
+	<SubTexture name="Brighty_Right Miss0017" x="3250" y="2055" width="212" height="390" frameX="-62" frameY="-14" frameWidth="274" frameHeight="406"/>
+	<SubTexture name="Brighty_Right Miss0018" x="3250" y="2055" width="212" height="390" frameX="-62" frameY="-14" frameWidth="274" frameHeight="406"/>
+	<SubTexture name="Brighty_Right Miss0019" x="3250" y="2055" width="212" height="390" frameX="-62" frameY="-14" frameWidth="274" frameHeight="406"/>
+	<SubTexture name="Brighty_Right Miss0020" x="3250" y="2055" width="212" height="390" frameX="-62" frameY="-14" frameWidth="274" frameHeight="406"/>
+	<SubTexture name="Brighty_Right Miss0021" x="3250" y="2055" width="212" height="390" frameX="-62" frameY="-14" frameWidth="274" frameHeight="406"/>
+	<SubTexture name="Brighty_Right Miss0022" x="3250" y="2055" width="212" height="390" frameX="-62" frameY="-14" frameWidth="274" frameHeight="406"/>
+	<SubTexture name="Brighty_Right Miss0023" x="3250" y="2055" width="212" height="390" frameX="-62" frameY="-14" frameWidth="274" frameHeight="406"/>
+	<SubTexture name="Brighty_Right Miss0024" x="3250" y="2055" width="212" height="390" frameX="-62" frameY="-14" frameWidth="274" frameHeight="406"/>
+	<SubTexture name="Brighty_Right Miss0025" x="3250" y="2055" width="212" height="390" frameX="-62" frameY="-14" frameWidth="274" frameHeight="406"/>
+	<SubTexture name="Brighty_Right Miss0026" x="3250" y="2055" width="212" height="390" frameX="-62" frameY="-14" frameWidth="274" frameHeight="406"/>
+	<SubTexture name="Brighty_Right Miss0027" x="3250" y="2055" width="212" height="390" frameX="-62" frameY="-14" frameWidth="274" frameHeight="406"/>
+	<SubTexture name="Brighty_Up0000" x="1546" y="1625" width="242" height="430" pivotX="46.1" pivotY="246.45" frameX="-8" frameY="0" frameWidth="258" frameHeight="430"/>
+	<SubTexture name="Brighty_Up0001" x="1546" y="1625" width="242" height="430" frameX="-8" frameY="0" frameWidth="258" frameHeight="430"/>
+	<SubTexture name="Brighty_Up0002" x="1788" y="1625" width="254" height="428" frameX="-4" frameY="-2" frameWidth="258" frameHeight="430"/>
+	<SubTexture name="Brighty_Up0003" x="1788" y="1625" width="254" height="428" frameX="-4" frameY="-2" frameWidth="258" frameHeight="430"/>
+	<SubTexture name="Brighty_Up0004" x="2042" y="1625" width="256" height="427" frameX="0" frameY="-3" frameWidth="258" frameHeight="430"/>
+	<SubTexture name="Brighty_Up0005" x="2042" y="1625" width="256" height="427" frameX="0" frameY="-3" frameWidth="258" frameHeight="430"/>
+	<SubTexture name="Brighty_Up0006" x="2042" y="1625" width="256" height="427" frameX="0" frameY="-3" frameWidth="258" frameHeight="430"/>
+	<SubTexture name="Brighty_Up0007" x="2042" y="1625" width="256" height="427" frameX="0" frameY="-3" frameWidth="258" frameHeight="430"/>
+	<SubTexture name="Brighty_Up0008" x="2042" y="1625" width="256" height="427" frameX="0" frameY="-3" frameWidth="258" frameHeight="430"/>
+	<SubTexture name="Brighty_Up0009" x="2042" y="1625" width="256" height="427" frameX="0" frameY="-3" frameWidth="258" frameHeight="430"/>
+	<SubTexture name="Brighty_Up0010" x="2042" y="1625" width="256" height="427" frameX="0" frameY="-3" frameWidth="258" frameHeight="430"/>
+	<SubTexture name="Brighty_Up0011" x="2042" y="1625" width="256" height="427" frameX="0" frameY="-3" frameWidth="258" frameHeight="430"/>
+	<SubTexture name="Brighty_Up0012" x="2042" y="1625" width="256" height="427" frameX="0" frameY="-3" frameWidth="258" frameHeight="430"/>
+	<SubTexture name="Brighty_Up0013" x="2042" y="1625" width="256" height="427" frameX="0" frameY="-3" frameWidth="258" frameHeight="430"/>
+	<SubTexture name="Brighty_Up0014" x="2042" y="1625" width="256" height="427" frameX="0" frameY="-3" frameWidth="258" frameHeight="430"/>
+	<SubTexture name="Brighty_Up Miss0000" x="3462" y="2055" width="256" height="430" pivotX="113.1" pivotY="228.6" frameX="0" frameY="0" frameWidth="256" frameHeight="435"/>
+	<SubTexture name="Brighty_Up Miss0001" x="3718" y="2055" width="213" height="428" frameX="-7" frameY="-7" frameWidth="256" frameHeight="435"/>
+	<SubTexture name="Brighty_Up Miss0002" x="3718" y="2055" width="213" height="428" frameX="-7" frameY="-7" frameWidth="256" frameHeight="435"/>
+	<SubTexture name="Brighty_Up Miss0003" x="0" y="2518" width="213" height="420" frameX="-7" frameY="-9" frameWidth="256" frameHeight="435"/>
+	<SubTexture name="Brighty_Up Miss0004" x="0" y="2518" width="213" height="420" frameX="-7" frameY="-9" frameWidth="256" frameHeight="435"/>
+	<SubTexture name="Brighty_Up Miss0005" x="0" y="2518" width="213" height="420" frameX="-7" frameY="-9" frameWidth="256" frameHeight="435"/>
+	<SubTexture name="Brighty_Up Miss0006" x="0" y="2518" width="213" height="420" frameX="-7" frameY="-9" frameWidth="256" frameHeight="435"/>
+	<SubTexture name="Brighty_Up Miss0007" x="0" y="2518" width="213" height="420" frameX="-7" frameY="-9" frameWidth="256" frameHeight="435"/>
+	<SubTexture name="Brighty_Up Miss0008" x="0" y="2518" width="213" height="420" frameX="-7" frameY="-9" frameWidth="256" frameHeight="435"/>
+	<SubTexture name="Brighty_Up Miss0009" x="0" y="2518" width="213" height="420" frameX="-7" frameY="-9" frameWidth="256" frameHeight="435"/>
+	<SubTexture name="Brighty_Up Miss0010" x="0" y="2518" width="213" height="420" frameX="-7" frameY="-9" frameWidth="256" frameHeight="435"/>
+	<SubTexture name="Brighty_Up Miss0011" x="0" y="2518" width="213" height="420" frameX="-7" frameY="-9" frameWidth="256" frameHeight="435"/>
+	<SubTexture name="Brighty_Up Miss0012" x="0" y="2518" width="213" height="420" frameX="-7" frameY="-9" frameWidth="256" frameHeight="435"/>
+	<SubTexture name="Brighty_Up Miss0013" x="0" y="2518" width="213" height="420" frameX="-7" frameY="-9" frameWidth="256" frameHeight="435"/>
+	<SubTexture name="Brighty_Up Miss0014" x="0" y="2518" width="213" height="420" frameX="-7" frameY="-9" frameWidth="256" frameHeight="435"/>
+	<SubTexture name="Brighty_Up Miss0015" x="0" y="2518" width="213" height="420" frameX="-7" frameY="-9" frameWidth="256" frameHeight="435"/>
+	<SubTexture name="Brighty_Up Miss0016" x="0" y="2518" width="213" height="420" frameX="-7" frameY="-9" frameWidth="256" frameHeight="435"/>
+	<SubTexture name="Brighty_Up Miss0017" x="0" y="2518" width="213" height="420" frameX="-7" frameY="-9" frameWidth="256" frameHeight="435"/>
+	<SubTexture name="Brighty_Up Miss0018" x="0" y="2518" width="213" height="420" frameX="-7" frameY="-9" frameWidth="256" frameHeight="435"/>
+	<SubTexture name="Brighty_Up Miss0019" x="0" y="2518" width="213" height="420" frameX="-7" frameY="-9" frameWidth="256" frameHeight="435"/>
+	<SubTexture name="Brighty_Up Miss0020" x="0" y="2518" width="213" height="420" frameX="-7" frameY="-9" frameWidth="256" frameHeight="435"/>
+	<SubTexture name="Brighty_Up Miss0021" x="0" y="2518" width="213" height="420" frameX="-7" frameY="-9" frameWidth="256" frameHeight="435"/>
+	<SubTexture name="Brighty_Up Miss0022" x="0" y="2518" width="213" height="420" frameX="-7" frameY="-9" frameWidth="256" frameHeight="435"/>
+	<SubTexture name="Brighty_Up Miss0023" x="0" y="2518" width="213" height="420" frameX="-7" frameY="-9" frameWidth="256" frameHeight="435"/>
+	<SubTexture name="Brighty_Up Miss0024" x="0" y="2518" width="213" height="420" frameX="-7" frameY="-9" frameWidth="256" frameHeight="435"/>
+	<SubTexture name="Brighty_Up Miss0025" x="0" y="2518" width="213" height="420" frameX="-7" frameY="-9" frameWidth="256" frameHeight="435"/>
+	<SubTexture name="Brighty_Up Miss0026" x="0" y="2518" width="213" height="420" frameX="-7" frameY="-9" frameWidth="256" frameHeight="435"/>
+	<SubTexture name="Brighty_Up Miss0027" x="0" y="2518" width="213" height="420" frameX="-7" frameY="-9" frameWidth="256" frameHeight="435"/>
+	<SubTexture name="Brighty_breakdown_accept0000" x="0" y="0" width="373" height="182" pivotX="141" pivotY="-40"/>
+	<SubTexture name="Brighty_breakdown_accept0001" x="0" y="0" width="373" height="182"/>
+	<SubTexture name="Brighty_breakdown_accept0002" x="373" y="0" width="373" height="182"/>
+	<SubTexture name="Brighty_breakdown_accept0003" x="373" y="0" width="373" height="182"/>
+	<SubTexture name="Brighty_breakdown_accept0004" x="746" y="0" width="373" height="182"/>
+	<SubTexture name="Brighty_breakdown_accept0005" x="746" y="0" width="373" height="182"/>
+	<SubTexture name="Brighty_breakdown_accept0006" x="1119" y="0" width="373" height="182"/>
+	<SubTexture name="Brighty_breakdown_accept0007" x="1119" y="0" width="373" height="182"/>
+	<SubTexture name="Brighty_breakdown_accept0008" x="1119" y="0" width="373" height="182"/>
+	<SubTexture name="Brighty_breakdown_accept0009" x="1119" y="0" width="373" height="182"/>
+	<SubTexture name="Brighty_breakdown_accept0010" x="1119" y="0" width="373" height="182"/>
+	<SubTexture name="Brighty_breakdown_accept0011" x="1119" y="0" width="373" height="182"/>
+	<SubTexture name="Brighty_breakdown_accept0012" x="1119" y="0" width="373" height="182"/>
+	<SubTexture name="Brighty_breakdown_accept0013" x="1119" y="0" width="373" height="182"/>
+	<SubTexture name="Brighty_breakdown_accept0014" x="1119" y="0" width="373" height="182"/>
+	<SubTexture name="Brighty_breakdown_accept0015" x="1119" y="0" width="373" height="182"/>
+	<SubTexture name="Brighty_breakdown_accept0016" x="1119" y="0" width="373" height="182"/>
+	<SubTexture name="Brighty_breakdown_accept0017" x="1119" y="0" width="373" height="182"/>
+	<SubTexture name="Brighty_breakdown_accept0018" x="1119" y="0" width="373" height="182"/>
+	<SubTexture name="Brighty_breakdown_accept0019" x="1119" y="0" width="373" height="182"/>
+	<SubTexture name="Brighty_breakdown_accept0020" x="1119" y="0" width="373" height="182"/>
+	<SubTexture name="Brighty_breakdown_accept0021" x="1119" y="0" width="373" height="182"/>
+	<SubTexture name="Brighty_breakdown_accept0022" x="1119" y="0" width="373" height="182"/>
+	<SubTexture name="Brighty_breakdown_accept0023" x="1119" y="0" width="373" height="182"/>
+	<SubTexture name="Brighty_breakdown_accept0024" x="1119" y="0" width="373" height="182"/>
+	<SubTexture name="Brighty_breakdown_accept0025" x="1119" y="0" width="373" height="182"/>
+	<SubTexture name="Brighty_breakdown_accept0026" x="1119" y="0" width="373" height="182"/>
+	<SubTexture name="Brighty_breakdown_accept0027" x="1119" y="0" width="373" height="182"/>
+	<SubTexture name="Brighty_breakdown_accept0028" x="1119" y="0" width="373" height="182"/>
+	<SubTexture name="Brighty_breakdown_accept0029" x="1119" y="0" width="373" height="182"/>
+	<SubTexture name="Brighty_breakdown_accept0030" x="1119" y="0" width="373" height="182"/>
+	<SubTexture name="Brighty_breakdown_accept0031" x="1119" y="0" width="373" height="182"/>
+	<SubTexture name="Brighty_breakdown_accept0032" x="1119" y="0" width="373" height="182"/>
+	<SubTexture name="Brighty_breakdown_accept0033" x="1119" y="0" width="373" height="182"/>
+	<SubTexture name="Brighty_breakdown_loop0000" x="1492" y="0" width="419" height="182" pivotX="187" pivotY="141.05" frameX="0" frameY="-181" frameWidth="419" frameHeight="363"/>
+	<SubTexture name="Brighty_breakdown_loop0001" x="1911" y="0" width="419" height="360" frameX="0" frameY="-3" frameWidth="419" frameHeight="363"/>
+	<SubTexture name="Brighty_breakdown_loop0002" x="1911" y="0" width="419" height="360" frameX="0" frameY="-3" frameWidth="419" frameHeight="363"/>
+	<SubTexture name="Brighty_breakdown_loop0003" x="2330" y="0" width="419" height="363"/>
+	<SubTexture name="Brighty_breakdown_loop0004" x="2330" y="0" width="419" height="363"/>
+	<SubTexture name="Brighty_breakdown_loop0005" x="2749" y="0" width="419" height="360" frameX="0" frameY="-3" frameWidth="419" frameHeight="363"/>
+	<SubTexture name="Brighty_breakdown_loop0006" x="2749" y="0" width="419" height="360" frameX="0" frameY="-3" frameWidth="419" frameHeight="363"/>
+	<SubTexture name="Brighty_breakdown_loop0007" x="3168" y="0" width="419" height="363"/>
+	<SubTexture name="Brighty_breakdown_loop0008" x="3168" y="0" width="419" height="363"/>
+	<SubTexture name="Brighty_breakdown_loop0009" x="3587" y="0" width="419" height="360" frameX="0" frameY="-3" frameWidth="419" frameHeight="363"/>
+	<SubTexture name="Brighty_breakdown_loop0010" x="3587" y="0" width="419" height="360" frameX="0" frameY="-3" frameWidth="419" frameHeight="363"/>
+	<SubTexture name="Brighty_breakdown_loop0011" x="1492" y="0" width="419" height="182" frameX="0" frameY="-181" frameWidth="419" frameHeight="363"/>
+	<SubTexture name="Brighty_breakdown_loop0012" x="1492" y="0" width="419" height="182" frameX="0" frameY="-181" frameWidth="419" frameHeight="363"/>
+	<SubTexture name="Brighty_breakdown_loop0013" x="1492" y="0" width="419" height="182" frameX="0" frameY="-181" frameWidth="419" frameHeight="363"/>
+	<SubTexture name="Brighty_breakdown_loop0014" x="1492" y="0" width="419" height="182" frameX="0" frameY="-181" frameWidth="419" frameHeight="363"/>
+	<SubTexture name="Brighty_breakdown_loop0015" x="1492" y="0" width="419" height="182" frameX="0" frameY="-181" frameWidth="419" frameHeight="363"/>
+	<SubTexture name="Brighty_breakdown_loop0016" x="1492" y="0" width="419" height="182" frameX="0" frameY="-181" frameWidth="419" frameHeight="363"/>
+	<SubTexture name="Brighty_breakdown_loop0017" x="1492" y="0" width="419" height="182" frameX="0" frameY="-181" frameWidth="419" frameHeight="363"/>
+	<SubTexture name="Brighty_breakdown_loop0018" x="1911" y="0" width="419" height="360" frameX="0" frameY="-3" frameWidth="419" frameHeight="363"/>
+	<SubTexture name="Brighty_breakdown_loop0019" x="1911" y="0" width="419" height="360" frameX="0" frameY="-3" frameWidth="419" frameHeight="363"/>
+	<SubTexture name="Brighty_breakdown_loop0020" x="2330" y="0" width="419" height="363"/>
+	<SubTexture name="Brighty_breakdown_loop0021" x="2330" y="0" width="419" height="363"/>
+	<SubTexture name="Brighty_breakdown_loop0022" x="2749" y="0" width="419" height="360" frameX="0" frameY="-3" frameWidth="419" frameHeight="363"/>
+	<SubTexture name="Brighty_breakdown_loop0023" x="2749" y="0" width="419" height="360" frameX="0" frameY="-3" frameWidth="419" frameHeight="363"/>
+	<SubTexture name="Brighty_breakdown_loop0024" x="3168" y="0" width="419" height="363"/>
+	<SubTexture name="Brighty_breakdown_loop0025" x="3168" y="0" width="419" height="363"/>
+	<SubTexture name="Brighty_breakdown_loop0026" x="3587" y="0" width="419" height="360" frameX="0" frameY="-3" frameWidth="419" frameHeight="363"/>
+	<SubTexture name="Brighty_breakdown_loop0027" x="3587" y="0" width="419" height="360" frameX="0" frameY="-3" frameWidth="419" frameHeight="363"/>
+	<SubTexture name="Brighty_breakdown_loop0028" x="1492" y="0" width="419" height="182" frameX="0" frameY="-181" frameWidth="419" frameHeight="363"/>
+	<SubTexture name="Brighty_breakdown_loop0029" x="1492" y="0" width="419" height="182" frameX="0" frameY="-181" frameWidth="419" frameHeight="363"/>
+	<SubTexture name="Brighty_breakdown_loop0030" x="1492" y="0" width="419" height="182" frameX="0" frameY="-181" frameWidth="419" frameHeight="363"/>
+	<SubTexture name="Brighty_breakdown_loop0031" x="1492" y="0" width="419" height="182" frameX="0" frameY="-181" frameWidth="419" frameHeight="363"/>
+	<SubTexture name="Brighty_breakdown_loop0032" x="1492" y="0" width="419" height="182" frameX="0" frameY="-181" frameWidth="419" frameHeight="363"/>
+	<SubTexture name="Brighty_breakdown_loop0033" x="1492" y="0" width="419" height="182" frameX="0" frameY="-181" frameWidth="419" frameHeight="363"/>
+	<SubTexture name="Brighty_breakdown_loop0034" x="1492" y="0" width="419" height="182" frameX="0" frameY="-181" frameWidth="419" frameHeight="363"/>
+	<SubTexture name="Brighty_having_a_breakdown0000" x="0" y="363" width="209" height="400" pivotX="239.15" pivotY="229.1" frameX="-134" frameY="0" frameWidth="471" frameHeight="451"/>
+	<SubTexture name="Brighty_having_a_breakdown0001" x="0" y="363" width="209" height="400" frameX="-134" frameY="0" frameWidth="471" frameHeight="451"/>
+	<SubTexture name="Brighty_having_a_breakdown0002" x="209" y="363" width="223" height="389" frameX="-135" frameY="-11" frameWidth="471" frameHeight="451"/>
+	<SubTexture name="Brighty_having_a_breakdown0003" x="209" y="363" width="223" height="389" frameX="-135" frameY="-11" frameWidth="471" frameHeight="451"/>
+	<SubTexture name="Brighty_having_a_breakdown0004" x="432" y="363" width="216" height="385" frameX="-134" frameY="-15" frameWidth="471" frameHeight="451"/>
+	<SubTexture name="Brighty_having_a_breakdown0005" x="432" y="363" width="216" height="385" frameX="-134" frameY="-15" frameWidth="471" frameHeight="451"/>
+	<SubTexture name="Brighty_having_a_breakdown0006" x="648" y="363" width="216" height="382" frameX="-131" frameY="-18" frameWidth="471" frameHeight="451"/>
+	<SubTexture name="Brighty_having_a_breakdown0007" x="648" y="363" width="216" height="382" frameX="-131" frameY="-18" frameWidth="471" frameHeight="451"/>
+	<SubTexture name="Brighty_having_a_breakdown0008" x="864" y="363" width="220" height="381" frameX="-128" frameY="-19" frameWidth="471" frameHeight="451"/>
+	<SubTexture name="Brighty_having_a_breakdown0009" x="864" y="363" width="220" height="381" frameX="-128" frameY="-19" frameWidth="471" frameHeight="451"/>
+	<SubTexture name="Brighty_having_a_breakdown0010" x="1084" y="363" width="222" height="380" frameX="-126" frameY="-20" frameWidth="471" frameHeight="451"/>
+	<SubTexture name="Brighty_having_a_breakdown0011" x="1084" y="363" width="222" height="380" frameX="-126" frameY="-20" frameWidth="471" frameHeight="451"/>
+	<SubTexture name="Brighty_having_a_breakdown0012" x="1306" y="363" width="227" height="379" frameX="-124" frameY="-21" frameWidth="471" frameHeight="451"/>
+	<SubTexture name="Brighty_having_a_breakdown0013" x="1306" y="363" width="227" height="379" frameX="-124" frameY="-21" frameWidth="471" frameHeight="451"/>
+	<SubTexture name="Brighty_having_a_breakdown0014" x="1533" y="363" width="230" height="379" frameX="-122" frameY="-21" frameWidth="471" frameHeight="451"/>
+	<SubTexture name="Brighty_having_a_breakdown0015" x="1533" y="363" width="230" height="379" frameX="-122" frameY="-21" frameWidth="471" frameHeight="451"/>
+	<SubTexture name="Brighty_having_a_breakdown0016" x="1763" y="363" width="235" height="378" frameX="-121" frameY="-23" frameWidth="471" frameHeight="451"/>
+	<SubTexture name="Brighty_having_a_breakdown0017" x="1763" y="363" width="235" height="378" frameX="-121" frameY="-23" frameWidth="471" frameHeight="451"/>
+	<SubTexture name="Brighty_having_a_breakdown0018" x="1998" y="363" width="316" height="323" frameX="-52" frameY="-77" frameWidth="471" frameHeight="451"/>
+	<SubTexture name="Brighty_having_a_breakdown0019" x="1998" y="363" width="316" height="323" frameX="-52" frameY="-77" frameWidth="471" frameHeight="451"/>
+	<SubTexture name="Brighty_having_a_breakdown0020" x="2314" y="363" width="471" height="175" frameX="0" frameY="-276" frameWidth="471" frameHeight="451"/>
+	<SubTexture name="Brighty_having_a_breakdown0021" x="2314" y="363" width="471" height="175" frameX="0" frameY="-276" frameWidth="471" frameHeight="451"/>
+	<SubTexture name="Brighty_having_a_breakdown0022" x="2785" y="363" width="453" height="182" frameX="-18" frameY="-269" frameWidth="471" frameHeight="451"/>
+	<SubTexture name="Brighty_having_a_breakdown0023" x="2785" y="363" width="453" height="182" frameX="-18" frameY="-269" frameWidth="471" frameHeight="451"/>
+	<SubTexture name="Brighty_having_a_breakdown0024" x="3238" y="363" width="454" height="182" frameX="-17" frameY="-269" frameWidth="471" frameHeight="451"/>
+	<SubTexture name="Brighty_having_a_breakdown0025" x="3238" y="363" width="454" height="182" frameX="-17" frameY="-269" frameWidth="471" frameHeight="451"/>
+	<SubTexture name="Brighty_having_a_breakdown0026" x="0" y="763" width="439" height="182" frameX="-32" frameY="-269" frameWidth="471" frameHeight="451"/>
+	<SubTexture name="Brighty_having_a_breakdown0027" x="0" y="763" width="439" height="182" frameX="-32" frameY="-269" frameWidth="471" frameHeight="451"/>
+	<SubTexture name="Brighty_having_a_breakdown0028" x="439" y="763" width="421" height="182" frameX="-50" frameY="-269" frameWidth="471" frameHeight="451"/>
+	<SubTexture name="Brighty_having_a_breakdown0029" x="439" y="763" width="421" height="182" frameX="-50" frameY="-269" frameWidth="471" frameHeight="451"/>
+	<SubTexture name="Brighty_having_a_breakdown0030" x="860" y="763" width="419" height="182" frameX="-52" frameY="-269" frameWidth="471" frameHeight="451"/>
+	<SubTexture name="Brighty_having_a_breakdown0031" x="860" y="763" width="419" height="182" frameX="-52" frameY="-269" frameWidth="471" frameHeight="451"/>
+	<SubTexture name="Brighty_having_a_breakdown0032" x="1279" y="763" width="419" height="182" frameX="-52" frameY="-269" frameWidth="471" frameHeight="451"/>
+	<SubTexture name="Brighty_having_a_breakdown0033" x="1279" y="763" width="419" height="182" frameX="-52" frameY="-269" frameWidth="471" frameHeight="451"/>
+	<SubTexture name="Brighty_having_a_breakdown0034" x="1698" y="763" width="419" height="182" frameX="-52" frameY="-269" frameWidth="471" frameHeight="451"/>
+	<SubTexture name="Brighty_having_a_breakdown0035" x="1698" y="763" width="419" height="182" frameX="-52" frameY="-269" frameWidth="471" frameHeight="451"/>
+	<SubTexture name="Brighty_having_a_breakdown0036" x="2117" y="763" width="419" height="182" frameX="-52" frameY="-269" frameWidth="471" frameHeight="451"/>
+	<SubTexture name="Brighty_having_a_breakdown0037" x="2117" y="763" width="419" height="182" frameX="-52" frameY="-269" frameWidth="471" frameHeight="451"/>
+	<SubTexture name="Brighty_having_a_breakdown0038" x="1492" y="0" width="419" height="182" frameX="-52" frameY="-269" frameWidth="419" frameHeight="363"/>
+	<SubTexture name="Brighty_having_a_breakdown0039" x="1492" y="0" width="419" height="182" frameX="-52" frameY="-269" frameWidth="419" frameHeight="363"/>
+	<SubTexture name="Brighty_having_a_breakdown0040" x="1492" y="0" width="419" height="182" frameX="-52" frameY="-269" frameWidth="419" frameHeight="363"/>
+	<SubTexture name="Brighty_having_a_breakdown0041" x="1492" y="0" width="419" height="182" frameX="-52" frameY="-269" frameWidth="419" frameHeight="363"/>
+	<SubTexture name="Brighty_having_a_breakdown0042" x="1492" y="0" width="419" height="182" frameX="-52" frameY="-269" frameWidth="419" frameHeight="363"/>
+	<SubTexture name="Brighty_having_a_breakdown0043" x="1492" y="0" width="419" height="182" frameX="-52" frameY="-269" frameWidth="419" frameHeight="363"/>
+	<SubTexture name="Brighty_having_a_breakdown0044" x="1492" y="0" width="419" height="182" frameX="-52" frameY="-269" frameWidth="419" frameHeight="363"/>
+	<SubTexture name="Brighty_having_a_breakdown0045" x="1492" y="0" width="419" height="182" frameX="-52" frameY="-269" frameWidth="419" frameHeight="363"/>
+	<SubTexture name="Brighty_having_a_breakdown0046" x="1492" y="0" width="419" height="182" frameX="-52" frameY="-269" frameWidth="419" frameHeight="363"/>
+	<SubTexture name="Brighty_having_a_breakdown0047" x="1492" y="0" width="419" height="182" frameX="-52" frameY="-269" frameWidth="419" frameHeight="363"/>
+	<SubTexture name="Brighty_having_a_breakdown0048" x="1492" y="0" width="419" height="182" frameX="-52" frameY="-269" frameWidth="419" frameHeight="363"/>
+	<SubTexture name="Brighty_having_a_breakdown0049" x="1492" y="0" width="419" height="182" frameX="-52" frameY="-269" frameWidth="419" frameHeight="363"/>
+	<SubTexture name="Brighty_having_a_breakdown0050" x="1492" y="0" width="419" height="182" frameX="-52" frameY="-269" frameWidth="419" frameHeight="363"/>
+	<SubTexture name="Brighty_having_a_breakdown0051" x="1492" y="0" width="419" height="182" frameX="-52" frameY="-269" frameWidth="419" frameHeight="363"/>
+	<SubTexture name="Brighty_having_a_breakdown0052" x="1492" y="0" width="419" height="182" frameX="-52" frameY="-269" frameWidth="419" frameHeight="363"/>
+	<SubTexture name="Brighty_having_a_breakdown0053" x="1492" y="0" width="419" height="182" frameX="-52" frameY="-269" frameWidth="419" frameHeight="363"/>
+	<SubTexture name="Brighty_having_a_breakdown0054" x="1492" y="0" width="419" height="182" frameX="-52" frameY="-269" frameWidth="419" frameHeight="363"/>
+	<SubTexture name="Brighty_having_a_breakdown0055" x="1492" y="0" width="419" height="182" frameX="-52" frameY="-269" frameWidth="419" frameHeight="363"/>
+	<SubTexture name="Brighty_having_a_breakdown0056" x="1492" y="0" width="419" height="182" frameX="-52" frameY="-269" frameWidth="419" frameHeight="363"/>
+	<SubTexture name="Brighty_having_a_breakdown0057" x="1492" y="0" width="419" height="182" frameX="-52" frameY="-269" frameWidth="419" frameHeight="363"/>
+</TextureAtlas>
