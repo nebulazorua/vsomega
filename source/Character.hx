@@ -264,6 +264,39 @@ class Character extends FlxSprite
 
 				flipX = true;
 
+			case 'black':
+				var tex = Paths.getSparrowAtlas('characters/BLACKFRIEND','shared');
+				frames = tex;
+				animation.addByPrefix('idle', 'BF idle dance', 24, false);
+				animation.addByPrefix('singUP', 'BF NOTE UP0', 24, false);
+				animation.addByPrefix('singLEFT', 'BF NOTE LEFT0', 24, false);
+				animation.addByPrefix('singRIGHT', 'BF NOTE RIGHT0', 24, false);
+				animation.addByPrefix('singDOWN', 'BF NOTE DOWN0', 24, false);
+				animation.addByPrefix('singUPmiss', 'BF NOTE UP MISS', 24, false);
+				animation.addByPrefix('singLEFTmiss', 'BF NOTE LEFT MISS', 24, false);
+				animation.addByPrefix('singRIGHTmiss', 'BF NOTE RIGHT MISS', 24, false);
+				animation.addByPrefix('singDOWNmiss', 'BF NOTE DOWN MISS', 24, false);
+				animation.addByPrefix('hey', 'BF HEY', 24, false);
+
+				animation.addByPrefix('cut', 'BF hit', 24, false);
+
+				animation.addByPrefix('firstDeath', "BF dies", 24, false);
+				animation.addByPrefix('deathLoop', "BF Dead Loop", 24, true);
+				animation.addByPrefix('deathConfirm', "BF Dead confirm", 24, false);
+
+				animation.addByPrefix('scared', 'BF idle shaking', 24);
+				var scaredFrames=[];
+				for(i in 0...24){
+					scaredFrames.push(i%3);
+				}
+				animation.addByIndices('dischargeScared', 'BF idle shaking', scaredFrames, "", 24, false);
+
+				loadOffsets();
+				addOffset("dischargeScared",animOffsets.get("scared")[0],animOffsets.get("scared")[1]);
+				playAnim('idle');
+
+				flipX = true;
+
 			case 'tgr':
 				isReskin=true;
 				var tex = Paths.getSparrowAtlas('characters/reskins/theghostreaper','shared');

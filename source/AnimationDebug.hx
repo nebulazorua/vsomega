@@ -165,7 +165,7 @@ class AnimationDebug extends FlxState
 		add(camFollow);
 		camGame.follow(camFollow);
 
-		ghostBF = new Character(0, 0, "bf-car");
+		ghostBF = new Character(0, 0, "black");
 		ghostBF.alpha = .5;
 		ghostBF.screenCenter();
 		ghostBF.debugMode = true;
