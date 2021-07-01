@@ -32,6 +32,9 @@ class SkinState extends MusicBeatState {
   public var characters:Array<Character> = [];
   public var selectedIdx:Int = 0;
 
+  var nameText:FlxText;
+  var descText:FlxText;
+
   var leftArrow:FlxSprite;
   var rightArrow:FlxSprite;
 
@@ -70,6 +73,20 @@ class SkinState extends MusicBeatState {
     selectedIdx = unlockedSkins.indexOf(selectedSkin);
     var ui_tex = Paths.getSparrowAtlas('campaign_menu_UI_assets');
 
+    nameText = new FlxText(10, 10, 0, "Boyfriend.XML", 32);
+		nameText.setFormat("VCR OSD Mono", 36, FlxColor.WHITE, CENTER, SHADOW,FlxColor.BLACK);
+		nameText.shadowOffset.set(2,2);
+		nameText.screenCenter(XY);
+		nameText.y -= 200;
+
+    descText = new FlxText(10, 10, 0, "Funky lil' man", 32);
+		descText.setFormat("VCR OSD Mono", 36, FlxColor.WHITE, CENTER, SHADOW,FlxColor.BLACK);
+		descText.shadowOffset.set(2,2);
+		descText.screenCenter(XY);
+		descText.y -= 150;
+
+    add(descText);
+    add(nameText);
     leftArrow = new FlxSprite(0,300);
     leftArrow.screenCenter(X);
     leftArrow.x -= 350;
@@ -78,6 +95,8 @@ class SkinState extends MusicBeatState {
     leftArrow.animation.addByPrefix('idle', "arrow left");
     leftArrow.animation.addByPrefix('press', "arrow push left");
     leftArrow.animation.play('idle');
+    leftArrow.scale.x = 1.2;
+    leftArrow.scale.y = 1.2;
     add(leftArrow);
 
     rightArrow = new FlxSprite(0, leftArrow.y);
@@ -87,6 +106,8 @@ class SkinState extends MusicBeatState {
     rightArrow.animation.addByPrefix('idle', 'arrow right');
     rightArrow.animation.addByPrefix('press', "arrow push right", 24, false);
     rightArrow.animation.play('idle');
+    rightArrow.scale.x = 1.2;
+    rightArrow.scale.y = 1.2;
     add(rightArrow);
 
     Conductor.changeBPM(102);
@@ -96,7 +117,7 @@ class SkinState extends MusicBeatState {
 
   override function beatHit(){
     for(char in characters){
-      if(!char.animation.name.startsWith("sing") || char.animation.curAnim.name=="hey" && char.animation.curAnim.finished ){
+      if(!char.animation.name.startsWith("sing") && char.animation.curAnim.name!="hey" || char.animation.curAnim.name=="hey" && char.animation.curAnim.finished ){
         char.dance();
       }
     }
@@ -119,7 +140,7 @@ class SkinState extends MusicBeatState {
   override function update(elapsed:Float){
     FlxG.camera.zoom = .7;
     selectedTimer+=elapsed;
-    if(selectedTimer>=5){
+    if(selectedTimer>=3){
       lastAnimTimer+=elapsed;
       if(lastAnimTimer>=.5){
         lastAnimTimer=0;
@@ -142,6 +163,14 @@ class SkinState extends MusicBeatState {
         c.visible=false;
     }
 
+    nameText.text = unlockedNames[selectedIdx];
+    descText.text = unlockedDescs[selectedIdx];
+
+    descText.screenCenter(XY);
+		descText.y -= 250;
+    nameText.screenCenter(XY);
+		nameText.y -= 300;
+
 
     Conductor.songPosition = FlxG.sound.music.time;
     if (controls.BACK)
@@ -162,8 +191,10 @@ class SkinState extends MusicBeatState {
       rightArrow.animation.play("idle");
     }
 
-    if(controls.ACCEPT){
+    if(controls.ACCEPT && selectedSkin!=unlockedSkins[selectedIdx]){
+      selectedTimer=0;
       selectedSkin = unlockedSkins[selectedIdx];
+      FlxG.sound.play(Paths.sound('confirmMenu'));
       characters[selectedIdx].playAnim("hey",true);
     }
 
