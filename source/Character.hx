@@ -12,6 +12,7 @@ using StringTools;
 class Character extends FlxSprite
 {
 	public var animOffsets:Map<String, Array<Dynamic>>;
+	public var offsetNames:Array<String>=[];
 	public var debugMode:Bool = false;
 
 	public var isPlayer:Bool = false;
@@ -20,6 +21,7 @@ class Character extends FlxSprite
 	public var disabledDance:Bool = false;
 	public var backupCharacter:Bool=false;
 	public var holdTimer:Float = 0;
+	public var isReskin=false;
 
 	public function new(x:Float, y:Float, ?character:String = "bf", ?isPlayer:Bool = false, ?backup:Bool=false)
 	{
@@ -262,30 +264,167 @@ class Character extends FlxSprite
 
 				flipX = true;
 
-				case 'bf-neb':
-					var tex = Paths.getSparrowAtlas('characters/nebBF','shared');
-					frames = tex;
-					animation.addByPrefix('idle', 'BF idle dance', 24, false);
-					animation.addByPrefix('singUP', 'BF NOTE UP0', 24, false);
-					animation.addByPrefix('singLEFT', 'BF NOTE LEFT0', 24, false);
-					animation.addByPrefix('singRIGHT', 'BF NOTE RIGHT0', 24, false);
-					animation.addByPrefix('singDOWN', 'BF NOTE DOWN0', 24, false);
-					animation.addByPrefix('singUPmiss', 'BF NOTE UP MISS', 24, false);
-					animation.addByPrefix('singLEFTmiss', 'BF NOTE LEFT MISS', 24, false);
-					animation.addByPrefix('singRIGHTmiss', 'BF NOTE RIGHT MISS', 24, false);
-					animation.addByPrefix('singDOWNmiss', 'BF NOTE DOWN MISS', 24, false);
-					animation.addByPrefix('hey', 'BF HEY', 24, false);
+			case 'tgr':
+				isReskin=true;
+				var tex = Paths.getSparrowAtlas('characters/reskins/theghostreaper','shared');
+				frames = tex;
+				animation.addByPrefix('idle', 'BF idle dance', 24, false);
+				animation.addByPrefix('singUP', 'BF NOTE UP0', 24, false);
+				animation.addByPrefix('singLEFT', 'BF NOTE LEFT0', 24, false);
+				animation.addByPrefix('singRIGHT', 'BF NOTE RIGHT0', 24, false);
+				animation.addByPrefix('singDOWN', 'BF NOTE DOWN0', 24, false);
+				animation.addByPrefix('singUPmiss', 'BF NOTE UP MISS', 24, false);
+				animation.addByPrefix('singLEFTmiss', 'BF NOTE LEFT MISS', 24, false);
+				animation.addByPrefix('singRIGHTmiss', 'BF NOTE RIGHT MISS', 24, false);
+				animation.addByPrefix('singDOWNmiss', 'BF NOTE DOWN MISS', 24, false);
+				animation.addByPrefix('hey', 'BF HEY', 24, false);
 
-					animation.addByPrefix('firstDeath', "BF dies", 24, false);
-					animation.addByPrefix('deathLoop', "BF Dead Loop", 24, true);
-					animation.addByPrefix('deathConfirm', "BF Dead confirm", 24, false);
+				animation.addByPrefix('cut', 'BF hit', 24, false);
 
-					animation.addByPrefix('scared', 'BF idle shaking', 24);
+				animation.addByPrefix('firstDeath', "BF dies", 24, false);
+				animation.addByPrefix('deathLoop', "BF Dead Loop", 24, true);
+				animation.addByPrefix('deathConfirm', "BF Dead confirm", 24, false);
 
-					loadOffsets();
-					playAnim('idle');
+				animation.addByPrefix('scared', 'BF idle shaking', 24);
+				var scaredFrames=[];
+				for(i in 0...24){
+					scaredFrames.push(i%3);
+				}
+				animation.addByIndices('dischargeScared', 'BF idle shaking', scaredFrames, "", 24, false);
 
-					flipX = true;
+				loadOffsets();
+				addOffset("dischargeScared",animOffsets.get("scared")[0],animOffsets.get("scared")[1]);
+				playAnim('idle');
+
+				flipX = true;
+
+			case 'mikeeey':
+				isReskin=true;
+				var tex = Paths.getSparrowAtlas('characters/reskins/mikeeey','shared');
+				frames = tex;
+				animation.addByPrefix('idle', 'BF idle dance', 24, false);
+				animation.addByPrefix('singUP', 'BF NOTE UP0', 24, false);
+				animation.addByPrefix('singLEFT', 'BF NOTE LEFT0', 24, false);
+				animation.addByPrefix('singRIGHT', 'BF NOTE RIGHT0', 24, false);
+				animation.addByPrefix('singDOWN', 'BF NOTE DOWN0', 24, false);
+				animation.addByPrefix('singUPmiss', 'BF NOTE UP MISS', 24, false);
+				animation.addByPrefix('singLEFTmiss', 'BF NOTE LEFT MISS', 24, false);
+				animation.addByPrefix('singRIGHTmiss', 'BF NOTE RIGHT MISS', 24, false);
+				animation.addByPrefix('singDOWNmiss', 'BF NOTE DOWN MISS', 24, false);
+				animation.addByPrefix('hey', 'BF HEY', 24, false);
+
+				animation.addByPrefix('cut', 'BF hit', 24, false);
+
+				animation.addByPrefix('firstDeath', "BF dies", 24, false);
+				animation.addByPrefix('deathLoop', "BF Dead Loop", 24, true);
+				animation.addByPrefix('deathConfirm', "BF Dead confirm", 24, false);
+
+				animation.addByPrefix('scared', 'BF idle shaking', 24);
+				var scaredFrames=[];
+				for(i in 0...24){
+					scaredFrames.push(i%3);
+				}
+				animation.addByIndices('dischargeScared', 'BF idle shaking', scaredFrames, "", 24, false);
+
+				loadOffsets();
+				addOffset("dischargeScared",animOffsets.get("scared")[0],animOffsets.get("scared")[1]);
+				playAnim('idle');
+
+				flipX = true;
+
+			case 'erderi':
+				isReskin=true;
+				var tex = Paths.getSparrowAtlas('characters/reskins/erderi','shared');
+				frames = tex;
+				animation.addByPrefix('idle', 'BF idle dance', 24, false);
+				animation.addByPrefix('singUP', 'BF NOTE UP0', 24, false);
+				animation.addByPrefix('singLEFT', 'BF NOTE LEFT0', 24, false);
+				animation.addByPrefix('singRIGHT', 'BF NOTE RIGHT0', 24, false);
+				animation.addByPrefix('singDOWN', 'BF NOTE DOWN0', 24, false);
+				animation.addByPrefix('singUPmiss', 'BF NOTE UP MISS', 24, false);
+				animation.addByPrefix('singLEFTmiss', 'BF NOTE LEFT MISS', 24, false);
+				animation.addByPrefix('singRIGHTmiss', 'BF NOTE RIGHT MISS', 24, false);
+				animation.addByPrefix('singDOWNmiss', 'BF NOTE DOWN MISS', 24, false);
+				animation.addByPrefix('hey', 'BF HEY', 24, false);
+
+				animation.addByPrefix('cut', 'BF hit', 24, false);
+
+				animation.addByPrefix('firstDeath', "BF dies", 24, false);
+				animation.addByPrefix('deathLoop', "BF Dead Loop", 24, true);
+				animation.addByPrefix('deathConfirm', "BF Dead confirm", 24, false);
+
+				animation.addByPrefix('scared', 'BF idle shaking', 24);
+				var scaredFrames=[];
+				for(i in 0...24){
+					scaredFrames.push(i%3);
+				}
+				animation.addByIndices('dischargeScared', 'BF idle shaking', scaredFrames, "", 24, false);
+
+				loadOffsets();
+				addOffset("dischargeScared",animOffsets.get("scared")[0],animOffsets.get("scared")[1]);
+				playAnim('idle');
+
+				flipX = true;
+			case 'bfside':
+				isReskin=true;
+				var tex = Paths.getSparrowAtlas('characters/reskins/Mini_Brightside','shared');
+				frames = tex;
+				animation.addByPrefix('idle', 'Brighty_Idle0', 24, false);
+				animation.addByPrefix('singUP', 'Brighty_Up0', 24, false);
+				animation.addByPrefix('singLEFT', 'Brighty_Left0', 24, false);
+				animation.addByPrefix('singRIGHT', 'Brighty_Right0', 24, false);
+				animation.addByPrefix('singDOWN', 'Brighty_Down0', 24, false);
+				animation.addByPrefix('singUPmiss', 'Brighty_Up Miss', 24, false);
+				animation.addByPrefix('singLEFTmiss', 'Brighty_Left Miss', 24, false);
+				animation.addByPrefix('singRIGHTmiss', 'Brighty_Right Miss', 24, false);
+				animation.addByPrefix('singDOWNmiss', 'Brighty_Down Miss', 24, false);
+				animation.addByPrefix('hey', 'Brighty_Hey', 24, false);
+
+				animation.addByPrefix('cut', 'Brighty_Hit', 24, false);
+
+				animation.addByPrefix('firstDeath', "Brighty_having_a_breakdown", 24, false);
+				animation.addByPrefix('deathLoop', "Brighty_breakdown_loop", 24, true);
+				animation.addByPrefix('deathConfirm', "Brighty_breakdown_accept", 24, false);
+
+				animation.addByPrefix('scared', 'Brighty_Idle Shaking', 24);
+				var scaredFrames=[];
+				for(i in 0...24){
+					scaredFrames.push(i%3);
+				}
+				animation.addByIndices('dischargeScared', 'Brighty_Idle Shaking', scaredFrames, "", 24, false);
+				setGraphicSize(Std.int(width*1.5));
+				updateHitbox();
+				loadOffsets();
+				addOffset("dischargeScared",animOffsets.get("scared")[0],animOffsets.get("scared")[1]);
+				playAnim('idle');
+
+				flipX = true;
+
+			case 'bf-neb':
+				isReskin=true;
+				var tex = Paths.getSparrowAtlas('characters/nebBF','shared');
+				frames = tex;
+				animation.addByPrefix('idle', 'BF idle dance', 24, false);
+				animation.addByPrefix('singUP', 'BF NOTE UP0', 24, false);
+				animation.addByPrefix('singLEFT', 'BF NOTE LEFT0', 24, false);
+				animation.addByPrefix('singRIGHT', 'BF NOTE RIGHT0', 24, false);
+				animation.addByPrefix('singDOWN', 'BF NOTE DOWN0', 24, false);
+				animation.addByPrefix('singUPmiss', 'BF NOTE UP MISS', 24, false);
+				animation.addByPrefix('singLEFTmiss', 'BF NOTE LEFT MISS', 24, false);
+				animation.addByPrefix('singRIGHTmiss', 'BF NOTE RIGHT MISS', 24, false);
+				animation.addByPrefix('singDOWNmiss', 'BF NOTE DOWN MISS', 24, false);
+				animation.addByPrefix('hey', 'BF HEY', 24, false);
+
+				animation.addByPrefix('firstDeath', "BF dies", 24, false);
+				animation.addByPrefix('deathLoop', "BF Dead Loop", 24, true);
+				animation.addByPrefix('deathConfirm', "BF Dead confirm", 24, false);
+
+				animation.addByPrefix('scared', 'BF idle shaking', 24);
+
+				loadOffsets();
+				playAnim('idle');
+
+				flipX = true;
 
 			case 'bf-christmas':
 				var tex = Paths.getSparrowAtlas('characters/bfChristmas','shared');
@@ -620,12 +759,8 @@ class Character extends FlxSprite
 				}
 				FlxG.bitmap.dumpCache();
 
-
-
-
-
-			loadAnimations();
-			loadOffsets();
+				loadAnimations();
+				loadOffsets();
 
 			if(animation.getByName("idle")!=null)
 				playAnim("idle");
@@ -641,7 +776,7 @@ class Character extends FlxSprite
 			flipX = !flipX;
 
 			// Doesn't flip for BF, since his are already in the right place???
-			if (!curCharacter.startsWith('bf'))
+			if (!curCharacter.startsWith('bf') && !isReskin)
 			{
 				// var animArray
 				var oldRight = animation.getByName('singRIGHT').frames;
@@ -660,16 +795,16 @@ class Character extends FlxSprite
 	}
 
 	public function loadOffsets(){
-		//var offsets = CoolUtil.coolTextFile(Paths.txtImages('characters/'+curCharacter+"Offsets"));
 		var offsets:Array<String>;
 		if(Cache.offsetData[curCharacter]!=null){
 			offsets = CoolUtil.coolTextFile2(Cache.offsetData[curCharacter]);
 		}else{
-			var data = File.getContent("assets/shared/images/characters/"+curCharacter+"Offsets.txt");
+			var data = File.getContent("assets/shared/images/characters/offsets/"+curCharacter+"Offsets.txt");
 			offsets = CoolUtil.coolTextFile2(data);
 			Cache.offsetData[curCharacter] = data;
 		}
-		for(s in offsets){
+		for(idx in 0...offsets.length){
+			var s = offsets[idx];
 			var stuff:Array<String> = s.split(" ");
 			addOffset(stuff[0],Std.parseFloat(stuff[1]),Std.parseFloat(stuff[2]));
 		}
@@ -678,7 +813,6 @@ class Character extends FlxSprite
 	public function loadAnimations(){
 		trace("loading anims for " + curCharacter);
 		try {
-			//var anims = CoolUtil.coolTextFile(Paths.txtImages('characters/'+curCharacter+"Anims"));
 			var anims:Array<String>;
 			if(Cache.offsetData[curCharacter]!=null){
 				anims = CoolUtil.coolTextFile2(Cache.animData[curCharacter]);
@@ -748,14 +882,14 @@ class Character extends FlxSprite
 			case 'gf':
 				if ((animation.curAnim.name == 'hairFall' || animation.curAnim.name=='cheer') && animation.curAnim.finished)
 					playAnim('danceRight');
-			case 'bf':
-				if ((animation.curAnim.name == 'cut' || animation.curAnim.name=="dischargeScared") && animation.curAnim.finished)
-					playAnim('idle');
 			case 'omega':
 				if (animation.curAnim.name == 'throwChild' && animation.curAnim.finished)
 					playAnim('idle');
 			case 'demetrios':
 				if (animation.curAnim.name == 'discharge' && animation.curAnim.finished)
+					playAnim('idle');
+			default:
+				if ((animation.curAnim.name == 'cut' || animation.curAnim.name=="dischargeScared") && animation.curAnim.finished)
 					playAnim('idle');
 		}
 
@@ -776,9 +910,6 @@ class Character extends FlxSprite
 		{
 			holding=false;
 			switch(curCharacter){
-			case 'bf':
-				if(animation.curAnim.name!='cut' && animation.curAnim.name!='dischargeScared')
-					playAnim('idle');
 			case 'angry-fucking-child':
 				if(animation.curAnim.name!='cry')
 					playAnim('idle');
@@ -789,17 +920,19 @@ class Character extends FlxSprite
 				if(animation.curAnim.name!='throwChild' && animation.curAnim.name!='grabChild')
 					playAnim('idle');
 			default:
-				if(animation.getByName("idle")!=null)
-					playAnim("idle");
-				else if (animation.getByName("danceRight")!=null && animation.getByName("danceLeft")!=null){
-					if (!animation.curAnim.name.startsWith('hair') && animation.curAnim.name!='cheer')
-					{
-						danced = !danced;
+				if(animation.curAnim.name!='cut' && animation.curAnim.name!='dischargeScared'){
+					if(animation.getByName("idle")!=null)
+						playAnim("idle");
+					else if (animation.getByName("danceRight")!=null && animation.getByName("danceLeft")!=null){
+						if (!animation.curAnim.name.startsWith('hair') && animation.curAnim.name!='cheer')
+						{
+							danced = !danced;
 
-						if (danced)
-							playAnim('danceRight');
-						else
-							playAnim('danceLeft');
+							if (danced)
+								playAnim('danceRight');
+							else
+								playAnim('danceLeft');
+						}
 					}
 				}
 			}
@@ -846,6 +979,7 @@ class Character extends FlxSprite
 
 	public function addOffset(name:String, x:Float = 0, y:Float = 0)
 	{
+		offsetNames.push(name);
 		animOffsets[name] = [x, y];
 	}
 }

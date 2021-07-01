@@ -49,7 +49,7 @@ class StoryMenuState extends MusicBeatState
 		['Satin-Panties', "High", "Milf"],
 		['Cocoa', 'Eggnog', 'Monster', 'Winter-Horrorland'],
 		['Senpai', 'Roses', 'Thorns'],
-		['Curse-Eternal']
+		['Mercenary','Odd-Job','Guardian']
 	];
 	var curDifficulty:Int = 1;
 
@@ -115,6 +115,7 @@ class StoryMenuState extends MusicBeatState
 			encounterableCameos=cringe;
 			encounterableCameos.remove("Oxidation");
 			if(encounterableCameos.length==0 || FlxG.save.data.cameos.contains("Oxidation")){
+				trace("OXIDIZED");
 				encounterableCameos.push("Oxidation");
 			}
 		}
@@ -426,7 +427,7 @@ class StoryMenuState extends MusicBeatState
 			new FlxTimer().start(1, function(tmr:FlxTimer)
 			{
 				if(curWeek==7 && !hasCameo){
-					LoadingState.loadAndSwitchState(new CutsceneState(CoolUtil.coolTextFile(Paths.txt('curse-eternal/cutscene')),new PlayState()));
+					LoadingState.loadAndSwitchState(new CutsceneState(CoolUtil.coolTextFile(Paths.txt('mercenary/pre')),new PlayState()));
 				}else{
 					LoadingState.loadAndSwitchState(new PlayState(), true);
 				}

@@ -42,7 +42,17 @@ class Song
 
 	public static function loadFromJson(jsonInput:String, ?folder:String):SwagSong
 	{
-		var rawJson = Assets.getText(Paths.json(folder.toLowerCase() + '/' + jsonInput.toLowerCase())).trim();
+		var rawJson='';
+		if(jsonInput=='hivemind' || jsonInput=='hivemind-hard'){
+			switch(jsonInput){
+				case 'hivemind':
+					rawJson = HiveCharts.normal.trim();
+				case 'hivemind-hard':
+					rawJson = HiveCharts.alpha.trim();
+			}
+		}else{
+			rawJson = Assets.getText(Paths.json(folder.toLowerCase() + '/' + jsonInput.toLowerCase())).trim();
+		}
 
 		while (!rawJson.endsWith("}"))
 		{

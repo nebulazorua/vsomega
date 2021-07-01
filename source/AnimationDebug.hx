@@ -17,10 +17,14 @@ import flixel.addons.ui.FlxUIInputText;
 import flixel.addons.ui.FlxUINumericStepper;
 import flixel.addons.ui.FlxUITabMenu;
 import flixel.addons.ui.FlxUITooltip.FlxUITooltipStyle;
-
+import openfl.net.FileReference;
+import openfl.events.Event;
+import openfl.events.IOErrorEvent;
 import flixel.text.FlxText;
 import flixel.util.FlxColor;
-
+import flixel.ui.FlxButton;
+import flixel.ui.FlxSpriteButton;
+using StringTools;
 /**
 	*DEBUG MODE
  */
@@ -41,6 +45,52 @@ class AnimationDebug extends FlxState
 	var camHUD:FlxCamera;
 	var camGame:FlxCamera;
 	var player:FlxUICheckBox;
+	var _file:FileReference;
+
+	private function saveLevel()
+	{
+		var data:String = '';
+		for(anim in animList){
+			if(anim!="dischargeScared")
+				data+=anim+" "+char.animOffsets.get(anim)[0] + " "+char.animOffsets.get(anim)[1]+"\n";
+		}
+
+		if ((data != null) && (data.length > 0))
+		{
+			_file = new FileReference();
+			_file.addEventListener(Event.COMPLETE, onSaveComplete);
+			_file.addEventListener(Event.CANCEL, onSaveCancel);
+			_file.addEventListener(IOErrorEvent.IO_ERROR, onSaveError);
+			_file.save(data.trim(), char.curCharacter + "Offsets.txt");
+		}
+	}
+
+	function onSaveComplete(_):Void
+	{
+		_file.removeEventListener(Event.COMPLETE, onSaveComplete);
+		_file.removeEventListener(Event.CANCEL, onSaveCancel);
+		_file.removeEventListener(IOErrorEvent.IO_ERROR, onSaveError);
+		_file = null;
+		FlxG.log.notice("Successfully saved LEVEL DATA.");
+	}
+
+	function onSaveCancel(_):Void
+	{
+		_file.removeEventListener(Event.COMPLETE, onSaveComplete);
+		_file.removeEventListener(Event.CANCEL, onSaveCancel);
+		_file.removeEventListener(IOErrorEvent.IO_ERROR, onSaveError);
+		_file = null;
+	}
+
+	function onSaveError(_):Void
+	{
+		_file.removeEventListener(Event.COMPLETE, onSaveComplete);
+		_file.removeEventListener(Event.CANCEL, onSaveCancel);
+		_file.removeEventListener(IOErrorEvent.IO_ERROR, onSaveError);
+		_file = null;
+		FlxG.log.error("Problem saving Level data");
+	}
+
 	public function new(daAnim:String = 'spooky')
 	{
 		super();
@@ -85,7 +135,6 @@ class AnimationDebug extends FlxState
 		player.checked = false;
 		player.callback = function()
 		{
-			//=check_use_hit.checked;
 			if(dad!=null)
 				dad.flipX=player.checked;
 
@@ -93,7 +142,13 @@ class AnimationDebug extends FlxState
 				bf.flipX=player.checked;
 		};
 
+		var saveButton:FlxButton = new FlxButton(100, 125, "Save", function()
+		{
+			saveLevel();
+		});
+
 		dumbTexts = new FlxTypedGroup<FlxText>();
+		dumbTexts.cameras = [camHUD];
 		add(dumbTexts);
 
 		textAnim = new FlxText(300, 16);
@@ -108,6 +163,7 @@ class AnimationDebug extends FlxState
 
 		UI_box.add(cumfart);
 		UI_box.add(player);
+		UI_box.add(saveButton);
 		displayCharacter(daAnim);
 
 		super.create();
@@ -162,8 +218,9 @@ class AnimationDebug extends FlxState
 	{
 		var daLoop:Int = 0;
 
-		for (anim => offsets in char.animOffsets)
+		for (anim in char.offsetNames)
 		{
+			var offsets = char.animOffsets.get(anim);
 			var text:FlxText = new FlxText(10, 20 + (18 * daLoop), 0, anim + ": " + offsets, 15);
 			text.scrollFactor.set();
 			text.color = FlxColor.BLUE;

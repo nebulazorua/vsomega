@@ -14,7 +14,7 @@ class GameOverSubstate extends MusicBeatSubstate
 
 	var stageSuffix:String = "";
 
-	public function new(x:Float, y:Float)
+	public function new(x:Float, y:Float, ?bfVer:String='bf')
 	{
 		PlayState.currentPState.modchart.clearCamEffects();
 		var daStage = PlayState.curStage;
@@ -28,7 +28,7 @@ class GameOverSubstate extends MusicBeatSubstate
 				stageSuffix = '-pixel';
 				daBf = 'bf-pixel-dead';
 			default:
-				daBf = 'bf';
+				daBf = bfVer;
 		}
 
 		switch(PlayState.SONG.song.toLowerCase()){
