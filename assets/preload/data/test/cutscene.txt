@@ -1,1 +1,21 @@
-[goto:black][decision:Yes|odd-job/cutscene,No|mercenary/cutscene]Help?
+[setstory:Last-Stand,Curse-Eternal][goto:laststandalt/1][music:Heartbeat][dialoguesound:soundbytes/omega]So I guess it’s come down to this, huh?
+[dialoguesound:soundbytes/bf]Be skoo dap!
+[dialoguesound:soundbytes/omega]I gave you a chance! I tried to reason with you!
+[goto:laststandalt/2][nofade]I have this sword for a reason, y'know.
+[goto:laststandalt/3][nofade]And I guess that if being intimidating isn't enough to deter you.
+[goto:laststandalt/4][nofade]I'm just gonna have to use it.
+[goto:laststandalt/5][nofade]C'mon kid, lets take this rat down.
+[goto:laststandalt/6][nofade][dialoguesound:soundbytes/mika]You got it mister!
+[dialoguesound:soundbytes/gf]Not so fast!
+[dialoguesound:soundbytes/bf][dialoguespeed:0.02]Beep bop!
+[dialoguesound:soundbytes/gf][goto:laststandalt/7]I told you not to-
+[nofade][music:ringRingBITCH][shake:1,0.2]
+[goto:laststandalt/8][nofade]Huh?
+[music:fuckYou][goto:laststandalt/9][nofade]Sorry, give me a moment.
+[goto:laststandalt/10][nofade]Huh? Oh? That guy? Oh, okay, one second!
+[goto:laststandalt/11][nofade]It's for you.
+[dialoguesound:soundbytes/daddy][goto:laststandalt/12][nofade]Hey, is this that big sword guy? Did you kill the blue-haired parasite yet?
+[dialoguesound:soundbytes/omega][nofade][goto:laststandalt/13]What the fuck is this?
+[dialoguesound:soundbytes/gf][nofade]... It's a phone. Obviously.
+[dialoguesound:soundbytes/omega][nofade][goto:laststandalt/14][shake:1.5,0.1]Quit wasting my time. Kid, you handle the girl.
+[dialoguesound:soundbytes/gf][nofade][goto:laststandalt/15][dialoguespeed:0.06]M-my phone...-

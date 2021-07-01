@@ -2,265 +2,265 @@
 <TextureAtlas imagePath="omega_assets.png">
 	<!-- Created with Adobe Animate version 18.0.1.115 -->
 	<!-- http://www.adobe.com/products/animate.html -->
-	<SubTexture name="Omega Alt Note0000" x="5" y="5" width="784" height="784" pivotX="511.45" pivotY="357.35" frameX="-46" frameY="-17" frameWidth="965" frameHeight="801"/>
-	<SubTexture name="Omega Alt Note0001" x="5" y="5" width="784" height="784" frameX="-46" frameY="-17" frameWidth="965" frameHeight="801"/>
-	<SubTexture name="Omega Alt Note0002" x="789" y="5" width="900" height="767" frameX="-50" frameY="-34" frameWidth="965" frameHeight="801"/>
-	<SubTexture name="Omega Alt Note0003" x="789" y="5" width="900" height="767" frameX="-50" frameY="-34" frameWidth="965" frameHeight="801"/>
-	<SubTexture name="Omega Alt Note0004" x="789" y="5" width="900" height="767" frameX="-50" frameY="-34" frameWidth="965" frameHeight="801"/>
-	<SubTexture name="Omega Alt Note0005" x="1689" y="5" width="915" height="767" frameX="-50" frameY="-34" frameWidth="965" frameHeight="801"/>
-	<SubTexture name="Omega Alt Note0006" x="1689" y="5" width="915" height="767" frameX="-50" frameY="-34" frameWidth="965" frameHeight="801"/>
-	<SubTexture name="Omega Alt Note0007" x="1689" y="5" width="915" height="767" frameX="-50" frameY="-34" frameWidth="965" frameHeight="801"/>
-	<SubTexture name="Omega Alt Note0008" x="1689" y="5" width="915" height="767" frameX="-50" frameY="-34" frameWidth="965" frameHeight="801"/>
-	<SubTexture name="Omega Alt Note0009" x="2604" y="5" width="904" height="777" frameX="-50" frameY="-24" frameWidth="965" frameHeight="801"/>
-	<SubTexture name="Omega Alt Note0010" x="2604" y="5" width="904" height="777" frameX="-50" frameY="-24" frameWidth="965" frameHeight="801"/>
-	<SubTexture name="Omega Alt Note0011" x="2604" y="5" width="904" height="777" frameX="-50" frameY="-24" frameWidth="965" frameHeight="801"/>
-	<SubTexture name="Omega Alt Note0012" x="5" y="789" width="793" height="800" frameX="-52" frameY="-1" frameWidth="965" frameHeight="801"/>
-	<SubTexture name="Omega Alt Note0013" x="5" y="789" width="793" height="800" frameX="-52" frameY="-1" frameWidth="965" frameHeight="801"/>
-	<SubTexture name="Omega Alt Note0014" x="5" y="789" width="793" height="800" frameX="-52" frameY="-1" frameWidth="965" frameHeight="801"/>
-	<SubTexture name="Omega Alt Note0015" x="798" y="789" width="898" height="801" frameX="-42" frameY="0" frameWidth="965" frameHeight="801"/>
-	<SubTexture name="Omega Alt Note0016" x="798" y="789" width="898" height="801" frameX="-42" frameY="0" frameWidth="965" frameHeight="801"/>
-	<SubTexture name="Omega Alt Note0017" x="798" y="789" width="898" height="801" frameX="-42" frameY="0" frameWidth="965" frameHeight="801"/>
-	<SubTexture name="Omega Alt Note0018" x="1696" y="789" width="870" height="731" frameX="-21" frameY="-70" frameWidth="965" frameHeight="801"/>
-	<SubTexture name="Omega Alt Note0019" x="1696" y="789" width="870" height="731" frameX="-21" frameY="-70" frameWidth="965" frameHeight="801"/>
-	<SubTexture name="Omega Alt Note0020" x="2566" y="789" width="569" height="727" frameX="0" frameY="-74" frameWidth="965" frameHeight="801"/>
-	<SubTexture name="Omega Alt Note0021" x="2566" y="789" width="569" height="727" frameX="0" frameY="-74" frameWidth="965" frameHeight="801"/>
-	<SubTexture name="Omega Alt Note0022" x="2566" y="789" width="569" height="727" frameX="0" frameY="-74" frameWidth="965" frameHeight="801"/>
-	<SubTexture name="Omega Alt Note0023" x="3135" y="789" width="553" height="728" frameX="-16" frameY="-73" frameWidth="965" frameHeight="801"/>
-	<SubTexture name="Omega Alt Note0024" x="3135" y="789" width="553" height="728" frameX="-16" frameY="-73" frameWidth="965" frameHeight="801"/>
-	<SubTexture name="Omega Alt Note0025" x="3135" y="789" width="553" height="728" frameX="-16" frameY="-73" frameWidth="965" frameHeight="801"/>
-	<SubTexture name="Omega Sing Note DOWN0000" x="5" y="1590" width="846" height="755" pivotX="175.6" pivotY="35.65" frameX="0" frameY="0" frameWidth="848" frameHeight="755"/>
-	<SubTexture name="Omega Sing Note DOWN0001" x="5" y="1590" width="846" height="755" frameX="0" frameY="0" frameWidth="848" frameHeight="755"/>
-	<SubTexture name="Omega Sing Note DOWN0002" x="851" y="1590" width="845" height="754" frameX="-3" frameY="-1" frameWidth="848" frameHeight="755"/>
-	<SubTexture name="Omega Sing Note DOWN0003" x="851" y="1590" width="845" height="754" frameX="-3" frameY="-1" frameWidth="848" frameHeight="755"/>
-	<SubTexture name="Omega Sing Note DOWN0004" x="851" y="1590" width="845" height="754" frameX="-3" frameY="-1" frameWidth="848" frameHeight="755"/>
-	<SubTexture name="Omega Sing Note DOWN0005" x="851" y="1590" width="845" height="754" frameX="-3" frameY="-1" frameWidth="848" frameHeight="755"/>
-	<SubTexture name="Omega Sing Note DOWN0006" x="851" y="1590" width="845" height="754" frameX="-3" frameY="-1" frameWidth="848" frameHeight="755"/>
-	<SubTexture name="Omega Sing Note DOWN0007" x="851" y="1590" width="845" height="754" frameX="-3" frameY="-1" frameWidth="848" frameHeight="755"/>
-	<SubTexture name="Omega Sing Note DOWN0008" x="851" y="1590" width="845" height="754" frameX="-3" frameY="-1" frameWidth="848" frameHeight="755"/>
-	<SubTexture name="Omega Sing Note DOWN0009" x="851" y="1590" width="845" height="754" frameX="-3" frameY="-1" frameWidth="848" frameHeight="755"/>
-	<SubTexture name="Omega Sing Note DOWN0010" x="851" y="1590" width="845" height="754" frameX="-3" frameY="-1" frameWidth="848" frameHeight="755"/>
-	<SubTexture name="Omega Sing Note DOWN0011" x="851" y="1590" width="845" height="754" frameX="-3" frameY="-1" frameWidth="848" frameHeight="755"/>
-	<SubTexture name="Omega Sing Note DOWN0012" x="851" y="1590" width="845" height="754" frameX="-3" frameY="-1" frameWidth="848" frameHeight="755"/>
-	<SubTexture name="Omega Sing Note DOWN0013" x="851" y="1590" width="845" height="754" frameX="-3" frameY="-1" frameWidth="848" frameHeight="755"/>
-	<SubTexture name="Omega Sing Note DOWN0014" x="851" y="1590" width="845" height="754" frameX="-3" frameY="-1" frameWidth="848" frameHeight="755"/>
-	<SubTexture name="Omega Sing Note DOWN0015" x="851" y="1590" width="845" height="754" frameX="-3" frameY="-1" frameWidth="848" frameHeight="755"/>
-	<SubTexture name="Omega Sing Note DOWN MISS0000" x="1696" y="1590" width="914" height="730" pivotX="291.1" pivotY="16.45" frameX="-10" frameY="0" frameWidth="924" frameHeight="730"/>
-	<SubTexture name="Omega Sing Note DOWN MISS0001" x="1696" y="1590" width="914" height="730" frameX="-10" frameY="0" frameWidth="924" frameHeight="730"/>
-	<SubTexture name="Omega Sing Note DOWN MISS0002" x="2610" y="1590" width="878" height="727" frameX="0" frameY="-3" frameWidth="924" frameHeight="730"/>
-	<SubTexture name="Omega Sing Note DOWN MISS0003" x="2610" y="1590" width="878" height="727" frameX="0" frameY="-3" frameWidth="924" frameHeight="730"/>
-	<SubTexture name="Omega Sing Note DOWN MISS0004" x="2610" y="1590" width="878" height="727" frameX="0" frameY="-3" frameWidth="924" frameHeight="730"/>
-	<SubTexture name="Omega Sing Note DOWN MISS0005" x="2610" y="1590" width="878" height="727" frameX="0" frameY="-3" frameWidth="924" frameHeight="730"/>
-	<SubTexture name="Omega Sing Note DOWN MISS0006" x="2610" y="1590" width="878" height="727" frameX="0" frameY="-3" frameWidth="924" frameHeight="730"/>
-	<SubTexture name="Omega Sing Note DOWN MISS0007" x="2610" y="1590" width="878" height="727" frameX="0" frameY="-3" frameWidth="924" frameHeight="730"/>
-	<SubTexture name="Omega Sing Note DOWN MISS0008" x="2610" y="1590" width="878" height="727" frameX="0" frameY="-3" frameWidth="924" frameHeight="730"/>
-	<SubTexture name="Omega Sing Note DOWN MISS0009" x="2610" y="1590" width="878" height="727" frameX="0" frameY="-3" frameWidth="924" frameHeight="730"/>
-	<SubTexture name="Omega Sing Note DOWN MISS0010" x="2610" y="1590" width="878" height="727" frameX="0" frameY="-3" frameWidth="924" frameHeight="730"/>
-	<SubTexture name="Omega Sing Note DOWN MISS0011" x="2610" y="1590" width="878" height="727" frameX="0" frameY="-3" frameWidth="924" frameHeight="730"/>
-	<SubTexture name="Omega Sing Note DOWN MISS0012" x="2610" y="1590" width="878" height="727" frameX="0" frameY="-3" frameWidth="924" frameHeight="730"/>
-	<SubTexture name="Omega Sing Note DOWN MISS0013" x="2610" y="1590" width="878" height="727" frameX="0" frameY="-3" frameWidth="924" frameHeight="730"/>
-	<SubTexture name="Omega Sing Note DOWN MISS0014" x="2610" y="1590" width="878" height="727" frameX="0" frameY="-3" frameWidth="924" frameHeight="730"/>
-	<SubTexture name="Omega Sing Note DOWN MISS0015" x="2610" y="1590" width="878" height="727" frameX="0" frameY="-3" frameWidth="924" frameHeight="730"/>
-	<SubTexture name="Omega Sing Note LEFT0000" x="5" y="2345" width="762" height="675" pivotX="231.9" pivotY="-37.1" frameX="0" frameY="-3" frameWidth="768" frameHeight="678"/>
-	<SubTexture name="Omega Sing Note LEFT0001" x="5" y="2345" width="762" height="675" frameX="0" frameY="-3" frameWidth="768" frameHeight="678"/>
-	<SubTexture name="Omega Sing Note LEFT0002" x="767" y="2345" width="758" height="678" frameX="-10" frameY="0" frameWidth="768" frameHeight="678"/>
-	<SubTexture name="Omega Sing Note LEFT0003" x="767" y="2345" width="758" height="678" frameX="-10" frameY="0" frameWidth="768" frameHeight="678"/>
-	<SubTexture name="Omega Sing Note LEFT0004" x="767" y="2345" width="758" height="678" frameX="-10" frameY="0" frameWidth="768" frameHeight="678"/>
-	<SubTexture name="Omega Sing Note LEFT0005" x="767" y="2345" width="758" height="678" frameX="-10" frameY="0" frameWidth="768" frameHeight="678"/>
-	<SubTexture name="Omega Sing Note LEFT0006" x="767" y="2345" width="758" height="678" frameX="-10" frameY="0" frameWidth="768" frameHeight="678"/>
-	<SubTexture name="Omega Sing Note LEFT0007" x="767" y="2345" width="758" height="678" frameX="-10" frameY="0" frameWidth="768" frameHeight="678"/>
-	<SubTexture name="Omega Sing Note LEFT0008" x="767" y="2345" width="758" height="678" frameX="-10" frameY="0" frameWidth="768" frameHeight="678"/>
-	<SubTexture name="Omega Sing Note LEFT0009" x="767" y="2345" width="758" height="678" frameX="-10" frameY="0" frameWidth="768" frameHeight="678"/>
-	<SubTexture name="Omega Sing Note LEFT0010" x="767" y="2345" width="758" height="678" frameX="-10" frameY="0" frameWidth="768" frameHeight="678"/>
-	<SubTexture name="Omega Sing Note LEFT0011" x="767" y="2345" width="758" height="678" frameX="-10" frameY="0" frameWidth="768" frameHeight="678"/>
-	<SubTexture name="Omega Sing Note LEFT0012" x="767" y="2345" width="758" height="678" frameX="-10" frameY="0" frameWidth="768" frameHeight="678"/>
-	<SubTexture name="Omega Sing Note LEFT0013" x="767" y="2345" width="758" height="678" frameX="-10" frameY="0" frameWidth="768" frameHeight="678"/>
-	<SubTexture name="Omega Sing Note LEFT0014" x="767" y="2345" width="758" height="678" frameX="-10" frameY="0" frameWidth="768" frameHeight="678"/>
-	<SubTexture name="Omega Sing Note LEFT0015" x="767" y="2345" width="758" height="678" frameX="-10" frameY="0" frameWidth="768" frameHeight="678"/>
-	<SubTexture name="Omega Sing Note LEFT Miss0000" x="1525" y="2345" width="657" height="740" pivotX="220.6" pivotY="-8.25" frameX="0" frameY="0" frameWidth="669" frameHeight="740"/>
-	<SubTexture name="Omega Sing Note LEFT Miss0001" x="1525" y="2345" width="657" height="740" frameX="0" frameY="0" frameWidth="669" frameHeight="740"/>
-	<SubTexture name="Omega Sing Note LEFT Miss0002" x="2182" y="2345" width="650" height="737" frameX="-19" frameY="0" frameWidth="669" frameHeight="740"/>
-	<SubTexture name="Omega Sing Note LEFT Miss0003" x="2182" y="2345" width="650" height="737" frameX="-19" frameY="0" frameWidth="669" frameHeight="740"/>
-	<SubTexture name="Omega Sing Note LEFT Miss0004" x="2182" y="2345" width="650" height="737" frameX="-19" frameY="0" frameWidth="669" frameHeight="740"/>
-	<SubTexture name="Omega Sing Note LEFT Miss0005" x="2182" y="2345" width="650" height="737" frameX="-19" frameY="0" frameWidth="669" frameHeight="740"/>
-	<SubTexture name="Omega Sing Note LEFT Miss0006" x="2182" y="2345" width="650" height="737" frameX="-19" frameY="0" frameWidth="669" frameHeight="740"/>
-	<SubTexture name="Omega Sing Note LEFT Miss0007" x="2182" y="2345" width="650" height="737" frameX="-19" frameY="0" frameWidth="669" frameHeight="740"/>
-	<SubTexture name="Omega Sing Note LEFT Miss0008" x="2182" y="2345" width="650" height="737" frameX="-19" frameY="0" frameWidth="669" frameHeight="740"/>
-	<SubTexture name="Omega Sing Note LEFT Miss0009" x="2182" y="2345" width="650" height="737" frameX="-19" frameY="0" frameWidth="669" frameHeight="740"/>
-	<SubTexture name="Omega Sing Note LEFT Miss0010" x="2182" y="2345" width="650" height="737" frameX="-19" frameY="0" frameWidth="669" frameHeight="740"/>
-	<SubTexture name="Omega Sing Note LEFT Miss0011" x="2182" y="2345" width="650" height="737" frameX="-19" frameY="0" frameWidth="669" frameHeight="740"/>
-	<SubTexture name="Omega Sing Note LEFT Miss0012" x="2182" y="2345" width="650" height="737" frameX="-19" frameY="0" frameWidth="669" frameHeight="740"/>
-	<SubTexture name="Omega Sing Note LEFT Miss0013" x="2182" y="2345" width="650" height="737" frameX="-19" frameY="0" frameWidth="669" frameHeight="740"/>
-	<SubTexture name="Omega Sing Note LEFT Miss0014" x="2182" y="2345" width="650" height="737" frameX="-19" frameY="0" frameWidth="669" frameHeight="740"/>
-	<SubTexture name="Omega Sing Note LEFT Miss0015" x="2182" y="2345" width="650" height="737" frameX="-19" frameY="0" frameWidth="669" frameHeight="740"/>
-	<SubTexture name="Omega Sing Note RIGHT0000" x="2832" y="2345" width="809" height="792" pivotX="92.05" pivotY="111.65" frameX="-4" frameY="-1" frameWidth="821" frameHeight="793"/>
-	<SubTexture name="Omega Sing Note RIGHT0001" x="2832" y="2345" width="809" height="792" frameX="-4" frameY="-1" frameWidth="821" frameHeight="793"/>
-	<SubTexture name="Omega Sing Note RIGHT0002" x="5" y="3137" width="821" height="793"/>
-	<SubTexture name="Omega Sing Note RIGHT0003" x="5" y="3137" width="821" height="793"/>
-	<SubTexture name="Omega Sing Note RIGHT0004" x="5" y="3137" width="821" height="793"/>
-	<SubTexture name="Omega Sing Note RIGHT0005" x="5" y="3137" width="821" height="793"/>
-	<SubTexture name="Omega Sing Note RIGHT0006" x="5" y="3137" width="821" height="793"/>
-	<SubTexture name="Omega Sing Note RIGHT0007" x="5" y="3137" width="821" height="793"/>
-	<SubTexture name="Omega Sing Note RIGHT0008" x="5" y="3137" width="821" height="793"/>
-	<SubTexture name="Omega Sing Note RIGHT0009" x="5" y="3137" width="821" height="793"/>
-	<SubTexture name="Omega Sing Note RIGHT0010" x="5" y="3137" width="821" height="793"/>
-	<SubTexture name="Omega Sing Note RIGHT0011" x="5" y="3137" width="821" height="793"/>
-	<SubTexture name="Omega Sing Note RIGHT0012" x="5" y="3137" width="821" height="793"/>
-	<SubTexture name="Omega Sing Note RIGHT0013" x="5" y="3137" width="821" height="793"/>
-	<SubTexture name="Omega Sing Note RIGHT0014" x="5" y="3137" width="821" height="793"/>
-	<SubTexture name="Omega Sing Note RIGHT0015" x="5" y="3137" width="821" height="793"/>
-	<SubTexture name="Omega Sing Note RIGHT0016" x="5" y="3137" width="821" height="793"/>
-	<SubTexture name="Omega Sing Note RIGHT0017" x="5" y="3137" width="821" height="793"/>
-	<SubTexture name="Omega Sing Note RIGHT0018" x="5" y="3137" width="821" height="793"/>
-	<SubTexture name="Omega Sing Note RIGHT miss0000" x="826" y="3137" width="747" height="787" pivotX="77.1" pivotY="103.95" frameX="-8" frameY="0" frameWidth="755" frameHeight="787"/>
-	<SubTexture name="Omega Sing Note RIGHT miss0001" x="826" y="3137" width="747" height="787" frameX="-8" frameY="0" frameWidth="755" frameHeight="787"/>
-	<SubTexture name="Omega Sing Note RIGHT miss0002" x="1573" y="3137" width="743" height="787" frameX="0" frameY="0" frameWidth="755" frameHeight="787"/>
-	<SubTexture name="Omega Sing Note RIGHT miss0003" x="1573" y="3137" width="743" height="787" frameX="0" frameY="0" frameWidth="755" frameHeight="787"/>
-	<SubTexture name="Omega Sing Note RIGHT miss0004" x="1573" y="3137" width="743" height="787" frameX="0" frameY="0" frameWidth="755" frameHeight="787"/>
-	<SubTexture name="Omega Sing Note RIGHT miss0005" x="1573" y="3137" width="743" height="787" frameX="0" frameY="0" frameWidth="755" frameHeight="787"/>
-	<SubTexture name="Omega Sing Note RIGHT miss0006" x="1573" y="3137" width="743" height="787" frameX="0" frameY="0" frameWidth="755" frameHeight="787"/>
-	<SubTexture name="Omega Sing Note RIGHT miss0007" x="1573" y="3137" width="743" height="787" frameX="0" frameY="0" frameWidth="755" frameHeight="787"/>
-	<SubTexture name="Omega Sing Note RIGHT miss0008" x="1573" y="3137" width="743" height="787" frameX="0" frameY="0" frameWidth="755" frameHeight="787"/>
-	<SubTexture name="Omega Sing Note RIGHT miss0009" x="1573" y="3137" width="743" height="787" frameX="0" frameY="0" frameWidth="755" frameHeight="787"/>
-	<SubTexture name="Omega Sing Note RIGHT miss0010" x="1573" y="3137" width="743" height="787" frameX="0" frameY="0" frameWidth="755" frameHeight="787"/>
-	<SubTexture name="Omega Sing Note RIGHT miss0011" x="1573" y="3137" width="743" height="787" frameX="0" frameY="0" frameWidth="755" frameHeight="787"/>
-	<SubTexture name="Omega Sing Note RIGHT miss0012" x="1573" y="3137" width="743" height="787" frameX="0" frameY="0" frameWidth="755" frameHeight="787"/>
-	<SubTexture name="Omega Sing Note RIGHT miss0013" x="1573" y="3137" width="743" height="787" frameX="0" frameY="0" frameWidth="755" frameHeight="787"/>
-	<SubTexture name="Omega Sing Note RIGHT miss0014" x="1573" y="3137" width="743" height="787" frameX="0" frameY="0" frameWidth="755" frameHeight="787"/>
-	<SubTexture name="Omega Sing Note RIGHT miss0015" x="1573" y="3137" width="743" height="787" frameX="0" frameY="0" frameWidth="755" frameHeight="787"/>
-	<SubTexture name="Omega Sing Note RIGHT miss0016" x="1573" y="3137" width="743" height="787" frameX="0" frameY="0" frameWidth="755" frameHeight="787"/>
-	<SubTexture name="Omega Sing Note RIGHT miss0017" x="1573" y="3137" width="743" height="787" frameX="0" frameY="0" frameWidth="755" frameHeight="787"/>
-	<SubTexture name="Omega Sing Note RIGHT miss0018" x="1573" y="3137" width="743" height="787" frameX="0" frameY="0" frameWidth="755" frameHeight="787"/>
-	<SubTexture name="Omega Sing Note UP0000" x="2316" y="3137" width="670" height="770" pivotX="518.4" pivotY="556.55" frameX="-3" frameY="0" frameWidth="673" frameHeight="770"/>
-	<SubTexture name="Omega Sing Note UP0001" x="2316" y="3137" width="670" height="770" frameX="-3" frameY="0" frameWidth="673" frameHeight="770"/>
-	<SubTexture name="Omega Sing Note UP0002" x="2986" y="3137" width="668" height="765" frameX="0" frameY="-5" frameWidth="673" frameHeight="770"/>
-	<SubTexture name="Omega Sing Note UP0003" x="2986" y="3137" width="668" height="765" frameX="0" frameY="-5" frameWidth="673" frameHeight="770"/>
-	<SubTexture name="Omega Sing Note UP0004" x="2986" y="3137" width="668" height="765" frameX="0" frameY="-5" frameWidth="673" frameHeight="770"/>
-	<SubTexture name="Omega Sing Note UP0005" x="2986" y="3137" width="668" height="765" frameX="0" frameY="-5" frameWidth="673" frameHeight="770"/>
-	<SubTexture name="Omega Sing Note UP0006" x="2986" y="3137" width="668" height="765" frameX="0" frameY="-5" frameWidth="673" frameHeight="770"/>
-	<SubTexture name="Omega Sing Note UP0007" x="2986" y="3137" width="668" height="765" frameX="0" frameY="-5" frameWidth="673" frameHeight="770"/>
-	<SubTexture name="Omega Sing Note UP0008" x="2986" y="3137" width="668" height="765" frameX="0" frameY="-5" frameWidth="673" frameHeight="770"/>
-	<SubTexture name="Omega Sing Note UP0009" x="2986" y="3137" width="668" height="765" frameX="0" frameY="-5" frameWidth="673" frameHeight="770"/>
-	<SubTexture name="Omega Sing Note UP0010" x="2986" y="3137" width="668" height="765" frameX="0" frameY="-5" frameWidth="673" frameHeight="770"/>
-	<SubTexture name="Omega Sing Note UP0011" x="2986" y="3137" width="668" height="765" frameX="0" frameY="-5" frameWidth="673" frameHeight="770"/>
-	<SubTexture name="Omega Sing Note UP0012" x="2986" y="3137" width="668" height="765" frameX="0" frameY="-5" frameWidth="673" frameHeight="770"/>
-	<SubTexture name="Omega Sing Note UP0013" x="2986" y="3137" width="668" height="765" frameX="0" frameY="-5" frameWidth="673" frameHeight="770"/>
-	<SubTexture name="Omega Sing Note UP0014" x="2986" y="3137" width="668" height="765" frameX="0" frameY="-5" frameWidth="673" frameHeight="770"/>
-	<SubTexture name="Omega Sing Note UP0015" x="2986" y="3137" width="668" height="765" frameX="0" frameY="-5" frameWidth="673" frameHeight="770"/>
-	<SubTexture name="Omega Sing Note UP0016" x="2986" y="3137" width="668" height="765" frameX="0" frameY="-5" frameWidth="673" frameHeight="770"/>
-	<SubTexture name="Omega Sing Note UP0017" x="2986" y="3137" width="668" height="765" frameX="0" frameY="-5" frameWidth="673" frameHeight="770"/>
-	<SubTexture name="Omega Sing Note UP0018" x="2986" y="3137" width="668" height="765" frameX="0" frameY="-5" frameWidth="673" frameHeight="770"/>
-	<SubTexture name="Omega Sing Note UP0019" x="2986" y="3137" width="668" height="765" frameX="0" frameY="-5" frameWidth="673" frameHeight="770"/>
-	<SubTexture name="Omega Sing Note UP0020" x="2986" y="3137" width="668" height="765" frameX="0" frameY="-5" frameWidth="673" frameHeight="770"/>
-	<SubTexture name="Omega Sing Note UP0021" x="2986" y="3137" width="668" height="765" frameX="0" frameY="-5" frameWidth="673" frameHeight="770"/>
-	<SubTexture name="Omega Sing Note UP0022" x="2986" y="3137" width="668" height="765" frameX="0" frameY="-5" frameWidth="673" frameHeight="770"/>
-	<SubTexture name="Omega Sing Note UP0023" x="2986" y="3137" width="668" height="765" frameX="0" frameY="-5" frameWidth="673" frameHeight="770"/>
-	<SubTexture name="Omega Sing Note UP0024" x="2986" y="3137" width="668" height="765" frameX="0" frameY="-5" frameWidth="673" frameHeight="770"/>
-	<SubTexture name="Omega Sing Note UP0025" x="2986" y="3137" width="668" height="765" frameX="0" frameY="-5" frameWidth="673" frameHeight="770"/>
-	<SubTexture name="Omega Sing Note UP0026" x="2986" y="3137" width="668" height="765" frameX="0" frameY="-5" frameWidth="673" frameHeight="770"/>
-	<SubTexture name="Omega Sing Note UP0027" x="2986" y="3137" width="668" height="765" frameX="0" frameY="-5" frameWidth="673" frameHeight="770"/>
-	<SubTexture name="Omega Sing Note UP0028" x="2986" y="3137" width="668" height="765" frameX="0" frameY="-5" frameWidth="673" frameHeight="770"/>
-	<SubTexture name="Omega Sing Note UP0029" x="2986" y="3137" width="668" height="765" frameX="0" frameY="-5" frameWidth="673" frameHeight="770"/>
-	<SubTexture name="Omega Sing Note UP0030" x="2986" y="3137" width="668" height="765" frameX="0" frameY="-5" frameWidth="673" frameHeight="770"/>
-	<SubTexture name="Omega Sing Note UP0031" x="2986" y="3137" width="668" height="765" frameX="0" frameY="-5" frameWidth="673" frameHeight="770"/>
-	<SubTexture name="Omega Sing Note UP0032" x="2986" y="3137" width="668" height="765" frameX="0" frameY="-5" frameWidth="673" frameHeight="770"/>
-	<SubTexture name="Omega Sing Note UP0033" x="2986" y="3137" width="668" height="765" frameX="0" frameY="-5" frameWidth="673" frameHeight="770"/>
-	<SubTexture name="Omega Sing Note UP0034" x="2986" y="3137" width="668" height="765" frameX="0" frameY="-5" frameWidth="673" frameHeight="770"/>
-	<SubTexture name="Omega Sing Note UP0035" x="2986" y="3137" width="668" height="765" frameX="0" frameY="-5" frameWidth="673" frameHeight="770"/>
-	<SubTexture name="Omega Sing Note UP0036" x="2986" y="3137" width="668" height="765" frameX="0" frameY="-5" frameWidth="673" frameHeight="770"/>
-	<SubTexture name="Omega Sing Note UP0037" x="2986" y="3137" width="668" height="765" frameX="0" frameY="-5" frameWidth="673" frameHeight="770"/>
-	<SubTexture name="Omega Sing Note UP0038" x="2986" y="3137" width="668" height="765" frameX="0" frameY="-5" frameWidth="673" frameHeight="770"/>
-	<SubTexture name="Omega Sing Note UP0039" x="2986" y="3137" width="668" height="765" frameX="0" frameY="-5" frameWidth="673" frameHeight="770"/>
-	<SubTexture name="Omega Sing Note UP0040" x="2986" y="3137" width="668" height="765" frameX="0" frameY="-5" frameWidth="673" frameHeight="770"/>
-	<SubTexture name="Omega Sing Note UP0041" x="2986" y="3137" width="668" height="765" frameX="0" frameY="-5" frameWidth="673" frameHeight="770"/>
-	<SubTexture name="Omega Sing Note UP0042" x="2986" y="3137" width="668" height="765" frameX="0" frameY="-5" frameWidth="673" frameHeight="770"/>
-	<SubTexture name="Omega Sing Note UP0043" x="2986" y="3137" width="668" height="765" frameX="0" frameY="-5" frameWidth="673" frameHeight="770"/>
-	<SubTexture name="Omega Sing Note UP0044" x="2986" y="3137" width="668" height="765" frameX="0" frameY="-5" frameWidth="673" frameHeight="770"/>
-	<SubTexture name="Omega Sing Note UP0045" x="2986" y="3137" width="668" height="765" frameX="0" frameY="-5" frameWidth="673" frameHeight="770"/>
-	<SubTexture name="Omega Sing Note UP0046" x="2986" y="3137" width="668" height="765" frameX="0" frameY="-5" frameWidth="673" frameHeight="770"/>
-	<SubTexture name="Omega Sing Note UP0047" x="2986" y="3137" width="668" height="765" frameX="0" frameY="-5" frameWidth="673" frameHeight="770"/>
-	<SubTexture name="Omega Sing Note UP0048" x="2986" y="3137" width="668" height="765" frameX="0" frameY="-5" frameWidth="673" frameHeight="770"/>
-	<SubTexture name="Omega Sing Note UP0049" x="2986" y="3137" width="668" height="765" frameX="0" frameY="-5" frameWidth="673" frameHeight="770"/>
-	<SubTexture name="Omega Sing Note UP0050" x="2986" y="3137" width="668" height="765" frameX="0" frameY="-5" frameWidth="673" frameHeight="770"/>
-	<SubTexture name="Omega Sing Note UP0051" x="2986" y="3137" width="668" height="765" frameX="0" frameY="-5" frameWidth="673" frameHeight="770"/>
-	<SubTexture name="Omega Sing Note UP0052" x="2986" y="3137" width="668" height="765" frameX="0" frameY="-5" frameWidth="673" frameHeight="770"/>
-	<SubTexture name="Omega Sing Note UP0053" x="2986" y="3137" width="668" height="765" frameX="0" frameY="-5" frameWidth="673" frameHeight="770"/>
-	<SubTexture name="Omega Sing Note UP0054" x="2986" y="3137" width="668" height="765" frameX="0" frameY="-5" frameWidth="673" frameHeight="770"/>
-	<SubTexture name="Omega Sing Note UP0055" x="2986" y="3137" width="668" height="765" frameX="0" frameY="-5" frameWidth="673" frameHeight="770"/>
-	<SubTexture name="Omega Sing Note UP0056" x="2986" y="3137" width="668" height="765" frameX="0" frameY="-5" frameWidth="673" frameHeight="770"/>
-	<SubTexture name="Omega Sing Note UP0057" x="2986" y="3137" width="668" height="765" frameX="0" frameY="-5" frameWidth="673" frameHeight="770"/>
-	<SubTexture name="Omega Sing Note UP0058" x="2986" y="3137" width="668" height="765" frameX="0" frameY="-5" frameWidth="673" frameHeight="770"/>
-	<SubTexture name="Omega Sing Note UP0059" x="2986" y="3137" width="668" height="765" frameX="0" frameY="-5" frameWidth="673" frameHeight="770"/>
-	<SubTexture name="Omega Sing Note UP miss0000" x="5" y="3930" width="634" height="749" pivotX="386.5" pivotY="544.4"/>
-	<SubTexture name="Omega Sing Note UP miss0001" x="5" y="3930" width="634" height="749"/>
-	<SubTexture name="Omega Sing Note UP miss0002" x="639" y="3930" width="626" height="749" frameX="0" frameY="0" frameWidth="634" frameHeight="749"/>
-	<SubTexture name="Omega Sing Note UP miss0003" x="639" y="3930" width="626" height="749" frameX="0" frameY="0" frameWidth="634" frameHeight="749"/>
-	<SubTexture name="Omega Sing Note UP miss0004" x="639" y="3930" width="626" height="749" frameX="0" frameY="0" frameWidth="634" frameHeight="749"/>
-	<SubTexture name="Omega Sing Note UP miss0005" x="639" y="3930" width="626" height="749" frameX="0" frameY="0" frameWidth="634" frameHeight="749"/>
-	<SubTexture name="Omega Sing Note UP miss0006" x="639" y="3930" width="626" height="749" frameX="0" frameY="0" frameWidth="634" frameHeight="749"/>
-	<SubTexture name="Omega Sing Note UP miss0007" x="639" y="3930" width="626" height="749" frameX="0" frameY="0" frameWidth="634" frameHeight="749"/>
-	<SubTexture name="Omega Sing Note UP miss0008" x="639" y="3930" width="626" height="749" frameX="0" frameY="0" frameWidth="634" frameHeight="749"/>
-	<SubTexture name="Omega Sing Note UP miss0009" x="639" y="3930" width="626" height="749" frameX="0" frameY="0" frameWidth="634" frameHeight="749"/>
-	<SubTexture name="Omega Sing Note UP miss0010" x="639" y="3930" width="626" height="749" frameX="0" frameY="0" frameWidth="634" frameHeight="749"/>
-	<SubTexture name="Omega Sing Note UP miss0011" x="639" y="3930" width="626" height="749" frameX="0" frameY="0" frameWidth="634" frameHeight="749"/>
-	<SubTexture name="Omega Sing Note UP miss0012" x="639" y="3930" width="626" height="749" frameX="0" frameY="0" frameWidth="634" frameHeight="749"/>
-	<SubTexture name="Omega Sing Note UP miss0013" x="639" y="3930" width="626" height="749" frameX="0" frameY="0" frameWidth="634" frameHeight="749"/>
-	<SubTexture name="Omega Sing Note UP miss0014" x="639" y="3930" width="626" height="749" frameX="0" frameY="0" frameWidth="634" frameHeight="749"/>
-	<SubTexture name="Omega Sing Note UP miss0015" x="639" y="3930" width="626" height="749" frameX="0" frameY="0" frameWidth="634" frameHeight="749"/>
-	<SubTexture name="Omega Sing Note UP miss0016" x="639" y="3930" width="626" height="749" frameX="0" frameY="0" frameWidth="634" frameHeight="749"/>
-	<SubTexture name="Omega Sing Note UP miss0017" x="639" y="3930" width="626" height="749" frameX="0" frameY="0" frameWidth="634" frameHeight="749"/>
-	<SubTexture name="Omega Sing Note UP miss0018" x="639" y="3930" width="626" height="749" frameX="0" frameY="0" frameWidth="634" frameHeight="749"/>
-	<SubTexture name="Omega Sing Note UP miss0019" x="639" y="3930" width="626" height="749" frameX="0" frameY="0" frameWidth="634" frameHeight="749"/>
-	<SubTexture name="Omega Sing Note UP miss0020" x="639" y="3930" width="626" height="749" frameX="0" frameY="0" frameWidth="634" frameHeight="749"/>
-	<SubTexture name="Omega Sing Note UP miss0021" x="639" y="3930" width="626" height="749" frameX="0" frameY="0" frameWidth="634" frameHeight="749"/>
-	<SubTexture name="Omega Sing Note UP miss0022" x="639" y="3930" width="626" height="749" frameX="0" frameY="0" frameWidth="634" frameHeight="749"/>
-	<SubTexture name="Omega Sing Note UP miss0023" x="639" y="3930" width="626" height="749" frameX="0" frameY="0" frameWidth="634" frameHeight="749"/>
-	<SubTexture name="Omega Sing Note UP miss0024" x="639" y="3930" width="626" height="749" frameX="0" frameY="0" frameWidth="634" frameHeight="749"/>
-	<SubTexture name="Omega Sing Note UP miss0025" x="639" y="3930" width="626" height="749" frameX="0" frameY="0" frameWidth="634" frameHeight="749"/>
-	<SubTexture name="Omega Sing Note UP miss0026" x="639" y="3930" width="626" height="749" frameX="0" frameY="0" frameWidth="634" frameHeight="749"/>
-	<SubTexture name="Omega Sing Note UP miss0027" x="639" y="3930" width="626" height="749" frameX="0" frameY="0" frameWidth="634" frameHeight="749"/>
-	<SubTexture name="Omega Sing Note UP miss0028" x="639" y="3930" width="626" height="749" frameX="0" frameY="0" frameWidth="634" frameHeight="749"/>
-	<SubTexture name="Omega Sing Note UP miss0029" x="639" y="3930" width="626" height="749" frameX="0" frameY="0" frameWidth="634" frameHeight="749"/>
-	<SubTexture name="Omega Sing Note UP miss0030" x="639" y="3930" width="626" height="749" frameX="0" frameY="0" frameWidth="634" frameHeight="749"/>
-	<SubTexture name="Omega Sing Note UP miss0031" x="639" y="3930" width="626" height="749" frameX="0" frameY="0" frameWidth="634" frameHeight="749"/>
-	<SubTexture name="Omega Sing Note UP miss0032" x="639" y="3930" width="626" height="749" frameX="0" frameY="0" frameWidth="634" frameHeight="749"/>
-	<SubTexture name="Omega Sing Note UP miss0033" x="639" y="3930" width="626" height="749" frameX="0" frameY="0" frameWidth="634" frameHeight="749"/>
-	<SubTexture name="Omega Sing Note UP miss0034" x="639" y="3930" width="626" height="749" frameX="0" frameY="0" frameWidth="634" frameHeight="749"/>
-	<SubTexture name="Omega Sing Note UP miss0035" x="639" y="3930" width="626" height="749" frameX="0" frameY="0" frameWidth="634" frameHeight="749"/>
-	<SubTexture name="Omega Sing Note UP miss0036" x="639" y="3930" width="626" height="749" frameX="0" frameY="0" frameWidth="634" frameHeight="749"/>
-	<SubTexture name="Omega Sing Note UP miss0037" x="639" y="3930" width="626" height="749" frameX="0" frameY="0" frameWidth="634" frameHeight="749"/>
-	<SubTexture name="Omega Sing Note UP miss0038" x="639" y="3930" width="626" height="749" frameX="0" frameY="0" frameWidth="634" frameHeight="749"/>
-	<SubTexture name="Omega Sing Note UP miss0039" x="639" y="3930" width="626" height="749" frameX="0" frameY="0" frameWidth="634" frameHeight="749"/>
-	<SubTexture name="Omega Sing Note UP miss0040" x="639" y="3930" width="626" height="749" frameX="0" frameY="0" frameWidth="634" frameHeight="749"/>
-	<SubTexture name="Omega Sing Note UP miss0041" x="639" y="3930" width="626" height="749" frameX="0" frameY="0" frameWidth="634" frameHeight="749"/>
-	<SubTexture name="Omega Sing Note UP miss0042" x="639" y="3930" width="626" height="749" frameX="0" frameY="0" frameWidth="634" frameHeight="749"/>
-	<SubTexture name="Omega Sing Note UP miss0043" x="639" y="3930" width="626" height="749" frameX="0" frameY="0" frameWidth="634" frameHeight="749"/>
-	<SubTexture name="Omega Sing Note UP miss0044" x="639" y="3930" width="626" height="749" frameX="0" frameY="0" frameWidth="634" frameHeight="749"/>
-	<SubTexture name="Omega Sing Note UP miss0045" x="639" y="3930" width="626" height="749" frameX="0" frameY="0" frameWidth="634" frameHeight="749"/>
-	<SubTexture name="Omega Sing Note UP miss0046" x="639" y="3930" width="626" height="749" frameX="0" frameY="0" frameWidth="634" frameHeight="749"/>
-	<SubTexture name="Omega Sing Note UP miss0047" x="639" y="3930" width="626" height="749" frameX="0" frameY="0" frameWidth="634" frameHeight="749"/>
-	<SubTexture name="Omega Sing Note UP miss0048" x="639" y="3930" width="626" height="749" frameX="0" frameY="0" frameWidth="634" frameHeight="749"/>
-	<SubTexture name="Omega Sing Note UP miss0049" x="639" y="3930" width="626" height="749" frameX="0" frameY="0" frameWidth="634" frameHeight="749"/>
-	<SubTexture name="Omega Sing Note UP miss0050" x="639" y="3930" width="626" height="749" frameX="0" frameY="0" frameWidth="634" frameHeight="749"/>
-	<SubTexture name="Omega Sing Note UP miss0051" x="639" y="3930" width="626" height="749" frameX="0" frameY="0" frameWidth="634" frameHeight="749"/>
-	<SubTexture name="Omega Sing Note UP miss0052" x="639" y="3930" width="626" height="749" frameX="0" frameY="0" frameWidth="634" frameHeight="749"/>
-	<SubTexture name="Omega Sing Note UP miss0053" x="639" y="3930" width="626" height="749" frameX="0" frameY="0" frameWidth="634" frameHeight="749"/>
-	<SubTexture name="Omega Sing Note UP miss0054" x="639" y="3930" width="626" height="749" frameX="0" frameY="0" frameWidth="634" frameHeight="749"/>
-	<SubTexture name="Omega Sing Note UP miss0055" x="639" y="3930" width="626" height="749" frameX="0" frameY="0" frameWidth="634" frameHeight="749"/>
-	<SubTexture name="Omega Sing Note UP miss0056" x="639" y="3930" width="626" height="749" frameX="0" frameY="0" frameWidth="634" frameHeight="749"/>
-	<SubTexture name="Omega Sing Note UP miss0057" x="639" y="3930" width="626" height="749" frameX="0" frameY="0" frameWidth="634" frameHeight="749"/>
-	<SubTexture name="Omega Sing Note UP miss0058" x="639" y="3930" width="626" height="749" frameX="0" frameY="0" frameWidth="634" frameHeight="749"/>
-	<SubTexture name="Omega Sing Note UP miss0059" x="639" y="3930" width="626" height="749" frameX="0" frameY="0" frameWidth="634" frameHeight="749"/>
-	<SubTexture name="Omega idle dance0000" x="1265" y="3930" width="515" height="788" pivotX="411.85" pivotY="559.1" frameX="-6" frameY="0" frameWidth="521" frameHeight="789"/>
-	<SubTexture name="Omega idle dance0001" x="1265" y="3930" width="515" height="788" frameX="-6" frameY="0" frameWidth="521" frameHeight="789"/>
-	<SubTexture name="Omega idle dance0002" x="1780" y="3930" width="519" height="786" frameX="0" frameY="-2" frameWidth="521" frameHeight="789"/>
-	<SubTexture name="Omega idle dance0003" x="1780" y="3930" width="519" height="786" frameX="0" frameY="-2" frameWidth="521" frameHeight="789"/>
-	<SubTexture name="Omega idle dance0004" x="2299" y="3930" width="519" height="786" frameX="0" frameY="-3" frameWidth="521" frameHeight="789"/>
-	<SubTexture name="Omega idle dance0005" x="2299" y="3930" width="519" height="786" frameX="0" frameY="-3" frameWidth="521" frameHeight="789"/>
-	<SubTexture name="Omega idle dance0006" x="2818" y="3930" width="519" height="785" frameX="0" frameY="-3" frameWidth="521" frameHeight="789"/>
-	<SubTexture name="Omega idle dance0007" x="2818" y="3930" width="519" height="785" frameX="0" frameY="-3" frameWidth="521" frameHeight="789"/>
-	<SubTexture name="Omega idle dance0008" x="3337" y="3930" width="516" height="788" frameX="-3" frameY="-1" frameWidth="521" frameHeight="789"/>
-	<SubTexture name="Omega idle dance0009" x="3337" y="3930" width="516" height="788" frameX="-3" frameY="-1" frameWidth="521" frameHeight="789"/>
-	<SubTexture name="Omega idle dance0010" x="3337" y="3930" width="516" height="788" frameX="-3" frameY="-1" frameWidth="521" frameHeight="789"/>
-	<SubTexture name="Omega idle dance0011" x="3337" y="3930" width="516" height="788" frameX="-3" frameY="-1" frameWidth="521" frameHeight="789"/>
-	<SubTexture name="Omega idle dance0012" x="3337" y="3930" width="516" height="788" frameX="-3" frameY="-1" frameWidth="521" frameHeight="789"/>
+	<SubTexture name="Omega Alt Note0000" x="20" y="20" width="784" height="784" pivotX="511.45" pivotY="357.35" frameX="-46" frameY="-17" frameWidth="965" frameHeight="801"/>
+	<SubTexture name="Omega Alt Note0001" x="20" y="20" width="784" height="784" frameX="-46" frameY="-17" frameWidth="965" frameHeight="801"/>
+	<SubTexture name="Omega Alt Note0002" x="804" y="20" width="900" height="767" frameX="-50" frameY="-34" frameWidth="965" frameHeight="801"/>
+	<SubTexture name="Omega Alt Note0003" x="804" y="20" width="900" height="767" frameX="-50" frameY="-34" frameWidth="965" frameHeight="801"/>
+	<SubTexture name="Omega Alt Note0004" x="804" y="20" width="900" height="767" frameX="-50" frameY="-34" frameWidth="965" frameHeight="801"/>
+	<SubTexture name="Omega Alt Note0005" x="1704" y="20" width="915" height="767" frameX="-50" frameY="-34" frameWidth="965" frameHeight="801"/>
+	<SubTexture name="Omega Alt Note0006" x="1704" y="20" width="915" height="767" frameX="-50" frameY="-34" frameWidth="965" frameHeight="801"/>
+	<SubTexture name="Omega Alt Note0007" x="1704" y="20" width="915" height="767" frameX="-50" frameY="-34" frameWidth="965" frameHeight="801"/>
+	<SubTexture name="Omega Alt Note0008" x="1704" y="20" width="915" height="767" frameX="-50" frameY="-34" frameWidth="965" frameHeight="801"/>
+	<SubTexture name="Omega Alt Note0009" x="2619" y="20" width="904" height="777" frameX="-50" frameY="-24" frameWidth="965" frameHeight="801"/>
+	<SubTexture name="Omega Alt Note0010" x="2619" y="20" width="904" height="777" frameX="-50" frameY="-24" frameWidth="965" frameHeight="801"/>
+	<SubTexture name="Omega Alt Note0011" x="2619" y="20" width="904" height="777" frameX="-50" frameY="-24" frameWidth="965" frameHeight="801"/>
+	<SubTexture name="Omega Alt Note0012" x="20" y="804" width="793" height="800" frameX="-52" frameY="-1" frameWidth="965" frameHeight="801"/>
+	<SubTexture name="Omega Alt Note0013" x="20" y="804" width="793" height="800" frameX="-52" frameY="-1" frameWidth="965" frameHeight="801"/>
+	<SubTexture name="Omega Alt Note0014" x="20" y="804" width="793" height="800" frameX="-52" frameY="-1" frameWidth="965" frameHeight="801"/>
+	<SubTexture name="Omega Alt Note0015" x="813" y="804" width="898" height="801" frameX="-42" frameY="0" frameWidth="965" frameHeight="801"/>
+	<SubTexture name="Omega Alt Note0016" x="813" y="804" width="898" height="801" frameX="-42" frameY="0" frameWidth="965" frameHeight="801"/>
+	<SubTexture name="Omega Alt Note0017" x="813" y="804" width="898" height="801" frameX="-42" frameY="0" frameWidth="965" frameHeight="801"/>
+	<SubTexture name="Omega Alt Note0018" x="1711" y="804" width="870" height="731" frameX="-21" frameY="-70" frameWidth="965" frameHeight="801"/>
+	<SubTexture name="Omega Alt Note0019" x="1711" y="804" width="870" height="731" frameX="-21" frameY="-70" frameWidth="965" frameHeight="801"/>
+	<SubTexture name="Omega Alt Note0020" x="2581" y="804" width="569" height="727" frameX="0" frameY="-74" frameWidth="965" frameHeight="801"/>
+	<SubTexture name="Omega Alt Note0021" x="2581" y="804" width="569" height="727" frameX="0" frameY="-74" frameWidth="965" frameHeight="801"/>
+	<SubTexture name="Omega Alt Note0022" x="2581" y="804" width="569" height="727" frameX="0" frameY="-74" frameWidth="965" frameHeight="801"/>
+	<SubTexture name="Omega Alt Note0023" x="3150" y="804" width="553" height="728" frameX="-16" frameY="-73" frameWidth="965" frameHeight="801"/>
+	<SubTexture name="Omega Alt Note0024" x="3150" y="804" width="553" height="728" frameX="-16" frameY="-73" frameWidth="965" frameHeight="801"/>
+	<SubTexture name="Omega Alt Note0025" x="3150" y="804" width="553" height="728" frameX="-16" frameY="-73" frameWidth="965" frameHeight="801"/>
+	<SubTexture name="Omega Sing Note DOWN0000" x="20" y="1605" width="846" height="755" pivotX="175.6" pivotY="35.65" frameX="0" frameY="0" frameWidth="848" frameHeight="755"/>
+	<SubTexture name="Omega Sing Note DOWN0001" x="20" y="1605" width="846" height="755" frameX="0" frameY="0" frameWidth="848" frameHeight="755"/>
+	<SubTexture name="Omega Sing Note DOWN0002" x="866" y="1605" width="845" height="754" frameX="-3" frameY="-1" frameWidth="848" frameHeight="755"/>
+	<SubTexture name="Omega Sing Note DOWN0003" x="866" y="1605" width="845" height="754" frameX="-3" frameY="-1" frameWidth="848" frameHeight="755"/>
+	<SubTexture name="Omega Sing Note DOWN0004" x="866" y="1605" width="845" height="754" frameX="-3" frameY="-1" frameWidth="848" frameHeight="755"/>
+	<SubTexture name="Omega Sing Note DOWN0005" x="866" y="1605" width="845" height="754" frameX="-3" frameY="-1" frameWidth="848" frameHeight="755"/>
+	<SubTexture name="Omega Sing Note DOWN0006" x="866" y="1605" width="845" height="754" frameX="-3" frameY="-1" frameWidth="848" frameHeight="755"/>
+	<SubTexture name="Omega Sing Note DOWN0007" x="866" y="1605" width="845" height="754" frameX="-3" frameY="-1" frameWidth="848" frameHeight="755"/>
+	<SubTexture name="Omega Sing Note DOWN0008" x="866" y="1605" width="845" height="754" frameX="-3" frameY="-1" frameWidth="848" frameHeight="755"/>
+	<SubTexture name="Omega Sing Note DOWN0009" x="866" y="1605" width="845" height="754" frameX="-3" frameY="-1" frameWidth="848" frameHeight="755"/>
+	<SubTexture name="Omega Sing Note DOWN0010" x="866" y="1605" width="845" height="754" frameX="-3" frameY="-1" frameWidth="848" frameHeight="755"/>
+	<SubTexture name="Omega Sing Note DOWN0011" x="866" y="1605" width="845" height="754" frameX="-3" frameY="-1" frameWidth="848" frameHeight="755"/>
+	<SubTexture name="Omega Sing Note DOWN0012" x="866" y="1605" width="845" height="754" frameX="-3" frameY="-1" frameWidth="848" frameHeight="755"/>
+	<SubTexture name="Omega Sing Note DOWN0013" x="866" y="1605" width="845" height="754" frameX="-3" frameY="-1" frameWidth="848" frameHeight="755"/>
+	<SubTexture name="Omega Sing Note DOWN0014" x="866" y="1605" width="845" height="754" frameX="-3" frameY="-1" frameWidth="848" frameHeight="755"/>
+	<SubTexture name="Omega Sing Note DOWN0015" x="866" y="1605" width="845" height="754" frameX="-3" frameY="-1" frameWidth="848" frameHeight="755"/>
+	<SubTexture name="Omega Sing Note DOWN MISS0000" x="1711" y="1605" width="914" height="730" pivotX="291.1" pivotY="16.45" frameX="-10" frameY="0" frameWidth="924" frameHeight="730"/>
+	<SubTexture name="Omega Sing Note DOWN MISS0001" x="1711" y="1605" width="914" height="730" frameX="-10" frameY="0" frameWidth="924" frameHeight="730"/>
+	<SubTexture name="Omega Sing Note DOWN MISS0002" x="2625" y="1605" width="878" height="727" frameX="0" frameY="-3" frameWidth="924" frameHeight="730"/>
+	<SubTexture name="Omega Sing Note DOWN MISS0003" x="2625" y="1605" width="878" height="727" frameX="0" frameY="-3" frameWidth="924" frameHeight="730"/>
+	<SubTexture name="Omega Sing Note DOWN MISS0004" x="2625" y="1605" width="878" height="727" frameX="0" frameY="-3" frameWidth="924" frameHeight="730"/>
+	<SubTexture name="Omega Sing Note DOWN MISS0005" x="2625" y="1605" width="878" height="727" frameX="0" frameY="-3" frameWidth="924" frameHeight="730"/>
+	<SubTexture name="Omega Sing Note DOWN MISS0006" x="2625" y="1605" width="878" height="727" frameX="0" frameY="-3" frameWidth="924" frameHeight="730"/>
+	<SubTexture name="Omega Sing Note DOWN MISS0007" x="2625" y="1605" width="878" height="727" frameX="0" frameY="-3" frameWidth="924" frameHeight="730"/>
+	<SubTexture name="Omega Sing Note DOWN MISS0008" x="2625" y="1605" width="878" height="727" frameX="0" frameY="-3" frameWidth="924" frameHeight="730"/>
+	<SubTexture name="Omega Sing Note DOWN MISS0009" x="2625" y="1605" width="878" height="727" frameX="0" frameY="-3" frameWidth="924" frameHeight="730"/>
+	<SubTexture name="Omega Sing Note DOWN MISS0010" x="2625" y="1605" width="878" height="727" frameX="0" frameY="-3" frameWidth="924" frameHeight="730"/>
+	<SubTexture name="Omega Sing Note DOWN MISS0011" x="2625" y="1605" width="878" height="727" frameX="0" frameY="-3" frameWidth="924" frameHeight="730"/>
+	<SubTexture name="Omega Sing Note DOWN MISS0012" x="2625" y="1605" width="878" height="727" frameX="0" frameY="-3" frameWidth="924" frameHeight="730"/>
+	<SubTexture name="Omega Sing Note DOWN MISS0013" x="2625" y="1605" width="878" height="727" frameX="0" frameY="-3" frameWidth="924" frameHeight="730"/>
+	<SubTexture name="Omega Sing Note DOWN MISS0014" x="2625" y="1605" width="878" height="727" frameX="0" frameY="-3" frameWidth="924" frameHeight="730"/>
+	<SubTexture name="Omega Sing Note DOWN MISS0015" x="2625" y="1605" width="878" height="727" frameX="0" frameY="-3" frameWidth="924" frameHeight="730"/>
+	<SubTexture name="Omega Sing Note LEFT0000" x="20" y="2360" width="762" height="675" pivotX="231.9" pivotY="-37.1" frameX="0" frameY="-3" frameWidth="768" frameHeight="678"/>
+	<SubTexture name="Omega Sing Note LEFT0001" x="20" y="2360" width="762" height="675" frameX="0" frameY="-3" frameWidth="768" frameHeight="678"/>
+	<SubTexture name="Omega Sing Note LEFT0002" x="782" y="2360" width="758" height="678" frameX="-10" frameY="0" frameWidth="768" frameHeight="678"/>
+	<SubTexture name="Omega Sing Note LEFT0003" x="782" y="2360" width="758" height="678" frameX="-10" frameY="0" frameWidth="768" frameHeight="678"/>
+	<SubTexture name="Omega Sing Note LEFT0004" x="782" y="2360" width="758" height="678" frameX="-10" frameY="0" frameWidth="768" frameHeight="678"/>
+	<SubTexture name="Omega Sing Note LEFT0005" x="782" y="2360" width="758" height="678" frameX="-10" frameY="0" frameWidth="768" frameHeight="678"/>
+	<SubTexture name="Omega Sing Note LEFT0006" x="782" y="2360" width="758" height="678" frameX="-10" frameY="0" frameWidth="768" frameHeight="678"/>
+	<SubTexture name="Omega Sing Note LEFT0007" x="782" y="2360" width="758" height="678" frameX="-10" frameY="0" frameWidth="768" frameHeight="678"/>
+	<SubTexture name="Omega Sing Note LEFT0008" x="782" y="2360" width="758" height="678" frameX="-10" frameY="0" frameWidth="768" frameHeight="678"/>
+	<SubTexture name="Omega Sing Note LEFT0009" x="782" y="2360" width="758" height="678" frameX="-10" frameY="0" frameWidth="768" frameHeight="678"/>
+	<SubTexture name="Omega Sing Note LEFT0010" x="782" y="2360" width="758" height="678" frameX="-10" frameY="0" frameWidth="768" frameHeight="678"/>
+	<SubTexture name="Omega Sing Note LEFT0011" x="782" y="2360" width="758" height="678" frameX="-10" frameY="0" frameWidth="768" frameHeight="678"/>
+	<SubTexture name="Omega Sing Note LEFT0012" x="782" y="2360" width="758" height="678" frameX="-10" frameY="0" frameWidth="768" frameHeight="678"/>
+	<SubTexture name="Omega Sing Note LEFT0013" x="782" y="2360" width="758" height="678" frameX="-10" frameY="0" frameWidth="768" frameHeight="678"/>
+	<SubTexture name="Omega Sing Note LEFT0014" x="782" y="2360" width="758" height="678" frameX="-10" frameY="0" frameWidth="768" frameHeight="678"/>
+	<SubTexture name="Omega Sing Note LEFT0015" x="782" y="2360" width="758" height="678" frameX="-10" frameY="0" frameWidth="768" frameHeight="678"/>
+	<SubTexture name="Omega Sing Note LEFT Miss0000" x="1540" y="2360" width="657" height="740" pivotX="220.6" pivotY="-8.25" frameX="0" frameY="0" frameWidth="669" frameHeight="740"/>
+	<SubTexture name="Omega Sing Note LEFT Miss0001" x="1540" y="2360" width="657" height="740" frameX="0" frameY="0" frameWidth="669" frameHeight="740"/>
+	<SubTexture name="Omega Sing Note LEFT Miss0002" x="2197" y="2360" width="650" height="737" frameX="-19" frameY="0" frameWidth="669" frameHeight="740"/>
+	<SubTexture name="Omega Sing Note LEFT Miss0003" x="2197" y="2360" width="650" height="737" frameX="-19" frameY="0" frameWidth="669" frameHeight="740"/>
+	<SubTexture name="Omega Sing Note LEFT Miss0004" x="2197" y="2360" width="650" height="737" frameX="-19" frameY="0" frameWidth="669" frameHeight="740"/>
+	<SubTexture name="Omega Sing Note LEFT Miss0005" x="2197" y="2360" width="650" height="737" frameX="-19" frameY="0" frameWidth="669" frameHeight="740"/>
+	<SubTexture name="Omega Sing Note LEFT Miss0006" x="2197" y="2360" width="650" height="737" frameX="-19" frameY="0" frameWidth="669" frameHeight="740"/>
+	<SubTexture name="Omega Sing Note LEFT Miss0007" x="2197" y="2360" width="650" height="737" frameX="-19" frameY="0" frameWidth="669" frameHeight="740"/>
+	<SubTexture name="Omega Sing Note LEFT Miss0008" x="2197" y="2360" width="650" height="737" frameX="-19" frameY="0" frameWidth="669" frameHeight="740"/>
+	<SubTexture name="Omega Sing Note LEFT Miss0009" x="2197" y="2360" width="650" height="737" frameX="-19" frameY="0" frameWidth="669" frameHeight="740"/>
+	<SubTexture name="Omega Sing Note LEFT Miss0010" x="2197" y="2360" width="650" height="737" frameX="-19" frameY="0" frameWidth="669" frameHeight="740"/>
+	<SubTexture name="Omega Sing Note LEFT Miss0011" x="2197" y="2360" width="650" height="737" frameX="-19" frameY="0" frameWidth="669" frameHeight="740"/>
+	<SubTexture name="Omega Sing Note LEFT Miss0012" x="2197" y="2360" width="650" height="737" frameX="-19" frameY="0" frameWidth="669" frameHeight="740"/>
+	<SubTexture name="Omega Sing Note LEFT Miss0013" x="2197" y="2360" width="650" height="737" frameX="-19" frameY="0" frameWidth="669" frameHeight="740"/>
+	<SubTexture name="Omega Sing Note LEFT Miss0014" x="2197" y="2360" width="650" height="737" frameX="-19" frameY="0" frameWidth="669" frameHeight="740"/>
+	<SubTexture name="Omega Sing Note LEFT Miss0015" x="2197" y="2360" width="650" height="737" frameX="-19" frameY="0" frameWidth="669" frameHeight="740"/>
+	<SubTexture name="Omega Sing Note RIGHT0000" x="2847" y="2360" width="809" height="792" pivotX="92.05" pivotY="111.65" frameX="-4" frameY="-1" frameWidth="821" frameHeight="793"/>
+	<SubTexture name="Omega Sing Note RIGHT0001" x="2847" y="2360" width="809" height="792" frameX="-4" frameY="-1" frameWidth="821" frameHeight="793"/>
+	<SubTexture name="Omega Sing Note RIGHT0002" x="20" y="3152" width="821" height="793"/>
+	<SubTexture name="Omega Sing Note RIGHT0003" x="20" y="3152" width="821" height="793"/>
+	<SubTexture name="Omega Sing Note RIGHT0004" x="20" y="3152" width="821" height="793"/>
+	<SubTexture name="Omega Sing Note RIGHT0005" x="20" y="3152" width="821" height="793"/>
+	<SubTexture name="Omega Sing Note RIGHT0006" x="20" y="3152" width="821" height="793"/>
+	<SubTexture name="Omega Sing Note RIGHT0007" x="20" y="3152" width="821" height="793"/>
+	<SubTexture name="Omega Sing Note RIGHT0008" x="20" y="3152" width="821" height="793"/>
+	<SubTexture name="Omega Sing Note RIGHT0009" x="20" y="3152" width="821" height="793"/>
+	<SubTexture name="Omega Sing Note RIGHT0010" x="20" y="3152" width="821" height="793"/>
+	<SubTexture name="Omega Sing Note RIGHT0011" x="20" y="3152" width="821" height="793"/>
+	<SubTexture name="Omega Sing Note RIGHT0012" x="20" y="3152" width="821" height="793"/>
+	<SubTexture name="Omega Sing Note RIGHT0013" x="20" y="3152" width="821" height="793"/>
+	<SubTexture name="Omega Sing Note RIGHT0014" x="20" y="3152" width="821" height="793"/>
+	<SubTexture name="Omega Sing Note RIGHT0015" x="20" y="3152" width="821" height="793"/>
+	<SubTexture name="Omega Sing Note RIGHT0016" x="20" y="3152" width="821" height="793"/>
+	<SubTexture name="Omega Sing Note RIGHT0017" x="20" y="3152" width="821" height="793"/>
+	<SubTexture name="Omega Sing Note RIGHT0018" x="20" y="3152" width="821" height="793"/>
+	<SubTexture name="Omega Sing Note RIGHT miss0000" x="841" y="3152" width="747" height="787" pivotX="77.1" pivotY="103.95" frameX="-8" frameY="0" frameWidth="755" frameHeight="787"/>
+	<SubTexture name="Omega Sing Note RIGHT miss0001" x="841" y="3152" width="747" height="787" frameX="-8" frameY="0" frameWidth="755" frameHeight="787"/>
+	<SubTexture name="Omega Sing Note RIGHT miss0002" x="1588" y="3152" width="743" height="787" frameX="0" frameY="0" frameWidth="755" frameHeight="787"/>
+	<SubTexture name="Omega Sing Note RIGHT miss0003" x="1588" y="3152" width="743" height="787" frameX="0" frameY="0" frameWidth="755" frameHeight="787"/>
+	<SubTexture name="Omega Sing Note RIGHT miss0004" x="1588" y="3152" width="743" height="787" frameX="0" frameY="0" frameWidth="755" frameHeight="787"/>
+	<SubTexture name="Omega Sing Note RIGHT miss0005" x="1588" y="3152" width="743" height="787" frameX="0" frameY="0" frameWidth="755" frameHeight="787"/>
+	<SubTexture name="Omega Sing Note RIGHT miss0006" x="1588" y="3152" width="743" height="787" frameX="0" frameY="0" frameWidth="755" frameHeight="787"/>
+	<SubTexture name="Omega Sing Note RIGHT miss0007" x="1588" y="3152" width="743" height="787" frameX="0" frameY="0" frameWidth="755" frameHeight="787"/>
+	<SubTexture name="Omega Sing Note RIGHT miss0008" x="1588" y="3152" width="743" height="787" frameX="0" frameY="0" frameWidth="755" frameHeight="787"/>
+	<SubTexture name="Omega Sing Note RIGHT miss0009" x="1588" y="3152" width="743" height="787" frameX="0" frameY="0" frameWidth="755" frameHeight="787"/>
+	<SubTexture name="Omega Sing Note RIGHT miss0010" x="1588" y="3152" width="743" height="787" frameX="0" frameY="0" frameWidth="755" frameHeight="787"/>
+	<SubTexture name="Omega Sing Note RIGHT miss0011" x="1588" y="3152" width="743" height="787" frameX="0" frameY="0" frameWidth="755" frameHeight="787"/>
+	<SubTexture name="Omega Sing Note RIGHT miss0012" x="1588" y="3152" width="743" height="787" frameX="0" frameY="0" frameWidth="755" frameHeight="787"/>
+	<SubTexture name="Omega Sing Note RIGHT miss0013" x="1588" y="3152" width="743" height="787" frameX="0" frameY="0" frameWidth="755" frameHeight="787"/>
+	<SubTexture name="Omega Sing Note RIGHT miss0014" x="1588" y="3152" width="743" height="787" frameX="0" frameY="0" frameWidth="755" frameHeight="787"/>
+	<SubTexture name="Omega Sing Note RIGHT miss0015" x="1588" y="3152" width="743" height="787" frameX="0" frameY="0" frameWidth="755" frameHeight="787"/>
+	<SubTexture name="Omega Sing Note RIGHT miss0016" x="1588" y="3152" width="743" height="787" frameX="0" frameY="0" frameWidth="755" frameHeight="787"/>
+	<SubTexture name="Omega Sing Note RIGHT miss0017" x="1588" y="3152" width="743" height="787" frameX="0" frameY="0" frameWidth="755" frameHeight="787"/>
+	<SubTexture name="Omega Sing Note RIGHT miss0018" x="1588" y="3152" width="743" height="787" frameX="0" frameY="0" frameWidth="755" frameHeight="787"/>
+	<SubTexture name="Omega Sing Note UP0000" x="2331" y="3152" width="670" height="770" pivotX="518.4" pivotY="556.55" frameX="-3" frameY="0" frameWidth="673" frameHeight="770"/>
+	<SubTexture name="Omega Sing Note UP0001" x="2331" y="3152" width="670" height="770" frameX="-3" frameY="0" frameWidth="673" frameHeight="770"/>
+	<SubTexture name="Omega Sing Note UP0002" x="3001" y="3152" width="668" height="765" frameX="0" frameY="-5" frameWidth="673" frameHeight="770"/>
+	<SubTexture name="Omega Sing Note UP0003" x="3001" y="3152" width="668" height="765" frameX="0" frameY="-5" frameWidth="673" frameHeight="770"/>
+	<SubTexture name="Omega Sing Note UP0004" x="3001" y="3152" width="668" height="765" frameX="0" frameY="-5" frameWidth="673" frameHeight="770"/>
+	<SubTexture name="Omega Sing Note UP0005" x="3001" y="3152" width="668" height="765" frameX="0" frameY="-5" frameWidth="673" frameHeight="770"/>
+	<SubTexture name="Omega Sing Note UP0006" x="3001" y="3152" width="668" height="765" frameX="0" frameY="-5" frameWidth="673" frameHeight="770"/>
+	<SubTexture name="Omega Sing Note UP0007" x="3001" y="3152" width="668" height="765" frameX="0" frameY="-5" frameWidth="673" frameHeight="770"/>
+	<SubTexture name="Omega Sing Note UP0008" x="3001" y="3152" width="668" height="765" frameX="0" frameY="-5" frameWidth="673" frameHeight="770"/>
+	<SubTexture name="Omega Sing Note UP0009" x="3001" y="3152" width="668" height="765" frameX="0" frameY="-5" frameWidth="673" frameHeight="770"/>
+	<SubTexture name="Omega Sing Note UP0010" x="3001" y="3152" width="668" height="765" frameX="0" frameY="-5" frameWidth="673" frameHeight="770"/>
+	<SubTexture name="Omega Sing Note UP0011" x="3001" y="3152" width="668" height="765" frameX="0" frameY="-5" frameWidth="673" frameHeight="770"/>
+	<SubTexture name="Omega Sing Note UP0012" x="3001" y="3152" width="668" height="765" frameX="0" frameY="-5" frameWidth="673" frameHeight="770"/>
+	<SubTexture name="Omega Sing Note UP0013" x="3001" y="3152" width="668" height="765" frameX="0" frameY="-5" frameWidth="673" frameHeight="770"/>
+	<SubTexture name="Omega Sing Note UP0014" x="3001" y="3152" width="668" height="765" frameX="0" frameY="-5" frameWidth="673" frameHeight="770"/>
+	<SubTexture name="Omega Sing Note UP0015" x="3001" y="3152" width="668" height="765" frameX="0" frameY="-5" frameWidth="673" frameHeight="770"/>
+	<SubTexture name="Omega Sing Note UP0016" x="3001" y="3152" width="668" height="765" frameX="0" frameY="-5" frameWidth="673" frameHeight="770"/>
+	<SubTexture name="Omega Sing Note UP0017" x="3001" y="3152" width="668" height="765" frameX="0" frameY="-5" frameWidth="673" frameHeight="770"/>
+	<SubTexture name="Omega Sing Note UP0018" x="3001" y="3152" width="668" height="765" frameX="0" frameY="-5" frameWidth="673" frameHeight="770"/>
+	<SubTexture name="Omega Sing Note UP0019" x="3001" y="3152" width="668" height="765" frameX="0" frameY="-5" frameWidth="673" frameHeight="770"/>
+	<SubTexture name="Omega Sing Note UP0020" x="3001" y="3152" width="668" height="765" frameX="0" frameY="-5" frameWidth="673" frameHeight="770"/>
+	<SubTexture name="Omega Sing Note UP0021" x="3001" y="3152" width="668" height="765" frameX="0" frameY="-5" frameWidth="673" frameHeight="770"/>
+	<SubTexture name="Omega Sing Note UP0022" x="3001" y="3152" width="668" height="765" frameX="0" frameY="-5" frameWidth="673" frameHeight="770"/>
+	<SubTexture name="Omega Sing Note UP0023" x="3001" y="3152" width="668" height="765" frameX="0" frameY="-5" frameWidth="673" frameHeight="770"/>
+	<SubTexture name="Omega Sing Note UP0024" x="3001" y="3152" width="668" height="765" frameX="0" frameY="-5" frameWidth="673" frameHeight="770"/>
+	<SubTexture name="Omega Sing Note UP0025" x="3001" y="3152" width="668" height="765" frameX="0" frameY="-5" frameWidth="673" frameHeight="770"/>
+	<SubTexture name="Omega Sing Note UP0026" x="3001" y="3152" width="668" height="765" frameX="0" frameY="-5" frameWidth="673" frameHeight="770"/>
+	<SubTexture name="Omega Sing Note UP0027" x="3001" y="3152" width="668" height="765" frameX="0" frameY="-5" frameWidth="673" frameHeight="770"/>
+	<SubTexture name="Omega Sing Note UP0028" x="3001" y="3152" width="668" height="765" frameX="0" frameY="-5" frameWidth="673" frameHeight="770"/>
+	<SubTexture name="Omega Sing Note UP0029" x="3001" y="3152" width="668" height="765" frameX="0" frameY="-5" frameWidth="673" frameHeight="770"/>
+	<SubTexture name="Omega Sing Note UP0030" x="3001" y="3152" width="668" height="765" frameX="0" frameY="-5" frameWidth="673" frameHeight="770"/>
+	<SubTexture name="Omega Sing Note UP0031" x="3001" y="3152" width="668" height="765" frameX="0" frameY="-5" frameWidth="673" frameHeight="770"/>
+	<SubTexture name="Omega Sing Note UP0032" x="3001" y="3152" width="668" height="765" frameX="0" frameY="-5" frameWidth="673" frameHeight="770"/>
+	<SubTexture name="Omega Sing Note UP0033" x="3001" y="3152" width="668" height="765" frameX="0" frameY="-5" frameWidth="673" frameHeight="770"/>
+	<SubTexture name="Omega Sing Note UP0034" x="3001" y="3152" width="668" height="765" frameX="0" frameY="-5" frameWidth="673" frameHeight="770"/>
+	<SubTexture name="Omega Sing Note UP0035" x="3001" y="3152" width="668" height="765" frameX="0" frameY="-5" frameWidth="673" frameHeight="770"/>
+	<SubTexture name="Omega Sing Note UP0036" x="3001" y="3152" width="668" height="765" frameX="0" frameY="-5" frameWidth="673" frameHeight="770"/>
+	<SubTexture name="Omega Sing Note UP0037" x="3001" y="3152" width="668" height="765" frameX="0" frameY="-5" frameWidth="673" frameHeight="770"/>
+	<SubTexture name="Omega Sing Note UP0038" x="3001" y="3152" width="668" height="765" frameX="0" frameY="-5" frameWidth="673" frameHeight="770"/>
+	<SubTexture name="Omega Sing Note UP0039" x="3001" y="3152" width="668" height="765" frameX="0" frameY="-5" frameWidth="673" frameHeight="770"/>
+	<SubTexture name="Omega Sing Note UP0040" x="3001" y="3152" width="668" height="765" frameX="0" frameY="-5" frameWidth="673" frameHeight="770"/>
+	<SubTexture name="Omega Sing Note UP0041" x="3001" y="3152" width="668" height="765" frameX="0" frameY="-5" frameWidth="673" frameHeight="770"/>
+	<SubTexture name="Omega Sing Note UP0042" x="3001" y="3152" width="668" height="765" frameX="0" frameY="-5" frameWidth="673" frameHeight="770"/>
+	<SubTexture name="Omega Sing Note UP0043" x="3001" y="3152" width="668" height="765" frameX="0" frameY="-5" frameWidth="673" frameHeight="770"/>
+	<SubTexture name="Omega Sing Note UP0044" x="3001" y="3152" width="668" height="765" frameX="0" frameY="-5" frameWidth="673" frameHeight="770"/>
+	<SubTexture name="Omega Sing Note UP0045" x="3001" y="3152" width="668" height="765" frameX="0" frameY="-5" frameWidth="673" frameHeight="770"/>
+	<SubTexture name="Omega Sing Note UP0046" x="3001" y="3152" width="668" height="765" frameX="0" frameY="-5" frameWidth="673" frameHeight="770"/>
+	<SubTexture name="Omega Sing Note UP0047" x="3001" y="3152" width="668" height="765" frameX="0" frameY="-5" frameWidth="673" frameHeight="770"/>
+	<SubTexture name="Omega Sing Note UP0048" x="3001" y="3152" width="668" height="765" frameX="0" frameY="-5" frameWidth="673" frameHeight="770"/>
+	<SubTexture name="Omega Sing Note UP0049" x="3001" y="3152" width="668" height="765" frameX="0" frameY="-5" frameWidth="673" frameHeight="770"/>
+	<SubTexture name="Omega Sing Note UP0050" x="3001" y="3152" width="668" height="765" frameX="0" frameY="-5" frameWidth="673" frameHeight="770"/>
+	<SubTexture name="Omega Sing Note UP0051" x="3001" y="3152" width="668" height="765" frameX="0" frameY="-5" frameWidth="673" frameHeight="770"/>
+	<SubTexture name="Omega Sing Note UP0052" x="3001" y="3152" width="668" height="765" frameX="0" frameY="-5" frameWidth="673" frameHeight="770"/>
+	<SubTexture name="Omega Sing Note UP0053" x="3001" y="3152" width="668" height="765" frameX="0" frameY="-5" frameWidth="673" frameHeight="770"/>
+	<SubTexture name="Omega Sing Note UP0054" x="3001" y="3152" width="668" height="765" frameX="0" frameY="-5" frameWidth="673" frameHeight="770"/>
+	<SubTexture name="Omega Sing Note UP0055" x="3001" y="3152" width="668" height="765" frameX="0" frameY="-5" frameWidth="673" frameHeight="770"/>
+	<SubTexture name="Omega Sing Note UP0056" x="3001" y="3152" width="668" height="765" frameX="0" frameY="-5" frameWidth="673" frameHeight="770"/>
+	<SubTexture name="Omega Sing Note UP0057" x="3001" y="3152" width="668" height="765" frameX="0" frameY="-5" frameWidth="673" frameHeight="770"/>
+	<SubTexture name="Omega Sing Note UP0058" x="3001" y="3152" width="668" height="765" frameX="0" frameY="-5" frameWidth="673" frameHeight="770"/>
+	<SubTexture name="Omega Sing Note UP0059" x="3001" y="3152" width="668" height="765" frameX="0" frameY="-5" frameWidth="673" frameHeight="770"/>
+	<SubTexture name="Omega Sing Note UP miss0000" x="20" y="3945" width="634" height="749" pivotX="386.5" pivotY="544.4"/>
+	<SubTexture name="Omega Sing Note UP miss0001" x="20" y="3945" width="634" height="749"/>
+	<SubTexture name="Omega Sing Note UP miss0002" x="654" y="3945" width="626" height="749" frameX="0" frameY="0" frameWidth="634" frameHeight="749"/>
+	<SubTexture name="Omega Sing Note UP miss0003" x="654" y="3945" width="626" height="749" frameX="0" frameY="0" frameWidth="634" frameHeight="749"/>
+	<SubTexture name="Omega Sing Note UP miss0004" x="654" y="3945" width="626" height="749" frameX="0" frameY="0" frameWidth="634" frameHeight="749"/>
+	<SubTexture name="Omega Sing Note UP miss0005" x="654" y="3945" width="626" height="749" frameX="0" frameY="0" frameWidth="634" frameHeight="749"/>
+	<SubTexture name="Omega Sing Note UP miss0006" x="654" y="3945" width="626" height="749" frameX="0" frameY="0" frameWidth="634" frameHeight="749"/>
+	<SubTexture name="Omega Sing Note UP miss0007" x="654" y="3945" width="626" height="749" frameX="0" frameY="0" frameWidth="634" frameHeight="749"/>
+	<SubTexture name="Omega Sing Note UP miss0008" x="654" y="3945" width="626" height="749" frameX="0" frameY="0" frameWidth="634" frameHeight="749"/>
+	<SubTexture name="Omega Sing Note UP miss0009" x="654" y="3945" width="626" height="749" frameX="0" frameY="0" frameWidth="634" frameHeight="749"/>
+	<SubTexture name="Omega Sing Note UP miss0010" x="654" y="3945" width="626" height="749" frameX="0" frameY="0" frameWidth="634" frameHeight="749"/>
+	<SubTexture name="Omega Sing Note UP miss0011" x="654" y="3945" width="626" height="749" frameX="0" frameY="0" frameWidth="634" frameHeight="749"/>
+	<SubTexture name="Omega Sing Note UP miss0012" x="654" y="3945" width="626" height="749" frameX="0" frameY="0" frameWidth="634" frameHeight="749"/>
+	<SubTexture name="Omega Sing Note UP miss0013" x="654" y="3945" width="626" height="749" frameX="0" frameY="0" frameWidth="634" frameHeight="749"/>
+	<SubTexture name="Omega Sing Note UP miss0014" x="654" y="3945" width="626" height="749" frameX="0" frameY="0" frameWidth="634" frameHeight="749"/>
+	<SubTexture name="Omega Sing Note UP miss0015" x="654" y="3945" width="626" height="749" frameX="0" frameY="0" frameWidth="634" frameHeight="749"/>
+	<SubTexture name="Omega Sing Note UP miss0016" x="654" y="3945" width="626" height="749" frameX="0" frameY="0" frameWidth="634" frameHeight="749"/>
+	<SubTexture name="Omega Sing Note UP miss0017" x="654" y="3945" width="626" height="749" frameX="0" frameY="0" frameWidth="634" frameHeight="749"/>
+	<SubTexture name="Omega Sing Note UP miss0018" x="654" y="3945" width="626" height="749" frameX="0" frameY="0" frameWidth="634" frameHeight="749"/>
+	<SubTexture name="Omega Sing Note UP miss0019" x="654" y="3945" width="626" height="749" frameX="0" frameY="0" frameWidth="634" frameHeight="749"/>
+	<SubTexture name="Omega Sing Note UP miss0020" x="654" y="3945" width="626" height="749" frameX="0" frameY="0" frameWidth="634" frameHeight="749"/>
+	<SubTexture name="Omega Sing Note UP miss0021" x="654" y="3945" width="626" height="749" frameX="0" frameY="0" frameWidth="634" frameHeight="749"/>
+	<SubTexture name="Omega Sing Note UP miss0022" x="654" y="3945" width="626" height="749" frameX="0" frameY="0" frameWidth="634" frameHeight="749"/>
+	<SubTexture name="Omega Sing Note UP miss0023" x="654" y="3945" width="626" height="749" frameX="0" frameY="0" frameWidth="634" frameHeight="749"/>
+	<SubTexture name="Omega Sing Note UP miss0024" x="654" y="3945" width="626" height="749" frameX="0" frameY="0" frameWidth="634" frameHeight="749"/>
+	<SubTexture name="Omega Sing Note UP miss0025" x="654" y="3945" width="626" height="749" frameX="0" frameY="0" frameWidth="634" frameHeight="749"/>
+	<SubTexture name="Omega Sing Note UP miss0026" x="654" y="3945" width="626" height="749" frameX="0" frameY="0" frameWidth="634" frameHeight="749"/>
+	<SubTexture name="Omega Sing Note UP miss0027" x="654" y="3945" width="626" height="749" frameX="0" frameY="0" frameWidth="634" frameHeight="749"/>
+	<SubTexture name="Omega Sing Note UP miss0028" x="654" y="3945" width="626" height="749" frameX="0" frameY="0" frameWidth="634" frameHeight="749"/>
+	<SubTexture name="Omega Sing Note UP miss0029" x="654" y="3945" width="626" height="749" frameX="0" frameY="0" frameWidth="634" frameHeight="749"/>
+	<SubTexture name="Omega Sing Note UP miss0030" x="654" y="3945" width="626" height="749" frameX="0" frameY="0" frameWidth="634" frameHeight="749"/>
+	<SubTexture name="Omega Sing Note UP miss0031" x="654" y="3945" width="626" height="749" frameX="0" frameY="0" frameWidth="634" frameHeight="749"/>
+	<SubTexture name="Omega Sing Note UP miss0032" x="654" y="3945" width="626" height="749" frameX="0" frameY="0" frameWidth="634" frameHeight="749"/>
+	<SubTexture name="Omega Sing Note UP miss0033" x="654" y="3945" width="626" height="749" frameX="0" frameY="0" frameWidth="634" frameHeight="749"/>
+	<SubTexture name="Omega Sing Note UP miss0034" x="654" y="3945" width="626" height="749" frameX="0" frameY="0" frameWidth="634" frameHeight="749"/>
+	<SubTexture name="Omega Sing Note UP miss0035" x="654" y="3945" width="626" height="749" frameX="0" frameY="0" frameWidth="634" frameHeight="749"/>
+	<SubTexture name="Omega Sing Note UP miss0036" x="654" y="3945" width="626" height="749" frameX="0" frameY="0" frameWidth="634" frameHeight="749"/>
+	<SubTexture name="Omega Sing Note UP miss0037" x="654" y="3945" width="626" height="749" frameX="0" frameY="0" frameWidth="634" frameHeight="749"/>
+	<SubTexture name="Omega Sing Note UP miss0038" x="654" y="3945" width="626" height="749" frameX="0" frameY="0" frameWidth="634" frameHeight="749"/>
+	<SubTexture name="Omega Sing Note UP miss0039" x="654" y="3945" width="626" height="749" frameX="0" frameY="0" frameWidth="634" frameHeight="749"/>
+	<SubTexture name="Omega Sing Note UP miss0040" x="654" y="3945" width="626" height="749" frameX="0" frameY="0" frameWidth="634" frameHeight="749"/>
+	<SubTexture name="Omega Sing Note UP miss0041" x="654" y="3945" width="626" height="749" frameX="0" frameY="0" frameWidth="634" frameHeight="749"/>
+	<SubTexture name="Omega Sing Note UP miss0042" x="654" y="3945" width="626" height="749" frameX="0" frameY="0" frameWidth="634" frameHeight="749"/>
+	<SubTexture name="Omega Sing Note UP miss0043" x="654" y="3945" width="626" height="749" frameX="0" frameY="0" frameWidth="634" frameHeight="749"/>
+	<SubTexture name="Omega Sing Note UP miss0044" x="654" y="3945" width="626" height="749" frameX="0" frameY="0" frameWidth="634" frameHeight="749"/>
+	<SubTexture name="Omega Sing Note UP miss0045" x="654" y="3945" width="626" height="749" frameX="0" frameY="0" frameWidth="634" frameHeight="749"/>
+	<SubTexture name="Omega Sing Note UP miss0046" x="654" y="3945" width="626" height="749" frameX="0" frameY="0" frameWidth="634" frameHeight="749"/>
+	<SubTexture name="Omega Sing Note UP miss0047" x="654" y="3945" width="626" height="749" frameX="0" frameY="0" frameWidth="634" frameHeight="749"/>
+	<SubTexture name="Omega Sing Note UP miss0048" x="654" y="3945" width="626" height="749" frameX="0" frameY="0" frameWidth="634" frameHeight="749"/>
+	<SubTexture name="Omega Sing Note UP miss0049" x="654" y="3945" width="626" height="749" frameX="0" frameY="0" frameWidth="634" frameHeight="749"/>
+	<SubTexture name="Omega Sing Note UP miss0050" x="654" y="3945" width="626" height="749" frameX="0" frameY="0" frameWidth="634" frameHeight="749"/>
+	<SubTexture name="Omega Sing Note UP miss0051" x="654" y="3945" width="626" height="749" frameX="0" frameY="0" frameWidth="634" frameHeight="749"/>
+	<SubTexture name="Omega Sing Note UP miss0052" x="654" y="3945" width="626" height="749" frameX="0" frameY="0" frameWidth="634" frameHeight="749"/>
+	<SubTexture name="Omega Sing Note UP miss0053" x="654" y="3945" width="626" height="749" frameX="0" frameY="0" frameWidth="634" frameHeight="749"/>
+	<SubTexture name="Omega Sing Note UP miss0054" x="654" y="3945" width="626" height="749" frameX="0" frameY="0" frameWidth="634" frameHeight="749"/>
+	<SubTexture name="Omega Sing Note UP miss0055" x="654" y="3945" width="626" height="749" frameX="0" frameY="0" frameWidth="634" frameHeight="749"/>
+	<SubTexture name="Omega Sing Note UP miss0056" x="654" y="3945" width="626" height="749" frameX="0" frameY="0" frameWidth="634" frameHeight="749"/>
+	<SubTexture name="Omega Sing Note UP miss0057" x="654" y="3945" width="626" height="749" frameX="0" frameY="0" frameWidth="634" frameHeight="749"/>
+	<SubTexture name="Omega Sing Note UP miss0058" x="654" y="3945" width="626" height="749" frameX="0" frameY="0" frameWidth="634" frameHeight="749"/>
+	<SubTexture name="Omega Sing Note UP miss0059" x="654" y="3945" width="626" height="749" frameX="0" frameY="0" frameWidth="634" frameHeight="749"/>
+	<SubTexture name="Omega idle dance0000" x="1280" y="3945" width="515" height="788" pivotX="411.85" pivotY="559.1" frameX="-6" frameY="0" frameWidth="521" frameHeight="789"/>
+	<SubTexture name="Omega idle dance0001" x="1280" y="3945" width="515" height="788" frameX="-6" frameY="0" frameWidth="521" frameHeight="789"/>
+	<SubTexture name="Omega idle dance0002" x="1795" y="3945" width="519" height="786" frameX="0" frameY="-2" frameWidth="521" frameHeight="789"/>
+	<SubTexture name="Omega idle dance0003" x="1795" y="3945" width="519" height="786" frameX="0" frameY="-2" frameWidth="521" frameHeight="789"/>
+	<SubTexture name="Omega idle dance0004" x="2314" y="3945" width="519" height="786" frameX="0" frameY="-3" frameWidth="521" frameHeight="789"/>
+	<SubTexture name="Omega idle dance0005" x="2314" y="3945" width="519" height="786" frameX="0" frameY="-3" frameWidth="521" frameHeight="789"/>
+	<SubTexture name="Omega idle dance0006" x="2833" y="3945" width="519" height="785" frameX="0" frameY="-3" frameWidth="521" frameHeight="789"/>
+	<SubTexture name="Omega idle dance0007" x="2833" y="3945" width="519" height="785" frameX="0" frameY="-3" frameWidth="521" frameHeight="789"/>
+	<SubTexture name="Omega idle dance0008" x="3352" y="3945" width="516" height="788" frameX="-3" frameY="-1" frameWidth="521" frameHeight="789"/>
+	<SubTexture name="Omega idle dance0009" x="3352" y="3945" width="516" height="788" frameX="-3" frameY="-1" frameWidth="521" frameHeight="789"/>
+	<SubTexture name="Omega idle dance0010" x="3352" y="3945" width="516" height="788" frameX="-3" frameY="-1" frameWidth="521" frameHeight="789"/>
+	<SubTexture name="Omega idle dance0011" x="3352" y="3945" width="516" height="788" frameX="-3" frameY="-1" frameWidth="521" frameHeight="789"/>
+	<SubTexture name="Omega idle dance0012" x="3352" y="3945" width="516" height="788" frameX="-3" frameY="-1" frameWidth="521" frameHeight="789"/>
 </TextureAtlas>

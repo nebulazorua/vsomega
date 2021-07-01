@@ -45,7 +45,7 @@ class StoryMenuState extends MusicBeatState
 		['Prelude'],
 		['Bopeebo', 'Fresh', 'Dadbattle'],
 		['Spookeez', 'South', "Salem"],
-		['Pico', 'Philly', "Blammed"],
+		['Pico', 'Philly-Nice', "Blammed"],
 		['Satin-Panties', "High", "Milf"],
 		['Cocoa', 'Eggnog', 'Monster', 'Winter-Horrorland'],
 		['Senpai', 'Roses', 'Thorns'],

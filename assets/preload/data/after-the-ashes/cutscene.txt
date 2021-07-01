@@ -8,6 +8,6 @@
 [dialoguesound:soundbytes/bf]Beep bap!
 [dialoguesound:soundbytes/omega]Well, that's good at least. I'm glad that you two found what you were looking for.
 [nofade][goto:ata/G2_4]Thanks for the help, rat boy. We really would've been in trouble if you hadn't decided to work with us.
-How about one last song for the road, eh? To rememberu s by.
+How about one last song for the road, eh? To remember us by.
 [dialoguesound:soundbytes/bf]Beep bap!
 [dialoguesound:soundbytes/omega]Sounds good! Y'all be safe, alright?
