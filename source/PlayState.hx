@@ -74,6 +74,7 @@ class PlayState extends MusicBeatState
 	public static var storyPlaylist:Array<String> = [];
 	public static var storyDifficulty:Int = 1;
 	public var dontSync:Bool=false;
+	var beenSavedByResistance:Bool = false;
 
 	var halloweenLevel:Bool = false;
 
@@ -118,6 +119,7 @@ class PlayState extends MusicBeatState
 	public var gfLua:LuaCharacter;
 	public var bfLua:LuaCharacter;
 	public static var keyAmount:Int = 4;
+	public static var blueballs:Int = 0;
 
 	public static var mikaShit:Array<MikaRunAnimMarker> = [];
 
@@ -319,7 +321,6 @@ class PlayState extends MusicBeatState
 		#if windows
 			luaModchartExists = FileSystem.exists(Paths.modchart(SONG.song.toLowerCase()));
 		#end
-
 
 
 		grade = ScoreUtils.gradeArray[0] + " (FC)";
@@ -1385,11 +1386,24 @@ class PlayState extends MusicBeatState
 				camPos.set(dad.getGraphicMidpoint().x + 300, dad.getGraphicMidpoint().y);
 		}
 
+		var bfwithitems:Bool = false;
+
 		if(SONG.player1.startsWith('bf') && SkinState.selectedSkin!='bf' ){
 			boyfriend = new Boyfriend(770, 450, SkinState.selectedSkin);
+		}else if(SONG.player1.startsWith('bf') && SkinState.selectedSkin=='bf' && ItemState.equipped.length>0){
+			bfwithitems=true;
+			var name = '';
+			var shit = ["sword","arrow","twat","depressed"];
+			for(cum in shit){
+				if(ItemState.equipped.contains(cum)){
+					name+=cum;
+				}
+			}
+			boyfriend = new Boyfriend(770, 450, name);
 		}else{
 			boyfriend = new Boyfriend(770, 450, SONG.player1);
 		}
+
 
 		omega = new Boyfriend(1000,70,"omega",true);
 		if(SONG.song.toLowerCase()!='2v200')
@@ -1768,6 +1782,10 @@ class PlayState extends MusicBeatState
 				hpIcon = "omegabf";
 			default:
 				hpIcon = boyfriend.curCharacter;
+		}
+
+		if(bfwithitems){
+			hpIcon = 'bf';
 		}
 
 		iconP1 = new HealthIcon(hpIcon, true);
@@ -2704,6 +2722,10 @@ class PlayState extends MusicBeatState
 		//							bfRock = new FlxSprite(770, 450).loadGraphic(Paths.image('thevoid/smallrock'));
 
 
+		if(ItemState.equipped.contains("twat") && accuracy<0.9){
+			beenSavedByResistance=true;
+			health=-100;
+		}
 
 
 		if(vcrDistortionHUD!=null){
@@ -3216,23 +3238,43 @@ class PlayState extends MusicBeatState
 
 		if (health <= 0)
 		{
-			boyfriend.stunned = true;
+			if(!ItemState.equipped.contains("arrow") || beenSavedByResistance){
+				boyfriend.stunned = true;
 
-			persistentUpdate = false;
-			persistentDraw = false;
-			paused = true;
+				persistentUpdate = false;
+				persistentDraw = false;
+				paused = true;
 
-			vocals.stop();
-			FlxG.sound.music.stop();
+				vocals.stop();
+				FlxG.sound.music.stop();
 
-			openSubState(new GameOverSubstate(boyfriend.getScreenPosition().x, boyfriend.getScreenPosition().y, boyfriend.isReskin?boyfriend.curCharacter:'bf' ));
+				openSubState(new GameOverSubstate(boyfriend.getScreenPosition().x, boyfriend.getScreenPosition().y, boyfriend.isReskin?boyfriend.curCharacter:'bf' ));
+				blueballs++;
+				if(blueballs==10){
+					FlxG.save.data.getResistance=true;
+				}
+				// FlxG.switchState(new GameOverState(boyfriend.getScreenPosition().x, boyfriend.getScreenPosition().y));
 
-			// FlxG.switchState(new GameOverState(boyfriend.getScreenPosition().x, boyfriend.getScreenPosition().y));
+				#if desktop
+				// Game Over doesn't get his own variable because it's only used here
+				DiscordClient.changePresence("Game Over - " + detailsText + SONG.song + " (" + storyDifficultyText + ")", grade + " | Acc: " + truncateFloat(accuracy*100,2) + "%", iconRPC);
+				#end
+			}else if(ItemState.equipped.contains("arrow") && !beenSavedByResistance){
+				FlxG.sound.play(Paths.sound('Gold_Note_Hit'), 0.7);
+				goldOverlay.alpha = 1;
+				if(goldOverlayTween!=null)
+					goldOverlayTween.cancel();
+				goldOverlayTween = FlxTween.tween(goldOverlay, {alpha: 0}, .25);
 
-			#if desktop
-			// Game Over doesn't get his own variable because it's only used here
-			DiscordClient.changePresence("Game Over - " + detailsText + SONG.song + " (" + storyDifficultyText + ")", grade + " | Acc: " + truncateFloat(accuracy*100,2) + "%", iconRPC);
-			#end
+				if(curStage.startsWith("school"))
+					FlxG.sound.play(Paths.music('gameOverEnd-pixel'));
+				else
+					FlxG.sound.play(Paths.music('gameOverEnd'));
+				burnTimer=0;
+				beenSavedByResistance=true;
+				health = 1;
+				previousHealth=health;
+			}
 		}
 
 		if (unspawnNotes[0] != null)
@@ -3648,8 +3690,10 @@ class PlayState extends MusicBeatState
 			Highscore.saveScore(SONG.song, songScore, storyDifficulty);
 			#end
 		}
-
-
+		blueballs=0;
+		if(accuracy>=.9){
+			FlxG.save.data.beATwat=true;
+		}
 		if (isStoryMode)
 		{
 			campaignScore += songScore;
@@ -3673,6 +3717,12 @@ class PlayState extends MusicBeatState
 
 					if(SONG.song.toLowerCase()=='after-the-ashes'){
 						FlxG.save.data.daddyTimeTime=true;
+					}
+
+					if(SONG.song.toLowerCase()=='curse-eternal'){
+						FlxG.save.data.omegaBadEnding=true;
+					}else if(SONG.song.toLowerCase()=='after-the-ashes'){
+						FlxG.save.data.omegaGoodEnding=true;
 					}
 					FlxG.switchState(new StoryMenuState());
 					Cache.Clear();
@@ -4119,13 +4169,20 @@ class PlayState extends MusicBeatState
 
 		boyfriend.holding=false;
 		misses++;
+		var missDmg = 0.04;
+
 		switch(SONG.song.toLowerCase()){
 			case 'curse-eternal':
-				// nothing
+				if(!ItemState.equipped.contains("depressed"))
+					missDmg = 0;
 			case 'dishonor' | 'father-time':
-				health -= .2;
+				missDmg = .2;
 			default:
-				health -= 0.04;
+				missDmg = 0.04;
+		}
+
+		if(ItemState.equipped.contains("depressed") && SONG.song.toLowerCase()!='curse-eternal' ){
+			missDmg = missDmg-(missDmg*.5); // 50% less for cold heart
 		}
 
 		previousHealth=health;
@@ -4242,11 +4299,21 @@ class PlayState extends MusicBeatState
 					if(damage<.5)
 						damage=.5;
 
+					if(ItemState.equipped.contains("arrow"))
+						damage-=damage*.5;
+
 					health-=damage;
 				}else if(SONG.song.toLowerCase()=='curse-eternal'){
-					health-=.05;
+					if(ItemState.equipped.contains("depressed"))
+						health = -100;
+					else
+						health-=.05;
 				}else{
-					health-=.5;
+					if(ItemState.equipped.contains("arrow"))
+						health-=.25;
+					else
+						health-=.5;
+
 				}
 				FlxG.sound.play(Paths.sound('slash'), FlxG.random.float(0.4, 0.6));
 				slash.visible = true;
@@ -4335,9 +4402,15 @@ class PlayState extends MusicBeatState
 
 		if(modchart.healthGain && !note.isSustainNote || modchart.susHeal && note.isSustainNote ){
 			if (note.noteType ==6)
-				health += modchart.gemHPGain;
+				if(ItemState.equipped.contains("sword"))
+					health += modchart.gemHPGain+(modchart.gemHPGain*.5);
+				else
+					health += modchart.gemHPGain;
 			else if(note.noteType==7)
 				health = .01;
+			else
+			if(ItemState.equipped.contains("sword"))
+				health += modchart.noteHPGain+(modchart.noteHPGain*.5);
 			else
 				health += modchart.noteHPGain;
 		}

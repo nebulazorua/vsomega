@@ -423,7 +423,7 @@ class StoryMenuState extends MusicBeatState
 			}else{
 				PlayState.storyWeek = curWeek;
 			}
-
+			PlayState.blueballs=0;
 			PlayState.campaignScore = 0;
 			new FlxTimer().start(1, function(tmr:FlxTimer)
 			{

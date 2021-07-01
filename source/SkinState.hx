@@ -91,6 +91,7 @@ class SkinState extends MusicBeatState {
     leftArrow.screenCenter(X);
     leftArrow.x -= 350;
     leftArrow.y += 125;
+    leftArrow.antialiasing=true;
     leftArrow.frames = ui_tex;
     leftArrow.animation.addByPrefix('idle', "arrow left");
     leftArrow.animation.addByPrefix('press', "arrow push left");
@@ -103,6 +104,7 @@ class SkinState extends MusicBeatState {
     rightArrow.screenCenter(X);
     rightArrow.x += 250;
     rightArrow.frames = ui_tex;
+    rightArrow.antialiasing=true;
     rightArrow.animation.addByPrefix('idle', 'arrow right');
     rightArrow.animation.addByPrefix('press', "arrow push right", 24, false);
     rightArrow.animation.play('idle');

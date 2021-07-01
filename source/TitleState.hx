@@ -314,6 +314,7 @@ class TitleState extends MusicBeatState
 					PlayState.isStoryMode = true;
 					PlayState.storyDifficulty = 2;
 					PlayState.storyWeek = -1;
+					PlayState.blueballs=0;
 					LoadingState.loadAndSwitchState(new PlayState());
 				}else{
 					FlxG.switchState(new MainMenuState());

@@ -260,6 +260,7 @@ class AnimationDebug extends FlxState
 		if (FlxG.keys.justPressed.ESCAPE)
 		{
 			FlxG.mouse.visible = false;
+			PlayState.blueballs=0;
 			LoadingState.loadAndSwitchState(new PlayState());
 		}
 

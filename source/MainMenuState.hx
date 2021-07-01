@@ -242,6 +242,7 @@ class MainMenuState extends MusicBeatState
 
 		if(fatherTimeButton!=null){
 			if(FlxG.mouse.overlaps(fatherTimeButton) && FlxG.mouse.justPressed){
+				PlayState.blueballs=0;
 				LoadingState.loadAndSwitchState(new CutsceneState(CoolUtil.coolTextFile(Paths.txt('father-time/found')),new PlayState()));
 			}
 		}
