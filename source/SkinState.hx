@@ -167,9 +167,9 @@ class SkinState extends MusicBeatState {
     descText.text = unlockedDescs[selectedIdx];
 
     descText.screenCenter(XY);
-		descText.y -= 250;
+		descText.y -= 300;
     nameText.screenCenter(XY);
-		nameText.y -= 300;
+		nameText.y -= 350;
 
 
     Conductor.songPosition = FlxG.sound.music.time;
