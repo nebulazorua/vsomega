@@ -31,11 +31,14 @@ class GameOverSubstate extends MusicBeatSubstate
 				daBf = bfVer;
 		}
 
-		switch(PlayState.SONG.song.toLowerCase()){
-			case 'last-stand' | 'dishonor':
-				daBf = 'bf-FUCKING-DIES';
-				stageSuffix='-omega';
+		if(daBf=='bf'){
+			switch(PlayState.SONG.song.toLowerCase()){
+				case 'last-stand' | 'dishonor':
+					daBf = 'bf-FUCKING-DIES';
+					stageSuffix='-omega';
+			}
 		}
+
 
 		super();
 
@@ -47,7 +50,16 @@ class GameOverSubstate extends MusicBeatSubstate
 		camFollow = new FlxObject(bf.getGraphicMidpoint().x, bf.getGraphicMidpoint().y, 1, 1);
 		add(camFollow);
 
-		FlxG.sound.play(Paths.sound('fnf_loss_sfx' + stageSuffix));
+		switch(daBf){
+			case 'babyvase':
+				FlxG.sound.play(Paths.sound('vaseDeath'));
+			case 'bfside':
+				FlxG.sound.play(Paths.sound('brightsideDeath'));
+			default:
+				FlxG.sound.play(Paths.sound('fnf_loss_sfx' + stageSuffix));
+		}
+
+
 		Conductor.changeBPM(100);
 
 		// FlxG.camera.followLerp = 1;

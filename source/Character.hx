@@ -365,6 +365,40 @@ class Character extends FlxSprite
 				playAnim('idle');
 
 				flipX = true;
+			case 'naikaze':
+				isReskin=true;
+				var tex = Paths.getSparrowAtlas('characters/reskins/Naikaze','shared');
+				frames = tex;
+				animation.addByPrefix('idle', 'Naikaze idle dance', 24, false);
+				animation.addByPrefix('singUP', 'Naikaze Sing Note Up0', 24, false);
+				animation.addByPrefix('singLEFT', 'Naikaze Sing Note LEFT0', 24, false);
+				animation.addByPrefix('singRIGHT', 'Naikaze Sing Note Right0', 24, false);
+				animation.addByPrefix('singDOWN', 'Naikaze Sing Note DOWN0', 24, false);
+				animation.addByPrefix('singUPmiss', 'Naikaze Sing Note Up Miss', 24, false);
+				animation.addByPrefix('singLEFTmiss', 'Naikaze Sing Note LEFT Miss', 24, false);
+				animation.addByPrefix('singRIGHTmiss', 'Naikaze Sing Note Right Miss', 24, false);
+				animation.addByPrefix('singDOWNmiss', 'Naikaze Sing Note DOWN Miss', 24, false);
+				animation.addByPrefix('hey', 'BF HEY', 24, false);
+
+				animation.addByPrefix('cut', 'BF hit copy', 24, false);
+
+				animation.addByPrefix('firstDeath', "BF dies", 24, false);
+				animation.addByPrefix('deathLoop', "BF DEAD Loop", 24, true);
+				animation.addByPrefix('deathConfirm', "BF Dead confirm", 24, false);
+
+				animation.addByPrefix('scared', 'Naikaze idle shaking', 24);
+				var scaredFrames=[];
+				for(i in 0...24){
+					scaredFrames.push(i%3);
+				}
+				animation.addByIndices('dischargeScared', 'Naikaze idle shaking', scaredFrames, "", 24, false);
+
+				loadOffsets();
+				addOffset("dischargeScared",animOffsets.get("scared")[0],animOffsets.get("scared")[1]);
+				playAnim('idle');
+
+				flipX = true;
+
 			case 'bfside':
 				isReskin=true;
 				var tex = Paths.getSparrowAtlas('characters/reskins/Mini_Brightside','shared');
@@ -394,6 +428,39 @@ class Character extends FlxSprite
 				animation.addByIndices('dischargeScared', 'Brighty_Idle Shaking', scaredFrames, "", 24, false);
 				setGraphicSize(Std.int(width*1.5));
 				updateHitbox();
+				loadOffsets();
+				addOffset("dischargeScared",animOffsets.get("scared")[0],animOffsets.get("scared")[1]);
+				playAnim('idle');
+
+				flipX = true;
+			case 'babyvase':
+				isReskin=true;
+				var tex = Paths.getSparrowAtlas('characters/reskins/Mini_Vase','shared');
+				frames = tex;
+				animation.addByPrefix('idle', 'Mini_Vase Idle0', 24, false);
+				animation.addByPrefix('singUP', 'Mini_Vase Up0', 24, false);
+				animation.addByPrefix('singLEFT', 'Mini_Vase Left0', 24, false);
+				animation.addByPrefix('singRIGHT', 'Mini_Vase Right0', 24, false);
+				animation.addByPrefix('singDOWN', 'Mini_Vase Down0', 24, false);
+				animation.addByPrefix('singUPmiss', 'Mini_Vase Up Miss', 24, false);
+				animation.addByPrefix('singLEFTmiss', 'Mini_Vase Left Miss', 24, false);
+				animation.addByPrefix('singRIGHTmiss', 'Mini_Vase Right Miss', 24, false);
+				animation.addByPrefix('singDOWNmiss', 'Mini_Vase Down Miss', 24, false);
+				animation.addByPrefix('hey', 'Mini_Vase Pose', 24, false);
+
+				animation.addByPrefix('cut', 'Mini_Vase Ouch', 24, false);
+
+				animation.addByPrefix('firstDeath', "Mini_Vase Die0", 24, false);
+				animation.addByPrefix('deathLoop', "Mini_Vase Die_Loop", 24, true);
+				animation.addByPrefix('deathConfirm', "Mini_Vase Die_Confirm", 24, false);
+
+				animation.addByPrefix('scared', 'Mini_Vase Shaking Idle', 24);
+				var scaredFrames=[];
+				for(i in 0...24){
+					scaredFrames.push(i%3);
+				}
+				animation.addByIndices('dischargeScared', 'Mini_Vase Shaking Idle', scaredFrames, "", 24, false);
+				setGraphicSize(Std.int(width*1.3));
 				loadOffsets();
 				addOffset("dischargeScared",animOffsets.get("scared")[0],animOffsets.get("scared")[1]);
 				playAnim('idle');

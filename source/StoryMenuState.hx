@@ -118,6 +118,7 @@ class StoryMenuState extends MusicBeatState
 				trace("OXIDIZED");
 				encounterableCameos.push("Oxidation");
 			}
+			trace(encounterableCameos);
 		}
 
 		if (FlxG.sound.music != null)
