@@ -54,13 +54,25 @@ class SkinState extends MusicBeatState {
       char.screenCenter(X);
       char.visible=false;
       add(char);
+      switch(skin){
+        case 'bf-neb':
+          char.y -= 75;
+        case 'naikaze':
+          char.y -= 90;
+        case 'bfside':
+          char.y -= 120;
+        case 'babyvase':
+          char.y -= 110;
+      }
       characters.push(char);
     }
+
+    selectedIdx = unlockedSkins.indexOf(selectedSkin);
     var ui_tex = Paths.getSparrowAtlas('campaign_menu_UI_assets');
 
     leftArrow = new FlxSprite(0,300);
     leftArrow.screenCenter(X);
-    leftArrow.x -= 300;
+    leftArrow.x -= 350;
     leftArrow.y += 125;
     leftArrow.frames = ui_tex;
     leftArrow.animation.addByPrefix('idle', "arrow left");
@@ -70,8 +82,7 @@ class SkinState extends MusicBeatState {
 
     rightArrow = new FlxSprite(0, leftArrow.y);
     rightArrow.screenCenter(X);
-    rightArrow.x += 300;
-    rightArrow.y += 125;
+    rightArrow.x += 250;
     rightArrow.frames = ui_tex;
     rightArrow.animation.addByPrefix('idle', 'arrow right');
     rightArrow.animation.addByPrefix('press', "arrow push right", 24, false);
@@ -85,14 +96,25 @@ class SkinState extends MusicBeatState {
 
   override function beatHit(){
     for(char in characters){
-      if(!char.animation.name.startsWith("sing")){
+      if(!char.animation.name.startsWith("sing") || char.animation.curAnim.name=="hey" && char.animation.curAnim.finished ){
         char.dance();
       }
     }
   }
 
   var animIdx=0;
-  var anims = ["singUP","singRIGHT","singDOWN","singLEFT","hey"];
+  var anims = ["singUP","singRIGHT","singDOWN","singLEFT"];
+
+  public function changeSelection(change:Int){
+    selectedIdx+=change;
+    if(selectedIdx<0)
+			selectedIdx=unlockedSkins.length-1;
+		if(selectedIdx>=unlockedSkins.length)
+			selectedIdx=0;
+
+    selectedTimer=0;
+  }
+
 
   override function update(elapsed:Float){
     FlxG.camera.zoom = .7;
@@ -112,7 +134,14 @@ class SkinState extends MusicBeatState {
       }
     }
 
-    characters[selectedIdx].visible=true;
+    for(idx in 0...characters.length){
+      var c = characters[idx];
+      if(idx==selectedIdx)
+        c.visible=true;
+      else
+        c.visible=false;
+    }
+
 
     Conductor.songPosition = FlxG.sound.music.time;
     if (controls.BACK)
@@ -120,6 +149,28 @@ class SkinState extends MusicBeatState {
       FlxG.sound.play(Paths.sound('cancelMenu'));
       FlxG.switchState(new MainMenuState());
     }
+
+    if(controls.LEFT){
+      leftArrow.animation.play("press");
+    }else{
+      leftArrow.animation.play("idle");
+    }
+
+    if(controls.RIGHT){
+      rightArrow.animation.play("press");
+    }else{
+      rightArrow.animation.play("idle");
+    }
+
+    if(controls.ACCEPT){
+      selectedSkin = unlockedSkins[selectedIdx];
+      characters[selectedIdx].playAnim("hey",true);
+    }
+
+    if (controls.RIGHT_P)
+      changeSelection(1);
+    if (controls.LEFT_P)
+      changeSelection(-1);
 
     super.update(elapsed);
   }

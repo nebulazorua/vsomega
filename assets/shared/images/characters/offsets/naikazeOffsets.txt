@@ -1,11 +1,11 @@
 idle 0 0
 singUP -38 11
-singRIGHT 5 -13
-singLEFT -67 -1
+singLEFT 5 -13
+singRIGHT -67 -1
 singDOWN -1 -9
 singUPmiss -40 29
-singRIGHTmiss 3 -9
-singLEFTmiss -82 10
+singLEFTmiss 3 -9
+singRIGHTmiss -82 10
 singDOWNmiss -8 1
 hey -1 12
 firstDeath 57 1

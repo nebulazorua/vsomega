@@ -404,12 +404,12 @@ class Character extends FlxSprite
 				frames = tex;
 				animation.addByPrefix('idle', 'Naikaze idle dance', 24, false);
 				animation.addByPrefix('singUP', 'Naikaze Sing Note Up0', 24, false);
-				animation.addByPrefix('singLEFT', 'Naikaze Sing Note LEFT0', 24, false);
-				animation.addByPrefix('singRIGHT', 'Naikaze Sing Note Right0', 24, false);
+				animation.addByPrefix('singLEFT', 'Naikaze Sing Note Right0', 24, false);
+				animation.addByPrefix('singRIGHT', 'Naikaze Sing Note LEFT0', 24, false);
 				animation.addByPrefix('singDOWN', 'Naikaze Sing Note DOWN0', 24, false);
 				animation.addByPrefix('singUPmiss', 'Naikaze Sing Note Up Miss', 24, false);
-				animation.addByPrefix('singLEFTmiss', 'Naikaze Sing Note LEFT Miss', 24, false);
-				animation.addByPrefix('singRIGHTmiss', 'Naikaze Sing Note Right Miss', 24, false);
+				animation.addByPrefix('singLEFTmiss', 'Naikaze Sing Note Right Miss', 24, false);
+				animation.addByPrefix('singRIGHTmiss', 'Naikaze Sing Note LEFT Miss', 24, false);
 				animation.addByPrefix('singDOWNmiss', 'Naikaze Sing Note DOWN Miss', 24, false);
 				animation.addByPrefix('hey', 'BF HEY', 24, false);
 
