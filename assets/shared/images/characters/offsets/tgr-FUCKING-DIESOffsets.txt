@@ -1,0 +1,3 @@
+firstDeath 149 -23
+deathLoop 144 -101
+deathConfirm 144 -99

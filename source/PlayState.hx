@@ -3142,7 +3142,7 @@ class PlayState extends MusicBeatState
 				#end
 			}
 		else if (FlxG.keys.justPressed.SIX){
-				FlxG.switchState(new AnimationDebug("bf-fucking-dies"));
+				FlxG.switchState(new AnimationDebug("bf-FUCKING-DIES"));
 				Cache.Clear();
 				#if windows
 				if(lua!=null){
