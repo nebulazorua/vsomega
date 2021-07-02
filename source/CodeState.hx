@@ -116,7 +116,7 @@ class CodeState extends MusicBeatState
                     startDelay:2
                   });
                 }
-              })
+              });
               if(!FlxG.save.data.unlockedSkins.contains(skin)){
                 FlxG.save.data.unlockedSkins.push(skin);
               }
