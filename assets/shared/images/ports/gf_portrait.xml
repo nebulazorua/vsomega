@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="gf_portrait.png">
+	<!-- Created with Adobe Animate version 20.0.0.17400 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="GF Dancing Beat0000" x="39" y="39" width="303" height="286" frameX="0" frameY="-2" frameWidth="303" frameHeight="288"/>
+	<SubTexture name="GF Dancing Beat0001" x="39" y="39" width="303" height="286" frameX="0" frameY="-2" frameWidth="303" frameHeight="288"/>
+	<SubTexture name="GF Dancing Beat0002" x="417" y="39" width="301" height="287" frameX="-1" frameY="0" frameWidth="303" frameHeight="288"/>
+	<SubTexture name="GF Dancing Beat0003" x="417" y="39" width="301" height="287" frameX="-1" frameY="0" frameWidth="303" frameHeight="288"/>
+</TextureAtlas>

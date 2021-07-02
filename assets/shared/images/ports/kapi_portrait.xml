@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="kapi_portrait.png">
+	<!-- Created with Adobe Animate version 20.0.0.17400 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="kapi0000" x="39" y="39" width="310" height="334" frameX="0" frameY="-2" frameWidth="310" frameHeight="336"/>
+	<SubTexture name="kapi0001" x="39" y="39" width="310" height="334" frameX="0" frameY="-2" frameWidth="310" frameHeight="336"/>
+	<SubTexture name="kapi0002" x="424" y="39" width="309" height="336" frameX="0" frameY="0" frameWidth="310" frameHeight="336"/>
+	<SubTexture name="kapi0003" x="424" y="39" width="309" height="336" frameX="0" frameY="0" frameWidth="310" frameHeight="336"/>
+</TextureAtlas>

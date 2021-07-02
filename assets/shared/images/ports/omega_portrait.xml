@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="omega_portrait.png">
+	<!-- Created with Adobe Animate version 20.0.0.17400 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Omega idle dance0000" x="39" y="39" width="446" height="338" frameX="0" frameY="-4" frameWidth="446" frameHeight="342"/>
+	<SubTexture name="Omega idle dance0001" x="39" y="39" width="446" height="338" frameX="0" frameY="-4" frameWidth="446" frameHeight="342"/>
+	<SubTexture name="Omega idle dance0002" x="39" y="452" width="442" height="342" frameX="-2" frameY="0" frameWidth="446" frameHeight="342"/>
+	<SubTexture name="Omega idle dance0003" x="39" y="452" width="442" height="342" frameX="-2" frameY="0" frameWidth="446" frameHeight="342"/>
+</TextureAtlas>

@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="tgr_portrait.png">
+	<!-- Created with Adobe Animate version 20.0.0.17400 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="tgr_idle0000" x="18" y="18" width="271" height="248" frameX="0" frameY="-4" frameWidth="271" frameHeight="253"/>
+	<SubTexture name="tgr_idle0001" x="18" y="18" width="271" height="248" frameX="0" frameY="-4" frameWidth="271" frameHeight="253"/>
+	<SubTexture name="tgr_idle0002" x="323" y="18" width="268" height="253" frameX="-1" frameY="0" frameWidth="271" frameHeight="253"/>
+	<SubTexture name="tgr_idle0003" x="323" y="18" width="268" height="253" frameX="-1" frameY="0" frameWidth="271" frameHeight="253"/>
+</TextureAtlas>

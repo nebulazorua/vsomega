@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="merchant_camera_portrait.png">
+	<!-- Created with Adobe Animate version 20.0.0.17400 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="merchant camera0000" x="39" y="39" width="437" height="335" frameX="0" frameY="-4" frameWidth="437" frameHeight="339"/>
+	<SubTexture name="merchant camera0001" x="39" y="39" width="437" height="335" frameX="0" frameY="-4" frameWidth="437" frameHeight="339"/>
+	<SubTexture name="merchant camera0002" x="39" y="449" width="437" height="339"/>
+	<SubTexture name="merchant camera0003" x="39" y="449" width="437" height="339"/>
+</TextureAtlas>

@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="naikaze_portrait.png">
+	<!-- Created with Adobe Animate version 20.0.0.17400 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Naikaze idle dance0000" x="18" y="18" width="263" height="292" frameX="0" frameY="-4" frameWidth="263" frameHeight="296"/>
+	<SubTexture name="Naikaze idle dance0001" x="18" y="18" width="263" height="292" frameX="0" frameY="-4" frameWidth="263" frameHeight="296"/>
+	<SubTexture name="Naikaze idle dance0002" x="305" y="18" width="263" height="296"/>
+	<SubTexture name="Naikaze idle dance0003" x="305" y="18" width="263" height="296"/>
+</TextureAtlas>

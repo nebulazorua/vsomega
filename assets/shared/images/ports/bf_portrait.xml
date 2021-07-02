@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="bf_portrait.png">
+	<!-- Created with Adobe Animate version 20.0.0.17400 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="BF idle dance0000" x="39" y="39" width="341" height="259" frameX="0" frameY="-2" frameWidth="341" frameHeight="261"/>
+	<SubTexture name="BF idle dance0001" x="39" y="39" width="341" height="259" frameX="0" frameY="-2" frameWidth="341" frameHeight="261"/>
+	<SubTexture name="BF idle dance0002" x="455" y="39" width="339" height="261" frameX="-2" frameY="0" frameWidth="341" frameHeight="261"/>
+	<SubTexture name="BF idle dance0003" x="455" y="39" width="339" height="261" frameX="-2" frameY="0" frameWidth="341" frameHeight="261"/>
+</TextureAtlas>

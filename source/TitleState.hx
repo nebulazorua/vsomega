@@ -52,6 +52,31 @@ class TitleState extends MusicBeatState
 		FlxG.mouse.visible = false;
 
 		if(initialized){
+			if(FlxG.save.data.finishedSongs==null)
+				FlxG.save.data.finishedSongs=[];
+
+			if(FlxG.save.data.perfectedSongs==null)
+				FlxG.save.data.perfectedSongs=[];
+
+			if(FlxG.save.data.flashySongs==null)
+				FlxG.save.data.flashySongs=[];
+
+			if(FlxG.save.data.unlockedOmegaSongs==null)
+				FlxG.save.data.unlockedOmegaSongs=[];
+
+			if(FlxG.save.data.unlocked==null)
+				FlxG.save.data.unlocked=[];
+
+			if(FlxG.save.data.cameos==null)
+				FlxG.save.data.cameos=[];
+
+			if(FlxG.save.data.unlockedSkins==null)
+				FlxG.save.data.unlockedSkins=[];
+
+			if(FlxG.save.data.selectedSkin==null)
+				FlxG.save.data.selectedSkin='bf';
+
+			SkinState.selectedSkin=FlxG.save.data.selectedSkin;
 			#if FREEPLAY
 			FlxG.switchState(new FreeplayState());
 			#elseif CHARTING

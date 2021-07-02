@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="demetrios_portrait.png">
+	<!-- Created with Adobe Animate version 20.0.0.17400 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="DEMETRIOS0000" x="39" y="39" width="644" height="673" frameX="0" frameY="-6" frameWidth="644" frameHeight="679"/>
+	<SubTexture name="DEMETRIOS0001" x="39" y="39" width="644" height="673" frameX="0" frameY="-6" frameWidth="644" frameHeight="679"/>
+	<SubTexture name="DEMETRIOS0002" x="758" y="39" width="634" height="679" frameX="-5" frameY="0" frameWidth="644" frameHeight="679"/>
+	<SubTexture name="DEMETRIOS0003" x="758" y="39" width="634" height="679" frameX="-5" frameY="0" frameWidth="644" frameHeight="679"/>
+</TextureAtlas>

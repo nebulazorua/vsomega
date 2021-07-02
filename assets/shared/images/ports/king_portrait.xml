@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="king_portrait.png">
+	<!-- Created with Adobe Animate version 20.0.0.17400 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="King Idle0000" x="39" y="39" width="291" height="371" frameX="0" frameY="-4" frameWidth="291" frameHeight="375"/>
+	<SubTexture name="King Idle0001" x="39" y="39" width="291" height="371" frameX="0" frameY="-4" frameWidth="291" frameHeight="375"/>
+	<SubTexture name="King Idle0002" x="405" y="39" width="285" height="375" frameX="-3" frameY="0" frameWidth="291" frameHeight="375"/>
+	<SubTexture name="King Idle0003" x="405" y="39" width="285" height="375" frameX="-3" frameY="0" frameWidth="291" frameHeight="375"/>
+</TextureAtlas>

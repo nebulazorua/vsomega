@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="erderi_portrait.png">
+	<!-- Created with Adobe Animate version 20.0.0.17400 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="erderi idle0000" x="18" y="18" width="254" height="275" frameX="0" frameY="-3" frameWidth="254" frameHeight="278"/>
+	<SubTexture name="erderi idle0001" x="18" y="18" width="254" height="275" frameX="0" frameY="-3" frameWidth="254" frameHeight="278"/>
+	<SubTexture name="erderi idle0002" x="306" y="18" width="252" height="278" frameX="-1" frameY="0" frameWidth="254" frameHeight="278"/>
+	<SubTexture name="erderi idle0003" x="306" y="18" width="252" height="278" frameX="-1" frameY="0" frameWidth="254" frameHeight="278"/>
+</TextureAtlas>

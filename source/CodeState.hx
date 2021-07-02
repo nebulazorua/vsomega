@@ -34,13 +34,13 @@ typedef Code = {
 class CodeState extends MusicBeatState
 {
   public static var codes:Array<Code> = [
-    {code: "youareafool",reward:"skin:babyvase"},
+    {code: "iamafool",reward:"skin:babyvase"},
     {code: "getout",reward:"skin:bfside"},
     {code: "naikaze",reward:"skin:naikaze"},
     {code: "mikeeey",reward:"skin:mikeeey"},
     {code: "tgr",reward:"skin:tgr"},
     {code: "erderithefox",reward:"skin:erderi"},
-    {code: "acai28",reward:"skinacai28"},
+    {code: "acai28",reward:"skin:acai28"},
   ];
 
   var inputText:FlxInputText;
@@ -106,6 +106,7 @@ class CodeState extends MusicBeatState
                 case 'acai28':
                   sound = 'AcaiUnlock';
               }
+
               if(FlxG.save.data.unlockedSkins.contains(skin)){
                 sound='alreadyHave';
               }
@@ -115,6 +116,24 @@ class CodeState extends MusicBeatState
 
 
               if(!FlxG.save.data.unlockedSkins.contains(skin)){
+                var notif = new FlxSprite(-200,50).loadGraphic(Paths.image('codenotifs/${codeData.code}'));
+                notif.setGraphicSize(Std.int(notif.width*.5));
+                notif.updateHitbox();
+                notif.scrollFactor.set(0,0);
+                FlxTween.tween(notif,{x: 0}, 0.4, {
+                  ease: FlxEase.quartInOut,
+                  onComplete:function(twn:FlxTween){
+                    FlxTween.tween(notif,{x: -400}, 0.4, {
+                      startDelay:2.5,
+                      ease: FlxEase.quartInOut,
+                      onComplete:function(twn:FlxTween){
+                        remove(notif);
+                      }
+                    });
+                  }
+                });
+
+                add(notif);
                 FlxG.save.data.unlockedSkins.push(skin);
               }
 

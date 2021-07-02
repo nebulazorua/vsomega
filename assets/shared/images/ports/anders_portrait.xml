@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="anders_portrait.png">
+	<!-- Created with Adobe Animate version 20.0.0.17400 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="anders_f_idle0000" x="39" y="39" width="413" height="342" frameX="0" frameY="-5" frameWidth="413" frameHeight="347"/>
+	<SubTexture name="anders_f_idle0001" x="39" y="39" width="413" height="342" frameX="0" frameY="-5" frameWidth="413" frameHeight="347"/>
+	<SubTexture name="anders_f_idle0002" x="527" y="39" width="405" height="347" frameX="-4" frameY="0" frameWidth="413" frameHeight="347"/>
+	<SubTexture name="anders_f_idle0003" x="527" y="39" width="405" height="347" frameX="-4" frameY="0" frameWidth="413" frameHeight="347"/>
+</TextureAtlas>

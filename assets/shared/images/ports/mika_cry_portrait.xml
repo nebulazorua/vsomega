@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="mika_cry_portrait.png">
+	<!-- Created with Adobe Animate version 20.0.0.17400 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="CHILD up0000" x="39" y="39" width="167" height="259" frameX="0" frameY="-4" frameWidth="167" frameHeight="263"/>
+	<SubTexture name="CHILD up0001" x="39" y="39" width="167" height="259" frameX="0" frameY="-4" frameWidth="167" frameHeight="263"/>
+	<SubTexture name="CHILD up0002" x="281" y="39" width="165" height="263" frameX="-1" frameY="0" frameWidth="167" frameHeight="263"/>
+	<SubTexture name="CHILD up0003" x="281" y="39" width="165" height="263" frameX="-1" frameY="0" frameWidth="167" frameHeight="263"/>
+</TextureAtlas>

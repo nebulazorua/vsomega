@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="mom_portrait.png">
+	<!-- Created with Adobe Animate version 20.0.0.17400 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="mom0000" x="39" y="39" width="392" height="396" frameX="0" frameY="-8" frameWidth="392" frameHeight="404"/>
+	<SubTexture name="mom0001" x="39" y="39" width="392" height="396" frameX="0" frameY="-8" frameWidth="392" frameHeight="404"/>
+	<SubTexture name="mom0002" x="506" y="39" width="386" height="404" frameX="-3" frameY="0" frameWidth="392" frameHeight="404"/>
+	<SubTexture name="mom0003" x="506" y="39" width="386" height="404" frameX="-3" frameY="0" frameWidth="392" frameHeight="404"/>
+</TextureAtlas>

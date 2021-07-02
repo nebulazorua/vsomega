@@ -165,7 +165,7 @@ class AnimationDebug extends FlxState
 		add(camFollow);
 		camGame.follow(camFollow);
 
-		ghostBF = new Character(0, 0, "gf");
+		ghostBF = new Character(0, 0, "bf");
 		ghostBF.alpha = .5;
 		ghostBF.screenCenter();
 		ghostBF.debugMode = true;
@@ -339,6 +339,7 @@ class AnimationDebug extends FlxState
 			updateTexts();
 			genBoyOffsets(false);
 			char.playAnim(animList[curAnim]);
+			ghostBF.playAnim(animList[curAnim]);
 		}
 
 		super.update(elapsed);

@@ -2010,6 +2010,8 @@ class PlayState extends MusicBeatState
 		weebShit.screenCenter(XY);
 		weebShit.scrollFactor.set();
 		weebShit.cameras = [camHUD];
+
+		FlxG.sound.play(Paths.sound("omegaAnimeMoment"),.8);
 		weebShit.animation.finishCallback = function(name:String){
 			FlxTween.tween(weebShit,{alpha:0},0.4,{
 					startDelay:2,
@@ -2875,6 +2877,8 @@ class PlayState extends MusicBeatState
 				dadRock.y = -500-25*Math.sin(timer);
 				bfRock.y = -200-25*Math.cos(timer*1.25);
 				boyfriend.y = 0-25*Math.cos(timer*1.25);
+
+
 				gf.y = -280-25*Math.cos(timer*1.25);
 				if(dad.curCharacter=='gf')
 					dad.y = gf.y
@@ -2891,6 +2895,7 @@ class PlayState extends MusicBeatState
 					case 'babyvase':
 						boyfriend.y -= 110;
 				}
+				slash.y = boyfriend.y+25;
 
 				var nextXBG = void1.x+(elapsed*256);
 				var nextXBG2 = void2.x+(elapsed*256);
@@ -3137,7 +3142,7 @@ class PlayState extends MusicBeatState
 				#end
 			}
 		else if (FlxG.keys.justPressed.SIX){
-				FlxG.switchState(new AnimationDebug("gf-child"));
+				FlxG.switchState(new AnimationDebug("bf-fucking-dies"));
 				Cache.Clear();
 				#if windows
 				if(lua!=null){
@@ -4567,20 +4572,22 @@ class PlayState extends MusicBeatState
 			lua.call("goodNoteHit",[note.noteData,note.strumTime,Conductor.songPosition,note.isSustainNote]); // TODO: Note lua class???
 		}
 
-		if(modchart.healthGain && !note.isSustainNote || modchart.susHeal && note.isSustainNote ){
-			if (note.noteType ==6)
-				if(ItemState.equipped.contains("sword"))
-					health += modchart.gemHPGain+(modchart.gemHPGain*.5);
-				else
-					health += modchart.gemHPGain;
-			else if(note.noteType==7)
-				health = .01;
-			else{
-				if(ItemState.equipped.contains("sword"))
-					health += modchart.noteHPGain+(modchart.noteHPGain*.5);
-				else
-					health += modchart.noteHPGain;
-				}
+		if(modchart.healthGain){
+			if(!note.isSustainNote || modchart.susHeal && note.isSustainNote ){
+				if (note.noteType ==6)
+					if(ItemState.equipped.contains("sword"))
+						health += modchart.gemHPGain+(modchart.gemHPGain*.5);
+					else
+						health += modchart.gemHPGain;
+				else if(note.noteType==7)
+					health = .01;
+				else{
+					if(ItemState.equipped.contains("sword"))
+						health += modchart.noteHPGain+(modchart.noteHPGain*.5);
+					else
+						health += modchart.noteHPGain;
+					}
+			}
 		}
 
 		previousHealth=health;

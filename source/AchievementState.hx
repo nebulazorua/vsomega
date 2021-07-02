@@ -70,7 +70,9 @@ class AchievementState extends MusicBeatState
   var medals:FlxTypedGroup<FlxSprite>;
   var selectedX:Int = 0;
   var selectedY:Int = 0;
-
+  var bigMedal:FlxSprite;
+  var badgeDesc:FlxText;
+  var badgeName:FlxText;
   public static var notifUp:Bool=false;
   public static var toUnlock:Array<String> = [];
   public static var unlockedMedals = [];
@@ -227,8 +229,6 @@ class AchievementState extends MusicBeatState
             toUnlock.push(data.name);
           unlockedMedals.push(data.name);
         }
-        //if(toUnlock!='')
-          //unlockMedal(toUnlock);
       }
 
   }
@@ -266,13 +266,43 @@ class AchievementState extends MusicBeatState
       medals.add(badge);
     }
 
+    bigMedal = new FlxSprite(765,105);
+    bigMedal.antialiasing=true;
+    add(bigMedal);
+
+    badgeName = new FlxText(625, 400, 600, "cum", 32);
+		badgeName.setFormat("VCR OSD Mono", 36, FlxColor.WHITE, CENTER, SHADOW,FlxColor.BLACK);
+		badgeName.shadowOffset.set(2,2);
+
+    badgeDesc = new FlxText(725, 435, 400, "Boyfriend.XML", 32);
+		badgeDesc.setFormat("VCR OSD Mono", 30, FlxColor.WHITE, CENTER, SHADOW,FlxColor.BLACK);
+		badgeDesc.shadowOffset.set(2,2);
+
+    add(badgeDesc);
+    add(badgeName);
+
     super.create();
   }
-
+  var selected='';
   override function update(elapsed:Float)
   {
     selectionRing.x = medals.members[selectedX+(selectedY*6)].x;
     selectionRing.y = medals.members[selectedX+(selectedY*6)].y;
+
+    var data = achievementData[selectedX+(selectedY*6)];
+    if(selected!=data.name){
+      selected=data.name;
+      if(unlockedMedals.contains(data.name)){
+        bigMedal.loadGraphic(Paths.image('achievements/${data.rarity}/${data.name}'));
+      }else{
+        bigMedal.loadGraphic(Paths.image('sex_mark'));
+      }
+      badgeDesc.text = data.desc;
+      badgeName.text=data.name;
+
+      bigMedal.x = 765;
+      bigMedal.y = 105;
+    }
 
     if (controls.BACK)
     {
