@@ -112,6 +112,9 @@ class TitleState extends MusicBeatState
 			if(FlxG.save.data.perfectedSongs==null)
 				FlxG.save.data.perfectedSongs=[];
 
+			if(FlxG.save.data.flashySongs==null)
+				FlxG.save.data.flashySongs=[];
+
 			if(FlxG.save.data.unlockedOmegaSongs==null)
 				FlxG.save.data.unlockedOmegaSongs=[];
 
@@ -325,19 +328,7 @@ class TitleState extends MusicBeatState
 
 			new FlxTimer().start(2, function(tmr:FlxTimer)
 			{
-				if(FlxG.save.data.hasPlayedOmegaMod!=true){
-					FlxG.save.data.hasPlayedOmegaMod=true;
-					var poop:String = Highscore.formatSong("prelude", 2);
-					PlayState.SONG = Song.loadFromJson(poop, "prelude");
-					PlayState.isStoryMode = true;
-					PlayState.storyDifficulty = 2;
-					PlayState.storyWeek = -1;
-					PlayState.blueballs=0;
-					LoadingState.loadAndSwitchState(new PlayState());
-				}else{
-					FlxG.switchState(new MainMenuState());
-				}
-
+				FlxG.switchState(new MainMenuState());
 			});
 			// FlxG.sound.play(Paths.music('titleShoot'), 0.7);
 		}

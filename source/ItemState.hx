@@ -22,6 +22,65 @@ import Options;
 import flixel.group.FlxSpriteGroup;
 import flixel.math.FlxMath;
 
+class Checkbox extends FlxSprite
+{
+	public var state:Bool=false;
+	public var tracker:FlxSprite;
+	public function new(state:Bool){
+		super();
+		this.state=state;
+		frames = Paths.getSparrowAtlas("checkbox");
+		updateHitbox();
+		animation.addByIndices("unselected","confirm",[0],"",36,false);
+		animation.addByPrefix("selecting","confirm",36,false);
+		var reversedindices = [];
+		var max = animation.getByName("selecting").frames.copy();
+		max.reverse();
+		for(i in max){
+			reversedindices.push(i-2);
+		}
+		animation.addByIndices("unselecting","confirm",reversedindices,"",36,false);
+		animation.addByIndices("selected","confirm",[animation.getByName("selecting").frames.length-2],"",36,false);
+		antialiasing=true;
+		setGraphicSize(Std.int(width*.6) );
+		updateHitbox();
+		if(state)
+			animation.play("selected");
+		else
+			animation.play("unselected");
+
+	}
+
+	public function changeState(state:Bool){
+		this.state=state;
+		if(state){
+			animation.play("selecting",true,false,animation.curAnim.name=='unselecting'?animation.curAnim.frames.length-animation.curAnim.curFrame:0);
+		}else{
+			animation.play("unselecting",true,false,animation.curAnim.name=='selecting'?animation.curAnim.frames.length-animation.curAnim.curFrame:0);
+		}
+	}
+
+	override function update(elapsed:Float){
+		super.update(elapsed);
+		if(tracker!=null){
+			x = tracker.x - 140;
+			y = tracker.y - 45;
+		}
+		if(animation.curAnim!=null){
+
+			if(animation.curAnim.finished && (animation.curAnim.name=="selecting" || animation.curAnim.name=="unselecting")){
+				if(state){
+					trace("SELECTED");
+					animation.play("selected",true);
+				}else{
+					trace("UNSELECTED");
+					animation.play("unselected",true);
+				}
+			}
+		}
+	}
+}
+
 class ItemChoice extends FlxSpriteGroup
 {
   public var name:String = '';
@@ -49,12 +108,34 @@ class ItemChoice extends FlxSpriteGroup
     if(internalName!='none')
 		  add(checkbox);
   }
+
+  override function update(elapsed:Float){
+    super.update(elapsed);
+
+  }
 }
 
 class ItemState extends MusicBeatState
 {
-  public static var items = ["sword","arrow","twat","depressed","flippy","drunk"];
-  public static var itemNames = ["Omega's Sword","Resistance","Flashy","Cold Heart","Flippy Mode","Drunk Notes"];
+  public static var items = ["sword","arrow","twat","depressed","drunk","flippy"];
+  public static var itemNames = ["Omega's Sword","Resistance","Flashy","Cold Heart","Drunk Notes","Flippy Mode"];
+	public static var itemFlavour:Map<String,String> = [
+		"sword" =>  "You're pretty sure it's a replica, but it's close enough.",
+		"arrow" => "You're taking 'what doesn't kill you makes you stronger' way too literally.",
+		"twat" => "Your strive for perfection has left you unable to accept anything else. Don't slip up.",
+		"depressed" => "You monster.",
+		"flippy" => "Feelin' lucky, are ya? ESPECIALLY Don't slip up.",
+		"drunk" => "I'm nto drnuk, you a-are!"
+	];
+	public static var itemDescs:Map<String,String> = [
+		"sword" =>  "You gain 50% more health when hitting notes.",
+		"arrow" => "You get revived with 50% HP the first time you die, and sword notes do 50% less damage to you.",
+		"twat" => "When you get below 90% accuracy, you die.",
+		"depressed" => "Missing deals 50% less damage, and torch notes are less effective.",
+		"flippy" => "You take damage when getting goods, and die on a bad, shit or miss.",
+		"drunk" => "Every song has a modchart akin to You Are a Fool's"
+	];
+
   public static var comboNames:Map<String,String> = [
     "sword" => "Omega's Sword",
     "arrow" => "Resistance",
@@ -103,6 +184,10 @@ class ItemState extends MusicBeatState
   public var unlockedItems = [];
   public var unlockedItemNames = [];
 
+	var comboNameTxt:FlxText;
+	var comboDescTxt:FlxText;
+	var itemDescTxt:FlxText;
+	var itemFlavTxt:FlxText;
   public static var equipped = [];
   var void1:FlxSprite;
   var void2:FlxSprite;
@@ -139,6 +224,10 @@ class ItemState extends MusicBeatState
     bfRock.active = false;
     add(bfRock);
 
+		comboNameTxt = new FlxText();
+		comboDescTxt = new FlxText();
+		itemDescTxt = new FlxText();
+	 	itemFlavTxt = new FlxText();
 
     var box = new FlxSprite().loadGraphic(Paths.image("WOODEN_BOX"));
     box.antialiasing=true;
@@ -157,8 +246,8 @@ class ItemState extends MusicBeatState
       FlxG.save.data.getResistance,
       FlxG.save.data.becomeATwat,
       FlxG.save.data.omegaBadEnding,
-      true,
-      FlxG.save.data.drunk
+      FlxG.save.data.drunk,
+			true
     ];*/
     var conditions = [
       true,
@@ -237,7 +326,7 @@ class ItemState extends MusicBeatState
     bf.dance();
     super.beatHit();
   }
-  
+
   var timer:Float = 0;
 
   override function update(elapsed:Float){

@@ -3256,12 +3256,14 @@ class PlayState extends MusicBeatState
 				if(storyDifficulty==0 && SONG.song.toLowerCase()=='prelude'){
 					AchievementState.toUnlock.push("Thats not how you do it");
 				}
-
-				openSubState(new GameOverSubstate(boyfriend.getScreenPosition().x, boyfriend.getScreenPosition().y, boyfriend.isReskin?boyfriend.curCharacter:'bf' ));
 				blueballs++;
 				if(blueballs==10){
 					FlxG.save.data.getResistance=true;
+				}else if(blueballs==99 && SONG.song.toLowerCase()=='last-stand'){
+					AchievementState.toUnlock.push("Waste of Time");
 				}
+
+				openSubState(new GameOverSubstate(boyfriend.getScreenPosition().x, boyfriend.getScreenPosition().y, boyfriend.isReskin?boyfriend.curCharacter:'bf' ));
 				// FlxG.switchState(new GameOverState(boyfriend.getScreenPosition().x, boyfriend.getScreenPosition().y));
 
 				#if desktop
@@ -3708,15 +3710,13 @@ class PlayState extends MusicBeatState
 		if(!FlxG.save.data.finishedSongs.contains(SONG.song.toLowerCase()))
 			FlxG.save.data.finishedSongs.push(SONG.song.toLowerCase());
 
-		if(misses==0 && storyDifficulty==2  && !FlxG.save.data.perfectedSongs.contains(SONG.song.toLowerCase())){
+		var isHard = (storyDifficulty==2 || SONG.song.toLowerCase()=='dishonor' || SONG.song.toLowerCase()=='hivemind' );
+		if(misses==0 && isHard  && !FlxG.save.data.perfectedSongs.contains(SONG.song.toLowerCase())){
 			FlxG.save.data.perfectedSongs.push(SONG.song.toLowerCase());
 		}
-		if(ItemState.equipped.contains("twat") && !FlxG.save.data.flashySongs.contains(SONG.song.toLowerCase()) ){
+		if(ItemState.equipped.contains("twat") && isHard && !FlxG.save.data.flashySongs.contains(SONG.song.toLowerCase()) ){
 			FlxG.save.data.flashySongs.push(SONG.song.toLowerCase());
 		}
-		//if(FlxG.save.data.flashySongs.length>=27){
-
-	//	}
 
 
 		AchievementState.checkUnlocks();

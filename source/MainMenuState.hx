@@ -184,7 +184,18 @@ class MainMenuState extends MusicBeatState
 				dismissItems();
 				FlxG.mouse.visible=false;
 				new FlxTimer().start(.5, function(tmr:FlxTimer){
-					FlxG.switchState(new StoryMenuState());
+					if(FlxG.save.data.hasPlayedOmegaMod!=true){
+						FlxG.save.data.hasPlayedOmegaMod=true;
+						var poop:String = Highscore.formatSong("prelude", 2);
+						PlayState.SONG = Song.loadFromJson(poop, "prelude");
+						PlayState.isStoryMode = true;
+						PlayState.storyDifficulty = 2;
+						PlayState.storyWeek = -1;
+						PlayState.blueballs=0;
+						LoadingState.loadAndSwitchState(new PlayState());
+					}else{
+						FlxG.switchState(new StoryMenuState());
+					}
 				});
 				trace("Story Menu Selected");
 			case 'freeplay':

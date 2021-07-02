@@ -42,6 +42,7 @@ class SkinState extends MusicBeatState {
   var lastAnimTimer:Float = 0;
 
   override function create(){
+    selectedSkin = FlxG.save.data.selectedSkin;
     for(idx in 0...skins.length){
       unlockedSkins.push(skins[idx]);
       unlockedNames.push(skinNames[idx]);
@@ -196,6 +197,7 @@ class SkinState extends MusicBeatState {
     if(controls.ACCEPT && selectedSkin!=unlockedSkins[selectedIdx]){
       selectedTimer=0;
       selectedSkin = unlockedSkins[selectedIdx];
+      FlxG.save.data.selectedSkin = selectedSkin;
       FlxG.sound.play(Paths.sound('confirmMenu'));
       characters[selectedIdx].playAnim("hey",true);
     }

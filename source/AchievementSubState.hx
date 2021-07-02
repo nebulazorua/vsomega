@@ -33,7 +33,7 @@ class AchievementSubState extends MusicBeatSubstate
       ease: FlxEase.quartInOut,
       onComplete:function(twn:FlxTween){
         FlxTween.tween(notif,{x: -400}, 0.4, {
-          startDelay:5,
+          startDelay:2.5,
           ease: FlxEase.quartInOut,
           onComplete:function(twn:FlxTween){
             remove(notif);
