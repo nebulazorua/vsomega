@@ -1,0 +1,12 @@
+[goto:childprotectiveservices/1][music:Defender][dialoguesound:soundbytes/omega]お前は分かっていない、何もかも。 彼女がどんな事をされてきたか、奴らがなんなのかを知らないんだ。
+[goto:childprotectiveservices/2]奴らは彼女を監禁していた。恐怖で震えていた、たった1人でな。
+[goto:childprotectiveservices/3][nofade]奴らはこんな幼い子供にこんな事をしたんだ。
+[goto:childprotectiveservices/4]一体何のために? 彼女が呪われているとくだらない予言で言われたから? 一体どんな子育てをしていたんだ?
+[goto:childprotectiveservices/5][nofade][dialoguesound:soundbytes/bf]Bop?
+[goto:childprotectiveservices/6][dialoguesound:soundbytes/omega]今からでも間に合う。お前は彼女を助けられる。 お前にはその力がある。
+…東から軍隊がやって来てる、恐らくお前と同じ目的でな。
+彼女を連れ戻して、また監禁しようとしているんだ。
+全員を退けるのは無理かもしれない。だが俺達が協力すれば、彼女を守ることはできるはずだ。
+[goto:childprotectiveservices/7][nofade]だが、お前がまだ金や名声で
+彼女を取り戻そうとするなら、覚えておけ。
+俺は戦わずにして倒れることはない。

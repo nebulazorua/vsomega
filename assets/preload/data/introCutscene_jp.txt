@@ -1,0 +1,20 @@
+[goto:preweek/1][music:Dearest][dialoguesound:soundbytes/daddy]あのバカで青臭いクソガキが… 今に見てろ。
+[goto:preweek/2]アイツを始末しようとして刺客を送る度に、
+[goto:preweek/3]アイツはその刺客たちと仲良くなっちまう…
+[goto:preweek/4]
+[goto:preweek/5]わ、私の妻とも…!?一体どうなっちまってんだ?! うぅ!
+[goto:preweek/6]どこかに、アイツを始末できる奴はいるはずだ。
+[goto:preweek/7]
+[goto:preweek/8]またハズレだ、こいつらはみんな使えない。
+[goto:preweek/9]役立たずが。 いくら金を使ったと思ってるんだ？
+[goto:preweek/10]なんでこの時代の奴らはみんな無能なんだ?
+[goto:preweek/11][nofade][shake:2,0.2][sound:dumbassDDFuckingDies]いってぇ!
+[goto:preweek/12]くそっ…待て、何だこれは?
+[dialoguespeed:0.08]うぅむ…今の時代にはいないが、違う時代ならどうだ?
+[goto:preweek/13]ふむ、これは…
+いや、待てよ、彼らが殺したのはフランスの貴族だけだ…。
+[goto:preweek/14][nofade][shake:0.5,0.1]
+[goto:preweek/15]Perfect.
+[goto:preweek/16]
+[goto:preweek/17][nofade][shake:2,0.3][sound:portalOpen]
+[goto:preweek/18][nofade]

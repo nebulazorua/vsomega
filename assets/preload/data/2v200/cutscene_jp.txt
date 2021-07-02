@@ -1,0 +1,15 @@
+[setstory:2v200,After-the-Ashes][goto:2v200/G1_1][music:Dynamic Duo][dialoguesound:soundbytes/bf]Beep be bo! Skadap doop!
+[dialoguesound:soundbytes/omega]お前は正しい選択をした。
+[nofade]なぜ俺が彼女をあそこに連れて行かせないのか、理由はわかっただろ。
+[dialoguesound:soundbytes/bf]Bedoop!
+[dialoguesound:soundbytes/omega]それじゃあ、一緒にやっちまおう。
+[goto:2v200/G1_2]地平線上に軍隊が来るのが見えた。覚悟を決めておけ。
+[goto:2v200/G1_3]…ミカ?
+[dialoguesound:soundbytes/mika]なに、お兄さん?
+[dialoguesound:soundbytes/omega]お前は急いで山の奥へむかえ。ここまで来た目的を果たそう。 その呪いを解くんだ。
+[dialoguesound:soundbytes/mika]分かったよ、お兄さん!
+[dialoguesound:soundbytes/omega]お前もだ、エルドリッチの女! 念のためにミカと一緒にいてくれ!
+[goto:2v200/G1_4][dialoguesound:soundbytes/gf]わかったわ!
+気をつけてね、いい?
+[dialoguesound:soundbytes/bf]Bedoop!
+[nofade][shake:1,0.1][goto:2v200/G1_5][dialoguesound:soundbytes/omega]よし、行くぞ。

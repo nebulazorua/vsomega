@@ -1,0 +1,15 @@
+[goto:merc/1_1][music:Swordsman]
+[goto:merc/1_2][dialoguesound:soundbytes/bf][nofade]Beep!
+[goto:merc/1_3][dialoguesound:soundbytes/omega]小娘、俺の後ろにいろ。
+何者だ？ お前は俺達の敵か味方か？
+[dialoguesound:soundbytes/bf]Beep
+[dialoguesound:soundbytes/omega]…まぁ、言語の壁があるが何とか伝わってるようだな。
+何しに来た？
+[goto:merc/1_4][nofade][dialoguesound:soundbytes/bf]Beep bap
+[dialoguesound:soundbytes/omega]...狙いはこいつか。
+[goto:merc/1_5][nofade]なんで、驚かないかって。
+いいか、奴らが俺達の前に送り込んだのはお前が初めてじゃない。
+[goto:merc/1_6][nofade]そして、お前で最後になるとは思えない。
+[goto:merc/1_7][nofade][shake:1,0.1]俺には使命がある、こいつを…彼女を守ることだ。
+“大丈夫だ、任せろ。
+[dialoguespeed:0.05]俺は、こういうのは得意なんだ。

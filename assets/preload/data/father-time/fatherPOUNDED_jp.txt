@@ -1,0 +1,14 @@
+[goto:daddygetspounded/1][sound:micDrop][music:BOYFRIEND.XML][shake:1,0.1]
+[dialoguesound:soundbytes/daddy]どうやって？！もう一度私を倒すためにどのように管理しましたか？！？！
+[dialoguesound:soundbytes/bf]Boop bedoop!
+[dialoguesound:soundbytes/gf]あなたにぴったりです！お父さん、あなたは屈辱を受けるに値しました！
+[dialoguesound:soundbytes/bf]Beep paribeep bo bap.
+[dialoguesound:soundbytes/daddy]このすべて...私はあなたに持っていたすべてを投げました...
+...それでも私はまだ負けました。
+なぜあなたは私を捕まえに来ないのですか、ボーイフレンド？
+ボーカルがそれを解決しない場合は、男のように私と戦ってください！
+[goto:daddygetspounded/2][nofade][dialoguesound:soundbytes/bf] Boop!
+[goto:daddygetspounded/3][nofade]Skebap!
+[goto:daddygetspounded/4][sound:epicPunch][shake:3,0.5][nofade]ビッチ！
+[goto:daddygetspounded/5][sound:bodyDrop][shake:1,0.1]
+[goto:daddygetspounded/6][dialoguesound:soundbytes/mommy]はぁ！ 4を引く！

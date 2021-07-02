@@ -1,0 +1,20 @@
+[goto:kingquarters/k_1][music:Your Highness][sound:portalClose][dialogueshadow:#f54295][dialoguesound:soundbytes/gf]いたた…今度は何をしたの?
+[dialogueshadow:#588ee0][dialoguesound:soundbytes/bf]Bop!
+[goto:kingquarters/k_2][dialogueshadow:#f54295][dialoguesound:soundbytes/gf]もう、ここから脱出する方法を探さないといけないわね。
+私は聞き込みしてくるけど、どこにも行かないでね。
+[dialogueshadow:#000000][goto:kingquarters/k_3][dialoguesound:soundbytes/queen]はぁ、どうしたものかしら。傭兵を派遣したのに上手くいかなかった。
+[goto:kingquarters/k_4][dialoguesound:soundbytes/king]もう王家の軍隊に頼るしかないだろう。 彼女を取り戻すにはそれしかない。
+[dialoguesound:soundbytes/queen]もし、またダメだったら?
+[dialoguespeed:0.05][dialoguesound:soundbytes/king]最悪の場合、この世界は終焉を迎えるだろうな。
+[nofade][goto:kingquarters/k_5][dialoguesound:soundbytes/queen]あら!見知らぬ青年ね! もしかしたら彼が私達の問題を解決してくれるかもしれないわね!
+[dialoguesound:soundbytes/king]あぁ!これは丁度良いかもしれない!
+[dialoguesound:soundbytes/queen]ヘッドリストから格安で司祭を雇えた時みたいに便利ね!
+[dialoguesound:soundbytes/king]確かに!あれは本当に便利だった!
+[dialogueshadow:#588ee0][dialoguesound:soundbytes/bf]Beep.
+[dialogueshadow:#000000][dialoguesound:soundbytes/queen]あらぁ!ごめんなさいね! 親愛なる王様、この子に状況を説明してくださらないかしら? きっと協力して下さると思うわ。
+[dialoguesound:soundbytes/king]勿論だよ、女王。
+[goto:kingquarters/k_6]青年よ、聞いてくれ。うちの一人娘が誘拐されてしまったんだ!  もしかしたら、西にある山に連れて行かれたんじゃないかと思われるんだ。
+[dialoguesound:soundbytes/queen]そう、それに西の方角には危険な獣が住んでいて…
+[dialoguesound:soundbytes/king]おそらくウルシペスが
+[dialoguesound:soundbytes/queen]とても凶暴な生き物が…
+[rightpos:-50,0][rightbgalpha:0][righttxtalpha:.2][righttxtcolor:#000000][leftinvis][skipleft][decision:Yes|mercenary/kingEnd,No|dishonor/YOUFUCKEDUP][dialoguesound:soundbytes/king]まだ知り合って5分しか経ってなくて、若くて不思議な格好をしている君だけが頼りなんだ。この話、信じてくれるかい?

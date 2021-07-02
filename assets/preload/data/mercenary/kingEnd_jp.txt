@@ -1,0 +1,4 @@
+[dialoguesound:soundbytes/king]では向かいなさい! 私たちの娘は君の異様に小さな肩にかかっています!
+[goto:kingquarters/k_7][dialoguesound:soundbytes/bf]Beep bop!
+[goto:kingquarters/k_8]
+[gotoscene:mercenary/cutscene]

@@ -1,0 +1,14 @@
+[music:Confrontation][changesong:Father-Time,2,-1][setstory:Father-Time][goto:daddyclock/1][dialoguesound:soundbytes/bf]Boop be bap ske doop bippidy boo bop ska!!
+[nofade][goto:daddyclock/2][dialoguesound:soundbytes/gf]わぁー、ボーイフレンドったら! 口がわるr-
+[goto:daddyclock/3][dialoguesound:soundbytes/daddy][nofade][shake:2,.2][nofade]くそがっ
+[goto:daddyclock/4][nofade][dialoguesound:soundbytes/gf][shake:1,.1]パパ?!?
+[goto:daddyclock/5][nofade][dialoguesound:soundbytes/daddy]こんな計画じゃなかった…
+[nofade][dialoguesound:soundbytes/gf]どんな計画?
+[nofade][dialoguesound:soundbytes/daddy]娘よ、聞いてくれ。私は娘のために最善を尽くそうと考えたんだ。
+それを考えた結果、お前のボーイフレンドを暗殺する事だったんだ。いや、たまたまだったんだがな。
+[goto:daddyclock/6][nofade][dialoguesound:soundbytes/gf]もぉ、パパってば。まだその話をしていたの?
+[goto:daddyclock/7][dialoguesound:soundbytes/daddy]どの時代の刺客も使えないんだろうな…
+だがもうそれでいい。
+ちゃんと考えた結果…
+[goto:daddyclock/8][dialoguesound:soundbytes/daddy][nofade][shake:2,.2]...自分でやるしかないんだな。
+[goto:daddyclock/9]

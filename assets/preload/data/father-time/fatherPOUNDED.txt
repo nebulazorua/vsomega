@@ -1,0 +1,14 @@
+[goto:daddygetspounded/1][sound:micDrop][music:BOYFRIEND.XML][shake:1,0.1]
+[dialoguesound:soundbytes/daddy]HOW?! HOW DID YOU MANAGE TO BEAT ME AGAIN?!?!
+[dialoguesound:soundbytes/bf]Boop bedoop!
+[dialoguesound:soundbytes/gf]Serves you right! You deserved to get humiliated, Dad!
+[dialoguesound:soundbytes/bf]Beep paribeep bo bap.
+[dialoguesound:soundbytes/daddy]All this... I threw everything I HAD at you...
+... and yet I still lost.
+WHY DON'T YOU COME GET ME, BOYFRIEND? 
+IF VOCALS WON'T SOLVE IT, THEN FIGHT ME LIKE A MAN!
+[goto:daddygetspounded/2][nofade][dialoguesound:soundbytes/bf] Boop!
+[goto:daddygetspounded/3][nofade]Skebap!
+[goto:daddygetspounded/4][sound:epicPunch][shake:3,0.5][nofade]BITCH!
+[goto:daddygetspounded/5][sound:bodyDrop][shake:1,0.1]
+[goto:daddygetspounded/6][dialoguesound:soundbytes/mommy]Hah! Draw 4!

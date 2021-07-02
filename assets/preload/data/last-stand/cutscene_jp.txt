@@ -1,0 +1,14 @@
+[setstory:Last-Stand,Curse-Eternal][goto:laststand/1][music:Heartbeat][dialoguesound:soundbytes/omega]やっぱり、こうなっちまったか…なぁ?
+[dialoguesound:soundbytes/bf]Be skoo dap!
+[dialoguesound:soundbytes/omega]チャンスはあった! 説得しようともした!
+[goto:laststand/2][nofade]俺がこの剣を振るうのには理由があるんだよ。
+[goto:laststand/3][nofade]もしこれを見てもビビらねぇなら、まだこっちに向かうっていうなら…
+[goto:laststand/4][nofade]もうこの手を使うしかねぇんだよ。
+[goto:laststand/5][nofade]いくぞ、小娘。このネズミ小僧をやっちまおう。
+[goto:laststand/6][nofade][dialoguesound:soundbytes/mika]うん、分かったよ お兄さん!
+[dialoguesound:soundbytes/gf]そうはさせないわよ!
+[dialoguesound:soundbytes/bf][dialoguespeed:0.02]Beep bop!
+[dialoguesound:soundbytes/gf][goto:laststand/7]どこにも行かないでねって言ったじゃない!
+私が迎えに行こうとしたら、どこ見まわしてもいなかったんだもの!
+王様と女王様があなたをここに送り出したっていうのを、衛兵隊長から聞けたのはラッキーだったけどね!
+[goto:laststand/8][nofade]私がいないといつもトラブルに巻き込まれてしまうのに、どうしてあなたから目を離しちゃたのかしらね。

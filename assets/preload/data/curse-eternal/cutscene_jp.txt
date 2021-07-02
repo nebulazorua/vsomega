@@ -1,0 +1,7 @@
+[music:Heartbreak][goto:sadnesscombat/B2_1][nofade]
+[goto:sadnesscombat/B2_2][nofade][shake:1,0.1][sound:bodyDrop]
+[goto:sadnesscombat/B2_3][nofade]
+[goto:sadnesscombat/B2_4][nofade][dialoguesound:soundbytes/mika]お兄さん! やだぁ!
+[nofade][goto:sadnesscombat/B2_5][nofade]どうして、どうしてこんなことを? お兄さんは、パパとママから私を守ってくれただけなのに…
+[nofade][goto:sadnesscombat/B2_6][shake:1,0.1]あなたみたいな人から守ってくれただけなのに‼︎
+[nofade][goto:sadnesscombat/B2_7]もう、彼を傷つけさせない!!

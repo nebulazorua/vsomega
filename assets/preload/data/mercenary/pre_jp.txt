@@ -1,0 +1,7 @@
+[goto:Pre_1][music:Firefly][dialogueshadow:#ae86db][dialoguesound:soundbytes/omega]ずっと歩いてきたが、疲れたか?
+[dialogueshadow:#84b8e8][dialoguesound:soundbytes/mika]うーん、ちょっとだけ。
+[dialogueshadow:#ae86db][dialoguesound:soundbytes/omega]もしあれなら、この先俺が肩車するぞ。
+[dialogueshadow:#84b8e8][dialoguesound:soundbytes/mika]ううん。 大丈夫だよ、お兄さん。
+[dialogueshadow:#ae86db][dialoguesound:soundbytes/omega]本当か? 俺は別に構わないが。
+[dialogueshadow:#84b8e8][dialoguesound:soundbytes/mika]うん、大丈夫。それにもうすぐ着くんでしょ?
+[gotoscene:mercenary/king]

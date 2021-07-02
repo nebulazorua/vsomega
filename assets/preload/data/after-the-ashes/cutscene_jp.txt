@@ -1,0 +1,13 @@
+[goto:ata/G2_1][music:Bittersweet Goodbyes][dialoguesound:soundbytes/gf]ねぇ、大丈夫よ。必ず呪いを解く方法はあるはず、だから…泣かないで!
+[dialoguesound:soundbytes/omega]2人とも、見つかったか?
+[dialoguesound:soundbytes/mika][goto:ata/G2_2][nofade]ううん…お兄さん…見つけられなかったよ、あちこち探したんだけど…
+[dialoguesound:soundbytes/omega]くそっ、振り出しか…
+[dialoguesound:soundbytes/gf][nofade]でも、別のものを見つけたわ!
+[dialoguesound:soundbytes/bf]Beep?
+[dialoguesound:soundbytes/gf][goto:ata/G2_3]仕掛けは分からないけど、これを使えば私と彼はこの世界から出られるかもしれないわ!
+[dialoguesound:soundbytes/bf]Beep bap!
+[dialoguesound:soundbytes/omega]ハァー… まぁ、良かったな。あんた達が探してたものが見つかったみたいで。
+[nofade][goto:ata/G2_4]ネズミ小僧、助けてくれて感謝する。 お前が力を貸してくれなかったら、本当にヤバイことになっていた。
+最後に一曲、旅の思い出に…どうだ？
+[dialoguesound:soundbytes/bf]Beep bap!
+[dialoguesound:soundbytes/omega]ハッ! いい返事だ!  あんたら、気を引き締めてけよ。

@@ -1,0 +1,9 @@
+[goto:blowjob/2_1][music:Swordsman][dialoguesound:soundbytes/omega]お前の欲しいものはなんでもやる、だが彼女だけは駄目だ。あそこには連れて行かせない。
+俺は彼女のために全てを捧げてきた。彼女はもはや家族同然なんだ。
+[dialoguesound:soundbytes/mika]お、お兄さん?
+[dialoguesound:soundbytes/omega]おい、小娘、何をしている? 俺の後ろに隠れてろ!
+[dialoguesound:soundbytes/mika]お兄さん…やだ…あそこには戻りたくないよ…
+[dialoguesound:soundbytes/omega]…大丈夫だ、俺はお前から離れない。
+[goto:blowjob/2_2]聞こえたか？
+こいつはあそこには連れて行かせない。
+絶対にだ。
