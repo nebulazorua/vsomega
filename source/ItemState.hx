@@ -53,8 +53,8 @@ class ItemChoice extends FlxSpriteGroup
 
 class ItemState extends MusicBeatState
 {
-  public static var items = ["sword","arrow","twat","depressed"];
-  public static var itemNames = ["Omega's Sword","Cold Heart","Resistance","Flashy"];
+  public static var items = ["sword","arrow","twat","depressed","flippy","drunk"];
+  public static var itemNames = ["Omega's Sword","Resistance","Flashy","Cold Heart","Flippy Mode","Drunk Notes"];
   public static var comboNames:Map<String,String> = [
     "sword" => "Omega's Sword",
     "arrow" => "Resistance",
@@ -78,9 +78,9 @@ class ItemState extends MusicBeatState
     "swordarrowtwatdepressed" => "Clusterfuck",
   ];
   public static var comboDescs:Map<String,String> = [
-    "sword" =>  "Not the real thing, but it's close enough.",
+    "sword" =>  "You're pretty sure it's a replica, but it's close enough.",
     "arrow" => "You're taking 'what doesn't kill you makes you stronger' way too literally.",
-    "twat" => "Looks like someone's feeling lucky. Don't slip up.",
+    "twat" => "Your strive for perfection has left you unable to accept anything else. Don't slip up.",
     "depressed" => "You monster.",
 
     "swordarrow" => "Having that sword must make you feel like a total pimp. Don't slip up.",
@@ -106,13 +106,13 @@ class ItemState extends MusicBeatState
   public static var equipped = [];
   var void1:FlxSprite;
   var void2:FlxSprite;
+  var bfRock:FlxSprite;
   var texts:FlxTypedGroup<ItemChoice>;
   var selectionArrow:FlxSprite;
   var selectedIdx:Int = 0;
-
+  var layerBullshit:FlxTypedGroup<Character>;
+  var bf:Character;
   override function create(){
-
-
     void1 = new FlxSprite(-600, -500).loadGraphic(Paths.image('BGvoid'));
     void1.antialiasing = true;
     void1.setGraphicSize(Std.int(void1.width*2));
@@ -131,6 +131,15 @@ class ItemState extends MusicBeatState
     void2.x = -(void1.width)-600;
     add(void2);
 
+    bfRock = new FlxSprite(350, 400).loadGraphic(Paths.image('smallrockItemStage'));
+    bfRock.setGraphicSize(Std.int(bfRock.width*.6));
+    bfRock.updateHitbox();
+    bfRock.antialiasing = true;
+    bfRock.scrollFactor.set(1, 1);
+    bfRock.active = false;
+    add(bfRock);
+
+
     var box = new FlxSprite().loadGraphic(Paths.image("WOODEN_BOX"));
     box.antialiasing=true;
     box.updateHitbox();
@@ -140,11 +149,24 @@ class ItemState extends MusicBeatState
     texts = new FlxTypedGroup<ItemChoice>();
     add(texts);
 
-    var conditions = [
+    layerBullshit = new FlxTypedGroup<Character>();
+    add(layerBullshit);
+
+    /*var conditions = [
       FlxG.save.data.omegaGoodEnding,
-      FlxG.save.data.omegaBadEnding,
       FlxG.save.data.getResistance,
-      FlxG.save.data.becomeATwat
+      FlxG.save.data.becomeATwat,
+      FlxG.save.data.omegaBadEnding,
+      true,
+      FlxG.save.data.drunk
+    ];*/
+    var conditions = [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
     ];
 
     for(cum in 0...items.length){
@@ -155,7 +177,6 @@ class ItemState extends MusicBeatState
       }else{
         fard = new ItemChoice("none","???",false);
       }
-      trace("cummmieeess");
       fard.y = 100 + (100*texts.members.length);
       texts.add(fard);
     }
@@ -170,8 +191,39 @@ class ItemState extends MusicBeatState
     selectionArrow.scale.y = .8;
     add(selectionArrow);
 
+    displayCharacter();
+
     super.create();
   }
+
+  function displayCharacter(){
+    if(bf!=null)
+      layerBullshit.remove(bf);
+
+    var name = '';
+    if(equipped.length>0){
+      var shit = ["sword","arrow","twat","depressed"];
+      for(cum in shit){
+        if(equipped.contains(cum)){
+          name+=cum;
+        }
+      }
+    }
+
+    if(name=='')name='bf';
+    var frame = 0;
+    if(bf!=null){
+      if(bf.animation.curAnim!=null)
+        frame = bf.animation.curAnim.curFrame;
+    }
+
+    bf = new Character(650,200,name);
+    bf.flipX=!bf.flipX;
+
+    layerBullshit.add(bf);
+  }
+
+
 
   public function changeSelection(change:Int){
     selectedIdx+=change;
@@ -179,16 +231,27 @@ class ItemState extends MusicBeatState
 			selectedIdx=items.length-1;
 		if(selectedIdx>=items.length)
 			selectedIdx=0;
+    }
 
+  override function beatHit(){
+    bf.dance();
+    super.beatHit();
   }
+  
+  var timer:Float = 0;
 
   override function update(elapsed:Float){
+    timer += elapsed;
+    bfRock.y = 0-25*Math.cos(timer*1.25);
+    bf.y = 200-25*Math.cos(timer*1.25);
+
+    Conductor.songPosition = FlxG.sound.music.time;
+
     var nextXBG = void1.x+(elapsed*64);
     var nextXBG2 = void2.x+(elapsed*64);
 
     void1.x = nextXBG;
     void2.x = nextXBG2;
-
 
     if(nextXBG>=3000){
       void1.x = void2.x-void2.width;
@@ -219,11 +282,11 @@ class ItemState extends MusicBeatState
         }else if(!item.toggled && equipped.contains(item.name)){
           equipped.remove(item.name);
         }
+        displayCharacter();
       }
     }
 
-
-    selectionArrow.y = FlxMath.lerp(selectionArrow.y,texts.members[selectedIdx].y - 32,.1);
+    selectionArrow.y = FlxMath.lerp(selectionArrow.y,texts.members[selectedIdx].y - 32,.2);
 
     super.update(elapsed);
   }

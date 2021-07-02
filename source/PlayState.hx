@@ -358,6 +358,9 @@ class PlayState extends MusicBeatState
 		if(SONG.song.toLowerCase()=='2v200' || SONG.song.toLowerCase()=='hivemind')
 			currentOptions.middleScroll=true;
 
+		if(SONG.song.toLowerCase()=='curse-eternal')
+			modchart.healthGain = false;
+
 		if(SONG.song.toLowerCase()=='dishonor' ){
 			modchart.susHeal=false;
 			modchart.noteHPGain = .01;
@@ -387,7 +390,6 @@ class PlayState extends MusicBeatState
 		if(!FlxG.save.data.unlockedOmegaSongs.contains(SONG.song.toLowerCase() )){
 			FlxG.save.data.unlockedOmegaSongs.push(SONG.song.toLowerCase());
 		}
-
 
 		Conductor.mapBPMChanges(SONG);
 		Conductor.changeBPM(SONG.bpm);
@@ -1289,7 +1291,7 @@ class PlayState extends MusicBeatState
 		if (curStage == 'limo')
 			gfVersion = 'gf-car';
 
-		if(SkinState.selectedSkin=='bf-neb' || StoryMenuState.cameos.contains(SONG.song) && FlxG.random.int(5000)==0)
+		if(SkinState.selectedSkin=='bf-neb' || StoryMenuState.cameos.contains(SONG.song) && FlxG.random.bool(.1))
 			gfVersion = 'lizzy';
 
 		gf = new Character(400, 130, gfVersion);
@@ -1399,6 +1401,8 @@ class PlayState extends MusicBeatState
 					name+=cum;
 				}
 			}
+			if(name=='')name = SONG.player1;
+
 			boyfriend = new Boyfriend(770, 450, name);
 		}else{
 			boyfriend = new Boyfriend(770, 450, SONG.player1);
@@ -2596,6 +2600,8 @@ class PlayState extends MusicBeatState
 			if (!startTimer.finished)
 				startTimer.active = true;
 			paused = false;
+			persistentUpdate = true;
+			persistentDraw = true;
 
 			#if desktop
 			if (startTimer.finished)
@@ -3247,6 +3253,9 @@ class PlayState extends MusicBeatState
 
 				vocals.stop();
 				FlxG.sound.music.stop();
+				if(storyDifficulty==0 && SONG.song.toLowerCase()=='prelude'){
+					AchievementState.toUnlock.push("Thats not how you do it");
+				}
 
 				openSubState(new GameOverSubstate(boyfriend.getScreenPosition().x, boyfriend.getScreenPosition().y, boyfriend.isReskin?boyfriend.curCharacter:'bf' ));
 				blueballs++;
@@ -3673,6 +3682,7 @@ class PlayState extends MusicBeatState
 
 	function endSong():Void
 	{
+		FlxG.sound.music.stop();
 		didIntro = false;
 		canPause = false;
 		FlxG.sound.music.volume = 0;
@@ -3694,6 +3704,22 @@ class PlayState extends MusicBeatState
 		if(accuracy>=.9){
 			FlxG.save.data.beATwat=true;
 		}
+
+		if(!FlxG.save.data.finishedSongs.contains(SONG.song.toLowerCase()))
+			FlxG.save.data.finishedSongs.push(SONG.song.toLowerCase());
+
+		if(misses==0 && storyDifficulty==2  && !FlxG.save.data.perfectedSongs.contains(SONG.song.toLowerCase())){
+			FlxG.save.data.perfectedSongs.push(SONG.song.toLowerCase());
+		}
+		if(ItemState.equipped.contains("twat") && !FlxG.save.data.flashySongs.contains(SONG.song.toLowerCase()) ){
+			FlxG.save.data.flashySongs.push(SONG.song.toLowerCase());
+		}
+		//if(FlxG.save.data.flashySongs.length>=27){
+
+	//	}
+
+
+		AchievementState.checkUnlocks();
 		if (isStoryMode)
 		{
 			campaignScore += songScore;
@@ -3701,14 +3727,15 @@ class PlayState extends MusicBeatState
 			storyPlaylist.remove(storyPlaylist[0]);
 			if(SONG.song.toLowerCase()=='guardian' ){
 				LoadingState.loadAndSwitchState(new CutsceneState(CoolUtil.coolTextFile(Paths.txt('guardian/decidetime')),new PlayState()));
+				AchievementState.checkUnlocks();
 			}else{
 
 				if (storyPlaylist.length <= 0)
 				{
 					if(SONG.song.toLowerCase()=='curse-eternal' ){
+						FlxG.save.data.omegaBadEnding=true;
 						LoadingState.loadAndSwitchState(new VideoState('assets/videos/CryAboutIt.webm', new MainMenuState()));
-					}else
-						FlxG.sound.playMusic(Paths.music('freakyMenu'));
+					}
 
 
 
@@ -3719,13 +3746,17 @@ class PlayState extends MusicBeatState
 						FlxG.save.data.daddyTimeTime=true;
 					}
 
-					if(SONG.song.toLowerCase()=='curse-eternal'){
-						FlxG.save.data.omegaBadEnding=true;
-					}else if(SONG.song.toLowerCase()=='after-the-ashes'){
+					if(SONG.song.toLowerCase()=='after-the-ashes'){
 						FlxG.save.data.omegaGoodEnding=true;
 					}
+					if(songScore==69420){
+						AchievementState.toUnlock.push("LOL");
+						FlxG.save.data.unlocked.push("LOL");
+					}
+
 					FlxG.switchState(new StoryMenuState());
 					Cache.Clear();
+
 
 					// if ()
 					StoryMenuState.weekUnlocked[Std.int(Math.min(storyWeek + 1, StoryMenuState.weekUnlocked.length - 1))] = true;
@@ -3786,6 +3817,7 @@ class PlayState extends MusicBeatState
 		{
 			trace('WENT BACK TO FREEPLAY??');
 			FlxG.switchState(new FreeplayState());
+
 			Cache.Clear();
 		}
 	}
@@ -3795,6 +3827,20 @@ class PlayState extends MusicBeatState
 	private function popUpScore(noteDiff:Float,?gold=false):Void
 	{
 		var daRating = ScoreUtils.DetermineRating(noteDiff);
+		if(daRating!='sick' && daRating!='epic'){
+			if(ItemState.equipped.contains("flippy")){
+				switch(daRating){
+					case 'bad' | 'shit':
+						beenSavedByResistance = false;
+						health = -2;
+					case 'good':
+						health -= .5;
+					case 'epic':
+						health += .1;
+				}
+			}
+		}
+
 		totalNotes++;
 		// boyfriend.playAnim('hey');
 		vocals.volume = 1;
@@ -3822,7 +3868,7 @@ class PlayState extends MusicBeatState
 				sicks++;
 		}
 
-		hitNotes+=ScoreUtils.RatingToHit(daRating);
+		hitNotes += ScoreUtils.RatingToHit(daRating);
 		songScore += score;
 
 		var pixelShitPart1:String = "";
@@ -4167,6 +4213,10 @@ class PlayState extends MusicBeatState
 	{
 		if(note!=null) direction=note.noteData;
 
+		if(ItemState.equipped.contains("flippy")){
+			beenSavedByResistance=true;
+			health=-100;
+		}
 		boyfriend.holding=false;
 		misses++;
 		var missDmg = 0.04;
@@ -4293,6 +4343,11 @@ class PlayState extends MusicBeatState
 					highComboTxt.text = "Highest Combo: " + highestCombo;
 				}
 
+				if(ItemState.equipped.contains("flippy")){
+					beenSavedByResistance=true;
+					health=-100;
+				}
+
 				if(SONG.player2 == 'angry-omega'){
 					var damage = FlxMath.lerp(0,1.25,health/2);
 
@@ -4408,11 +4463,12 @@ class PlayState extends MusicBeatState
 					health += modchart.gemHPGain;
 			else if(note.noteType==7)
 				health = .01;
-			else
-			if(ItemState.equipped.contains("sword"))
-				health += modchart.noteHPGain+(modchart.noteHPGain*.5);
-			else
-				health += modchart.noteHPGain;
+			else{
+				if(ItemState.equipped.contains("sword"))
+					health += modchart.noteHPGain+(modchart.noteHPGain*.5);
+				else
+					health += modchart.noteHPGain;
+				}
 		}
 
 		previousHealth=health;
@@ -4563,7 +4619,7 @@ class PlayState extends MusicBeatState
 					vietnamFlashbacks=!vietnamFlashbacks;
 			case 'dishonor':
 				if(curStep==2048 || curStep==1024){
-					modchart.opponentHPDrain=.015;
+					modchart.opponentHPDrain=.0165;
 					modchart.noteHPGain = .03;
 					modchart.susHeal=true;
 				}else if(curStep==1280){
@@ -4629,8 +4685,6 @@ class PlayState extends MusicBeatState
 			{
 				mika.dance();
 			}
-
-
 		}
 
 		// FlxG.log.add('change bpm' + SONG.notes[Std.int(curStep / 16)].changeBPM);

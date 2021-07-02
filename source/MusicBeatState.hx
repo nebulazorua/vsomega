@@ -27,9 +27,17 @@ class MusicBeatState extends FlxUIState
 
 		super.create();
 	}
-
+	var fuck:Float=0;
+	var shit=false;
 	override function update(elapsed:Float)
 	{
+		if(shit==false){ // MAKESHIFT TIMER BECAUSE TIMER DOESNT WORK FOR SOME FUCKING REASON
+			fuck+=elapsed;
+			if(fuck>=.2){
+				shit=true;
+				AchievementState.doUnlock();
+			}
+		}
 		//everyStep();
 		var oldStep:Int = curStep;
 

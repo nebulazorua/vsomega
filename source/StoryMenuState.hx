@@ -294,6 +294,7 @@ class StoryMenuState extends MusicBeatState
 		Conductor.changeBPM(102);
 		Conductor.songPosition = FlxG.sound.music.time;
 		changeWeek();
+		AchievementState.doUnlock();
 	}
 	override function beatHit(){
 		super.beatHit();

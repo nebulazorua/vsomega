@@ -259,6 +259,9 @@ class Checkbox extends FlxSprite
 		else
 			animation.play("unselected");
 
+		offset.x = 0;
+		offset.y = 0;
+
 	}
 
 	public function changeState(state:Bool){
