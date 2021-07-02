@@ -118,7 +118,7 @@ class CodeState extends MusicBeatState
                 }
               })
               if(!FlxG.save.data.unlockedSkins.contains(skin)){
-                FlxG.save.data.unlockedSkins.push(skin);;
+                FlxG.save.data.unlockedSkins.push(skin);
               }
 
             }
