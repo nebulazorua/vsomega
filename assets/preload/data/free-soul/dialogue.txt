@@ -1,0 +1,11 @@
+:merchant: Oh, welcome to my shop, man!
+:bf: Bedoop ske bop.
+:merchant: Oh, a tourist! That's pretty rad.
+:merchantcamera: This is how it's done, for all the folks at home.
+:merchant: How would you like to buy this one-of-a-kind shirt?
+:merchant: It was sewn with golden threads and worn by a man of legend.
+:bf: Bah.
+:merchant: Ah, darn, always next time I suppose.
+:merchant: ... oh, do you hear that? They're playin' my favorite song!
+:merchant: Why not stick around for a minute? You look like you know this one.
+:bf: Boop bap!!
