@@ -419,11 +419,8 @@ class StoryMenuState extends MusicBeatState
 					diffic = '-glitch';
 			}
 
-			if(curDifficulty==3){
-				PlayState.storyDifficulty = 2;
-			}else{
-				PlayState.storyDifficulty = curDifficulty;
-			}
+			PlayState.storyDifficulty = curDifficulty;
+
 
 
 			PlayState.SONG = Song.loadFromJson(PlayState.storyPlaylist[0].toLowerCase() + diffic, PlayState.storyPlaylist[0].toLowerCase());
@@ -450,7 +447,7 @@ class StoryMenuState extends MusicBeatState
 		curDifficulty += change;
 
 		if (curDifficulty < 0)
-			curDifficulty = 2;
+			curDifficulty = 3;
 		if (curDifficulty > 2)
 			curDifficulty = 0;
 
