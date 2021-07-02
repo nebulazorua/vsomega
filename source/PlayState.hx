@@ -1390,7 +1390,7 @@ class PlayState extends MusicBeatState
 
 		var bfwithitems:Bool = false;
 
-		if(SONG.player1.startsWith('bf') && SkinState.selectedSkin!='bf' ){
+		if(SONG.player1.startsWith('bf') && SkinState.selectedSkin!='bf' && SONG.player1!='bf' ){
 			boyfriend = new Boyfriend(770, 450, SkinState.selectedSkin);
 		}else if(SONG.player1.startsWith('bf') && SkinState.selectedSkin=='bf' && ItemState.equipped.length>0){
 			bfwithitems=true;

@@ -17,20 +17,20 @@
 	<SubTexture name="CHILD down0012" x="746" y="5" width="359" height="361" frameX="-9" frameY="0" frameWidth="376" frameHeight="361"/>
 	<SubTexture name="CHILD down0013" x="746" y="5" width="359" height="361" frameX="-9" frameY="0" frameWidth="376" frameHeight="361"/>
 	<SubTexture name="CHILD down0014" x="746" y="5" width="359" height="361" frameX="-9" frameY="0" frameWidth="376" frameHeight="361"/>
-	<SubTexture name="CHILD idle0000" x="1105" y="5" width="252" height="532" pivotX="-589.15" pivotY="61.7" frameX="0" frameY="-12" frameWidth="252" frameHeight="545"/>
-	<SubTexture name="CHILD idle0001" x="1105" y="5" width="252" height="532" frameX="0" frameY="-12" frameWidth="252" frameHeight="545"/>
-	<SubTexture name="CHILD idle0002" x="1357" y="5" width="248" height="535" frameX="-3" frameY="-9" frameWidth="252" frameHeight="545"/>
-	<SubTexture name="CHILD idle0003" x="1357" y="5" width="248" height="535" frameX="-3" frameY="-9" frameWidth="252" frameHeight="545"/>
-	<SubTexture name="CHILD idle0004" x="1605" y="5" width="238" height="543" frameX="-9" frameY="-2" frameWidth="252" frameHeight="545"/>
-	<SubTexture name="CHILD idle0005" x="1605" y="5" width="238" height="543" frameX="-9" frameY="-2" frameWidth="252" frameHeight="545"/>
-	<SubTexture name="CHILD idle0006" x="5" y="548" width="237" height="545" frameX="-10" frameY="0" frameWidth="252" frameHeight="545"/>
-	<SubTexture name="CHILD idle0007" x="5" y="548" width="237" height="545" frameX="-10" frameY="0" frameWidth="252" frameHeight="545"/>
+	<SubTexture name="CHILD idle0000" x="1105" y="5" width="248" height="535" pivotX="-589.15" pivotY="61.7" frameX="-3" frameY="-9" frameWidth="252" frameHeight="545"/>
+	<SubTexture name="CHILD idle0001" x="1105" y="5" width="248" height="535" frameX="-3" frameY="-9" frameWidth="252" frameHeight="545"/>
+	<SubTexture name="CHILD idle0002" x="1353" y="5" width="252" height="532" frameX="0" frameY="-12" frameWidth="252" frameHeight="545"/>
+	<SubTexture name="CHILD idle0003" x="1353" y="5" width="252" height="532" frameX="0" frameY="-12" frameWidth="252" frameHeight="545"/>
+	<SubTexture name="CHILD idle0004" x="1105" y="5" width="248" height="535" frameX="-3" frameY="-9" frameWidth="252" frameHeight="545"/>
+	<SubTexture name="CHILD idle0005" x="1105" y="5" width="248" height="535" frameX="-3" frameY="-9" frameWidth="252" frameHeight="545"/>
+	<SubTexture name="CHILD idle0006" x="1605" y="5" width="238" height="543" frameX="-9" frameY="-2" frameWidth="252" frameHeight="545"/>
+	<SubTexture name="CHILD idle0007" x="1605" y="5" width="238" height="543" frameX="-9" frameY="-2" frameWidth="252" frameHeight="545"/>
 	<SubTexture name="CHILD idle0008" x="5" y="548" width="237" height="545" frameX="-10" frameY="0" frameWidth="252" frameHeight="545"/>
 	<SubTexture name="CHILD idle0009" x="5" y="548" width="237" height="545" frameX="-10" frameY="0" frameWidth="252" frameHeight="545"/>
 	<SubTexture name="CHILD idle0010" x="5" y="548" width="237" height="545" frameX="-10" frameY="0" frameWidth="252" frameHeight="545"/>
 	<SubTexture name="CHILD idle0011" x="5" y="548" width="237" height="545" frameX="-10" frameY="0" frameWidth="252" frameHeight="545"/>
-	<SubTexture name="CHILD idle0012" x="1357" y="5" width="248" height="535" frameX="-3" frameY="-9" frameWidth="252" frameHeight="545"/>
-	<SubTexture name="CHILD idle0013" x="1357" y="5" width="248" height="535" frameX="-3" frameY="-9" frameWidth="252" frameHeight="545"/>
+	<SubTexture name="CHILD idle0012" x="5" y="548" width="237" height="545" frameX="-10" frameY="0" frameWidth="252" frameHeight="545"/>
+	<SubTexture name="CHILD idle0013" x="5" y="548" width="237" height="545" frameX="-10" frameY="0" frameWidth="252" frameHeight="545"/>
 	<SubTexture name="CHILD left0000" x="242" y="548" width="395" height="497" pivotX="-446.2" pivotY="17.95" frameX="-2" frameY="-4" frameWidth="397" frameHeight="501"/>
 	<SubTexture name="CHILD left0001" x="637" y="548" width="396" height="500" frameX="-1" frameY="-1" frameWidth="397" frameHeight="501"/>
 	<SubTexture name="CHILD left0002" x="637" y="548" width="396" height="500" frameX="-1" frameY="-1" frameWidth="397" frameHeight="501"/>

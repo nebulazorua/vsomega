@@ -245,6 +245,7 @@ class StoryMenuState extends MusicBeatState
 		sprDifficulty.animation.addByPrefix('easy', 'EASY');
 		sprDifficulty.animation.addByPrefix('normal', 'NORMAL');
 		sprDifficulty.animation.addByPrefix('hard', 'HARD');
+		sprDifficulty.animation.addByPrefix('glitch', 'GLITCH Alt');
 		sprDifficulty.animation.play('easy');
 		changeDifficulty();
 
@@ -414,9 +415,16 @@ class StoryMenuState extends MusicBeatState
 					diffic = '-easy';
 				case 2:
 					diffic = '-hard';
+				case 3:
+					diffic = '-glitch';
 			}
 
-			PlayState.storyDifficulty = curDifficulty;
+			if(curDifficulty==3){
+				PlayState.storyDifficulty = 2;
+			}else{
+				PlayState.storyDifficulty = curDifficulty;
+			}
+
 
 			PlayState.SONG = Song.loadFromJson(PlayState.storyPlaylist[0].toLowerCase() + diffic, PlayState.storyPlaylist[0].toLowerCase());
 			if(curWeek==0 || curWeek==7){
@@ -458,6 +466,9 @@ class StoryMenuState extends MusicBeatState
 				sprDifficulty.offset.x = 70;
 			case 2:
 				sprDifficulty.animation.play('hard');
+				sprDifficulty.offset.x = 20;
+			case 3:
+				sprDifficulty.animation.play('glitch');
 				sprDifficulty.offset.x = 20;
 		}
 
