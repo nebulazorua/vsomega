@@ -437,6 +437,8 @@ class PlayState extends MusicBeatState
 				storyDifficultyText = "Normal";
 			case 2:
 				storyDifficultyText = "Hard";
+			case 2:
+				storyDifficultyText = "Glitch";
 		}
 
 		iconRPC = SONG.player2;
@@ -3827,7 +3829,7 @@ class PlayState extends MusicBeatState
 		if(!FlxG.save.data.finishedSongs.contains(SONG.song.toLowerCase()))
 			FlxG.save.data.finishedSongs.push(SONG.song.toLowerCase());
 
-		var isHard = (storyDifficulty==2 || SONG.song.toLowerCase()=='dishonor' || SONG.song.toLowerCase()=='hivemind' );
+		var isHard = (storyDifficulty>=2 || SONG.song.toLowerCase()=='dishonor' || SONG.song.toLowerCase()=='hivemind' );
 		if(misses==0 && isHard  && !FlxG.save.data.perfectedSongs.contains(SONG.song.toLowerCase())){
 			FlxG.save.data.perfectedSongs.push(SONG.song.toLowerCase());
 		}
