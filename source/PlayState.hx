@@ -1390,20 +1390,24 @@ class PlayState extends MusicBeatState
 
 		var bfwithitems:Bool = false;
 
-		if(SONG.player1.startsWith('bf') && SkinState.selectedSkin!='bf' && SONG.player1!='bf' ){
-			boyfriend = new Boyfriend(770, 450, SkinState.selectedSkin);
-		}else if(SONG.player1.startsWith('bf') && SkinState.selectedSkin=='bf' && ItemState.equipped.length>0){
-			bfwithitems=true;
-			var name = '';
-			var shit = ["sword","arrow","twat","depressed"];
-			for(cum in shit){
-				if(ItemState.equipped.contains(cum)){
-					name+=cum;
+		if(SONG.player1!='bf-pixel'){
+			if(SONG.player1.startsWith('bf') && SkinState.selectedSkin!='bf' ){
+				boyfriend = new Boyfriend(770, 450, SkinState.selectedSkin);
+			}else if(SONG.player1.startsWith('bf') && SkinState.selectedSkin=='bf' && ItemState.equipped.length>0){
+				bfwithitems=true;
+				var name = '';
+				var shit = ["sword","arrow","twat","depressed"];
+				for(cum in shit){
+					if(ItemState.equipped.contains(cum)){
+						name+=cum;
+					}
 				}
-			}
-			if(name=='')name = SONG.player1;
+				if(name=='')name = SONG.player1;
 
-			boyfriend = new Boyfriend(770, 450, name);
+				boyfriend = new Boyfriend(770, 450, name);
+			}else{
+				boyfriend = new Boyfriend(770, 450, SONG.player1);
+			}
 		}else{
 			boyfriend = new Boyfriend(770, 450, SONG.player1);
 		}
@@ -1506,7 +1510,7 @@ class PlayState extends MusicBeatState
 			case 'naikaze':
 				boyfriend.y -= 90;
 			case 'bfside':
-				boyfriend.y -= 120;
+				boyfriend.y -= 130;
 			case 'babyvase':
 				boyfriend.y -= 110;
 		}
@@ -2781,7 +2785,7 @@ class PlayState extends MusicBeatState
 					case 'naikaze':
 						boyfriend.y -= 90;
 					case 'bfside':
-						boyfriend.y -= 120;
+						boyfriend.y -= 130;
 					case 'babyvase':
 						boyfriend.y -= 110;
 				}

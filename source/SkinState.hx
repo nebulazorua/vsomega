@@ -26,9 +26,9 @@ class SkinState extends MusicBeatState {
   public static var skins = ["bf","naikaze","mikeeey","tgr","erderi","babyvase","bfside","bf-neb"];
   public static var skinNames = ["Boyfriend.XML","Naikaze","Mikeeey","TheGhostReaper","Erderi the Fox","Fun-sized Vase","Fun-sized Brightside","Nebby"];
   public static var skinDescs = ["Funky lil' man","Literal god","Mikey with 3 e's","idk","furry","Don't you throw stones in glass houses","Brigthbsied my beloved","Stupid Cocksleeve Zorua"];
-  public var unlockedSkins:Array<String> = [];
-  public var unlockedNames:Array<String> = [];
-  public var unlockedDescs:Array<String> = [];
+  public var unlockedSkins:Array<String> = ["bf"];
+  public var unlockedNames:Array<String> = ["Boyfriend.XML"];
+  public var unlockedDescs:Array<String> = ["Funky lil' man"];
   public var characters:Array<Character> = [];
   public var selectedIdx:Int = 0;
 
@@ -44,9 +44,11 @@ class SkinState extends MusicBeatState {
   override function create(){
     selectedSkin = FlxG.save.data.selectedSkin;
     for(idx in 0...skins.length){
-      unlockedSkins.push(skins[idx]);
-      unlockedNames.push(skinNames[idx]);
-      unlockedDescs.push(skinDescs[idx]);
+      if(FlxG.save.data.unlockedSkins.contains(skins[idx])){
+        unlockedSkins.push(skins[idx]);
+        unlockedNames.push(skinNames[idx]);
+        unlockedDescs.push(skinDescs[idx]);
+      }
     }
     selectedIdx = unlockedSkins.indexOf(selectedSkin);
     if(selectedIdx==-1){
@@ -69,7 +71,7 @@ class SkinState extends MusicBeatState {
         case 'naikaze':
           char.y -= 90;
         case 'bfside':
-          char.y -= 120;
+          char.y -= 130;
         case 'babyvase':
           char.y -= 110;
       }
@@ -124,10 +126,12 @@ class SkinState extends MusicBeatState {
   }
 
   override function beatHit(){
+    var idx = 0;
     for(char in characters){
-      if(!char.animation.name.startsWith("sing") && char.animation.curAnim.name!="hey" || char.animation.curAnim.name=="hey" && char.animation.curAnim.finished ){
+      if(idx!=selectedIdx || !char.animation.name.startsWith("sing") && char.animation.curAnim.name!="hey" || char.animation.curAnim.name=="hey" && char.animation.curAnim.finished ){
         char.dance();
       }
+      idx++;
     }
   }
 

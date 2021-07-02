@@ -123,6 +123,14 @@ class TitleState extends MusicBeatState
 
 			if(FlxG.save.data.cameos==null)
 				FlxG.save.data.cameos=[];
+
+			if(FlxG.save.data.unlockedSkins==null)
+				FlxG.save.data.unlockedSkins=[];
+
+			if(FlxG.save.data.selectedSkin==null)
+				FlxG.save.data.selectedSkin='bf';
+
+			SkinState.selectedSkin=FlxG.save.data.selectedSkin;
 			Highscore.load();
 
 			AchievementState.checkUnlocks();

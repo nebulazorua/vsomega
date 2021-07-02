@@ -21,16 +21,46 @@ using StringTools;
 import flixel.util.FlxTimer;
 import Options;
 import flixel.addons.ui.FlxInputText;
+import flixel.system.FlxSound;
+import flixel.tweens.FlxEase;
+import flixel.tweens.FlxTween;
+
+typedef Code = {
+  var code:String;
+  var reward:String;
+}
 
 class CodeState extends MusicBeatState
 {
-  public static var codes = [];
+  public static var codes:Array<Code> = [
+    {code: "youareafool",reward:"skin:babyvase"},
+    {code: "getout",reward:"skin:bfside"},
+    {code: "naikaze",reward:"skin:naikaze"},
+    {code: "mikeeey",reward:"skin:mikeeey"},
+    {code: "tgr",reward:"skin:tgr"},
+    {code: "erderithefox",reward:"skin:erderi"},
+    {code: "acai28",reward:"skinacai28"},
+  ];
 
   var inputText:FlxInputText;
   var void1:FlxSprite;
   var void2:FlxSprite;
-
+  var wrong:FlxText;
+  var wrongTimer:Float = 10000;
   override function create(){
+
+    var title = new FlxText(0, 250, 0, "Type the code into the box and press enter to input\nthe code", 32);
+    title.setFormat("VCR OSD Mono", 36, FlxColor.WHITE, CENTER, SHADOW,FlxColor.BLACK);
+    title.shadowOffset.set(2,2);
+    title.screenCenter(X);
+
+    wrong = new FlxText(0, 0, 0, "That is not a valid code!", 32);
+    wrong.setFormat("VCR OSD Mono", 36, FlxColor.RED, CENTER, SHADOW,FlxColor.BLACK);
+    wrong.shadowOffset.set(2,2);
+    wrong.screenCenter(XY);
+    wrong.y += 100;
+    wrong.visible=false;
+
     void1 = new FlxSprite(-600, -500).loadGraphic(Paths.image('BGvoid'));
     void1.antialiasing = true;
     void1.setGraphicSize(Std.int(void1.width*2));
@@ -49,7 +79,9 @@ class CodeState extends MusicBeatState
     void2.x = -(void1.width)-600;
     add(void2);
 
-    inputText = new FlxInputText(0,125,FlxG.width,"CUM",16,FlxColor.WHITE,FlxColor.BLACK,true);
+    add(wrong);
+    add(title);
+    inputText = new FlxInputText(0,125,FlxG.width,"Code",16,FlxColor.WHITE,FlxColor.BLACK,true);
     @:privateAccess
     inputText.backgroundSprite.setGraphicSize(Std.int(inputText.backgroundSprite.width),Std.int(inputText.backgroundSprite.height*3));
     @:privateAccess
@@ -57,7 +89,50 @@ class CodeState extends MusicBeatState
     inputText.screenCenter(XY);
     inputText.callback = function(text,action){
       if(action=='enter'){
+        var exists=false;
+        for(codeData in codes){
+          if(text==codeData.code){
+            if(codeData.reward.startsWith("skin:")){
+              var skin = codeData.reward.substring(5,codeData.reward.length);
+              var sound = 'GeneralUnlock';
+              switch(skin){
+                case 'bfside':
+                  sound = 'BrightsideUnlock';
+                case 'babyvase':
+                  sound = 'VaseUnlock';
+                case 'acai28':
+                  sound = 'AcaiUnlock';
+              }
+              if(FlxG.save.data.unlockedSkins.contains(skin)){
+                sound='alreadyHave';
+              }
+              var notifSound = new FlxSound().loadEmbedded(Paths.sound('${sound}'), false, true);
+              notifSound.volume = .7;
+              notifSound.play(true,0);
+              FlxTween.tween(FlxG.sound.music,{volume: .5}, 0.1, {
+                ease: FlxEase.quartInOut,
+                onComplete:function(twn:FlxTween){
+                  FlxTween.tween(FlxG.sound.music,{volume: 1}, 0.4, {
+                    startDelay:2
+                  });
+                }
+              })
+              if(!FlxG.save.data.unlockedSkins.contains(skin)){
+                FlxG.save.data.unlockedSkins.push(skin);;
+              }
 
+            }
+            exists=true;
+            break;
+          }
+        }
+        if(!exists){
+          var notifSound = new FlxSound().loadEmbedded(Paths.sound('wrongCode'), false, true);
+          notifSound.volume = .7;
+          notifSound.play(true,0);
+          wrong.visible=true;
+          wrongTimer=0;
+        }
       }
     }
     add(inputText);
@@ -68,6 +143,13 @@ class CodeState extends MusicBeatState
   var timer:Float = 0;
   override function update(elapsed:Float){
     timer += elapsed;
+    wrongTimer+= elapsed;
+
+    if(wrongTimer>2){
+      wrong.visible=false;
+    }else{
+      wrong.visible=true;
+    }
 
     var nextXBG = void1.x+(elapsed*64);
     var nextXBG2 = void2.x+(elapsed*64);
@@ -87,6 +169,11 @@ class CodeState extends MusicBeatState
     {
       FlxG.sound.play(Paths.sound('cancelMenu'));
       FlxG.switchState(new MainMenuState());
+      FlxG.mouse.visible=false;
+    }
+
+    if(FlxG.keys.justPressed.ESCAPE && inputText.hasFocus){
+      inputText.hasFocus=false;
     }
 
     super.update(elapsed);

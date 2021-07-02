@@ -248,11 +248,11 @@ class ItemState extends MusicBeatState
 		comboDescTxt.setFormat("VCR OSD Mono", 28, FlxColor.WHITE, CENTER, SHADOW,FlxColor.BLACK);
 		comboDescTxt.shadowOffset.set(2,2);
 
-		itemDescTxt = new FlxText(650, 600, 700, "Omega's Sword", 32);
+		itemDescTxt = new FlxText(650, 600, 725, "Omega's Sword", 32);
 		itemDescTxt.setFormat("VCR OSD Mono", 22, FlxColor.WHITE, CENTER, SHADOW,FlxColor.BLACK);
 		itemDescTxt.shadowOffset.set(2,2);
 
-		itemFlavTxt = new FlxText(650, 650, 700, "Cum", 32);
+		itemFlavTxt = new FlxText(650, 650, 725, "Cum", 32);
 		itemFlavTxt.setFormat("VCR OSD Mono", 26, FlxColor.WHITE, CENTER, SHADOW,FlxColor.BLACK);
 		itemFlavTxt.shadowOffset.set(2,2);
 
@@ -261,15 +261,6 @@ class ItemState extends MusicBeatState
 		add(itemFlavTxt);
 		add(itemDescTxt);
 
-
-    /*var conditions = [
-      FlxG.save.data.omegaGoodEnding,
-      FlxG.save.data.getResistance,
-      FlxG.save.data.becomeATwat,
-      FlxG.save.data.omegaBadEnding,
-      FlxG.save.data.drunk,
-			true
-    ];*/
     var conditions = [
       true,
       true,
@@ -330,7 +321,7 @@ class ItemState extends MusicBeatState
         frame = bf.animation.curAnim.curFrame;
     }
 
-    bf = new Character(650,200,name);
+    bf = new Character(750,200,name);
     bf.flipX=!bf.flipX;
 
     layerBullshit.add(bf);
@@ -398,10 +389,10 @@ class ItemState extends MusicBeatState
         displayCharacter();
       }
     }
-		comboNameTxt.x = 550;
+		comboNameTxt.x = 650;
 		comboNameTxt.y = 50;
 
-		comboDescTxt.x = 550;
+		comboDescTxt.x = 650;
 		comboDescTxt.y = 80;
 		var item = texts.members[selectedIdx];
 		if(item.name!='none'){
@@ -414,10 +405,10 @@ class ItemState extends MusicBeatState
 			itemDescTxt.visible=false;
 			itemFlavTxt.visible=false;
 		}
-		itemDescTxt.x = 450;
+		itemDescTxt.x = 475;
 		itemDescTxt.y = 650;
 
-		itemFlavTxt.x = 450;
+		itemFlavTxt.x = 475;
 		itemFlavTxt.y = 600;
 
     selectionArrow.y = FlxMath.lerp(selectionArrow.y,texts.members[selectedIdx].y - 32,.2);
