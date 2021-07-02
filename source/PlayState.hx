@@ -529,49 +529,21 @@ class PlayState extends MusicBeatState
 		          case 'milf' | 'satin-panties' | 'high':
 		          {
 		                  curStage = 'limo';
-		                  defaultCamZoom = 0.90;
+		                  defaultCamZoom = 0.8;
 
-		                  var skyBG:FlxSprite = new FlxSprite(-120, -50).loadGraphic(Paths.image('limo/limoSunset'));
+		                  var skyBG:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('limo/sky'));
+											skyBG.screenCenter(XY);
 		                  skyBG.scrollFactor.set(0.1, 0.1);
 		                  add(skyBG);
 
-		                  var bgLimo:FlxSprite = new FlxSprite(-200, 480);
-		                  bgLimo.frames = Paths.getSparrowAtlas('limo/bgLimo');
-		                  bgLimo.animation.addByPrefix('drive', "background limo pink", 24);
-		                  bgLimo.animation.play('drive');
-		                  bgLimo.scrollFactor.set(0.4, 0.4);
-		                  add(bgLimo);
+		                  var train:FlxSprite = new FlxSprite(98, 157).loadGraphic(Paths.image("limo/train"));
+											train.scale.y = 2.2;
+											train.scale.x = 2.2;
+		                  train.scrollFactor.set(1, 1);
+		                  add(train);
+											FlxG.watch.add(train,"x");
+											FlxG.watch.add(train,"y");
 
-		                  grpLimoDancers = new FlxTypedGroup<BackgroundDancer>();
-		                  add(grpLimoDancers);
-
-		                  for (i in 0...5)
-		                  {
-		                          var dancer:BackgroundDancer = new BackgroundDancer((370 * i) + 130, bgLimo.y - 400);
-		                          dancer.scrollFactor.set(0.4, 0.4);
-		                          grpLimoDancers.add(dancer);
-		                  }
-
-		                  var overlayShit:FlxSprite = new FlxSprite(-500, -600).loadGraphic(Paths.image('limo/limoOverlay'));
-		                  overlayShit.alpha = 0.5;
-		                  // add(overlayShit);
-
-		                  // var shaderBullshit = new BlendModeEffect(new OverlayShader(), FlxColor.RED);
-
-		                  // FlxG.camera.setFilters([new ShaderFilter(cast shaderBullshit.shader)]);
-
-		                  // overlayShit.shader = shaderBullshit;
-
-		                  var limoTex = Paths.getSparrowAtlas('limo/limoDrive');
-
-		                  limo = new FlxSprite(-120, 550);
-		                  limo.frames = limoTex;
-		                  limo.animation.addByPrefix('drive', "Limo stage", 24);
-		                  limo.animation.play('drive');
-		                  limo.antialiasing = true;
-
-		                  fastCar = new FlxSprite(-300, 160).loadGraphic(Paths.image('limo/fastCarLol'));
-		                  // add(limo);
 		          }
 		          case 'cocoa' | 'eggnog':
 		          {
@@ -1427,11 +1399,9 @@ class PlayState extends MusicBeatState
 		switch (curStage)
 		{
 			case 'limo':
-				boyfriend.y -= 220;
+				boyfriend.y -= 100;
+				dad.y -= 100;
 				boyfriend.x += 260;
-
-				resetFastCar();
-				add(fastCar);
 
 			case 'mall':
 				boyfriend.x += 200;
@@ -1525,8 +1495,6 @@ class PlayState extends MusicBeatState
 		add(gf);
 
 		// Shitty layering but whatev it works LOL
-		if (curStage == 'limo')
-			add(limo);
 
 		if(curStage=='lab'){
 			add(cage1);
@@ -3873,7 +3841,12 @@ class PlayState extends MusicBeatState
 						FlxG.save.data.unlocked.push("LOL");
 					}
 
-					FlxG.switchState(new StoryMenuState());
+					if(SONG.song.toLowerCase()=='father-time'){
+						LoadingState.loadAndSwitchState(new CutsceneState(CoolUtil.coolTextFile(Paths.txt('father-time/fatherPOUNDED')),new PlayState()));
+					}else{
+						FlxG.switchState(new StoryMenuState());
+					}
+
 					Cache.Clear();
 
 
@@ -4639,27 +4612,6 @@ class PlayState extends MusicBeatState
 
 	}
 
-	var fastCarCanDrive:Bool = true;
-
-	function resetFastCar():Void
-	{
-		fastCar.x = -12600;
-		fastCar.y = FlxG.random.int(140, 250);
-		fastCar.velocity.x = 0;
-		fastCarCanDrive = true;
-	}
-
-	function fastCarDrive()
-	{
-		FlxG.sound.play(Paths.soundRandom('carPass', 0, 1), 0.7);
-
-		fastCar.velocity.x = (FlxG.random.int(170, 220) / FlxG.elapsed) * 3;
-		fastCarCanDrive = false;
-		new FlxTimer().start(2, function(tmr:FlxTimer)
-		{
-			resetFastCar();
-		});
-	}
 
 	var trainMoving:Bool = false;
 	var trainFrameTiming:Float = 0;
@@ -4884,14 +4836,6 @@ class PlayState extends MusicBeatState
 				if(curBeat%2==0)
 					queen.animation.play("idle",true);
 
-			case 'limo':
-				grpLimoDancers.forEach(function(dancer:BackgroundDancer)
-				{
-					dancer.dance();
-				});
-
-				if (FlxG.random.bool(10) && fastCarCanDrive)
-					fastCarDrive();
 			case "philly":
 				if (!trainMoving)
 					trainCooldown += 1;

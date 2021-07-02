@@ -96,7 +96,7 @@ class StoryMenuState extends MusicBeatState
 
 	override function create()
 	{
-		if(FlxG.save.data.hasBeatenOMEGAWeek){
+		if(FlxG.save.data.omegaGoodEnding || FlxG.save.data.omegaBadEnding){ // beaten omega
 			baseCameoChance=50;
 		}
 
@@ -448,7 +448,7 @@ class StoryMenuState extends MusicBeatState
 
 		if (curDifficulty < 0)
 			curDifficulty = 3;
-		if (curDifficulty > 2)
+		if (curDifficulty > 3)
 			curDifficulty = 0;
 
 		sprDifficulty.offset.x = 0;

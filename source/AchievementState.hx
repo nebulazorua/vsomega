@@ -271,12 +271,10 @@ class AchievementState extends MusicBeatState
     add(bigMedal);
 
     badgeName = new FlxText(625, 400, 600, "cum", 32);
-		badgeName.setFormat("VCR OSD Mono", 36, FlxColor.WHITE, CENTER, SHADOW,FlxColor.BLACK);
-		badgeName.shadowOffset.set(2,2);
+		badgeName.setFormat("VCR OSD Mono", 36, FlxColor.BLACK, CENTER, OUTLINE,FlxColor.RED);
 
     badgeDesc = new FlxText(725, 435, 400, "Boyfriend.XML", 32);
-		badgeDesc.setFormat("VCR OSD Mono", 30, FlxColor.WHITE, CENTER, SHADOW,FlxColor.BLACK);
-		badgeDesc.shadowOffset.set(2,2);
+		badgeDesc.setFormat("VCR OSD Mono", 30, FlxColor.BLACK, CENTER, OUTLINE,FlxColor.RED);
 
     add(badgeDesc);
     add(badgeName);

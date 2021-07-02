@@ -20,6 +20,8 @@ import haxe.Exception;
 using StringTools;
 import flixel.util.FlxTimer;
 import Options;
+
+
 class MainMenuState extends MusicBeatState
 {
 	var curSelected:Int = 0;
@@ -40,7 +42,7 @@ class MainMenuState extends MusicBeatState
 	var fatherTimeButton:FlxSprite;
 
 	var camFollow:FlxObject;
-
+	var iconSpr:FlxSprite;
 	override function create()
 	{
 		controls.setKeyboardScheme(Solo,true);
@@ -62,6 +64,17 @@ class MainMenuState extends MusicBeatState
 		portal.antialiasing=true;
 		portal.setGraphicSize(Std.int(portal.width*1.05));
 		add(portal);
+
+		iconSpr= new FlxSprite(650,0).loadGraphic(Paths.image('menushit/story'));
+		iconSpr.scale.x = .55;
+		iconSpr.scale.y = .55;
+		iconSpr.screenCenter(Y);
+		iconSpr.y += 25;
+		iconSpr.antialiasing=true;
+		iconSpr.centerOffsets();
+		iconSpr.scrollFactor.x = 0.02;
+		iconSpr.scrollFactor.y = 0.18;
+		add(iconSpr);
 
 		if(FlxG.save.data.daddyTimeTime){
 			FlxG.save.data.daddyTimeTime=false;
@@ -121,8 +134,8 @@ class MainMenuState extends MusicBeatState
 			menuItem.animation.play('idle');
 			menuItem.ID = i;
 			menuItem.alpha=0;
-			menuItem.scale.x=.5;
-			menuItem.scale.y=.5;
+			menuItem.scale.x=.55;
+			menuItem.scale.y=.55;
 			smallItems.add(menuItem);
 			items.add(menuItem);
 			menuItem.scrollFactor.set();
@@ -243,8 +256,11 @@ class MainMenuState extends MusicBeatState
 				});
 		}
 	}
+	var timer:Float = 0;
 	override function update(elapsed:Float)
 	{
+		timer += elapsed;
+		iconSpr.angle = 10*Math.cos(timer);
 		FlxG.camera.zoom = 1;
 		if (FlxG.sound.music.volume < 0.8)
 		{
@@ -329,6 +345,19 @@ class MainMenuState extends MusicBeatState
 		if (curSelected < 0)
 			curSelected = menuItems.length+smallItems.length - 1;
 
+		var daChoice:String = 'story';
+		if(curSelected>optionShit.length-1)
+			daChoice = tinyButtons[curSelected-optionShit.length];
+		else
+			daChoice = optionShit[curSelected];
+
+		iconSpr.loadGraphic(Paths.image('menushit/${daChoice.toLowerCase()}'));
+		iconSpr.scale.x = .5;
+		iconSpr.scale.y = .5;
+		iconSpr.screenCenter(Y);
+		iconSpr.y += 25;
+		iconSpr.x = 350;
+
 		menuItems.forEach(function(spr:FlxSprite)
 		{
 			if (spr.ID == curSelected)
@@ -336,6 +365,7 @@ class MainMenuState extends MusicBeatState
 				if(tweens[spr.ID]!=null){
 					tweens[spr.ID].cancel();
 				}
+
 				tweens[spr.ID]=FlxTween.tween(spr, {alpha: 1,x:35}, 0.1, {
 					ease: FlxEase.quadOut,
 					type: ONESHOT

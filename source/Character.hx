@@ -657,6 +657,19 @@ class Character extends FlxSprite
 				updateHitbox();
 				antialiasing = true;
 				flipX = true;
+			case 'tgr-FUCKING-DIES' | 'naikaze-FUCKING-DIES' | 'mikeeey-FUCKING-DIES' | 'erderi-FUCKING-DIES' :
+				frames = Paths.getSparrowAtlas('characters/' + curCharacter.toLowerCase(),'shared');
+				animation.addByPrefix('singUP', "BF dies", 24, false);
+				animation.addByPrefix('firstDeath', "BF dies", 24, false);
+				animation.addByPrefix('deathLoop', "BF Dead Loop", 24, true);
+				animation.addByPrefix('deathConfirm', "BF Dead confirm", 24, false);
+				animation.play('firstDeath');
+
+				loadOffsets();
+				playAnim('firstDeath');
+				updateHitbox();
+				antialiasing = true;
+				flipX = true;
 
 			case 'senpai':
 				frames = Paths.getSparrowAtlas('characters/Senpai_Assets','shared');
