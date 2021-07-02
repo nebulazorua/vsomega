@@ -62,14 +62,6 @@ class OptionsMenu extends MusicBeatState
 				new ToggleOption("senpaiShaders","Week 6 shaders"),
 			])
 		]),
-		new OptionCategory("Cutscenes",[
-			new CutsceneOption("Intro","introCutscene"),
-			new CutsceneOption("Week Intro","mercenary/pre"),
-			new CutsceneOption("Mercenary","mercenary/cutscene"),
-			new CutsceneOption("Odd Job","odd-job/cutscene"),
-			new CutsceneOption("Guardian","guardian/cutscene"),
-			new CutsceneOption("Test","test/cutscene"),
-		]),
 		new WipeOption()
 	]);
 

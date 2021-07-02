@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="OMEGAWEEB.png">
+	<!-- Created with Adobe Animate version 21.0.5.40714 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="WEEB0000" x="0" y="0" width="1281" height="721"/>
+	<SubTexture name="WEEB0001" x="1285" y="0" width="1281" height="721"/>
+	<SubTexture name="WEEB0002" x="2570" y="0" width="1281" height="721"/>
+	<SubTexture name="WEEB0003" x="0" y="725" width="1281" height="721"/>
+	<SubTexture name="WEEB0004" x="1285" y="725" width="1281" height="721"/>
+	<SubTexture name="WEEB0005" x="2570" y="725" width="1281" height="721"/>
+	<SubTexture name="WEEB0006" x="2570" y="725" width="1281" height="721"/>
+	<SubTexture name="WEEB0007" x="0" y="1450" width="1281" height="721"/>
+	<SubTexture name="WEEB0008" x="0" y="1450" width="1281" height="721"/>
+	<SubTexture name="WEEB0009" x="2570" y="725" width="1281" height="721"/>
+	<SubTexture name="WEEB0010" x="2570" y="725" width="1281" height="721"/>
+	<SubTexture name="WEEB0011" x="1285" y="1450" width="1281" height="721"/>
+	<SubTexture name="WEEB0012" x="1285" y="1450" width="1281" height="721"/>
+	<SubTexture name="WEEB0013" x="1285" y="1450" width="1281" height="721"/>
+	<SubTexture name="WEEB0014" x="1285" y="1450" width="1281" height="721"/>
+	<SubTexture name="WEEB0015" x="1285" y="1450" width="1281" height="721"/>
+	<SubTexture name="WEEB0016" x="1285" y="1450" width="1281" height="721"/>
+	<SubTexture name="WEEB0017" x="1285" y="1450" width="1281" height="721"/>
+	<SubTexture name="WEEB0018" x="1285" y="1450" width="1281" height="721"/>
+	<SubTexture name="WEEB0019" x="1285" y="1450" width="1281" height="721"/>
+	<SubTexture name="WEEB0020" x="1285" y="1450" width="1281" height="721"/>
+	<SubTexture name="WEEB0021" x="1285" y="1450" width="1281" height="721"/>
+	<SubTexture name="WEEB0022" x="1285" y="1450" width="1281" height="721"/>
+	<SubTexture name="WEEB0023" x="1285" y="1450" width="1281" height="721"/>
+	<SubTexture name="WEEB0024" x="2570" y="1450" width="1281" height="721"/>
+	<SubTexture name="WEEB0025" x="0" y="2175" width="1281" height="721"/>
+	<SubTexture name="WEEB0026" x="1285" y="2175" width="1281" height="721"/>
+	<SubTexture name="WEEB0027" x="1285" y="2175" width="1281" height="721"/>
+	<SubTexture name="WEEB0028" x="2570" y="2175" width="1281" height="721"/>
+	<SubTexture name="WEEB0029" x="2570" y="2175" width="1281" height="721"/>
+	<SubTexture name="WEEB0030" x="0" y="2900" width="1281" height="721"/>
+	<SubTexture name="WEEB0031" x="1285" y="2900" width="1281" height="721"/>
+	<SubTexture name="WEEB0032" x="1285" y="1450" width="1281" height="721"/>
+</TextureAtlas>

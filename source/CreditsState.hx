@@ -121,9 +121,6 @@ class CreditsState extends MusicBeatState {
       var asd:OMenuItem = new OMenuItem(0, 0, icon, "CreditMenu_UI");
 			asd.targetY = i;
 			items.add(asd);
-      if(icon=='Naikaze'){
-        asd.offset.y += asd.height;
-      }
 
 			asd.daX = 80;
 			asd.antialiasing = true;
