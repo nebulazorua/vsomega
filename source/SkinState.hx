@@ -42,10 +42,16 @@ class SkinState extends MusicBeatState {
   var lastAnimTimer:Float = 0;
 
   override function create(){
+    selectedSkin = FlxG.save.data.selectedSkin;
     for(idx in 0...skins.length){
       unlockedSkins.push(skins[idx]);
       unlockedNames.push(skinNames[idx]);
       unlockedDescs.push(skinDescs[idx]);
+    }
+    selectedIdx = unlockedSkins.indexOf(selectedSkin);
+    if(selectedIdx==-1){
+      selectedIdx=0;
+      selectedSkin='bf';
     }
     var bg = new FlxSprite().loadGraphic(Paths.image("equipBG"));
     bg.antialiasing=true;
@@ -196,6 +202,7 @@ class SkinState extends MusicBeatState {
     if(controls.ACCEPT && selectedSkin!=unlockedSkins[selectedIdx]){
       selectedTimer=0;
       selectedSkin = unlockedSkins[selectedIdx];
+      FlxG.save.data.selectedSkin = selectedSkin;
       FlxG.sound.play(Paths.sound('confirmMenu'));
       characters[selectedIdx].playAnim("hey",true);
     }

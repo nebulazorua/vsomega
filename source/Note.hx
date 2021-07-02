@@ -103,7 +103,7 @@ class Note extends FlxSprite
 		{
 			case 'school' | 'schoolEvil':
 				if(noteType==2){
-					canMiss=false;
+					canMiss=true;
 
 					loadGraphic(Paths.image('weeb/pixelUI/arrows-pixels-glitch'), true, 16, 16);
 					animation.add('greenScroll', [2]);
@@ -257,8 +257,8 @@ class Note extends FlxSprite
 
 						setGraphicSize(Std.int((width * widMult)*scale));
 						updateHitbox();
-						offset.x += (width/4)+8;
-						//offset.y += (width*widMult)/2 - 13;
+						offset.x += (width/4);
+						offset.y += (width/4);
 						antialiasing = true;
 					case 5: // torch
 						canMiss=true;

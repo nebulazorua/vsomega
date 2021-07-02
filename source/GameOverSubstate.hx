@@ -56,7 +56,12 @@ class GameOverSubstate extends MusicBeatSubstate
 			case 'bfside':
 				FlxG.sound.play(Paths.sound('brightsideDeath'));
 			default:
+				if(PlayState.SONG.song.toLowerCase()=='prelude'){
+					FlxG.sound.play(Paths.sound('NotHowYouDoIt'));
+				}
 				FlxG.sound.play(Paths.sound('fnf_loss_sfx' + stageSuffix));
+
+
 		}
 
 

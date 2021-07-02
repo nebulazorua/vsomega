@@ -30,6 +30,42 @@ typedef AchievementData ={
 
 class AchievementState extends MusicBeatState
 {
+  public static var songs = [
+    "New-Retro", // Kapi
+    "57.5hz", // Demi
+    "Free-Soul", // Merch
+    "No-Arm-Shogun", // Flexy
+    "Fragmented-Surreality", // Noke
+    "Oxidation", // Anders
+    "Bopeebo",
+    "Fresh",
+    "Dadbatle",
+    "Spookeez",
+    "South",
+    "Salem",
+    "Pico",
+    "Philly-Nice",
+    "Blammed",
+    "Satin-Panties",
+    "High",
+    "MILF",
+    'Cocoa',
+    'Eggnog',
+    'Monster',
+    'Winter-Horrorland',
+    'Senpai',
+    'Roses',
+    'Thorns',
+    'Mercenary',
+    'Odd-Job',
+    'Guardian',
+    'Last-Stand',
+    'Curse-Eternal',
+    '2v200',
+    'After-the-Ashes',
+    'Father-Time',
+    'Dishonor',
+  ];
   var selectionRing:FlxSprite;
   var medals:FlxTypedGroup<FlxSprite>;
   var selectedX:Int = 0;
@@ -54,7 +90,7 @@ class AchievementState extends MusicBeatState
     {name: "Overclocked", desc: "Attempt to pull the plug on the supercharged dragon.", rarity: "rare", condition: "unlock57.5hz"},
     {name: "Liquidated", desc: "Confront the mysterious figure who has stalked you throughout your journey.", rarity: "rare", condition: "unlockOxidation"},
 
-    {name: "Butterfly Effect", desc: "Conquer every distortion with flawless grace.", rarity: "epic", condition: "custom"},
+    {name: "Butterfly Effect", desc: "Conquer every distortion with flawless grace.", rarity: "epic", condition: "beatcameos"},
     {name: "Rampage", desc: "Go toe-to-toe with the swordsman and come out on top.", rarity: "epic", condition: "beatLast-Stand"},
     {name: "Defy the Odds", desc: "Dismantle the army that has subjugated all opposition.", rarity: "epic", condition: "beat2v200"},
     {name: "Down with the Patriarch", desc: "Find the root of the problem", rarity: "epic", condition: "beatFather-Time"},
@@ -62,12 +98,12 @@ class AchievementState extends MusicBeatState
     {name: "Full Playthrough", desc: "Your story ends here, but there’s still more mysteries to uncover.", rarity: "epic", condition: "custom"},
 
     {name: "Temporal Overlord", desc: "Your story truly ends here.", rarity: "legendary", condition: "custom"},
-    {name: "Temporal Expert", desc: "Strike down all of your opponents without even a single mistake.", rarity: "legendary", condition: "custom"},
+    {name: "Temporal Expert", desc: "Strike down all of your opponents without even a single mistake.", rarity: "legendary", condition: "fcall"},
     {name: "Gobbledygook", desc: "Even in the face of a broken, lethal challenge, come out on top.", rarity: "legendary", condition: "custom"},
     {name: "Dance of Death", desc: "Defeat the swordsman without so much as a scratch on you.", rarity: "legendary", condition: "fcLast-Stand"},
     {name: "Two-Man Army", desc: "Crush the royal fleet in perfect unison.", rarity: "legendary", condition: "fc2v200"},
     {name: "All in the Family", desc: "Sing this final song with immaculate skill and prove your worth once and for all.", rarity: "legendary", condition: "fcFather-Time"},
-    {name: "Kakorrhaphiophobia", desc: "Don’t make a single misstep or it’ll cost you.", rarity: "legendary", condition: "custom"},
+    {name: "Kakorrhaphiophobia", desc: "Don’t make a single misstep or it’ll cost you.", rarity: "legendary", condition: "flashyfcall"},
 
     {name: "Circus of Fools", desc: "You really ARE a fool.", rarity: "hidden", condition: "beathivemind"},
     {name: "Break the Cycle", desc: "Prove that not even a shattered reality can hold you back.", rarity: "hidden", condition: "fchivemind"},
@@ -112,7 +148,6 @@ class AchievementState extends MusicBeatState
   public static function doUnlock(){
     var rarity = 0;
     var unlocked = '';
-    trace("checking unlocks");
     for(shit in toUnlock){
       var data = dataFromName(shit);
       var pRarity= rarityPriorities.indexOf(data.rarity);
@@ -122,7 +157,6 @@ class AchievementState extends MusicBeatState
       }
     }
     toUnlock=[];
-    trace('unlocking "${unlocked}"');
     if(unlocked!='')
       unlockMedal(unlocked);
   }
@@ -134,11 +168,10 @@ class AchievementState extends MusicBeatState
       var finishedSongs:Array<String> = FlxG.save.data.finishedSongs;
       var perfectedSongs:Array<String> = FlxG.save.data.perfectedSongs;
       var flashySongs:Array<String> = FlxG.save.data.flashySongs;
-      
+
       for(idx in 0...achievementData.length){
         var data = achievementData[idx];
         var unlocked=false;
-        trace(data.name,data.condition,data.condition.startsWith("beat"));
         if(data.condition.startsWith("unlock")){
           var song = data.condition.replace("unlock","");
           if(encounteredCameos.contains(song) || unlockedMedals.contains(song)){
@@ -146,14 +179,41 @@ class AchievementState extends MusicBeatState
           }
         }else if(data.condition.startsWith("beat")){
           var song = data.condition.replace("beat","");
-          trace(finishedSongs.contains(song.toLowerCase()));
-          if(finishedSongs.contains(song.toLowerCase())){
+          if(song=='cameos'){
+            unlocked=true;
+            for(shit in StoryMenuState.cameos){
+              if(!FlxG.save.data.perfectedSongs.contains(shit.toLowerCase())){
+                unlocked=false;
+                break;
+              }
+            }
+          }else if(finishedSongs.contains(song.toLowerCase())){
             unlocked=true;
           }
         }else if(data.condition.startsWith("fc")){
           var song = data.condition.replace("fc","");
-          if(perfectedSongs.contains(song.toLowerCase())){
+          if(song=='all'){
             unlocked=true;
+            for(shit in songs){
+              if(!FlxG.save.data.perfectedSongs.contains(shit.toLowerCase())){
+                unlocked=false;
+                break;
+              }
+            }
+          }else{
+            if(perfectedSongs.contains(song.toLowerCase())){
+              unlocked=true;
+            }
+          }
+        }
+
+        if(data.condition=='flashyfcall'){
+          unlocked=true;
+          for(shit in songs){
+            if(!FlxG.save.data.flashySongs.contains(shit.toLowerCase())){
+              unlocked=false;
+              break;
+            }
           }
         }
 

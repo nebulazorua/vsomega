@@ -20,10 +20,7 @@ class OptionUtils
 		"Vanilla",
 		"ITG",
 		"Quaver",
-		"Judge Four / KadeEngine",
-		"EMFNF2",
-		"BSide Philly",
-		"Dream",
+		"Judge Four",
 	];
 	public static var ratingWindowTypes:Array<Array<Float>> = [ // TODO: make these all properly scale w/ the safeZoneOffset n shit
 		[ // Vanilla
@@ -53,27 +50,6 @@ class OptionUtils
 			90, // good
 			135, // bad
 			180, // shit
-		],
-		[ // EMFNF2
-			25, // epic
-			50, // sick
-			124, // good
-			149, // bad
-			166, // shit
-		],
-		[ // BSide Philly
-			0,
-			300,
-			0,
-			0,
-			300,
-		],
-		[ // All sick
-			0,
-			166,
-			0,
-			0,
-			166
 		]
 	];
 	public static var shit:Array<FlxKey> = [
@@ -94,7 +70,6 @@ class OptionUtils
 		var fields = Reflect.fields(options);
 		for(f in fields){
 			var shit = Reflect.field(options,f);
-			trace(f,shit);
 			Reflect.setField(saveFile.data,f,shit);
 		}
 		saveFile.flush();
@@ -102,7 +77,6 @@ class OptionUtils
 	public static function loadOptions(options:Options){
 		var fields = Reflect.fields(saveFile.data);
 		for(f in fields){
-			trace(f,Reflect.getProperty(options,f));
 			if(Reflect.getProperty(options,f)!=null)
 				Reflect.setField(options,f,Reflect.field(saveFile.data,f));
 		}
@@ -218,6 +192,33 @@ class CutsceneOption extends Option
 		return false;
 	}
 }
+
+class WipeOption extends Option
+{
+	private var areYOUSURE:Bool=false;
+
+	public function new(){
+		super();
+		this.name="Wipe save data";
+	}
+	public override function accept(){
+		if(areYOUSURE==false){
+			areYOUSURE=true;
+			name="Are you sure?";
+		}else{
+			var fields = Reflect.fields(FlxG.save.data);
+			for(f in fields){
+				trace(f);
+				Reflect.setField(FlxG.save.data,f,null);
+			}
+			FlxG.save.flush();
+
+			FlxG.resetGame();
+		}
+		return true;
+	}
+}
+
 class StateOption extends Option
 {
 	private var state:FlxState;
@@ -232,7 +233,7 @@ class StateOption extends Option
 	}
 }
 
-class Checkbox extends FlxSprite
+class OptionCheckbox extends FlxSprite
 {
 	public var state:Bool=false;
 	public var tracker:FlxSprite;
@@ -258,9 +259,6 @@ class Checkbox extends FlxSprite
 			animation.play("selected");
 		else
 			animation.play("unselected");
-
-		offset.x = 0;
-		offset.y = 0;
 
 	}
 
@@ -291,19 +289,20 @@ class Checkbox extends FlxSprite
 				}
 			}
 		}
-
+		offset.x = 0;
+		offset.y = 0;
 	}
 }
 
 class ToggleOption extends Option
 {
 	private var property = "dummy";
-	private var checkbox:Checkbox;
+	private var checkbox:OptionCheckbox;
 	public function new(property:String,?name:String){
 		super();
 		this.property = property;
 		this.name = name;
-		checkbox = new Checkbox(Reflect.field(OptionUtils.options,property));
+		checkbox = new OptionCheckbox(Reflect.field(OptionUtils.options,property));
 		add(checkbox);
 	}
 

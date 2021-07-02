@@ -69,7 +69,8 @@ class OptionsMenu extends MusicBeatState
 			new CutsceneOption("Odd Job","odd-job/cutscene"),
 			new CutsceneOption("Guardian","guardian/cutscene"),
 			new CutsceneOption("Test","test/cutscene"),
-		])
+		]),
+		new WipeOption()
 	]);
 
 	private var optionText:FlxTypedGroup<Option>;
