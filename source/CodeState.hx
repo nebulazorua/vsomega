@@ -24,6 +24,7 @@ import flixel.addons.ui.FlxInputText;
 import flixel.system.FlxSound;
 import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
+import flixel.math.FlxMath;
 
 typedef Code = {
   var code:String;
@@ -47,7 +48,9 @@ class CodeState extends MusicBeatState
   var void2:FlxSprite;
   var wrong:FlxText;
   var wrongTimer:Float = 10000;
+  var notifSound:FlxSound;
   override function create(){
+    notifSound = new FlxSound();
 
     var title = new FlxText(0, 250, 0, "Type the code into the box and press enter to input\nthe code", 32);
     title.setFormat("VCR OSD Mono", 36, FlxColor.WHITE, CENTER, SHADOW,FlxColor.BLACK);
@@ -106,17 +109,11 @@ class CodeState extends MusicBeatState
               if(FlxG.save.data.unlockedSkins.contains(skin)){
                 sound='alreadyHave';
               }
-              var notifSound = new FlxSound().loadEmbedded(Paths.sound('${sound}'), false, true);
-              notifSound.volume = .7;
+              notifSound.loadEmbedded(Paths.sound('${sound}'), false, true);
+              notifSound.volume = 1;
               notifSound.play(true,0);
-              FlxTween.tween(FlxG.sound.music,{volume: .5}, 0.1, {
-                ease: FlxEase.quartInOut,
-                onComplete:function(twn:FlxTween){
-                  FlxTween.tween(FlxG.sound.music,{volume: 1}, 0.4, {
-                    startDelay:2
-                  });
-                }
-              });
+
+
               if(!FlxG.save.data.unlockedSkins.contains(skin)){
                 FlxG.save.data.unlockedSkins.push(skin);
               }
@@ -144,6 +141,7 @@ class CodeState extends MusicBeatState
   override function update(elapsed:Float){
     timer += elapsed;
     wrongTimer+= elapsed;
+    FlxG.sound.music.volume = FlxMath.lerp(FlxG.sound.music.volume,.5,.1);
 
     if(wrongTimer>2){
       wrong.visible=false;

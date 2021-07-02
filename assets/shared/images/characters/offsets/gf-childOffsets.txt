@@ -1,0 +1,2 @@
+danceLeft -34 -71
+danceRight -34 -71

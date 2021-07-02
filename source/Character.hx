@@ -89,6 +89,17 @@ class Character extends FlxSprite
 				loadOffsets();
 				playAnim('danceRight');
 
+			case 'gf-child':
+				tex = Paths.getSparrowAtlas('characters/GF_ass_sets_fighting','shared');
+				frames = tex;
+				animation.addByIndices('singUP', 'GF Dancing fight Beat', [0], "", 24, false);
+				animation.addByIndices('danceRight', 'GF Dancing fight Beat', [30, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], "", 24, false);
+				animation.addByIndices('danceLeft', 'GF Dancing fight Beat', [15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29], "", 24,
+					false);
+
+				loadOffsets();
+				playAnim('danceRight');
+
 			case 'gf-car':
 				tex = Paths.getSparrowAtlas('characters/gfCar','shared');
 				frames = tex;
