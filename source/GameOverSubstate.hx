@@ -39,7 +39,6 @@ class GameOverSubstate extends MusicBeatSubstate
 			}
 		}
 
-
 		super();
 
 		Conductor.songPosition = 0;

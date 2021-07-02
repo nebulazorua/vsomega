@@ -82,13 +82,13 @@ class SkinState extends MusicBeatState {
     var ui_tex = Paths.getSparrowAtlas('campaign_menu_UI_assets');
 
     nameText = new FlxText(10, 10, 0, "Boyfriend.XML", 32);
-		nameText.setFormat("VCR OSD Mono", 36, FlxColor.BLACK, CENTER, SHADOW,FlxColor.WHITE);
+		nameText.setFormat("VCR OSD Mono", 36, FlxColor.WHITE, CENTER, SHADOW,FlxColor.BLACK);
 		nameText.shadowOffset.set(2,2);
 		nameText.screenCenter(XY);
 		nameText.y -= 200;
 
     descText = new FlxText(10, 10, 0, "Funky lil' man", 32);
-		descText.setFormat("VCR OSD Mono", 36, FlxColor.BLACK, CENTER, SHADOW,FlxColor.WHITE);
+		descText.setFormat("VCR OSD Mono", 36, FlxColor.WHITE, CENTER, SHADOW,FlxColor.BLACK);
 		descText.shadowOffset.set(2,2);
 		descText.screenCenter(XY);
 		descText.y -= 150;

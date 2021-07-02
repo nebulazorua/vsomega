@@ -33,7 +33,7 @@ class Character extends FlxSprite
 
 		var tex:FlxAtlasFrames;
 		antialiasing = true;
-
+		trace(curCharacter);
 		switch (curCharacter)
 		{
 			case 'gf':
@@ -657,8 +657,22 @@ class Character extends FlxSprite
 				updateHitbox();
 				antialiasing = true;
 				flipX = true;
-			case 'tgr-FUCKING-DIES' | 'naikaze-FUCKING-DIES' | 'mikeeey-FUCKING-DIES' | 'erderi-FUCKING-DIES' :
-				frames = Paths.getSparrowAtlas('characters/' + curCharacter.toLowerCase(),'shared');
+			case 'naikaze-FUCKING-DIES':
+				trace("skdjhf");
+				frames = Paths.getSparrowAtlas('characters/reskins/naikaze-fucking-dies','shared');
+				animation.addByPrefix('singUP', "BF dies", 24, false);
+				animation.addByPrefix('firstDeath', "BF dies", 24, false);
+				animation.addByPrefix('deathLoop', "BF Dead Loop", 24, true);
+				animation.addByPrefix('deathConfirm', "BF Dead confirm", 24, false);
+				animation.play('firstDeath');
+
+				loadOffsets();
+				playAnim('firstDeath');
+				updateHitbox();
+				antialiasing = true;
+				flipX = true;
+			case 'tgr-FUCKING-DIES':
+				frames = Paths.getSparrowAtlas('characters/reskins/tgr-fucking-dies','shared');
 				animation.addByPrefix('singUP', "BF dies", 24, false);
 				animation.addByPrefix('firstDeath', "BF dies", 24, false);
 				animation.addByPrefix('deathLoop', "BF Dead Loop", 24, true);
@@ -671,6 +685,32 @@ class Character extends FlxSprite
 				antialiasing = true;
 				flipX = true;
 
+			case 'mikeeey-FUCKING-DIES':
+				frames = Paths.getSparrowAtlas('characters/reskins/mikeeey-fucking-dies','shared');
+				animation.addByPrefix('singUP', "BF dies", 24, false);
+				animation.addByPrefix('firstDeath', "BF dies", 24, false);
+				animation.addByPrefix('deathLoop', "BF Dead Loop", 24, true);
+				animation.addByPrefix('deathConfirm', "BF Dead confirm", 24, false);
+				animation.play('firstDeath');
+
+				loadOffsets();
+				playAnim('firstDeath');
+				updateHitbox();
+				antialiasing = true;
+				flipX = true;
+			case 'erderi-FUCKING-DIES':
+				frames = Paths.getSparrowAtlas('characters/reskins/erderi-fucking-dies','shared');
+				animation.addByPrefix('singUP', "BF dies", 24, false);
+				animation.addByPrefix('firstDeath', "BF dies", 24, false);
+				animation.addByPrefix('deathLoop', "BF Dead Loop", 24, true);
+				animation.addByPrefix('deathConfirm', "BF Dead confirm", 24, false);
+				animation.play('firstDeath');
+
+				loadOffsets();
+				playAnim('firstDeath');
+				updateHitbox();
+				antialiasing = true;
+				flipX = true;
 			case 'senpai':
 				frames = Paths.getSparrowAtlas('characters/Senpai_Assets','shared');
 				animation.addByPrefix('idle', 'SENPAI Idle', 24, false);

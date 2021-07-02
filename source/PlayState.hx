@@ -437,7 +437,7 @@ class PlayState extends MusicBeatState
 				storyDifficultyText = "Normal";
 			case 2:
 				storyDifficultyText = "Hard";
-			case 2:
+			case 3:
 				storyDifficultyText = "Glitch";
 		}
 
@@ -2191,7 +2191,6 @@ class PlayState extends MusicBeatState
 				for(cum in dadStrums){
 					var brokenArrow = new FlxSprite(cum.x,cum.y);
 					brokenArrow.frames = Paths.getSparrowAtlas("CUNTNOTES");
-					trace(sides[idx]);
 					brokenArrow.animation.addByPrefix("cut",'CUT${sides[idx]}',24,false);
 					brokenArrow.scrollFactor.set(cum.scrollFactor.x,cum.scrollFactor.y);
 					brokenArrow.cameras=cum.cameras;
