@@ -48,6 +48,11 @@ class SkinState extends MusicBeatState {
       unlockedNames.push(skinNames[idx]);
       unlockedDescs.push(skinDescs[idx]);
     }
+    selectedIdx = unlockedSkins.indexOf(selectedSkin);
+    if(selectedIdx==-1){
+      selectedIdx=0;
+      selectedSkin='bf';
+    }
     var bg = new FlxSprite().loadGraphic(Paths.image("equipBG"));
     bg.antialiasing=true;
     bg.updateHitbox();

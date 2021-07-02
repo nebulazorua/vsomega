@@ -90,7 +90,7 @@ class AchievementState extends MusicBeatState
     {name: "Overclocked", desc: "Attempt to pull the plug on the supercharged dragon.", rarity: "rare", condition: "unlock57.5hz"},
     {name: "Liquidated", desc: "Confront the mysterious figure who has stalked you throughout your journey.", rarity: "rare", condition: "unlockOxidation"},
 
-    {name: "Butterfly Effect", desc: "Conquer every distortion with flawless grace.", rarity: "epic", condition: "custom"},
+    {name: "Butterfly Effect", desc: "Conquer every distortion with flawless grace.", rarity: "epic", condition: "beatcameos"},
     {name: "Rampage", desc: "Go toe-to-toe with the swordsman and come out on top.", rarity: "epic", condition: "beatLast-Stand"},
     {name: "Defy the Odds", desc: "Dismantle the army that has subjugated all opposition.", rarity: "epic", condition: "beat2v200"},
     {name: "Down with the Patriarch", desc: "Find the root of the problem", rarity: "epic", condition: "beatFather-Time"},
@@ -179,7 +179,15 @@ class AchievementState extends MusicBeatState
           }
         }else if(data.condition.startsWith("beat")){
           var song = data.condition.replace("beat","");
-          if(finishedSongs.contains(song.toLowerCase())){
+          if(song=='cameos'){
+            unlocked=true;
+            for(shit in StoryMenuState.cameos){
+              if(!FlxG.save.data.perfectedSongs.contains(shit.toLowerCase())){
+                unlocked=false;
+                break;
+              }
+            }
+          }else if(finishedSongs.contains(song.toLowerCase())){
             unlocked=true;
           }
         }else if(data.condition.startsWith("fc")){

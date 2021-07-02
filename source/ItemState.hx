@@ -157,6 +157,8 @@ class ItemState extends MusicBeatState
     "arrowtwatdepressed" => "Work Through the Pain",
 
     "swordarrowtwatdepressed" => "Clusterfuck",
+
+		"" => "Naked",
   ];
   public static var comboDescs:Map<String,String> = [
     "sword" =>  "You're pretty sure it's a replica, but it's close enough.",
@@ -179,6 +181,8 @@ class ItemState extends MusicBeatState
     "arrowtwatdepressed" => "Smile all you want, you still did what you did, and now you got an arrow through your head.",
 
     "swordarrowtwatdepressed" => "You just like checking all the boxes, huh?",
+
+		"" => "No items!",
   ];
 
   public var unlockedItems = [];
@@ -224,11 +228,6 @@ class ItemState extends MusicBeatState
     bfRock.active = false;
     add(bfRock);
 
-		comboNameTxt = new FlxText();
-		comboDescTxt = new FlxText();
-		itemDescTxt = new FlxText();
-	 	itemFlavTxt = new FlxText();
-
     var box = new FlxSprite().loadGraphic(Paths.image("WOODEN_BOX"));
     box.antialiasing=true;
     box.updateHitbox();
@@ -240,6 +239,28 @@ class ItemState extends MusicBeatState
 
     layerBullshit = new FlxTypedGroup<Character>();
     add(layerBullshit);
+
+		comboNameTxt = new FlxText(650, 50, 600, "Naked", 32);
+		comboNameTxt.setFormat("VCR OSD Mono", 36, FlxColor.WHITE, CENTER, SHADOW,FlxColor.BLACK);
+		comboNameTxt.shadowOffset.set(2,2);
+
+		comboDescTxt = new FlxText(650, 85, 600, "No items!", 32);
+		comboDescTxt.setFormat("VCR OSD Mono", 28, FlxColor.WHITE, CENTER, SHADOW,FlxColor.BLACK);
+		comboDescTxt.shadowOffset.set(2,2);
+
+		itemDescTxt = new FlxText(650, 600, 700, "Omega's Sword", 32);
+		itemDescTxt.setFormat("VCR OSD Mono", 22, FlxColor.WHITE, CENTER, SHADOW,FlxColor.BLACK);
+		itemDescTxt.shadowOffset.set(2,2);
+
+		itemFlavTxt = new FlxText(650, 650, 700, "Cum", 32);
+		itemFlavTxt.setFormat("VCR OSD Mono", 26, FlxColor.WHITE, CENTER, SHADOW,FlxColor.BLACK);
+		itemFlavTxt.shadowOffset.set(2,2);
+
+		add(comboNameTxt);
+		add(comboDescTxt);
+		add(itemFlavTxt);
+		add(itemDescTxt);
+
 
     /*var conditions = [
       FlxG.save.data.omegaGoodEnding,
@@ -298,6 +319,9 @@ class ItemState extends MusicBeatState
         }
       }
     }
+
+		comboNameTxt.text = comboNames.get(name);
+		comboDescTxt.text = comboDescs.get(name);
 
     if(name=='')name='bf';
     var frame = 0;
@@ -374,6 +398,27 @@ class ItemState extends MusicBeatState
         displayCharacter();
       }
     }
+		comboNameTxt.x = 550;
+		comboNameTxt.y = 50;
+
+		comboDescTxt.x = 550;
+		comboDescTxt.y = 80;
+		var item = texts.members[selectedIdx];
+		if(item.name!='none'){
+			itemDescTxt.visible=true;
+			itemFlavTxt.visible=true;
+
+			itemDescTxt.text=itemDescs.get(item.name);
+			itemFlavTxt.text='"${itemFlavour.get(item.name)}"';
+		}else{
+			itemDescTxt.visible=false;
+			itemFlavTxt.visible=false;
+		}
+		itemDescTxt.x = 450;
+		itemDescTxt.y = 650;
+
+		itemFlavTxt.x = 450;
+		itemFlavTxt.y = 600;
 
     selectionArrow.y = FlxMath.lerp(selectionArrow.y,texts.members[selectedIdx].y - 32,.2);
 
