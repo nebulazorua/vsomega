@@ -42,7 +42,7 @@ class Cutscene extends FlxSpriteGroup {
   public function new (data:Array<String>){
     super();
     cutsceneCamera = new FlxCamera();
-    FlxG.cameras.add(cutsceneCamera);
+    FlxG.cameras.reset(cutsceneCamera);
     cameras=[cutsceneCamera];
 
     image = new FlxSprite();

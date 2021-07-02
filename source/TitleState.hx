@@ -27,6 +27,7 @@ import flixel.util.FlxColor;
 import flixel.util.FlxTimer;
 import io.newgrounds.NG;
 import lime.app.Application;
+import flixel.FlxCamera;
 import openfl.Assets;
 import sys.FileSystem;
 
@@ -49,6 +50,7 @@ class TitleState extends MusicBeatState
 	override public function create():Void
 	{
 		FlxG.mouse.visible = false;
+
 		if(initialized){
 			#if FREEPLAY
 			FlxG.switchState(new FreeplayState());
@@ -58,6 +60,7 @@ class TitleState extends MusicBeatState
 			startIntro();
 			#end
 		}else{
+
 			#if polymod
 			polymod.Polymod.init({modRoot: "mods", dirs: ['introMod']});
 			#end
@@ -103,8 +106,23 @@ class TitleState extends MusicBeatState
 			#end*/
 
 			FlxG.save.bind('funkin', 'ninjamuffin99');
+			if(FlxG.save.data.finishedSongs==null)
+				FlxG.save.data.finishedSongs=[];
 
+			if(FlxG.save.data.perfectedSongs==null)
+				FlxG.save.data.perfectedSongs=[];
+
+			if(FlxG.save.data.unlockedOmegaSongs==null)
+				FlxG.save.data.unlockedOmegaSongs=[];
+
+			if(FlxG.save.data.unlocked==null)
+				FlxG.save.data.unlocked=[];
+
+			if(FlxG.save.data.cameos==null)
+				FlxG.save.data.cameos=[];
 			Highscore.load();
+
+			AchievementState.checkUnlocks();
 
 			if (FlxG.save.data.weekUnlocked != null)
 			{

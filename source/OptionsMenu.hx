@@ -40,9 +40,6 @@ class OptionsMenu extends MusicBeatState
 					new ControlOption(controls,Control.RESET,true),
 				]),
 			]),
-			new OptionCategory("Modifiers",[
-				new ToggleOption("failForMissing","Sudden Death"),
-			]),
 			new ScrollOption("ratingWindow",0,OptionUtils.ratingWindowNames.length-1,OptionUtils.ratingWindowNames),
 			new ToggleOption("ghosttapping","Ghost-tapping"),
 			new StateOption("Calibrate Offset",new SoundOffsetState()),
@@ -52,7 +49,6 @@ class OptionsMenu extends MusicBeatState
 		]),
 		new OptionCategory("Preferences",[
 			new ToggleOption("pauseHoldAnims","Holds pause anims"),
-			//new ScrollOption("holdBehaviour",0,1,["Holds pause anims","Holds repeat anims"]),
 			new ToggleOption("showMS","Hit MS"),
 			new ToggleOption("ratingInHUD","Ratings in HUD"),
 			new ToggleOption("downScroll","Downscroll"),

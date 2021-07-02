@@ -76,8 +76,10 @@ class ScoreUtils
 	public static function RatingToScore(rating:String):Int{
 		var score = 0;
 		switch (rating){
-			case 'shit' | 'bad':
+			case 'shit':
 				score = 0;
+			case 'bad':
+				score = 20;
 			case 'good':
 				score = 100;
 			case 'sick':

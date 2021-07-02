@@ -58,6 +58,8 @@ class FreeplayState extends MusicBeatState
 			{
 				if (!FlxG.sound.music.playing)
 					FlxG.sound.playMusic(Paths.music('freakyMenu'));
+			}else{
+				FlxG.sound.playMusic(Paths.music('freakyMenu'));
 			}
 
 
@@ -76,7 +78,7 @@ class FreeplayState extends MusicBeatState
 			addWeek(['Bopeebo', 'Fresh', 'Dadbattle'], 1, ['dad']);
 
 		if (StoryMenuState.weekUnlocked[2] || isDebug)
-			addWeek(['Spookeez', 'South', 'Salem', 'Monster'], 2, ['spooky','spooky','spooky','monster']);
+			addWeek(['Spookeez', 'South', 'Salem'], 2, ['spooky','spooky','spooky']);
 
 		if (StoryMenuState.weekUnlocked[3] || isDebug)
 			addWeek(['Pico', 'Philly-Nice', 'Blammed'], 3, ['pico']);
@@ -85,7 +87,7 @@ class FreeplayState extends MusicBeatState
 			addWeek(['Satin-Panties', 'High', 'Milf'], 4, ['mom']);
 
 		if (StoryMenuState.weekUnlocked[5] || isDebug)
-			addWeek(['Cocoa', 'Eggnog', 'Winter-Horrorland'], 5, ['parents-christmas', 'parents-christmas', 'monster-christmas']);
+			addWeek(['Cocoa', 'Eggnog', 'Winter-Horrorland', 'Monster'], 5, ['parents-christmas', 'parents-christmas', 'monster-christmas', 'monster-christmas']);
 
 		if (StoryMenuState.weekUnlocked[6] || isDebug)
 			addWeek(['Senpai', 'Roses', 'Thorns'], 6, ['senpai', 'senpai', 'spirit']);
