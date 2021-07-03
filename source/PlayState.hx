@@ -537,8 +537,8 @@ class PlayState extends MusicBeatState
 		                  add(skyBG);
 
 		                  var train:FlxSprite = new FlxSprite(98, 157).loadGraphic(Paths.image("limo/train"));
-											train.scale.y = 2.2;
-											train.scale.x = 2.2;
+											train.scale.y = 1.2;
+											train.scale.x = 1.2;
 		                  train.scrollFactor.set(1, 1);
 		                  add(train);
 											FlxG.watch.add(train,"x");
@@ -551,55 +551,23 @@ class PlayState extends MusicBeatState
 
 		                  defaultCamZoom = 0.80;
 
-		                  var bg:FlxSprite = new FlxSprite(-1000, -500).loadGraphic(Paths.image('christmas/bgWalls'));
+		                  var bg:FlxSprite = new FlxSprite(-1000, -500).loadGraphic(Paths.image('shit/bg'));
 		                  bg.antialiasing = true;
-		                  bg.scrollFactor.set(0.2, 0.2);
+		                  bg.scrollFactor.set(1, 1);
 		                  bg.active = false;
-		                  bg.setGraphicSize(Std.int(bg.width * 0.8));
-		                  bg.updateHitbox();
+											bg.setGraphicSize(Std.int(bg.width*.5));
+											bg.updateHitbox();
+											bg.screenCenter(XY);
 		                  add(bg);
 
-		                  upperBoppers = new FlxSprite(-240, -90);
-		                  upperBoppers.frames = Paths.getSparrowAtlas('christmas/upperBop');
-		                  upperBoppers.animation.addByPrefix('bop', "Upper Crowd Bob", 24, false);
-		                  upperBoppers.antialiasing = true;
-		                  upperBoppers.scrollFactor.set(0.33, 0.33);
-		                  upperBoppers.setGraphicSize(Std.int(upperBoppers.width * 0.85));
-		                  upperBoppers.updateHitbox();
-		                  add(upperBoppers);
-
-		                  var bgEscalator:FlxSprite = new FlxSprite(-1100, -600).loadGraphic(Paths.image('christmas/bgEscalator'));
-		                  bgEscalator.antialiasing = true;
-		                  bgEscalator.scrollFactor.set(0.3, 0.3);
-		                  bgEscalator.active = false;
-		                  bgEscalator.setGraphicSize(Std.int(bgEscalator.width * 0.9));
-		                  bgEscalator.updateHitbox();
-		                  add(bgEscalator);
-
-		                  var tree:FlxSprite = new FlxSprite(370, -250).loadGraphic(Paths.image('christmas/christmasTree'));
-		                  tree.antialiasing = true;
-		                  tree.scrollFactor.set(0.40, 0.40);
-		                  add(tree);
-
-		                  bottomBoppers = new FlxSprite(-300, 140);
-		                  bottomBoppers.frames = Paths.getSparrowAtlas('christmas/bottomBop');
-		                  bottomBoppers.animation.addByPrefix('bop', 'Bottom Level Boppers', 24, false);
-		                  bottomBoppers.antialiasing = true;
-	                          bottomBoppers.scrollFactor.set(0.9, 0.9);
-	                          bottomBoppers.setGraphicSize(Std.int(bottomBoppers.width * 1));
-		                  bottomBoppers.updateHitbox();
-		                  add(bottomBoppers);
-
-		                  var fgSnow:FlxSprite = new FlxSprite(-600, 700).loadGraphic(Paths.image('christmas/fgSnow'));
-		                  fgSnow.active = false;
-		                  fgSnow.antialiasing = true;
-		                  add(fgSnow);
-
-		                  santa = new FlxSprite(-840, 150);
-		                  santa.frames = Paths.getSparrowAtlas('christmas/santa');
-		                  santa.animation.addByPrefix('idle', 'santa idle in fear', 24, false);
-		                  santa.antialiasing = true;
-		                  add(santa);
+											var stage:FlxSprite = new FlxSprite(-1000, -500).loadGraphic(Paths.image('shit/stage'));
+		                  stage.antialiasing = true;
+		                  stage.scrollFactor.set(1, 1);
+		                  stage.active = false;
+											stage.setGraphicSize(Std.int(stage.width*.5));
+											stage.updateHitbox();
+											stage.screenCenter(XY);
+		                  add(stage);
 		          }
 		          case 'winter-horrorland':
 		          {
@@ -4816,9 +4784,7 @@ class PlayState extends MusicBeatState
 		{
 
 			case 'mall':
-				upperBoppers.animation.play('bop', true);
-				bottomBoppers.animation.play('bop', true);
-				santa.animation.play('idle', true);
+
 			case 'dojo':
 				if(curBeat%2==0){
 					anders.animation.play("idle",true);

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="front bop.png">
+	<!-- Created with Adobe Animate version 21.0.4.39603 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="front bop0000" x="5" y="5" width="1275" height="294" frameX="-38" frameY="0" frameWidth="1351" frameHeight="294"/>
+	<SubTexture name="front bop0001" x="5" y="5" width="1275" height="294" frameX="-38" frameY="0" frameWidth="1351" frameHeight="294"/>
+	<SubTexture name="front bop0002" x="5" y="309" width="1288" height="280" frameX="-31" frameY="-13" frameWidth="1351" frameHeight="294"/>
+	<SubTexture name="front bop0003" x="5" y="309" width="1288" height="280" frameX="-31" frameY="-13" frameWidth="1351" frameHeight="294"/>
+	<SubTexture name="front bop0004" x="5" y="599" width="1313" height="280" frameX="-19" frameY="-13" frameWidth="1351" frameHeight="294"/>
+	<SubTexture name="front bop0005" x="5" y="599" width="1313" height="280" frameX="-19" frameY="-13" frameWidth="1351" frameHeight="294"/>
+	<SubTexture name="front bop0006" x="5" y="889" width="1351" height="272" frameX="0" frameY="-19" frameWidth="1351" frameHeight="294"/>
+	<SubTexture name="front bop0007" x="5" y="889" width="1351" height="272" frameX="0" frameY="-19" frameWidth="1351" frameHeight="294"/>
+	<SubTexture name="front bop0008" x="5" y="889" width="1351" height="272" frameX="0" frameY="-19" frameWidth="1351" frameHeight="294"/>
+	<SubTexture name="front bop0009" x="5" y="889" width="1351" height="272" frameX="0" frameY="-19" frameWidth="1351" frameHeight="294"/>
+	<SubTexture name="front bop0010" x="5" y="889" width="1351" height="272" frameX="0" frameY="-19" frameWidth="1351" frameHeight="294"/>
+	<SubTexture name="front bop0011" x="5" y="1171" width="1275" height="286" frameX="-38" frameY="-4" frameWidth="1351" frameHeight="294"/>
+</TextureAtlas>

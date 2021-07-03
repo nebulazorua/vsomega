@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="bg bop.png">
+	<!-- Created with Adobe Animate version 21.0.4.39603 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="bg bop0000" x="5" y="5" width="1275" height="573" frameX="-42" frameY="-3" frameWidth="1338" frameHeight="608"/>
+	<SubTexture name="bg bop0001" x="5" y="5" width="1275" height="573" frameX="-42" frameY="-3" frameWidth="1338" frameHeight="608"/>
+	<SubTexture name="bg bop0002" x="1290" y="5" width="1301" height="568" frameX="-29" frameY="-16" frameWidth="1338" frameHeight="608"/>
+	<SubTexture name="bg bop0003" x="1290" y="5" width="1301" height="568" frameX="-29" frameY="-16" frameWidth="1338" frameHeight="608"/>
+	<SubTexture name="bg bop0004" x="2601" y="5" width="1313" height="564" frameX="-15" frameY="-28" frameWidth="1338" frameHeight="608"/>
+	<SubTexture name="bg bop0005" x="2601" y="5" width="1313" height="564" frameX="-15" frameY="-28" frameWidth="1338" frameHeight="608"/>
+	<SubTexture name="bg bop0006" x="5" y="588" width="1338" height="560" frameX="0" frameY="-48" frameWidth="1338" frameHeight="608"/>
+	<SubTexture name="bg bop0007" x="5" y="588" width="1338" height="560" frameX="0" frameY="-48" frameWidth="1338" frameHeight="608"/>
+	<SubTexture name="bg bop0008" x="5" y="588" width="1338" height="560" frameX="0" frameY="-48" frameWidth="1338" frameHeight="608"/>
+	<SubTexture name="bg bop0009" x="5" y="588" width="1338" height="560" frameX="0" frameY="-48" frameWidth="1338" frameHeight="608"/>
+	<SubTexture name="bg bop0010" x="5" y="588" width="1338" height="560" frameX="0" frameY="-48" frameWidth="1338" frameHeight="608"/>
+	<SubTexture name="bg bop0011" x="1353" y="588" width="1275" height="574" frameX="-32" frameY="0" frameWidth="1338" frameHeight="608"/>
+</TextureAtlas>

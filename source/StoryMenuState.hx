@@ -39,7 +39,7 @@ class StoryMenuState extends MusicBeatState
 	];
 
 	var encounterableCameos=[];
-	public static var baseCameoChance:Int = 10;
+	public static var baseCameoChance:Int = 0;
 	public static var cameoAttempts:Int = 0;
 	var weekData:Array<Dynamic> = [
 		['Prelude'],
