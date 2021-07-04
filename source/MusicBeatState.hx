@@ -10,6 +10,7 @@ import Options;
 
 class MusicBeatState extends FlxUIState
 {
+
 	private var lastBeat:Float = 0;
 	private var lastStep:Float = 0;
 
@@ -33,7 +34,7 @@ class MusicBeatState extends FlxUIState
 	{
 		if(shit==false){ // MAKESHIFT TIMER BECAUSE TIMER DOESNT WORK FOR SOME FUCKING REASON
 			fuck+=elapsed;
-			if(fuck>=.2){
+			if(fuck>=.5){
 				shit=true;
 				AchievementState.doUnlock();
 			}
@@ -81,4 +82,6 @@ class MusicBeatState extends FlxUIState
 	{
 		//do literally nothing dumbass
 	}
+
+
 }

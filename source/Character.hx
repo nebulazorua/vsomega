@@ -945,25 +945,6 @@ class Character extends FlxSprite
 				loadOffsets();
 
 				playAnim("idle");
-
-			default:
-				var xmlData:String = '';
-
-				if(Cache.charFrames[curCharacter]!=null){
-					frames=Cache.charFrames[curCharacter];
-				}else{
-					frames = FlxAtlasFrames.fromSparrow(BitmapData.fromFile("assets/shared/images/characters/"+curCharacter+".png"),File.getContent("assets/shared/images/characters/"+curCharacter+".xml"));
-					Cache.charFrames[curCharacter]=frames;
-				}
-				FlxG.bitmap.dumpCache();
-
-				loadAnimations();
-				loadOffsets();
-
-			if(animation.getByName("idle")!=null)
-				playAnim("idle");
-			else
-				playAnim("danceRight");
 		}
 
 
@@ -993,14 +974,7 @@ class Character extends FlxSprite
 	}
 
 	public function loadOffsets(){
-		var offsets:Array<String>;
-		if(Cache.offsetData[curCharacter]!=null){
-			offsets = CoolUtil.coolTextFile2(Cache.offsetData[curCharacter]);
-		}else{
-			var data = File.getContent("assets/shared/images/characters/offsets/"+curCharacter+"Offsets.txt");
-			offsets = CoolUtil.coolTextFile2(data);
-			Cache.offsetData[curCharacter] = data;
-		}
+		var offsets:Array<String>= CoolUtil.coolTextFile(Paths.txtImages('characters/offsets/${curCharacter}Offsets',"shared"));
 		for(idx in 0...offsets.length){
 			var s = offsets[idx];
 			var stuff:Array<String> = s.split(" ");
@@ -1012,13 +986,7 @@ class Character extends FlxSprite
 		trace("loading anims for " + curCharacter);
 		try {
 			var anims:Array<String>;
-			if(Cache.offsetData[curCharacter]!=null){
-				anims = CoolUtil.coolTextFile2(Cache.animData[curCharacter]);
-			}else{
-				var data = File.getContent("assets/shared/images/characters/"+curCharacter+"Anims.txt");
-				anims = CoolUtil.coolTextFile2(data);
-				Cache.animData[curCharacter] = data;
-			}
+			anims = CoolUtil.coolTextFile(Paths.txtImages("characters/"+curCharacter+"Anims","shared"));
 			for(s in anims){
 				var stuff:Array<String> = s.split(" ");
 				var type = stuff.splice(0,1)[0];

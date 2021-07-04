@@ -74,7 +74,7 @@ class PauseSubState extends MusicBeatSubstate
 
 		changeSelection();
 
-		cameras = [FlxG.cameras.list[FlxG.cameras.list.length - 1]];
+		cameras = [PlayState.pauseHUD];
 	}
 
 	override function update(elapsed:Float)
@@ -109,7 +109,7 @@ class PauseSubState extends MusicBeatSubstate
 					FlxG.resetState();
 				case "Exit to menu":
 					FlxG.switchState(new MainMenuState());
-					Cache.Clear();
+
 			}
 		}
 

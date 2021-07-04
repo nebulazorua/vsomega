@@ -88,7 +88,11 @@ class ScoreUtils
 				score = 500;
 		}
 		if(!ghostTapping)
-			score=Std.int(score*1.1); // TINY LIL MODIFIER
+			score=Std.int(score*1.05);
+
+		if(ItemState.equipped.contains("flippy"))
+			score=Std.int(score*1.1);
+		
 		return score;
 	}
 }

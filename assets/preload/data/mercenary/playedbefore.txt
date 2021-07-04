@@ -1,0 +1,2 @@
+[goto:black][nofade]Would you like to skip straight to the ending choice?
+[decision:Yes|guardian/decidetime,No|mercenary/pre]

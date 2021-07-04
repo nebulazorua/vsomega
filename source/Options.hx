@@ -133,6 +133,7 @@ class OptionUtils
 
 class Options
 {
+	public var dishonorShaders:Bool = true;
 	public var controls:Array<FlxKey> = [FlxKey.A,FlxKey.S,FlxKey.K,FlxKey.L,FlxKey.R];
 	public var controlsSixK:Array<FlxKey> = [FlxKey.A,FlxKey.S,FlxKey.D,FlxKey.J,FlxKey.K,FlxKey.L,FlxKey.R];
 	public var ghosttapping:Bool = false;
@@ -206,12 +207,7 @@ class WipeOption extends Option
 			areYOUSURE=true;
 			name="Are you sure?";
 		}else{
-			var fields = Reflect.fields(FlxG.save.data);
-			for(f in fields){
-				trace(f);
-				Reflect.setField(FlxG.save.data,f,null);
-			}
-			FlxG.save.flush();
+			FlxG.save.erase();
 
 			FlxG.resetGame();
 		}

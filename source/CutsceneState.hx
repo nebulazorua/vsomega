@@ -19,14 +19,18 @@ using StringTools;
 class CutsceneState extends MusicBeatState {
   var cutsceneData:Array<String>;
   var transRights:FlxState;
-  public function new(cutsceneData:Array<String>,state:FlxState){
+  var skippable:Bool=false;
+  public function new(cutsceneData:Array<String>,state:FlxState,?skippable=false){
+    persistentUpdate=true;
+    persistentDraw=true;
+    this.skippable=skippable;
     this.cutsceneData=cutsceneData;
     transRights=state;
     super();
   }
 
   override public function create(){
-    var cutscene = new Cutscene(cutsceneData);
+    var cutscene = new Cutscene(cutsceneData,skippable);
     cutscene.finishThing = function(){
       LoadingState.loadAndSwitchState(transRights);
     }

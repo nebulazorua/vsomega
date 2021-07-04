@@ -53,7 +53,12 @@ class MainMenuState extends MusicBeatState
 
 		if (!FlxG.sound.music.playing)
 		{
-			FlxG.sound.playMusic(Paths.music('freakyMenu'));
+			if(PlayState.SONG.song.toLowerCase()=='curse-eternal' && PlayState.isStoryMode){
+				FlxG.sound.playMusic(Paths.inst('curse-eternal'));
+			}else{
+				FlxG.sound.playMusic(Paths.music('freakyMenu'));
+			}
+
 		}
 
 		persistentUpdate = persistentDraw = true;

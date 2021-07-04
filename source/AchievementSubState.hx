@@ -13,12 +13,15 @@ import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
 import flixel.util.FlxColor;
 import flixel.util.FlxTimer;
-
+import flixel.FlxCamera;
 class AchievementSubState extends MusicBeatSubstate
 {
   public function new(name:String,rarity:String)
   {
     super();
+    var camera = new FlxCamera();
+    camera.bgColor.alpha = 0;
+    FlxG.cameras.add(camera);
     var notifSound = new FlxSound().loadEmbedded(Paths.sound('achievements/${rarity}'), false, true);
     notifSound.volume = .5;
     notifSound.play(true,0);
@@ -36,6 +39,7 @@ class AchievementSubState extends MusicBeatSubstate
           startDelay:2.5,
           ease: FlxEase.quartInOut,
           onComplete:function(twn:FlxTween){
+            FlxG.cameras.remove(camera);
             remove(notif);
             close();
           }
@@ -45,6 +49,6 @@ class AchievementSubState extends MusicBeatSubstate
 
     add(notif);
 
-    cameras = [FlxG.cameras.list[FlxG.cameras.list.length - 1]];
+    cameras = [camera];
   }
 }

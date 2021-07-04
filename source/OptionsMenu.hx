@@ -44,9 +44,6 @@ class OptionsMenu extends MusicBeatState
 			new ToggleOption("ghosttapping","Ghost-tapping"),
 			new StateOption("Calibrate Offset",new SoundOffsetState()),
 		]),
-		new OptionCategory("Modification",[
-			new ToggleOption("loadModcharts","Load Lua modcharts"),
-		]),
 		new OptionCategory("Preferences",[
 			new ToggleOption("pauseHoldAnims","Holds pause anims"),
 			new ToggleOption("showMS","Hit MS"),
@@ -57,9 +54,9 @@ class OptionsMenu extends MusicBeatState
 			new ToggleOption("hitSound","Hit sounds"),
 			new ToggleOption("freeplayPreview","Songs preview in menus"),
 			new OptionCategory("Effects",[
-				new ToggleOption("picoShaders","Week 3 shaders"),
 				new ToggleOption("picoCamshake","Week 3 cam shake"),
 				new ToggleOption("senpaiShaders","Week 6 shaders"),
+				new ToggleOption("dishonorShaders","Dishonor shaders"),
 			])
 		]),
 		new WipeOption()

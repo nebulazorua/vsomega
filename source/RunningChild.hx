@@ -65,7 +65,7 @@ class RunningChild extends FlxSprite {
 					x = FlxMath.lerp(270,endPoint,FlxEase.quadOut(startA/endA) );
 	      }else if(Conductor.songPosition>marker.end+800){
 	        visible=false;
-	        PlayState.mikaShit.shift();
+	        schedule.shift();
 	      }
 	    }
 		}

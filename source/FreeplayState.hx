@@ -20,8 +20,9 @@ using StringTools;
 
 class FreeplayState extends MusicBeatState
 {
-	public static var unlockables=['2v200','After-the-Ashes','Father-Time','Last-Stand','Curse-Eternal','Dishonor'];
-	public static var unlockableChars = ['army','omega','father','angry-omega','mika','king'];
+	var trackedAssets:Array<Dynamic> = [];
+	public static var unlockables=['Last-Stand','Curse-Eternal','2v200','After-the-Ashes','Father-Time','Dishonor'];
+	public static var unlockableChars = ['angry-omega','mika','army','omega','father','king'];
 	var songs:Array<SongMetadata> = [];
 
 	var selector:FlxText;
@@ -57,9 +58,17 @@ class FreeplayState extends MusicBeatState
 			if (FlxG.sound.music != null)
 			{
 				if (!FlxG.sound.music.playing)
-					FlxG.sound.playMusic(Paths.music('freakyMenu'));
+					if(PlayState.SONG.song.toLowerCase()=='curse-eternal' && PlayState.isStoryMode){
+						FlxG.sound.playMusic(Paths.inst('curse-eternal'));
+					}else{
+						FlxG.sound.playMusic(Paths.music('freakyMenu'));
+					}
 			}else{
-				FlxG.sound.playMusic(Paths.music('freakyMenu'));
+				if(PlayState.SONG.song.toLowerCase()=='curse-eternal' && PlayState.isStoryMode){
+					FlxG.sound.playMusic(Paths.inst('curse-eternal'));
+				}else{
+					FlxG.sound.playMusic(Paths.music('freakyMenu'));
+				}
 			}
 
 
@@ -355,16 +364,20 @@ class FreeplayState extends MusicBeatState
 
 			item.alpha = 0.6;
 			item.wantedA = .6;
-			// item.setGraphicSize(Std.int(item.width * 0.8));
 
 			if (item.targetY == 0)
 			{
 				item.alpha = 1;
 				item.wantedA = 1;
-				// item.setGraphicSize(Std.int(item.width));
 			}
 		}
 	}
+
+	function unloadAssets():Void
+	{
+
+	}
+
 }
 
 class SongMetadata

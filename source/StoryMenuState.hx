@@ -39,7 +39,7 @@ class StoryMenuState extends MusicBeatState
 	];
 
 	var encounterableCameos=[];
-	public static var baseCameoChance:Int = 0;
+	public var baseCameoChance:Int = 10;
 	public static var cameoAttempts:Int = 0;
 	var weekData:Array<Dynamic> = [
 		['Prelude'],
@@ -183,7 +183,7 @@ class StoryMenuState extends MusicBeatState
 		for (char in 0...weekCharacters.length)
 		{
 			var character = weekCharacters[char];
-			var weekCharacterThing:Character = new Character(0, 0, character);
+			/*var weekCharacterThing:Character = new Character(0, 0, character);
 			weekCharacterThing.alpha = 0;
 			weekCharacterThing.screenCenter(XY);
 			weekCharacterThing.y -= 25;
@@ -222,7 +222,7 @@ class StoryMenuState extends MusicBeatState
 					weekCharacterThing.flipX = true;
 
 			}
-			grpWeekCharacters.add(weekCharacterThing);
+			grpWeekCharacters.add(weekCharacterThing);*/
 		}
 
 
@@ -269,7 +269,7 @@ class StoryMenuState extends MusicBeatState
 		//add(yellowBG);
 		add(portal);
 		add(grpWeekText);
-		add(grpWeekCharacters);
+		//add(grpWeekCharacters);
 		add(difficultyBG);
 		add(difficultySelectors);
 
@@ -300,8 +300,8 @@ class StoryMenuState extends MusicBeatState
 	override function beatHit(){
 		super.beatHit();
 
-		for(item in grpWeekCharacters)
-			item.dance();
+		//for(item in grpWeekCharacters)
+		//	item.dance();
 	}
 
 	override function update(elapsed:Float)
@@ -383,17 +383,19 @@ class StoryMenuState extends MusicBeatState
 				grpWeekText.members[curWeek].startFlashing();
 				stopspamming = true;
 			}
-			if(curCharacter.curCharacter=='gf')
-				curCharacter.playAnim("cheer",true);
+			//if(curCharacter.curCharacter=='gf')
+			//	curCharacter.playAnim("cheer",true);
 
-			if(curCharacter.curCharacter=='bf')
-				curCharacter.playAnim("hey",true);
+			//if(curCharacter.curCharacter=='bf')
+			//	curCharacter.playAnim("hey",true);
 			PlayState.storyPlaylist = weekData[curWeek];
+			trace(curWeek,weekData[curWeek]);
 			var hasCameo=false;
 			if(FlxG.random.bool(baseCameoChance+(cameoAttempts*10)) || cameoAttempts>5 && !FlxG.save.data.hasGottenACameo){
 				FlxG.save.data.hasGottenACameo=true;
 				cameoAttempts=0;
 				var cameo = encounterableCameos[FlxG.random.int(0,encounterableCameos.length)];
+				trace(cameo);
 				if(FlxG.save.data.cameos==null){
 					FlxG.save.data.cameos=[];
 				}
@@ -421,8 +423,6 @@ class StoryMenuState extends MusicBeatState
 
 			PlayState.storyDifficulty = curDifficulty;
 
-
-
 			PlayState.SONG = Song.loadFromJson(PlayState.storyPlaylist[0].toLowerCase() + diffic, PlayState.storyPlaylist[0].toLowerCase());
 			if(curWeek==0 || curWeek==7){
 				PlayState.storyWeek = -1;
@@ -434,7 +434,11 @@ class StoryMenuState extends MusicBeatState
 			new FlxTimer().start(1, function(tmr:FlxTimer)
 			{
 				if(curWeek==7 && !hasCameo){
-					LoadingState.loadAndSwitchState(new CutsceneState(CoolUtil.coolTextFile(Paths.txt('mercenary/pre')),new PlayState()));
+					if(FlxG.save.data.omegaGoodEnding || FlxG.save.data.omegaBadEnding)
+						LoadingState.loadAndSwitchState(new CutsceneState(CoolUtil.coolTextFile(Paths.txt('mercenary/playedbefore')),new PlayState()));
+					else
+						LoadingState.loadAndSwitchState(new CutsceneState(CoolUtil.coolTextFile(Paths.txt('mercenary/pre')),new PlayState()));
+
 				}else{
 					LoadingState.loadAndSwitchState(new PlayState(), true);
 				}
@@ -511,12 +515,12 @@ class StoryMenuState extends MusicBeatState
 			else
 				item.alpha = 0.6;
 
-			if(item.targetY==Std.int(0)){
+			/*if(item.targetY==Std.int(0)){
 				grpWeekCharacters.members[i].alpha = 1;
 				curCharacter=grpWeekCharacters.members[i];
 			}
 			else
-				grpWeekCharacters.members[i].alpha = 0;
+				grpWeekCharacters.members[i].alpha = 0;*/
 
 			bullShit++;
 		}

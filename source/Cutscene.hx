@@ -39,8 +39,11 @@ class Cutscene extends FlxSpriteGroup {
   var currentRight = '';
 
   public var finishThing:Void->Void;
-  public function new (data:Array<String>){
+  var skippable=false;
+
+  public function new (data:Array<String>,?skippable=false){
     super();
+    this.skippable=skippable;
     cutsceneCamera = new FlxCamera();
     FlxG.cameras.reset(cutsceneCamera);
     cameras=[cutsceneCamera];
@@ -93,6 +96,8 @@ class Cutscene extends FlxSpriteGroup {
         }
       }else
         dialogueBox.skipDialogue();
+    }else if(FlxG.keys.justPressed.SPACE && canSkip && skippable){
+      endCutscene(false);
     }
     super.update(elapsed);
   }

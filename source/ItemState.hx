@@ -202,6 +202,7 @@ class ItemState extends MusicBeatState
   var layerBullshit:FlxTypedGroup<Character>;
   var bf:Character;
   override function create(){
+		equipped = FlxG.save.data.equipped;
     void1 = new FlxSprite(-600, -500).loadGraphic(Paths.image('BGvoid'));
     void1.antialiasing = true;
     void1.setGraphicSize(Std.int(void1.width*2));
@@ -387,6 +388,7 @@ class ItemState extends MusicBeatState
           equipped.remove(item.name);
         }
         displayCharacter();
+				FlxG.save.data.equipped=equipped;
       }
     }
 		comboNameTxt.x = 650;

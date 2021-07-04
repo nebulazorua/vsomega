@@ -48,7 +48,7 @@ class Note extends FlxSprite
 	public static var BLUE_NOTE:Int = 1;
 	public static var RED_NOTE:Int = 3;
 
-	public function new(strumTime:Float, noteData:Int, ?prevNote:Note, ?gottaHitNote:Bool=false, ?sustainNote:Bool = false, ?sword:Bool = false, ?glitch:Bool = false, ?singingShit:String = "0", ?shield:Bool=false,?discharge:Bool=false,?type:Int=0)
+	public function new(strumTime:Float, noteData:Int, ?prevNote:Note, ?gottaHitNote:Bool=false, ?sustainNote:Bool = false, ?sword:Bool = false, ?glitch:Bool = false, ?singingShit:String = "0", ?shield:Bool=false,?discharge:Bool=false,?type:Int=0,?downscroll:Bool=false,?grayscale:Bool=false)
 	{
 		super();
 
@@ -97,7 +97,10 @@ class Note extends FlxSprite
 		this.noteData = noteData;
 
 		var daStage:String = PlayState.curStage;
-		var scale = gottaHitNote?PlayState.currentPState.modchart.playerNoteScale:PlayState.currentPState.modchart.opponentNoteScale;
+		var scale:Float=1;
+		if(PlayState.currentPState!=null){
+			scale = gottaHitNote?PlayState.currentPState.modchart.playerNoteScale:PlayState.currentPState.modchart.opponentNoteScale;
+		}
 
 		switch (daStage)
 		{
@@ -397,7 +400,10 @@ class Note extends FlxSprite
 							animation.addByPrefix('lavenderhold', 'lavender hold piece');
 							animation.addByPrefix('navyhold', 'navy hold piece');
 						}else{
-							frames = Paths.getSparrowAtlas('NOTE_assets');
+							if(grayscale)
+								frames = PlayState.dishonorNotes;
+							else
+								frames = Paths.getSparrowAtlas('NOTE_assets');
 
 							animation.addByPrefix('greenScroll', 'green0');
 							animation.addByPrefix('redScroll', 'red0');
@@ -439,7 +445,6 @@ class Note extends FlxSprite
 
 		if (isSustainNote && prevNote != null)
 		{
-			var scale = gottaHitNote?PlayState.currentPState.modchart.playerNoteScale:PlayState.currentPState.modchart.opponentNoteScale;
 			prevNote.holdParent=true;
 			noteScore * 0.2;
 			if(!PlayState.curStage.startsWith("school"))
@@ -452,7 +457,7 @@ class Note extends FlxSprite
 
 			updateHitbox();
 
-			if(PlayState.currentPState.currentOptions.downScroll){
+			if(downscroll){
 				this.scale.y *= -1;
 			}
 
@@ -483,6 +488,7 @@ class Note extends FlxSprite
 			}
 		}
 	}
+
 
 	override function update(elapsed:Float)
 	{
