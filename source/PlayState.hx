@@ -3162,7 +3162,7 @@ class PlayState extends MusicBeatState
 						switch (dad.curCharacter)
 						{
 							case 'mom' | 'mom-car':
-								camFollow.y = dad.getMidpoint().y;
+								camFollow.y = dad.getMidpoint().y + 75;
 								camFollow.x = dad.getMidpoint().x + 190;
 							case 'senpai':
 								camFollow.y = dad.getMidpoint().y - 300;
@@ -3622,12 +3622,19 @@ class PlayState extends MusicBeatState
 					}
 				}
 
+				if(isGrayscale){
+					camHUD.shake(.005,.1);
+					camGame.shake(.005,.1);
+				}
+
 				// I KNOW I CAN DO THIS BETTER
 				// BUT I DONT CARE!!!! IT WORKS!!!!
 				// GOD ITS SO CONVOLUTED LOL WHY DID I DO THIS
 
 				// OK TURNS OUT I DONT EVEN NEED TO DO THIS BUT IDC IM KEEPING THE CODE BECAUSE IDK IF IT HANDLES SHIT W/ TRYING TO USE LEFT-MOST ANIM BETTER
 				// IT DOES NOT BUT IDC
+
+
 				if(hittingData.length>0){
 					var aids:Array<Dynamic>=[];
 					for(i in hittingData){
@@ -4690,8 +4697,8 @@ class PlayState extends MusicBeatState
 			case 'dishonor':
 				if(curStep==2048 || curStep==1024){
 					isGrayscale=true;
-					modchart.opponentHPDrain=.015;
-					modchart.noteHPGain = .0175;
+					modchart.opponentHPDrain=.0175;
+					modchart.noteHPGain = .018;
 				}else if(curStep==1280){
 					isGrayscale=false;
 					modchart.noteHPGain = .0075;

@@ -299,8 +299,10 @@ class ItemState extends MusicBeatState
   }
 
   function displayCharacter(){
-    if(bf!=null)
+    if(bf!=null){
       layerBullshit.remove(bf);
+			bf.destroy();
+		}
 
     var name = '';
     if(equipped.length>0){

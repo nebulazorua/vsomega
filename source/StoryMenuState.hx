@@ -394,7 +394,7 @@ class StoryMenuState extends MusicBeatState
 			if(FlxG.random.bool(baseCameoChance+(cameoAttempts*10)) || cameoAttempts>5 && !FlxG.save.data.hasGottenACameo){
 				FlxG.save.data.hasGottenACameo=true;
 				cameoAttempts=0;
-				var cameo = encounterableCameos[FlxG.random.int(0,encounterableCameos.length)];
+				var cameo = encounterableCameos[FlxG.random.int(0,encounterableCameos.length-1)];
 				trace(cameo);
 				if(FlxG.save.data.cameos==null){
 					FlxG.save.data.cameos=[];
