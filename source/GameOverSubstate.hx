@@ -6,6 +6,7 @@ import flixel.FlxSubState;
 import flixel.math.FlxPoint;
 import flixel.util.FlxColor;
 import flixel.util.FlxTimer;
+using StringTools;
 
 class GameOverSubstate extends MusicBeatSubstate
 {
@@ -31,11 +32,21 @@ class GameOverSubstate extends MusicBeatSubstate
 				daBf = bfVer;
 		}
 
-		if(daBf=='bf'){
+		if(daBf=='bf' || daBf.startsWith("sword") || daBf.startsWith("arrow") || daBf.startsWith("twat") || daBf=='depressed'  ){
 			switch(PlayState.SONG.song.toLowerCase()){
 				case 'last-stand' | 'dishonor':
 					daBf = 'bf-FUCKING-DIES';
 					stageSuffix='-omega';
+			}
+		}else{
+			switch(daBf){
+				case 'naikaze' | 'tgr' | 'erderi' | 'mikeeey':
+					switch(PlayState.SONG.song.toLowerCase()){
+						case 'last-stand' | 'dishonor':
+							daBf = '${daBf}-FUCKING-DIES';
+							stageSuffix='-omega';
+					}
+
 			}
 		}
 

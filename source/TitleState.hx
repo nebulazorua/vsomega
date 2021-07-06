@@ -75,7 +75,7 @@ class TitleState extends MusicBeatState
 		if(FlxG.save.data.selectedSkin==null)
 			FlxG.save.data.selectedSkin='bf';
 
-
+		ItemState.equipped=FlxG.save.data.equipped;
 		SkinState.selectedSkin=FlxG.save.data.selectedSkin;
 	}
 	override public function create():Void
@@ -83,8 +83,8 @@ class TitleState extends MusicBeatState
 		super.create();
 		new FlxTimer().start(1, function(tmr:FlxTimer) {
 			FlxG.mouse.visible = false;
-			setSave();
 			if(initialized){
+				setSave();
 				#if FREEPLAY
 				FlxG.switchState(new FreeplayState());
 				#elseif CHARTING

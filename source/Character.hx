@@ -88,6 +88,40 @@ class Character extends FlxSprite
 
 				loadOffsets();
 				playAnim('danceRight');
+			case 'gf-rave':
+				tex = Paths.getSparrowAtlas('characters/raveGf','shared');
+				frames = tex;
+				animation.addByPrefix('cheer', 'GF Cheer', 24, false);
+				animation.addByPrefix('singLEFT', 'GF left note', 24, false);
+				animation.addByPrefix('singRIGHT', 'GF Right Note', 24, false);
+				animation.addByPrefix('singUP', 'GF Up Note', 24, false);
+				animation.addByPrefix('singDOWN', 'GF Down Note', 24, false);
+				animation.addByIndices('sad', 'gf sad', [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], "", 24, false);
+				animation.addByIndices('danceLeft', 'GF Dancing Beat', [30, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], "", 24, false);
+				animation.addByIndices('danceRight', 'GF Dancing Beat', [15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29], "", 24, false);
+				animation.addByIndices('hairBlow', "GF Dancing Beat Hair blowing", [0, 1, 2, 3], "", 24);
+				animation.addByIndices('hairFall', "GF Dancing Beat Hair Landing", [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11], "", 24, false);
+				animation.addByPrefix('scared', 'GF FEAR', 24);
+
+				loadOffsets();
+				playAnim('danceRight');
+			case 'gf-raveFaceless':
+				tex = Paths.getSparrowAtlas('characters/raveGfFaceless','shared');
+				frames = tex;
+				animation.addByPrefix('cheer', 'GF Cheer', 24, false);
+				animation.addByPrefix('singLEFT', 'GF left note', 24, false);
+				animation.addByPrefix('singRIGHT', 'GF Right Note', 24, false);
+				animation.addByPrefix('singUP', 'GF Up Note', 24, false);
+				animation.addByPrefix('singDOWN', 'GF Down Note', 24, false);
+				animation.addByIndices('sad', 'gf sad', [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], "", 24, false);
+				animation.addByIndices('danceLeft', 'GF Dancing Beat', [30, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], "", 24, false);
+				animation.addByIndices('danceRight', 'GF Dancing Beat', [15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29], "", 24, false);
+				animation.addByIndices('hairBlow', "GF Dancing Beat Hair blowing", [0, 1, 2, 3], "", 24);
+				animation.addByIndices('hairFall', "GF Dancing Beat Hair Landing", [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11], "", 24, false);
+				animation.addByPrefix('scared', 'GF FEAR', 24);
+
+				loadOffsets();
+				playAnim('danceRight');
 
 			case 'gf-child':
 				tex = Paths.getSparrowAtlas('characters/GF_ass_sets_fighting','shared');
@@ -207,8 +241,8 @@ class Character extends FlxSprite
 				animation.addByPrefix('idle', 'monster idle', 24, false);
 				animation.addByPrefix('singUP', 'monster up note', 24, false);
 				animation.addByPrefix('singDOWN', 'monster down', 24, false);
-				animation.addByPrefix('singLEFT', 'Monster left note', 24, false);
-				animation.addByPrefix('singRIGHT', 'Monster Right note', 24, false);
+				animation.addByPrefix('singLEFT', 'Monster Right note', 24, false);
+				animation.addByPrefix('singRIGHT', 'Monster left note', 24, false);
 				loadOffsets();
 
 				playAnim('idle');
@@ -657,49 +691,9 @@ class Character extends FlxSprite
 				updateHitbox();
 				antialiasing = true;
 				flipX = true;
-			case 'naikaze-FUCKING-DIES':
-				trace("skdjhf");
-				frames = Paths.getSparrowAtlas('characters/reskins/naikaze-fucking-dies','shared');
-				animation.addByPrefix('singUP', "BF dies", 24, false);
-				animation.addByPrefix('firstDeath', "BF dies", 24, false);
-				animation.addByPrefix('deathLoop', "BF Dead Loop", 24, true);
-				animation.addByPrefix('deathConfirm', "BF Dead confirm", 24, false);
-				animation.play('firstDeath');
-
-				loadOffsets();
-				playAnim('firstDeath');
-				updateHitbox();
-				antialiasing = true;
-				flipX = true;
-			case 'tgr-FUCKING-DIES':
-				frames = Paths.getSparrowAtlas('characters/reskins/tgr-fucking-dies','shared');
-				animation.addByPrefix('singUP', "BF dies", 24, false);
-				animation.addByPrefix('firstDeath', "BF dies", 24, false);
-				animation.addByPrefix('deathLoop', "BF Dead Loop", 24, true);
-				animation.addByPrefix('deathConfirm', "BF Dead confirm", 24, false);
-				animation.play('firstDeath');
-
-				loadOffsets();
-				playAnim('firstDeath');
-				updateHitbox();
-				antialiasing = true;
-				flipX = true;
-
-			case 'mikeeey-FUCKING-DIES':
-				frames = Paths.getSparrowAtlas('characters/reskins/mikeeey-fucking-dies','shared');
-				animation.addByPrefix('singUP', "BF dies", 24, false);
-				animation.addByPrefix('firstDeath', "BF dies", 24, false);
-				animation.addByPrefix('deathLoop', "BF Dead Loop", 24, true);
-				animation.addByPrefix('deathConfirm', "BF Dead confirm", 24, false);
-				animation.play('firstDeath');
-
-				loadOffsets();
-				playAnim('firstDeath');
-				updateHitbox();
-				antialiasing = true;
-				flipX = true;
-			case 'erderi-FUCKING-DIES':
-				frames = Paths.getSparrowAtlas('characters/reskins/erderi-fucking-dies','shared');
+			case 'naikaze-FUCKING-DIES' | 'tgr-FUCKING-DIES' | 'erderi-FUCKING-DIES' | 'mikeeey-FUCKING-DIES':
+				isReskin=true;
+				frames = Paths.getSparrowAtlas('characters/reskins/${curCharacter.toLowerCase()}','shared');
 				animation.addByPrefix('singUP', "BF dies", 24, false);
 				animation.addByPrefix('firstDeath', "BF dies", 24, false);
 				animation.addByPrefix('deathLoop', "BF Dead Loop", 24, true);
