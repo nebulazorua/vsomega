@@ -183,7 +183,7 @@ class StoryMenuState extends MusicBeatState
 		for (char in 0...weekCharacters.length)
 		{
 			var character = weekCharacters[char];
-			/*var weekCharacterThing:Character = new Character(0, 0, character);
+			var weekCharacterThing:Character = new Character(0, 0, character);
 			weekCharacterThing.alpha = 0;
 			weekCharacterThing.screenCenter(XY);
 			weekCharacterThing.y -= 25;
@@ -191,8 +191,8 @@ class StoryMenuState extends MusicBeatState
 			weekCharacterThing.setGraphicSize(Std.int(weekCharacterThing.width*.5));
 			switch(character){
 				case 'senpai':
-					weekCharacterThing.y += 350;
-					weekCharacterThing.x += 425;
+					weekCharacterThing.y += 0;
+					weekCharacterThing.x += 0;
 					weekCharacterThing.setGraphicSize(Std.int(weekCharacterThing.width*.6));
 				case 'gf':
 					weekCharacterThing.x += 105;
@@ -222,7 +222,7 @@ class StoryMenuState extends MusicBeatState
 					weekCharacterThing.flipX = true;
 
 			}
-			grpWeekCharacters.add(weekCharacterThing);*/
+			grpWeekCharacters.add(weekCharacterThing);
 		}
 
 
@@ -515,12 +515,12 @@ class StoryMenuState extends MusicBeatState
 			else
 				item.alpha = 0.6;
 
-			/*if(item.targetY==Std.int(0)){
+			if(item.targetY==Std.int(0)){
 				grpWeekCharacters.members[i].alpha = 1;
 				curCharacter=grpWeekCharacters.members[i];
 			}
 			else
-				grpWeekCharacters.members[i].alpha = 0;*/
+				grpWeekCharacters.members[i].alpha = 0;
 
 			bullShit++;
 		}

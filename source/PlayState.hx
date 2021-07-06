@@ -3162,7 +3162,7 @@ class PlayState extends MusicBeatState
 						switch (dad.curCharacter)
 						{
 							case 'mom' | 'mom-car':
-								camFollow.y = dad.getMidpoint().y + 75;
+								camFollow.y = dad.getMidpoint().y + 80;
 								camFollow.x = dad.getMidpoint().x + 190;
 							case 'senpai':
 								camFollow.y = dad.getMidpoint().y - 300;

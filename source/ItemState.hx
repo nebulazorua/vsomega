@@ -299,6 +299,12 @@ class ItemState extends MusicBeatState
   }
 
   function displayCharacter(){
+		var frame = 0;
+		if(bf!=null){
+			if(bf.animation.curAnim!=null)
+				frame = bf.animation.curAnim.curFrame;
+		}
+
     if(bf!=null){
       layerBullshit.remove(bf);
 			bf.destroy();
@@ -318,11 +324,6 @@ class ItemState extends MusicBeatState
 		comboDescTxt.text = comboDescs.get(name);
 
     if(name=='')name='bf';
-    var frame = 0;
-    if(bf!=null){
-      if(bf.animation.curAnim!=null)
-        frame = bf.animation.curAnim.curFrame;
-    }
 
     bf = new Character(750,200,name);
     bf.flipX=!bf.flipX;
