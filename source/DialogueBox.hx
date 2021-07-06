@@ -111,11 +111,11 @@ class DialogueBox extends FlxSpriteGroup
 			portraitLeft.animation.addByPrefix('enter', 'Senpai Portrait Enter', 24, false);
 			portraitLeft.setGraphicSize(Std.int(portraitLeft.width * PlayState.daPixelZoom * 0.9));
 		}else{
-			portraitLeft.frames = Paths.getSparrowAtlas('ports');
-			portraitLeft.animation.addByPrefix('enter', PlayState.SONG.player2, 24, false);
+			portraitLeft.frames = Paths.getSparrowAtlas('ports/${PlayState.SONG.player2}_portrait');
+			trace(portraitLeft.frames.frames);
+			portraitLeft.antialiasing=true;
+			portraitLeft.animation.addByPrefix('enter', portraitLeft.frames.frames[0].name, 24, false);
 		}
-
-
 		portraitLeft.updateHitbox();
 		portraitLeft.scrollFactor.set();
 		portraitLeft.setGraphicSize(Std.int(portraitLeft.width*(1+(1-FlxG.camera.zoom))));
@@ -127,11 +127,12 @@ class DialogueBox extends FlxSpriteGroup
 		{
 			portraitRight.x = 0;
 			portraitRight.frames = Paths.getSparrowAtlas('weeb/bfPortrait');
-			portraitRight.animation.addByPrefix('enter', 'Boyfriend portrait enter', 24, false);
+			portraitRight.animation.addByPrefix('enter', 'Boyfriend portrait enter', 24, true);
 			portraitRight.setGraphicSize(Std.int(portraitRight.width * PlayState.daPixelZoom * 0.9));
 		}else{
-			portraitRight.frames = Paths.getSparrowAtlas('bfPort');
-			portraitRight.animation.addByPrefix('enter', 'bfPort', 24, false);
+			portraitRight.antialiasing=true;
+			portraitRight.frames = Paths.getSparrowAtlas('ports/${SkinState.selectedSkin}_portrait');
+			portraitRight.animation.addByPrefix('enter', portraitRight.frames.frames[0].name, 24, true);
 		}
 
 		portraitRight.updateHitbox();
@@ -292,48 +293,50 @@ class DialogueBox extends FlxSpriteGroup
 				portraitLeft.visible = true;
 				portraitLeft.animation.play('enter');
 			}
-			case 'bf':
-				box.flipX = false;
-				portraitLeft.visible = false;
-				if(curRight != 'bf' && PlayState.SONG.song.toLowerCase()!='thorns' && PlayState.SONG.song.toLowerCase()!='roses' && PlayState.SONG.song.toLowerCase()!='senpai'){
-						curRight='bf';
-						portraitRight.frames = Paths.getSparrowAtlas('bfPort');
-            portraitRight.animation.addByPrefix('enter', 'bfPort', 24, true);
-						portraitRight.visible=false;
-				}
-				if (!portraitRight.visible)
-				{
-						portraitRight.visible = true;
-						portraitRight.animation.play('enter');
-				}
-			case 'bf-scared':
-				box.flipX = false;
-				portraitLeft.visible = false;
-				if(curRight != 'bf-scared'){
-						curRight='bf-scared';
-						portraitRight.frames = Paths.getSparrowAtlas('bfPort');
-            portraitRight.animation.addByPrefix('enter', 'bfNervousPort', 24, true);
-						portraitRight.visible=false;
-				}
-				if (!portraitRight.visible)
-				{
-						portraitRight.visible = true;
-						portraitRight.animation.play('enter');
-				}
-			default:
-				box.flipX = true;
-				portraitRight.visible = false;
-				if(curLeft != curCharacter){
-						curLeft=curCharacter;
-						portraitLeft.frames = Paths.getSparrowAtlas('ports');
-            portraitLeft.animation.addByPrefix('enter', curCharacter+"0", 24, true);
-						portraitLeft.visible=false;
-				}
-				if (!portraitLeft.visible)
-				{
-						portraitLeft.visible = true;
-						portraitLeft.animation.play('enter');
-				}
+		case 'bf':
+			box.flipX = false;
+			portraitLeft.visible = false;
+			if(curRight != 'bf' && PlayState.SONG.song.toLowerCase()!='thorns' && PlayState.SONG.song.toLowerCase()!='roses' && PlayState.SONG.song.toLowerCase()!='senpai'){
+					curRight='bf';
+					var x = portraitRight.x;
+					var y = portraitRight.y;
+					portraitRight.frames = Paths.getSparrowAtlas('ports/${SkinState.selectedSkin}_portrait');
+					portraitRight.animation.addByPrefix('enter', portraitRight.frames.frames[0].name, 24, false);
+					portraitRight.updateHitbox();
+					portraitRight.scrollFactor.set();
+					portraitRight.setGraphicSize(Std.int(portraitRight.width*(1+(1-FlxG.camera.zoom))));
+					portraitRight.visible=false;
+
+					portraitRight.x=x;
+					portraitRight.y=y;
+			}
+			if (!portraitRight.visible)
+			{
+					portraitRight.visible = true;
+					portraitRight.animation.play('enter');
+			}
+		default:
+			box.flipX = true;
+			portraitRight.visible = false;
+			if(curLeft != curCharacter){
+					curLeft=curCharacter;
+					var x = portraitLeft.x;
+					var y = portraitLeft.y;
+					portraitLeft.frames = Paths.getSparrowAtlas('ports/${curLeft}_portrait');
+					portraitLeft.animation.addByPrefix('enter', portraitLeft.frames.frames[0].name, 24, false);
+					portraitLeft.updateHitbox();
+					portraitLeft.scrollFactor.set();
+					portraitLeft.setGraphicSize(Std.int(portraitLeft.width*(1+(1-FlxG.camera.zoom))));
+					portraitLeft.visible=false;
+
+					portraitLeft.x=x;
+					portraitLeft.y=y;
+			}
+			if (!portraitLeft.visible)
+			{
+					portraitLeft.visible = true;
+					portraitLeft.animation.play('enter');
+			}
 		}
 	}
 

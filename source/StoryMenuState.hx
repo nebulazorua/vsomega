@@ -97,7 +97,7 @@ class StoryMenuState extends MusicBeatState
 	override function create()
 	{
 		if(FlxG.save.data.omegaGoodEnding || FlxG.save.data.omegaBadEnding){ // beaten omega
-			baseCameoChance=50;
+			baseCameoChance=100;
 		}
 
 		if(FlxG.save.data.cameos!=null){
@@ -191,34 +191,35 @@ class StoryMenuState extends MusicBeatState
 			weekCharacterThing.setGraphicSize(Std.int(weekCharacterThing.width*.5));
 			switch(character){
 				case 'senpai':
-					weekCharacterThing.y += 0;
-					weekCharacterThing.x += 0;
+					weekCharacterThing.y += 275;
+					weekCharacterThing.x += 250;
 					weekCharacterThing.setGraphicSize(Std.int(weekCharacterThing.width*.6));
 				case 'gf':
 					weekCharacterThing.x += 105;
 				case 'dad':
 					weekCharacterThing.x += 100;
-					weekCharacterThing.y -= 50;
+					weekCharacterThing.y -= 0;
 					weekCharacterThing.flipX = true;
 				case 'omega':
 					weekCharacterThing.setGraphicSize(Std.int(weekCharacterThing.width*.35));
-					weekCharacterThing.y -= 50;
-					weekCharacterThing.x += 150;
+					weekCharacterThing.y -= 60;
+					weekCharacterThing.x += 250;
 					weekCharacterThing.flipX = true;
 				case 'pico':
 					weekCharacterThing.setGraphicSize(Std.int(weekCharacterThing.width*.4));
-					weekCharacterThing.y -= 0;
+					weekCharacterThing.y += 50;
 					weekCharacterThing.x += 175;
 					weekCharacterThing.flipX = false;
 				case 'spooky':
 					weekCharacterThing.x += 100;
+					weekCharacterThing.y += 50;
 				case 'parents-christmas':
 					weekCharacterThing.x += 100;
 					weekCharacterThing.y -= 10;
 					weekCharacterThing.flipX = true;
 				case 'mom':
 					weekCharacterThing.x += 125;
-					weekCharacterThing.y -= 85;
+					weekCharacterThing.y -= 125;
 					weekCharacterThing.flipX = true;
 
 			}
@@ -300,8 +301,8 @@ class StoryMenuState extends MusicBeatState
 	override function beatHit(){
 		super.beatHit();
 
-		//for(item in grpWeekCharacters)
-		//	item.dance();
+		for(item in grpWeekCharacters)
+			item.dance();
 	}
 
 	override function update(elapsed:Float)

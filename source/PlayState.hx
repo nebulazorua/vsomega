@@ -1032,7 +1032,7 @@ class PlayState extends MusicBeatState
 							bg.setGraphicSize(Std.int(bg.width*1.25));
 							bg.screenCenter(XY);
 							bg.antialiasing = true;
-							bg.scrollFactor.set(.3,.1);
+							bg.scrollFactor.set(.3,.3);
 							bg.active = false;
 							add(bg);
 
@@ -1930,6 +1930,8 @@ class PlayState extends MusicBeatState
 					schoolIntro(doof);
 				case 'last-stand':
 					cutthefuckinnotes();
+				case 'new-retro' | 'fragmented-surreality' | 'free-soul' | 'oxidation' | '57.5hz':
+					showDialogue(doof);
 				default:
 					startCountdown();
 			}
@@ -1944,6 +1946,16 @@ class PlayState extends MusicBeatState
 		}
 
 		super.create();
+	}
+
+	function showDialogue(?d:DialogueBox):Void {
+		new FlxTimer().start(0.3, function(tmr:FlxTimer){
+			if (d != null)
+			{
+				inCutscene = true;
+				add(d);
+			}
+		});
 	}
 
 	public function cutthefuckinnotes(){
