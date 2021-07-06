@@ -269,7 +269,7 @@ class StoryMenuState extends MusicBeatState
 		//add(yellowBG);
 		add(portal);
 		add(grpWeekText);
-		//add(grpWeekCharacters);
+		add(grpWeekCharacters);
 		add(difficultyBG);
 		add(difficultySelectors);
 
