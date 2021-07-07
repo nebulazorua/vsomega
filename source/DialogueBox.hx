@@ -119,8 +119,7 @@ class DialogueBox extends FlxSpriteGroup
 			portraitLeft.animation.addByPrefix('enter', 'Senpai Portrait Enter', 24, false);
 			portraitLeft.setGraphicSize(Std.int(portraitLeft.width * PlayState.daPixelZoom * 0.9));
 		}else{
-			portraitLeft.frames = Paths.getSparrowAtlas('ports/${PlayState.SONG.player2}_portrait');
-			trace(portraitLeft.frames.frames);
+			portraitLeft.frames = Paths.getSparrowAtlas('ports/dad_portrait');
 			portraitLeft.antialiasing=true;
 			portraitLeft.animation.addByPrefix('enter', portraitLeft.frames.frames[0].name, 24, false);
 		}

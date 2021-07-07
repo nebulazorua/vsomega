@@ -31,6 +31,7 @@ typedef AchievementData ={
 class AchievementState extends MusicBeatState
 {
   public static var songs = [
+    "Prelude",
     "New-Retro", // Kapi
     "57.5hz", // Demi
     "Free-Soul", // Merch
@@ -46,6 +47,7 @@ class AchievementState extends MusicBeatState
     'After-the-Ashes',
     'Father-Time',
     'Dishonor',
+    "Salem"
   ];
 
   var selectionRing:FlxSprite;

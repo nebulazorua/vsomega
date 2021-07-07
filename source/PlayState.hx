@@ -1624,10 +1624,12 @@ class PlayState extends MusicBeatState
 		add(slash);
 
 		disabledHud = modchart.hudVisible;
-		var doof:DialogueBox = new DialogueBox(false, dialogue);
-		doof.scrollFactor.set();
-		doof.finishThing = startCountdown;
-
+		var doof:Null<DialogueBox>=null;
+		if(dialogue.length>0){
+			doof = new DialogueBox(false, dialogue);
+			doof.scrollFactor.set();
+			doof.finishThing = startCountdown;
+		}
 		if(SONG.song.toLowerCase()=='2v200')
 			keyAmount=6;
 		else
@@ -1934,7 +1936,7 @@ class PlayState extends MusicBeatState
 				default:
 					startCountdown();
 			}
-		}else if(isStoryMode && didIntro && SONG.song.toLowerCase()=='last-stand'){
+		}else if(isStoryMode && didIntro && SONG.song.toLowerCase()=='last-stand' && blueballs>0){
 			var shit = CoolUtil.coolTextFile(Paths.txt('last-stand/deathsdialogue'));
 			var dialogue = [];
 			for(idx in 0...shit.length){
@@ -1952,7 +1954,7 @@ class PlayState extends MusicBeatState
 			}
 			var box:DialogueBox = new DialogueBox(false, dialogue);
 			box.scrollFactor.set();
-			box.finishThing = startCountdown;
+			box.finishThing = cutthefuckinnotes;
 			box.cameras = [pauseHUD];
 			showDialogue(box);
 		}
@@ -3983,6 +3985,8 @@ class PlayState extends MusicBeatState
 		var coolText:FlxText = new FlxText(0, 0, 0, placement, 32);
 		coolText.screenCenter();
 		coolText.x = FlxG.width * 0.55;
+		if(curStage=='time-void')
+			coolText.x += 200;
 		//
 
 		var rating:FlxSprite = new FlxSprite();

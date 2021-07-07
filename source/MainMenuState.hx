@@ -40,6 +40,7 @@ class MainMenuState extends MusicBeatState
 
 	var tinyButtons:Array<String> = ["codes","equipment","Skins","achievements"];
 	var fatherTimeButton:FlxSprite;
+	var secret:Dynamic;
 
 	var camFollow:FlxObject;
 	var iconSpr:FlxSprite;
@@ -51,6 +52,16 @@ class MainMenuState extends MusicBeatState
 		DiscordClient.changePresence("In the Menus", null);
 		#end
 
+		try{
+			if(SecretShit!=null){
+				secret = new SecretShit();
+				FlxG.inputs.add(secret);
+			}
+		}catch(e:Any){
+			trace(e);
+		}
+
+
 		if (!FlxG.sound.music.playing)
 		{
 			if(PlayState.SONG.song.toLowerCase()=='curse-eternal' && PlayState.isStoryMode){
@@ -58,7 +69,6 @@ class MainMenuState extends MusicBeatState
 			}else{
 				FlxG.sound.playMusic(Paths.music('freakyMenu'));
 			}
-
 		}
 
 		persistentUpdate = persistentDraw = true;
@@ -414,5 +424,16 @@ class MainMenuState extends MusicBeatState
 
 			//spr.updateHitbox();
 		});
+	}
+
+	override function destroy(){
+		try{
+			if(SecretShit!=null){
+				FlxG.inputs.remove(secret);
+			}
+		}catch(e:Any){
+			trace(e);
+		}
+		super.destroy();
 	}
 }

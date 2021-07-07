@@ -21,69 +21,38 @@ class VaseDialogueBox extends FlxSpriteGroup
 	var dropText:FlxText;
 
 	public var finishThing:Void->Void;
-	public var leftCallback:Void->Void;
-	public var rightCallback:Void->Void;
   public var finishedTyping:Bool = false;
   public var wantedText:String='';
 
-	public var leftDecision:FlxSprite;
-	public var rightDecision:FlxSprite;
-
-	public var leftDecisionTxt:FlxText;
-	public var rightDecisionTxt:FlxText;
-
-	public var inDecision=false;
   var speed = 0.04;
 
 	var nametag:FlxSprite;
 
 	var handSelect:FlxSprite;
 	var bgFade:FlxSprite;
-
-	var dialogueList = [];
-
+	var portraitLeft:FlxSprite;
 	public function new(dialogue:Array<String>)
 	{
 		super();
 
 		dialogueList=dialogue;
-		box = new FlxSprite(-20, 45);
 		var hasDialog=true;
-		box.frames = Paths.getSparrowAtlas("speech_bubble_talking");
-		box.animation.addByPrefix('normalOpen', 'Speech Bubble Normal Open', 24, false);
-		box.animation.addByPrefix('normal','speech bubble normal', 24);
 
-		box.animation.play('normalOpen');
-		box.flipX=true;
-		portraitLeft.frames = Paths.getSparrowAtlas('ports/dad_portrait');
-		var shit = portraitLeft.frames.frames[0].name;
-		var name = shit.substr(0,shit.length-4);
-		portraitLeft.animation.addByPrefix('enter', name, 24, true);
-		portraitLeft.animation.addByIndices('idle', name, [0],'',24,false);
+		dropText = new FlxText(52, 522, Std.int(FlxG.width * 0.9), "", 32);
+		dropText.setFormat(Paths.font("vcr.ttf"), 32);
+		dropText.color = 0xFFD89494;
+		add(dropText);
 
-		portraitLeft.updateHitbox();
-		portraitLeft.scrollFactor.set();
-		add(portraitLeft);
-		portraitLeft.visible = false;
-
-		box.updateHitbox();
-		box.screenCenter(XY);
-		box.y += 200;
-		portraitLeft.x += 50;
-		portraitLeft.y += 150;
-
-		add(box);
-
-		swagDialogue = new FlxTypeText(100, 500, Std.int((FlxG.width - 100)*.9), "", 32);
-		swagDialogue.setFormat(Paths.font("vcr.ttf"), 32,FlxColor.WHITE,LEFT,SHADOW,0xFFD89494);
+		swagDialogue = new FlxTypeText(50, 520, Std.int(FlxG.width * 0.9), "", 32);
+		swagDialogue.setFormat(Paths.font("vcr.ttf"), 32);
 		swagDialogue.color = 0xFFFFFFFF;
-    swagDialogue.completeCallback = function(){
-      finishedTyping=true;
-    }
 		add(swagDialogue);
 
-		var cum = dialogueList[0];
 
+		var cum = dialogueList[0];
+		dialogueList.shift();
+		swagDialogue.sounds=[FlxG.sound.load(Paths.sound("Vase"))];
+		setText(cum);
 	}
 
 	public function setDropTextColor(?color:FlxColor){
@@ -103,10 +72,6 @@ class VaseDialogueBox extends FlxSpriteGroup
     finishedTyping=true;
   }
 
-	public function setTypeSound(?sound=null){
-		swagDialogue.sounds=[FlxG.sound.load(Paths.sound(sound))];
-	}
-
 	var dialogueOpened:Bool = true;
 	var dialogueStarted:Bool = true;
 
@@ -125,14 +90,13 @@ class VaseDialogueBox extends FlxSpriteGroup
 		if(FlxG.keys.justPressed.ENTER){
 			if(finishedTyping){
 				if(dialogueList.length==0){
-					if(finishThing==null)
+					if(finishThing!=null)
 						finishThing();
 					else
 						destroy();
-
 				}else{
+					setText(dialogueList[0]);
 					dialogueList.shift();
-					setText(dialogueList[0])
 				}
 			}else{
 				skipDialogue();

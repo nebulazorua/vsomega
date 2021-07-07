@@ -56,7 +56,7 @@ class RunningChild extends FlxSprite {
 	        }
 				}else if(Conductor.songPosition>=marker.start+200 && Conductor.songPosition<=marker.end+800){
 					animation.play("slide");
-					offset.y=-180;
+					offset.y=-200;
 					visible=true;
 					var startA = (Conductor.songPosition-marker.end)-500;
 					var endA = 300;
