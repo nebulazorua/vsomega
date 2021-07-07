@@ -40,7 +40,7 @@ class CodeState extends MusicBeatState
     {code: "mikeeey",reward:"skin:mikeeey"},
     {code: "tgr",reward:"skin:tgr"},
     {code: "erderithefox",reward:"skin:erderi"},
-    {code: "acai28",reward:"skin:acai28"},
+    //{code: "acai28",reward:"skin:acai28"},
   ];
 
   var inputText:FlxInputText;

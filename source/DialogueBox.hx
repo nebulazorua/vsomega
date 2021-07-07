@@ -394,13 +394,8 @@ class DialogueBox extends FlxSpriteGroup
 				portraitLeft.x=x;
 				portraitLeft.y=y;
 			}
-			if(curLeft=='flexy'){
-				swagDialogue.font = 'Tanugo-S';
-				dropText.font = 'Tanugo-S';
-			}else{
-				swagDialogue.font = Paths.font("vcr.ttf");
-				dropText.font = Paths.font("vcr.ttf");
-			}
+			swagDialogue.font = Paths.font("vcr.ttf");
+			dropText.font = Paths.font("vcr.ttf");
 			if (!portraitLeft.visible)
 			{
 				swagDialogue.sounds = [FlxG.sound.load(Paths.sound('soundbytes/${curLeft}'), 0.6)];

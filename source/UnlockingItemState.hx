@@ -34,7 +34,7 @@ class UnlockingItemState extends MusicBeatState {
     for(item in unlocking){
       var shit = new FlxSprite(0,0);
       shit.frames = Paths.getSparrowAtlas('items/${item}');
-      shit.animation.addByPrefix("equip","equip",24,false);
+      shit.animation.addByPrefix("equip","equip",32,false);
       var reversedindices = [];
       var max = shit.animation.getByName("equip").frames.copy();
       max.reverse();

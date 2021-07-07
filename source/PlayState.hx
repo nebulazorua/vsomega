@@ -629,7 +629,7 @@ class PlayState extends MusicBeatState
 											raveGlow.antialiasing = true;
 											raveGlow.scrollFactor.set(1.05,.1);
 											raveGlow.active = false;
-											raveGlow.setGraphicSize(Std.int(raveGlow.width*1.5));
+											raveGlow.setGraphicSize(Std.int(raveGlow.width*1.7));
 											raveGlow.updateHitbox();
 											raveGlow.screenCenter(XY);
 
@@ -1353,7 +1353,7 @@ class PlayState extends MusicBeatState
 				dad.y += 175;
 			case 'flexy':
 				dad.y += 200;
-				camPos.set(dad.getGraphicMidpoint().x + 300, dad.getGraphicMidpoint().y - 250);
+				camPos.set(dad.getGraphicMidpoint().x + 300, dad.getGraphicMidpoint().y - 600);
 			case 'merchant':
 				dad.y += 225;
 				camPos.set(dad.getGraphicMidpoint().x + 375, dad.getGraphicMidpoint().y - 250);
@@ -1369,11 +1369,11 @@ class PlayState extends MusicBeatState
 				dad.y += 150;
 			case 'demetrios':
 				dad.y -= 390;
-				camPos.set(dad.getGraphicMidpoint().x, dad.getGraphicMidpoint().y-100);
+				camPos.set(dad.getGraphicMidpoint().x, dad.getGraphicMidpoint().y+ 100);
 			case "monster":
 				dad.y += 100;
 			case 'monster-christmas':
-				dad.y += 130;
+				dad.y += 100;
 			case 'dad':
 				camPos.x += 400;
 			case 'pico':
@@ -1382,6 +1382,7 @@ class PlayState extends MusicBeatState
 			case 'parents-christmas':
 				dad.x -= 500;
 				mika.x -= 500;
+				camPos.set(dad.getGraphicMidpoint().x+200,dad.getGraphicMidpoint().y-300);
 			case 'noke':
 				dad.y += dad.height/2;
 				dad.y -= 5;
@@ -1702,8 +1703,6 @@ class PlayState extends MusicBeatState
 
 		camFollow = new FlxObject(0, 0, 1, 1);
 		aCamFollow = new FlxObject(0,0,1,1);
-		camFollow.setPosition(camPos.x, camPos.y);
-		aCamFollow.setPosition(camPos.x,camPos.y);
 
 		if (prevCamFollow != null)
 		{
@@ -1717,6 +1716,8 @@ class PlayState extends MusicBeatState
 		// FlxG.camera.setScrollBounds(0, FlxG.width, 0, FlxG.height);
 		FlxG.camera.zoom = defaultCamZoom;
 		FlxG.camera.focusOn(camFollow.getPosition());
+		camFollow.setPosition(camPos.x, camPos.y);
+		aCamFollow.setPosition(camPos.x,camPos.y);
 
 		FlxG.worldBounds.set(0, 0, FlxG.width, FlxG.height);
 
@@ -3421,6 +3422,19 @@ class PlayState extends MusicBeatState
 
 		if (generatedMusic)
 		{
+
+			if(ItemState.equipped.contains("drunk")){
+				for(idx in 0...opponentRefNotes.length){
+					opponentRefNotes.members[idx].angle = 15*Math.cos((timer*2)+idx*2);
+					opponentNoteOffsets[idx][0]=(100*Math.cos(((timer*4)+idx/2)));
+					opponentNoteOffsets[idx][1]=(40*Math.sin((timer*2)+idx*2));
+				}
+				for(idx in 0...refNotes.length){
+					refNotes.members[idx].angle = 15*Math.cos((timer*2)+(idx+keyAmount-1)*2);
+					playerNoteOffsets[idx][0]=(100*Math.cos(((timer*4)+(idx+keyAmount-1)/2)));
+					playerNoteOffsets[idx][1]=(40*Math.sin((timer*2)+(idx+keyAmount-1)*2));
+				}
+			}
 			for(idx in 0...playerStrumLines.length){
 				var width = (Note.swagWidth*modchart.playerNoteScale);
 				var line = playerStrumLines.members[idx];
@@ -4001,8 +4015,10 @@ class PlayState extends MusicBeatState
 		var coolText:FlxText = new FlxText(0, 0, 0, placement, 32);
 		coolText.screenCenter();
 		coolText.x = FlxG.width * 0.55;
-		if(curStage=='time-void')
-			coolText.x += 200;
+		if(curStage=='time-void'){
+			coolText.x += 600;
+			coolText.y -= 100;
+		}
 		//
 
 		var rating:FlxSprite = new FlxSprite();
