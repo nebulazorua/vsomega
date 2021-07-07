@@ -37,25 +37,6 @@ class AchievementState extends MusicBeatState
     "No-Arm-Shogun", // Flexy
     "Fragmented-Surreality", // Noke
     "Oxidation", // Anders
-    "Bopeebo",
-    "Fresh",
-    "Dadbatle",
-    "Spookeez",
-    "South",
-    "Salem",
-    "Pico",
-    "Philly-Nice",
-    "Blammed",
-    "Satin-Panties",
-    "High",
-    "MILF",
-    'Cocoa',
-    'Eggnog',
-    'Monster',
-    'Winter-Horrorland',
-    'Senpai',
-    'Roses',
-    'Thorns',
     'Mercenary',
     'Odd-Job',
     'Guardian',
@@ -66,6 +47,7 @@ class AchievementState extends MusicBeatState
     'Father-Time',
     'Dishonor',
   ];
+
   var selectionRing:FlxSprite;
   var medals:FlxTypedGroup<FlxSprite>;
   var selectedX:Int = 0;
@@ -230,6 +212,8 @@ class AchievementState extends MusicBeatState
           unlockedMedals.push(data.name);
         }
       }
+
+
 
   }
 

@@ -12,6 +12,7 @@ import flixel.tweens.FlxTween;
 import flixel.util.FlxColor;
 import flixel.util.FlxTimer;
 import lime.net.curl.CURLCode;
+import flixel.group.FlxSpriteGroup;
 #if desktop
 import Discord.DiscordClient;
 #end
@@ -97,7 +98,7 @@ class StoryMenuState extends MusicBeatState
 	override function create()
 	{
 		if(FlxG.save.data.omegaGoodEnding || FlxG.save.data.omegaBadEnding){ // beaten omega
-			baseCameoChance=100;
+			baseCameoChance=50;
 		}
 
 		if(FlxG.save.data.cameos!=null){
@@ -115,7 +116,6 @@ class StoryMenuState extends MusicBeatState
 			encounterableCameos=cringe;
 			encounterableCameos.remove("Oxidation");
 			if(encounterableCameos.length==0 || FlxG.save.data.cameos.contains("Oxidation")){
-				trace("OXIDIZED");
 				encounterableCameos.push("Oxidation");
 			}
 			trace(encounterableCameos);
@@ -160,6 +160,46 @@ class StoryMenuState extends MusicBeatState
 		var portal:FlxSprite = new FlxSprite(0,0).loadGraphic(Paths.image("spaceshit"));
 		portal.antialiasing=true;
 		portal.screenCenter(XY);
+
+		var cameoShit:FlxSpriteGroup = new FlxSpriteGroup();
+
+		var cameoCard:FlxSprite = new FlxSprite(0,0).loadGraphic(Paths.image("cameoshit/postit"));
+		cameoCard.antialiasing=true;
+		cameoCard.screenCenter(XY);
+		add(cameoCard);
+
+
+		var deme:FlxSprite = new FlxSprite(0,0).loadGraphic(Paths.image("cameoshit/dog"));
+		deme.antialiasing=true;
+		deme.screenCenter(XY);
+
+		var femboy:FlxSprite = new FlxSprite(0,0).loadGraphic(Paths.image("cameoshit/femboy"));
+		femboy.antialiasing=true;
+		femboy.screenCenter(XY);
+
+		var vase:FlxSprite = new FlxSprite(0,0).loadGraphic(Paths.image("cameoshit/intense_fingering"));
+		vase.antialiasing=true;
+		vase.screenCenter(XY);
+
+		var kong:FlxSprite = new FlxSprite(0,0).loadGraphic(Paths.image("cameoshit/kong"));
+		kong.antialiasing=true;
+		kong.screenCenter(XY);
+
+		var marcant:FlxSprite = new FlxSprite(0,0).loadGraphic(Paths.image("cameoshit/marcant"));
+		marcant.antialiasing=true;
+		marcant.screenCenter(XY);
+
+		var noker:FlxSprite = new FlxSprite(0,0).loadGraphic(Paths.image("cameoshit/noker"));
+		noker.antialiasing=true;
+		noker.screenCenter(XY);
+
+		var flecky:FlxSprite = new FlxSprite(0,0).loadGraphic(Paths.image("cameoshit/friend_ouo"));
+		flecky.antialiasing=true;
+		flecky.screenCenter(XY);
+
+		var andrs:FlxSprite = new FlxSprite(0,0).loadGraphic(Paths.image("cameoshit/fat_bitch_andy_from_toy_story"));
+		andrs.antialiasing=true;
+		andrs.screenCenter(XY);
 
 		grpWeekText = new FlxTypedGroup<OMenuItem>();
 
@@ -269,6 +309,35 @@ class StoryMenuState extends MusicBeatState
 
 		//add(yellowBG);
 		add(portal);
+		cameoShit.add(cameoCard);
+		cameoShit.add(andrs);
+		cameoShit.add(noker);
+		cameoShit.add(femboy);
+		cameoShit.add(flecky);
+		cameoShit.add(deme);
+		cameoShit.add(kong);
+		cameoShit.add(vase);
+		cameoShit.add(marcant);
+
+
+		var cumfart = ["Oxidation","Fragmented-Surreality","New-Retro","No-Arm-Shogun","57.5hz","Free-Soul","Dishonor","Hivemind"];
+		var shit:Array<FlxSprite> = [andrs,noker,femboy,flecky,deme,marcant,kong,vase];
+		for(idx in 0...cumfart.length){
+			var song = cumfart[idx];
+			if(FlxG.save.data.cameos.contains(song) || FlxG.save.data.unlockedOmegaSongs.contains(song.toLowerCase())) {
+				shit[idx].visible=true;
+			}else{
+				shit[idx].visible=false;
+			}
+		}
+
+		cameoShit.y += 175;
+		cameoShit.x += 10;
+
+		add(cameoShit);
+
+
+
 		add(grpWeekText);
 		add(grpWeekCharacters);
 		add(difficultyBG);
@@ -280,7 +349,7 @@ class StoryMenuState extends MusicBeatState
 		txtTracklist.shadowOffset.set(2,2);
 		txtTracklist.color = 0xFFe55777;
 		txtTracklist.screenCenter(XY);
-		txtTracklist.y -= 100;
+		txtTracklist.y -= 150;
 		add(txtTracklist);
 
 
@@ -451,9 +520,11 @@ class StoryMenuState extends MusicBeatState
 	{
 		curDifficulty += change;
 
+		var max = 2;
+		if(FlxG.save.data.finishedSongs.contains("father-time")) max=3;
 		if (curDifficulty < 0)
-			curDifficulty = 3;
-		if (curDifficulty > 3)
+			curDifficulty = max;
+		if (curDifficulty > max)
 			curDifficulty = 0;
 
 		sprDifficulty.offset.x = 0;
@@ -471,7 +542,8 @@ class StoryMenuState extends MusicBeatState
 				sprDifficulty.offset.x = 20;
 			case 3:
 				sprDifficulty.animation.play('glitch');
-				sprDifficulty.offset.x = 20;
+				sprDifficulty.offset.x += 100;
+				sprDifficulty.offset.y += 40;
 		}
 
 		sprDifficulty.alpha = 0;

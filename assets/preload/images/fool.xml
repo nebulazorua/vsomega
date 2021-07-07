@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="fool.png">
+	<!-- Created with Adobe Animate version 21.0.5.40714 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="cum0000" x="0" y="0" width="421" height="686" pivotX="-826.1" pivotY="-111.9" frameX="0" frameY="-22" frameWidth="421" frameHeight="708"/>
+	<SubTexture name="cum0001" x="0" y="0" width="421" height="686" frameX="0" frameY="-22" frameWidth="421" frameHeight="708"/>
+	<SubTexture name="cum0002" x="429" y="0" width="406" height="706" frameX="-7" frameY="0" frameWidth="421" frameHeight="708"/>
+	<SubTexture name="cum0003" x="429" y="0" width="406" height="706" frameX="-7" frameY="0" frameWidth="421" frameHeight="708"/>
+</TextureAtlas>

@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Funsized Vase portrait.png">
+	<!-- Created with Adobe Animate version 21.0.7.42652 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Mini_Vase_Idle0000" x="0" y="0" width="212" height="291" pivotX="81.25" pivotY="107.15" frameX="-3" frameY="0" frameWidth="216" frameHeight="291"/>
+	<SubTexture name="Mini_Vase_Idle0001" x="0" y="0" width="212" height="291" frameX="-3" frameY="0" frameWidth="216" frameHeight="291"/>
+	<SubTexture name="Mini_Vase_Idle0002" x="212" y="0" width="216" height="280" frameX="0" frameY="-9" frameWidth="216" frameHeight="291"/>
+	<SubTexture name="Mini_Vase_Idle0003" x="212" y="0" width="216" height="280" frameX="0" frameY="-9" frameWidth="216" frameHeight="291"/>
+</TextureAtlas>

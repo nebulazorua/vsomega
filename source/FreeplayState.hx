@@ -21,8 +21,8 @@ using StringTools;
 class FreeplayState extends MusicBeatState
 {
 	var trackedAssets:Array<Dynamic> = [];
-	public static var unlockables=['Last-Stand','Curse-Eternal','2v200','After-the-Ashes','Father-Time','Dishonor'];
-	public static var unlockableChars = ['angry-omega','mika','army','omega','father','king'];
+	public static var unlockables=['Last-Stand','Curse-Eternal','2v200','After-the-Ashes','Father-Time','Dishonor','Hivemind'];
+	public static var unlockableChars = ['angry-omega','mika','army','omega','father','king','babyvase'];
 	var songs:Array<SongMetadata> = [];
 
 	var selector:FlxText;

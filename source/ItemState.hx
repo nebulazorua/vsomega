@@ -262,13 +262,13 @@ class ItemState extends MusicBeatState
 		add(itemFlavTxt);
 		add(itemDescTxt);
 
-    var conditions = [
-      true,
-      true,
-      true,
-      true,
-      true,
-      true
+		var conditions = [
+      FlxG.save.data.omegaGoodEnding,
+      FlxG.save.data.getResistance,
+      FlxG.save.data.becomeATwat,
+      FlxG.save.data.omegaBadEnding,
+      FlxG.save.data.drunk,
+			true
     ];
 
     for(cum in 0...items.length){

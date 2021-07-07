@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TextureAtlas imagePath="noke_portrait.png">
-	<!-- Created with Adobe Animate version 20.0.0.17400 -->
+	<!-- Created with Adobe Animate version 21.0.5.40714 -->
 	<!-- http://www.adobe.com/products/animate.html -->
-	<SubTexture name="noke idle0000" x="39" y="39" width="153" height="193" frameX="0" frameY="-3" frameWidth="153" frameHeight="196"/>
-	<SubTexture name="noke idle0001" x="39" y="39" width="153" height="193" frameX="0" frameY="-3" frameWidth="153" frameHeight="196"/>
-	<SubTexture name="noke idle0002" x="267" y="39" width="151" height="196" frameX="-1" frameY="0" frameWidth="153" frameHeight="196"/>
-	<SubTexture name="noke idle0003" x="267" y="39" width="151" height="196" frameX="-1" frameY="0" frameWidth="153" frameHeight="196"/>
+	<SubTexture name="noke idle0000" x="0" y="0" width="236" height="297" pivotX="-828.5" pivotY="-241.35" frameX="0" frameY="-4" frameWidth="236" frameHeight="301"/>
+	<SubTexture name="noke idle0001" x="0" y="0" width="236" height="297" frameX="0" frameY="-4" frameWidth="236" frameHeight="301"/>
+	<SubTexture name="noke idle0002" x="240" y="0" width="234" height="301" frameX="-1" frameY="0" frameWidth="236" frameHeight="301"/>
+	<SubTexture name="noke idle0003" x="240" y="0" width="234" height="301" frameX="-1" frameY="0" frameWidth="236" frameHeight="301"/>
 </TextureAtlas>

@@ -1032,7 +1032,7 @@ class PlayState extends MusicBeatState
 							bg.setGraphicSize(Std.int(bg.width*1.25));
 							bg.screenCenter(XY);
 							bg.antialiasing = true;
-							bg.scrollFactor.set(.3,.3);
+							bg.scrollFactor.set(.1,.1);
 							bg.active = false;
 							add(bg);
 
@@ -1555,7 +1555,7 @@ class PlayState extends MusicBeatState
 			add(backroomFG);
 		}
 
-		if(curStage=='omegafield' && SONG.song.toLowerCase()!='last-stand'  || curStage=='void' || curStage=='dojo' || curStage=='castle')
+		if(curStage=='omegafield' && SONG.song.toLowerCase()!='last-stand' && SONG.song.toLowerCase()!='after-the-ashes'  || curStage=='void' || curStage=='dojo' || curStage=='castle')
 			gf.visible=false;
 
 		if(SONG.song.toLowerCase()=='salem')
@@ -1625,8 +1625,6 @@ class PlayState extends MusicBeatState
 
 		disabledHud = modchart.hudVisible;
 		var doof:DialogueBox = new DialogueBox(false, dialogue);
-		// doof.x += 70;
-		// doof.y = FlxG.height * 0.5;
 		doof.scrollFactor.set();
 		doof.finishThing = startCountdown;
 
@@ -1858,7 +1856,7 @@ class PlayState extends MusicBeatState
 		iconP1.cameras = [camHUD];
 		iconP2.cameras = [camHUD];
 		scoreTxt.cameras = [camHUD];
-		doof.cameras = [camHUD];
+		doof.cameras = [pauseHUD];
 		missesTxt.cameras = [camHUD];
 		sicksTxt.cameras = [camHUD];
 		goodsTxt.cameras = [camHUD];
@@ -1929,12 +1927,34 @@ class PlayState extends MusicBeatState
 				case 'thorns':
 					schoolIntro(doof);
 				case 'last-stand':
-					cutthefuckinnotes();
-				case 'new-retro' | 'fragmented-surreality' | 'free-soul' | 'oxidation' | '57.5hz':
+					doof.finishThing = cutthefuckinnotes;
+					showDialogue(doof);
+				case 'new-retro' | 'fragmented-surreality' | 'free-soul' | 'oxidation' | '57.5hz' | 'no-arm-shogun':
 					showDialogue(doof);
 				default:
 					startCountdown();
 			}
+		}else if(isStoryMode && didIntro && SONG.song.toLowerCase()=='last-stand'){
+			var shit = CoolUtil.coolTextFile(Paths.txt('last-stand/deathsdialogue'));
+			var dialogue = [];
+			for(idx in 0...shit.length){
+				var hm = shit[idx];
+				var cumshitcunt = new EReg("\\[(.+)\\]","ig");
+				if(cumshitcunt.match(hm)){
+					var num = Std.parseInt(cumshitcunt.matched(1));
+					if(blueballs<num){
+						break;
+					}
+					dialogue = [];
+				}else{
+					dialogue.push(hm);
+				}
+			}
+			var box:DialogueBox = new DialogueBox(false, dialogue);
+			box.scrollFactor.set();
+			box.finishThing = startCountdown;
+			box.cameras = [pauseHUD];
+			showDialogue(box);
 		}
 		else
 		{
@@ -1974,8 +1994,17 @@ class PlayState extends MusicBeatState
 			FlxTween.tween(weebShit,{alpha:0},0.4,{
 					startDelay:2,
 					onComplete: function(tw:FlxTween){
+						cumBreakNotes();
 						remove(weebShit);
-						startCountdown();
+						if(blueballs==0){
+							var box:DialogueBox = new DialogueBox(false, CoolUtil.coolTextFile(Paths.txt("last-stand/dialogueCut")));
+							box.scrollFactor.set();
+							box.finishThing = startCountdown;
+							box.cameras = [pauseHUD];
+							showDialogue(box);
+						}else{
+							startCountdown();
+						}
 					}
 			});
 		};
@@ -2080,6 +2109,121 @@ class PlayState extends MusicBeatState
 
 	}
 
+
+	function cumBreakNotes(){
+		var plrBrokenNotes=[];
+		var dadBrokenNotes=[];
+
+		var sides = ["LEFT","DOWN","UP","RIGHT"];
+		for(idx in 0...3){
+			var brokenArrow = new FlxSprite();
+			brokenArrow.frames = Paths.getSparrowAtlas("CUNTNOTES");
+			brokenArrow.animation.addByPrefix("cut",'CUT${sides[idx]}',24,false);
+			brokenArrow.scrollFactor.set(0,0);
+			brokenArrow.setGraphicSize(Std.int(brokenArrow.width*.7));
+			brokenArrow.updateHitbox();
+			brokenArrow.cameras=[camHUD];
+			brokenArrow.antialiasing=true;
+			brokenArrow.visible=false;
+			add(brokenArrow);
+			plrBrokenNotes.push(brokenArrow);
+		}
+		for(idx in 0...3){
+			var brokenArrow = new FlxSprite();
+			brokenArrow.frames = Paths.getSparrowAtlas("CUNTNOTES");
+			brokenArrow.animation.addByPrefix("cut",'CUT${sides[idx]}',24,false);
+			brokenArrow.scrollFactor.set(0,0);
+			brokenArrow.setGraphicSize(Std.int(brokenArrow.width*.7));
+			brokenArrow.updateHitbox();
+			brokenArrow.cameras=[camHUD];
+			brokenArrow.antialiasing=true;
+			brokenArrow.visible=false;
+			add(brokenArrow);
+			dadBrokenNotes.push(brokenArrow);
+		}
+
+		var idx=0;
+		for(i in dadBrokenNotes){
+			i.animation.play("cut");
+			i.updateHitbox();
+			i.visible=true;
+			switch(idx){
+				case 0:
+					i.x = 520-(FlxG.width/2);
+					if(currentOptions.downScroll){
+						i.y = FlxG.height-100;
+					}else{
+						i.y = 0;
+					}
+				case 1:
+					i.x = 745-(FlxG.width/2);
+					if(currentOptions.downScroll){
+						i.y = FlxG.height-100;
+					}else{
+						i.y = 0;
+					}
+				case 2:
+					i.x = 835-(FlxG.width/2);
+					if(currentOptions.downScroll){
+						i.y = FlxG.height-130;
+					}else{
+						i.y = 0;
+					}
+				case 3:
+					i.x = 1025-(FlxG.width/2);
+					if(currentOptions.downScroll){
+						i.y = FlxG.height-95;
+					}else{
+						i.y = 0;
+					}
+			}
+			idx++;
+		}
+		for(cum in dadStrums){
+			cum.visible=false;
+		}
+
+		var idx=0;
+		for(i in plrBrokenNotes){
+			i.animation.play("cut");
+			i.updateHitbox();
+			i.visible=true;
+			switch(idx){
+				case 0:
+					i.x = 520;
+					if(currentOptions.downScroll){
+						i.y = FlxG.height-100;
+					}else{
+						i.y = 0;
+					}
+				case 1:
+					i.x = 745;
+					if(currentOptions.downScroll){
+						i.y = FlxG.height-100;
+					}else{
+						i.y = 0;
+					}
+				case 2:
+					i.x = 835;
+					if(currentOptions.downScroll){
+						i.y = FlxG.height-130;
+					}else{
+						i.y = 0;
+					}
+				case 3:
+					i.x = 1025;
+					if(currentOptions.downScroll){
+						i.y = FlxG.height-95;
+					}else{
+						i.y = 0;
+					}
+			}
+			idx++;
+		}
+		for(cum in playerStrums){
+			cum.visible=false;
+		}
+	}
 	function startCountdown():Void
 	{
 		modchart.hudVisible=disabledHud;
@@ -2128,135 +2272,13 @@ class PlayState extends MusicBeatState
 				}
 			}
 
-			var plrBrokenNotes=[];
-			var dadBrokenNotes=[];
-			if(SONG.song.toLowerCase()=='last-stand'){
-				var sides = ["LEFT","DOWN","UP","RIGHT"];
-				var idx = 0;
-				for(cum in playerStrums){
-					var brokenArrow = new FlxSprite(cum.x,cum.y);
-					brokenArrow.frames = Paths.getSparrowAtlas("CUNTNOTES");
-					brokenArrow.animation.addByPrefix("cut",'CUT${sides[idx]}',24,false);
-					brokenArrow.scrollFactor.set(cum.scrollFactor.x,cum.scrollFactor.y);
-					brokenArrow.cameras=cum.cameras;
-					brokenArrow.scale.x = .7;
-					brokenArrow.scale.y = .7;
-					brokenArrow.updateHitbox();
-					brokenArrow.x = cum.x;
-					brokenArrow.antialiasing=true;
-					brokenArrow.y = cum.y;
-					brokenArrow.visible=false;
-					add(brokenArrow);
-					plrBrokenNotes.push(brokenArrow);
-					idx++;
-				}
-				var idx = 0;
-				for(cum in dadStrums){
-					var brokenArrow = new FlxSprite(cum.x,cum.y);
-					brokenArrow.frames = Paths.getSparrowAtlas("CUNTNOTES");
-					brokenArrow.animation.addByPrefix("cut",'CUT${sides[idx]}',24,false);
-					brokenArrow.scrollFactor.set(cum.scrollFactor.x,cum.scrollFactor.y);
-					brokenArrow.scale.x = .7;
-					brokenArrow.scale.y = .7;
-					brokenArrow.cameras=cum.cameras;
-					brokenArrow.updateHitbox();
-					brokenArrow.x = cum.x;
-					brokenArrow.antialiasing=true;
-					brokenArrow.y = cum.y;
-					brokenArrow.visible=false;
-					add(brokenArrow);
-					dadBrokenNotes.push(brokenArrow);
-					idx++;
-				}
-			}
-
 			switch (swagCounter)
 			{
 				case 0:
-					if(SONG.song.toLowerCase()=='last-stand'){
-						var idx=0;
-						for(i in dadBrokenNotes){
-							i.animation.play("cut");
-							i.updateHitbox();
-							i.visible=true;
-							switch(idx){
-								case 0:
-									i.x = 520-(FlxG.width/2);
-									if(currentOptions.downScroll){
-										i.y = FlxG.height-100;
-									}else{
-										i.y = -100;
-									}
-								case 1:
-									i.x = 745-(FlxG.width/2);
-									if(currentOptions.downScroll){
-										i.y = FlxG.height-100;
-									}else{
-										i.y = -100;
-									}
-								case 2:
-									i.x = 835-(FlxG.width/2);
-									if(currentOptions.downScroll){
-										i.y = FlxG.height-130;
-									}else{
-										i.y = -130;
-									}
-								case 3:
-									i.x = 1025-(FlxG.width/2);
-									if(currentOptions.downScroll){
-										i.y = FlxG.height-95;
-									}else{
-										i.y = -95;
-									}
-							}
-							idx++;
-						}
-						for(cum in dadStrums){
-							cum.visible=false;
-						}
-
-						var idx=0;
-						for(i in plrBrokenNotes){
-							i.animation.play("cut");
-							i.updateHitbox();
-							i.visible=true;
-							switch(idx){
-								case 0:
-									i.x = 520;
-									if(currentOptions.downScroll){
-										i.y = FlxG.height-100;
-									}else{
-										i.y = -100;
-									}
-								case 1:
-									i.x = 745;
-									if(currentOptions.downScroll){
-										i.y = FlxG.height-100;
-									}else{
-										i.y = -100;
-									}
-								case 2:
-									i.x = 835;
-									if(currentOptions.downScroll){
-										i.y = FlxG.height-130;
-									}else{
-										i.y = -130;
-									}
-								case 3:
-									i.x = 1025;
-									if(currentOptions.downScroll){
-										i.y = FlxG.height-95;
-									}else{
-										i.y = -95;
-									}
-							}
-							idx++;
-						}
-						for(cum in playerStrums){
-							cum.visible=false;
-						}
+					if(SONG.song.toLowerCase()=='last-stand' && !isStoryMode){
+						cumBreakNotes();
 					}
-					FlxG.sound.play(Paths.sound('intro3'), 0.6);
+					FlxG.sound.play(Paths.sound('intro3${altSuffix}'), 0.6);
 				case 1:
 					var ready:FlxSprite = new FlxSprite().loadGraphic(Paths.image(introAlts[0]));
 					ready.scrollFactor.set();
@@ -2274,7 +2296,7 @@ class PlayState extends MusicBeatState
 							ready.destroy();
 						}
 					});
-					FlxG.sound.play(Paths.sound('intro2'), 0.6);
+					FlxG.sound.play(Paths.sound('intro2${altSuffix}'), 0.6);
 				case 2:
 					var set:FlxSprite = new FlxSprite().loadGraphic(Paths.image(introAlts[1]));
 					set.scrollFactor.set();
@@ -2291,7 +2313,7 @@ class PlayState extends MusicBeatState
 							set.destroy();
 						}
 					});
-					FlxG.sound.play(Paths.sound('intro1'), 0.6);
+					FlxG.sound.play(Paths.sound('intro1${altSuffix}'), 0.6);
 				case 3:
 					var go:FlxSprite = new FlxSprite().loadGraphic(Paths.image(introAlts[2]));
 					go.scrollFactor.set();
@@ -2310,7 +2332,7 @@ class PlayState extends MusicBeatState
 							go.destroy();
 						}
 					});
-					FlxG.sound.play(Paths.sound('introGo'), 0.6);
+					FlxG.sound.play(Paths.sound('introGo${altSuffix}'), 0.6);
 				case 4:
 			}
 
@@ -3741,7 +3763,7 @@ class PlayState extends MusicBeatState
 		}
 		dadStrums.forEach(function(spr:FlxSprite)
 		{
-			if(spr.animation.curAnim.name!='confirm' && SONG.song.toLowerCase()=='last-stand' && Conductor.songPosition>0){
+			if(spr.animation.curAnim.name!='confirm' && SONG.song.toLowerCase()=='last-stand'){
 				spr.visible=false;
 				grayscaleDadStrums.members[spr.ID].visible=false;
 			}else if(spr.animation.curAnim.name=='confirm' && SONG.song.toLowerCase()=='last-stand'){
@@ -3821,16 +3843,15 @@ class PlayState extends MusicBeatState
 			FlxG.save.data.unlocked.push("LOL");
 		}
 
-		AchievementState.checkUnlocks();
 		if (isStoryMode)
 		{
 			campaignScore += songScore;
 
 			storyPlaylist.remove(storyPlaylist[0]);
 			if(SONG.song.toLowerCase()=='guardian' ){
-				LoadingState.loadAndSwitchState(new CutsceneState(CoolUtil.coolTextFile(Paths.txt('guardian/decidetime')),new PlayState()));
-				//unloadAssets();
 				AchievementState.checkUnlocks();
+				LoadingState.loadAndSwitchState(new CutsceneState(CoolUtil.coolTextFile(Paths.txt('guardian/decidetime')),new PlayState()));
+
 			}else{
 
 				if (storyPlaylist.length <= 0)
@@ -3848,7 +3869,14 @@ class PlayState extends MusicBeatState
 					transOut = FlxTransitionableState.defaultTransOut;
 
 					if(SONG.song.toLowerCase()=='father-time'){
-						LoadingState.loadAndSwitchState(new CutsceneState(CoolUtil.coolTextFile(Paths.txt('father-time/fatherPOUNDED')),new PlayState()));
+						if(SkinState.selectedSkin=='bfside'){
+							LoadingState.loadAndSwitchState(new CutsceneState(CoolUtil.coolTextFile(Paths.txt('father-time/fatherPOUNDED')),new VideoState('assets/videos/DO NOT DELETE OR GAME WILL CRASH/YouFoundSomethingYouShouldntHave.webm', new MainMenuState())));
+						}else{
+							LoadingState.loadAndSwitchState(new CutsceneState(CoolUtil.coolTextFile(Paths.txt('father-time/fatherPOUNDED')),new MainMenuState()));
+						}
+
+					}else if(SONG.song.toLowerCase()=='after-the-ashes'){
+						FlxG.switchState(new MainMenuState());
 					}else{
 						FlxG.switchState(new StoryMenuState());
 					}
@@ -3879,6 +3907,8 @@ class PlayState extends MusicBeatState
 					if (storyDifficulty == 2)
 						difficulty = '-hard';
 
+					if (storyDifficulty == 3)
+						difficulty = '-glitch';
 					trace('LOADING NEXT SONG');
 					trace(PlayState.storyPlaylist[0].toLowerCase() + difficulty);
 
@@ -3900,33 +3930,29 @@ class PlayState extends MusicBeatState
 
 					PlayState.SONG = Song.loadFromJson(PlayState.storyPlaylist[0].toLowerCase() + difficulty, PlayState.storyPlaylist[0]);
 					FlxG.sound.music.stop();
-
+					AchievementState.checkUnlocks();
+					FlxG.save.flush();
 					switch(SONG.song.toLowerCase()){
 						case 'odd-job'|'guardian'|'2v200'|'after-the-ashes'|'last-stand'|'curse-eternal':
 							LoadingState.loadAndSwitchState(new CutsceneState(CoolUtil.coolTextFile(Paths.txt('${SONG.song.toLowerCase()}/cutscene')),new PlayState()));
 						case 'mercenary':
-							LoadingState.loadAndSwitchState(new CutsceneState(CoolUtil.coolTextFile(Paths.txt('${SONG.song.toLowerCase()}/pre')),new PlayState()));
+							if(FlxG.save.data.omegaGoodEnding || FlxG.save.data.omegaBadEnding)
+								LoadingState.loadAndSwitchState(new CutsceneState(CoolUtil.coolTextFile(Paths.txt('mercenary/playedbefore')),new PlayState()));
+							else
+								LoadingState.loadAndSwitchState(new CutsceneState(CoolUtil.coolTextFile(Paths.txt('mercenary/pre')),new PlayState()));
 						default:
 							LoadingState.loadAndSwitchState(new PlayState());
 					}
-					//unloadAssets();
-
-
 				}
 			}
 		}
 		else
 		{
-			if(SONG.song.toLowerCase()=='curse-eternal' ){
-				FlxG.save.data.omegaBadEnding=true;
-				LoadingState.loadAndSwitchState(new VideoState('assets/videos/CryAboutIt.webm', new MainMenuState()));
-			}
-
+			AchievementState.checkUnlocks();
 			trace('WENT BACK TO FREEPLAY??');
 			FlxG.switchState(new FreeplayState());
-			//unloadAssets();
-
 		}
+
 	}
 
 	var endingSong:Bool = false;
@@ -4293,7 +4319,7 @@ class PlayState extends MusicBeatState
 
 			playerStrums.forEach(function(spr:FlxSprite)
 			{
-				if(spr.animation.curAnim.name!='confirm' && SONG.song.toLowerCase()=='last-stand' && Conductor.songPosition>0){
+				if(spr.animation.curAnim.name!='confirm' && SONG.song.toLowerCase()=='last-stand'){
 					spr.visible=false;
 					grayscalePlayerStrums.members[spr.ID].visible=false;
 				}else if(spr.animation.curAnim.name=='confirm' && SONG.song.toLowerCase()=='last-stand'){

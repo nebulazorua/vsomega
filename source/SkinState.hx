@@ -209,6 +209,7 @@ class SkinState extends MusicBeatState {
       FlxG.save.data.selectedSkin = selectedSkin;
       FlxG.sound.play(Paths.sound('confirmMenu'));
       characters[selectedIdx].playAnim("hey",true);
+      FlxG.save.flush();
     }
 
     if (controls.RIGHT_P)

@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="bfside_portrait.png">
+	<!-- Created with Adobe Animate version 21.0.5.40714 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Brighty_Idle0000" x="0" y="0" width="210" height="281" pivotX="-271.9" pivotY="271.6" frameX="-3" frameY="0" frameWidth="215" frameHeight="281"/>
+	<SubTexture name="Brighty_Idle0001" x="0" y="0" width="210" height="281" frameX="-3" frameY="0" frameWidth="215" frameHeight="281"/>
+	<SubTexture name="Brighty_Idle0002" x="214" y="0" width="215" height="274" frameX="0" frameY="-7" frameWidth="215" frameHeight="281"/>
+	<SubTexture name="Brighty_Idle0003" x="214" y="0" width="215" height="274" frameX="0" frameY="-7" frameWidth="215" frameHeight="281"/>
+</TextureAtlas>
