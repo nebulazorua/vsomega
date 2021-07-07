@@ -10,3 +10,13 @@ class HiveCharts
   public static var alpha='';
 }
 ```
+
+IF IT COMPLAINS ABOUT SECRETSHIT THEN
+
+```haxe
+class SecretShit extends FlxKeyboard
+{}
+```
+
+IN "SecretShit.hx"
+THAT SHOULD WORK???
