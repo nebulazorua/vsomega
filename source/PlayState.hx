@@ -3368,6 +3368,7 @@ class PlayState extends MusicBeatState
 				blueballs++;
 				if(blueballs==10){
 					FlxG.save.data.getResistance=true;
+					UnlockingItemState.unlocked.push("resistance");
 				}else if(blueballs==99 && SONG.song.toLowerCase()=='last-stand'){
 					AchievementState.toUnlock.push("Waste of Time");
 				}
@@ -3842,6 +3843,7 @@ class PlayState extends MusicBeatState
 		blueballs=0;
 		if(accuracy>=.9){
 			FlxG.save.data.beATwat=true;
+			UnlockingItemState.unlocking.push('twatmode');
 		}
 
 		if(!FlxG.save.data.finishedSongs.contains(SONG.song.toLowerCase()))
@@ -3982,7 +3984,11 @@ class PlayState extends MusicBeatState
 		{
 			AchievementState.checkUnlocks();
 			trace('WENT BACK TO FREEPLAY??');
-			FlxG.switchState(new FreeplayState());
+			var state:MusicBeatState = new FreeplayState();
+			if(UnlockingItemState.unlocking.length>0){
+				state = new UnlockingItemState();
+			}
+			FlxG.switchState(state);
 		}
 
 	}
