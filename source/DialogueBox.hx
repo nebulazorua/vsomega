@@ -105,17 +105,17 @@ class DialogueBox extends FlxSpriteGroup
 
 		portraitLeft = new FlxSprite(0, 40);
 
-		if(PlayState.SONG.song.toLowerCase()=='thorns' || PlayState.SONG.song.toLowerCase()=='roses' || PlayState.SONG.song.toLowerCase()=='senpai')
+		if(PlayState.SONG.song.toLowerCase()=='thorns' || PlayState.SONG.song.toLowerCase()=='roses' || PlayState.SONG.song.toLowerCase()=='senpai' || PlayState.SONG.song.toLowerCase()=='2v200')
 		{
 			portraitLeft.frames = Paths.getSparrowAtlas('weeb/senpaiPortrait');
 			portraitLeft.animation.addByPrefix('enter', 'Senpai Portrait Enter', 24, false);
 			portraitLeft.setGraphicSize(Std.int(portraitLeft.width * PlayState.daPixelZoom * 0.9));
-		}else{
-			portraitLeft.frames = Paths.getSparrowAtlas('ports/${PlayState.SONG.player2}_portrait');
-			trace(portraitLeft.frames.frames);
-			portraitLeft.antialiasing=true;
-			portraitLeft.animation.addByPrefix('enter', portraitLeft.frames.frames[0].name, 24, false);
-		}
+		///}else{
+			///portraitLeft.frames = Paths.getSparrowAtlas('ports/${PlayState.SONG.player2}_portrait');
+			///trace(portraitLeft.frames.frames);
+			///portraitLeft.antialiasing=true;
+			///portraitLeft.animation.addByPrefix('enter', portraitLeft.frames.frames[0].name, 24, false);
+		}///
 		portraitLeft.updateHitbox();
 		portraitLeft.scrollFactor.set();
 		portraitLeft.setGraphicSize(Std.int(portraitLeft.width*(1+(1-FlxG.camera.zoom))));
@@ -123,16 +123,16 @@ class DialogueBox extends FlxSpriteGroup
 		portraitLeft.visible = false;
 
 		portraitRight = new FlxSprite(Std.int(FlxG.width/2), 40);
-		if(PlayState.SONG.song.toLowerCase()=='thorns' || PlayState.SONG.song.toLowerCase()=='roses' || PlayState.SONG.song.toLowerCase()=='senpai')
+		if(PlayState.SONG.song.toLowerCase()=='thorns' || PlayState.SONG.song.toLowerCase()=='roses' || PlayState.SONG.song.toLowerCase()=='senpai' || PlayState.SONG.song.toLowerCase()=='2v200')
 		{
 			portraitRight.x = 0;
 			portraitRight.frames = Paths.getSparrowAtlas('weeb/bfPortrait');
 			portraitRight.animation.addByPrefix('enter', 'Boyfriend portrait enter', 24, true);
 			portraitRight.setGraphicSize(Std.int(portraitRight.width * PlayState.daPixelZoom * 0.9));
-		}else{
-			portraitRight.antialiasing=true;
-			portraitRight.frames = Paths.getSparrowAtlas('ports/${SkinState.selectedSkin}_portrait');
-			portraitRight.animation.addByPrefix('enter', portraitRight.frames.frames[0].name, 24, true);
+///		}else{
+		///	portraitRight.antialiasing=true;
+		///	portraitRight.frames = Paths.getSparrowAtlas('ports/${SkinState.selectedSkin}_portrait');
+		///	portraitRight.animation.addByPrefix('enter', portraitRight.frames.frames[0].name, 24, true);
 		}
 
 		portraitRight.updateHitbox();
