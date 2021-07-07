@@ -3368,7 +3368,7 @@ class PlayState extends MusicBeatState
 				blueballs++;
 				if(blueballs==10){
 					FlxG.save.data.getResistance=true;
-					UnlockingItemState.unlocked.push("resistance");
+					UnlockingItemState.unlocking.push("resistance");
 				}else if(blueballs==99 && SONG.song.toLowerCase()=='last-stand'){
 					AchievementState.toUnlock.push("Waste of Time");
 				}

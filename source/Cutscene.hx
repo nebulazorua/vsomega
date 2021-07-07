@@ -209,6 +209,7 @@ class Cutscene extends FlxSpriteGroup {
 
         var poop:String = Highscore.formatSong(name, diff);
   			PlayState.SONG = Song.loadFromJson(poop, name);
+        PlayState.storyPlaylist=[];
         PlayState.storyDifficulty=diff;
   			PlayState.storyWeek = week;
       }else if(action.startsWith('setstory:')){
