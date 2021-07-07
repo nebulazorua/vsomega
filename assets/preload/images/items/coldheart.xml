@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="coldheart.png">
+	<!-- Created with Adobe Animate version 21.0.5.40714 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="equip0000" x="0" y="0" width="248" height="268" pivotX="940.9" pivotY="-163.95" frameX="0" frameY="0" frameWidth="763" frameHeight="268"/>
+	<SubTexture name="equip0001" x="256" y="0" width="263" height="268" frameX="-89" frameY="0" frameWidth="763" frameHeight="268"/>
+	<SubTexture name="equip0002" x="527" y="0" width="279" height="268" frameX="-178" frameY="0" frameWidth="763" frameHeight="268"/>
+	<SubTexture name="equip0003" x="814" y="0" width="294" height="268" frameX="-267" frameY="0" frameWidth="763" frameHeight="268"/>
+	<SubTexture name="equip0004" x="1116" y="0" width="309" height="268" frameX="-356" frameY="0" frameWidth="763" frameHeight="268"/>
+	<SubTexture name="equip0005" x="1433" y="0" width="263" height="268" frameX="-500" frameY="0" frameWidth="763" frameHeight="268"/>
+	<SubTexture name="equip0006" x="1704" y="0" width="251" height="268" frameX="-507" frameY="0" frameWidth="763" frameHeight="268"/>
+	<SubTexture name="equip0007" x="0" y="276" width="255" height="268" frameX="-500" frameY="0" frameWidth="763" frameHeight="268"/>
+	<SubTexture name="equip0008" x="263" y="276" width="257" height="268" frameX="-494" frameY="0" frameWidth="763" frameHeight="268"/>
+	<SubTexture name="equip0009" x="528" y="276" width="260" height="268" frameX="-488" frameY="0" frameWidth="763" frameHeight="268"/>
+</TextureAtlas>

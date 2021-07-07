@@ -521,7 +521,7 @@ class StoryMenuState extends MusicBeatState
 		curDifficulty += change;
 
 		var max = 2;
-		if(FlxG.save.data.finishedSongs.contains("father-time")) max=3;
+		if(FlxG.save.data.canGlitch) max=3;
 		if (curDifficulty < 0)
 			curDifficulty = max;
 		if (curDifficulty > max)

@@ -3845,6 +3845,7 @@ class PlayState extends MusicBeatState
 			FlxG.save.data.unlocked.push("LOL");
 		}
 
+		AchievementState.checkUnlocks();
 		if (isStoryMode)
 		{
 			campaignScore += songScore;
@@ -3853,30 +3854,46 @@ class PlayState extends MusicBeatState
 			if(SONG.song.toLowerCase()=='guardian' ){
 				AchievementState.checkUnlocks();
 				LoadingState.loadAndSwitchState(new CutsceneState(CoolUtil.coolTextFile(Paths.txt('guardian/decidetime')),new PlayState()));
-
 			}else{
 
 				if (storyPlaylist.length <= 0)
 				{
 					if(SONG.song.toLowerCase()=='curse-eternal' ){
-						FlxG.save.data.omegaBadEnding=true;
-						LoadingState.loadAndSwitchState(new VideoState('assets/videos/CryAboutIt.webm', new MainMenuState()));
+						var state:MusicBeatState = new MainMenuState();
+						if(!FlxG.save.data.omegaBadEnding){
+							UnlockingItemState.unlocking.push('coldheart');
+							state = new UnlockingItemState();
+							FlxG.save.data.omegaBadEnding=true;
+						}
+						LoadingState.loadAndSwitchState(new VideoState('assets/videos/CryAboutIt.webm', state));
+
 						//unloadAssets();
 					}else if(SONG.song.toLowerCase()=='after-the-ashes'){
 						FlxG.save.data.daddyTimeTime=true;
-						FlxG.save.data.omegaGoodEnding=true;
+						if(!FlxG.save.data.omegaGoodEnding){
+							FlxG.save.data.omegaGoodEnding=true;
+							UnlockingItemState.unlocking.push('omegasword');
+						}
+
 					}
 
 					transIn = FlxTransitionableState.defaultTransIn;
 					transOut = FlxTransitionableState.defaultTransOut;
 
 					if(SONG.song.toLowerCase()=='father-time'){
-						if(SkinState.selectedSkin=='bfside'){
-							LoadingState.loadAndSwitchState(new CutsceneState(CoolUtil.coolTextFile(Paths.txt('father-time/fatherPOUNDED')),new VideoState('assets/videos/DO NOT DELETE OR GAME WILL CRASH/YouFoundSomethingYouShouldntHave.webm', new MainMenuState())));
-						}else{
-							LoadingState.loadAndSwitchState(new CutsceneState(CoolUtil.coolTextFile(Paths.txt('father-time/fatherPOUNDED')),new MainMenuState()));
+						var state:MusicBeatState = new MainMenuState();
+						if(!FlxG.save.data.canGlitch){
+							UnlockingItemState.unlocking.push('glitchdiff');
+							state = new UnlockingItemState();
+							FlxG.save.data.canGlitch=true;
 						}
-
+						if(SkinState.selectedSkin=='bfside'){
+							LoadingState.loadAndSwitchState(new CutsceneState(CoolUtil.coolTextFile(Paths.txt('father-time/fatherPOUNDED')),new VideoState('assets/videos/DO NOT DELETE OR GAME WILL CRASH/YouFoundSomethingYouShouldntHave.webm', state)));
+						}else{
+							LoadingState.loadAndSwitchState(new CutsceneState(CoolUtil.coolTextFile(Paths.txt('father-time/fatherPOUNDED')),state));
+						}
+					}else if(UnlockingItemState.unlocking.length==0){
+						FlxG.switchState(new UnlockingItemState());
 					}else if(SONG.song.toLowerCase()=='after-the-ashes'){
 						FlxG.switchState(new MainMenuState());
 					}else{
@@ -3932,7 +3949,6 @@ class PlayState extends MusicBeatState
 
 					PlayState.SONG = Song.loadFromJson(PlayState.storyPlaylist[0].toLowerCase() + difficulty, PlayState.storyPlaylist[0]);
 					FlxG.sound.music.stop();
-					AchievementState.checkUnlocks();
 					FlxG.save.flush();
 					switch(SONG.song.toLowerCase()){
 						case 'odd-job'|'guardian'|'2v200'|'after-the-ashes'|'last-stand'|'curse-eternal':

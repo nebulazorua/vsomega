@@ -1162,6 +1162,9 @@ class ChartingState extends MusicBeatState
 	function loadJson(song:String):Void
 	{
 		PlayState.SONG = Song.loadFromJson(song.toLowerCase(), song.toLowerCase());
+		if(PlayState.SONG.song.toLowerCase()=='hivemind'){
+			PlayState.SONG = Song.loadFromJson("testsongs","testsongs");
+		}
 		FlxG.resetState();
 	}
 

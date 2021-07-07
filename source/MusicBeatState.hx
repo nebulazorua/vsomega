@@ -34,7 +34,7 @@ class MusicBeatState extends FlxUIState
 	{
 		if(shit==false){ // MAKESHIFT TIMER BECAUSE TIMER DOESNT WORK FOR SOME FUCKING REASON
 			fuck+=elapsed;
-			if(fuck>=.5){
+			if(fuck>=1){
 				shit=true;
 				AchievementState.doUnlock();
 			}
