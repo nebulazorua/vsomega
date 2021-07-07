@@ -58,8 +58,12 @@ class UnlockingItemState extends MusicBeatState {
       add(shit);
     }
 
-    gotoNextItem();
-    unlocking=[];
+    if(unlocking.length>0){
+      gotoNextItem();
+      unlocking=[];
+    }else{
+      FlxG.switchState(new MainMenuState());
+    }
 
     super.create();
   }

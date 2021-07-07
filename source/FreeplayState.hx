@@ -44,15 +44,6 @@ class FreeplayState extends MusicBeatState
 		persistentDraw=true;
 		persistentUpdate=true;
 		controls.setKeyboardScheme(Solo,true);
-		var initSonglist = CoolUtil.coolTextFile(Paths.txt('freeplaySonglist'));
-
-		for (i in 0...initSonglist.length)
-		{
-			var data = initSonglist[i].split(" ");
-			var icon = data.splice(0,1)[0];
-			var week = data.splice(0,1)[0];
-			songs.push(new SongMetadata(data.join(" "), Std.parseInt(week), icon));
-		}
 
 
 			if (FlxG.sound.music != null)

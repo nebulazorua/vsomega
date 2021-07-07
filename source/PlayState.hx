@@ -3892,7 +3892,7 @@ class PlayState extends MusicBeatState
 						}else{
 							LoadingState.loadAndSwitchState(new CutsceneState(CoolUtil.coolTextFile(Paths.txt('father-time/fatherPOUNDED')),state));
 						}
-					}else if(UnlockingItemState.unlocking.length==0){
+					}else if(UnlockingItemState.unlocking.length!=0){
 						FlxG.switchState(new UnlockingItemState());
 					}else if(SONG.song.toLowerCase()=='after-the-ashes'){
 						FlxG.switchState(new MainMenuState());
