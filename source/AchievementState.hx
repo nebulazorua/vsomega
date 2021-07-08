@@ -49,6 +49,18 @@ class AchievementState extends MusicBeatState
     'Dishonor',
     "Salem"
   ];
+  public static var omegaSongs = [
+    "Mercenary",
+    "Odd-Job",
+    "Guardian",
+    "Last-Stand",
+    "Curse-Eternal",
+    "2v200",
+    "After-the-Ashes",
+    "Father-Time",
+    "Dishonor",
+    "Salem"
+  ];
 
   var selectionRing:FlxSprite;
   var medals:FlxTypedGroup<FlxSprite>;
@@ -150,7 +162,6 @@ class AchievementState extends MusicBeatState
   public static function checkUnlocks(){
       var len = unlockedMedals.length;
       var encounteredCameos:Array<String> = FlxG.save.data.cameos;
-      var unlockedSongs:Array<String> = FlxG.save.data.unlockedOmegaSongs;
       var finishedSongs:Array<String> = FlxG.save.data.finishedSongs;
       var perfectedSongs:Array<String> = FlxG.save.data.perfectedSongs;
       var flashySongs:Array<String> = FlxG.save.data.flashySongs;
@@ -175,6 +186,14 @@ class AchievementState extends MusicBeatState
             }
           }else if(finishedSongs.contains(song.toLowerCase())){
             unlocked=true;
+          }
+        }else if(data.condition=='finishomega'){
+          unlocked=true;
+          for(i in omegaSongs){
+            if(!finishedSongs.contains(i.toLowerCase())){
+              unlocked=false;
+              break;
+            }
           }
         }else if(data.condition.startsWith("fc")){
           var song = data.condition.replace("fc","");
@@ -215,6 +234,23 @@ class AchievementState extends MusicBeatState
         }
       }
 
+      var shit:Array<String>=[];
+      for(i in achievementData){
+        if(i.rarity!='hidden' && i.name!='Temporal Overlord' && i.rarity!='troll'){
+          shit.push(i.name);
+        }
+      }
+      var hundredPercent=true;
+      for(n in shit){
+        if(!unlockedMedals.contains(n)){
+          hundredPercent=false;
+        }
+      }
+      if(hundredPercent && !unlockedMedals.contains("Temporal Overlord")){
+        FlxG.save.data.unlocked.push("Temporal Overlord");
+        unlockedMedals.push("Temporal Overlord");
+        toUnlock.push("Temporal Overlord");
+      }
 
 
   }

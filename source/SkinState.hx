@@ -25,7 +25,7 @@ class SkinState extends MusicBeatState {
   public static var selectedSkin = 'bf';
   public static var skins = ["bf","naikaze","mikeeey","tgr","erderi","babyvase","bfside","bf-neb"];
   public static var skinNames = ["Boyfriend.XML","Naikaze","Mikeeey","TheGhostReaper","Erderi the Fox","Fun-sized Vase","Fun-sized Brightside","Nebby"];
-  public static var skinDescs = ["Funky lil' man","Literal god","Mikey with 3 e's","Crackhead Editing Energy","Epic cosplays tbh","Don't you throw stones in glass houses","Brigthbsied my beloved","Stupid Cocksleeve Zorua"];
+  public static var skinDescs = ["Funky lil' man","Literal god","Mikey with 3 e's","Look I got Omega mod early","Epic cosplays tbh","Don't you throw stones in glass houses","Brigthbsied my beloved","Stupid Cocksleeve Zorua"];
   public var unlockedSkins:Array<String> = ["bf"];
   public var unlockedNames:Array<String> = ["Boyfriend.XML"];
   public var unlockedDescs:Array<String> = ["Funky lil' man"];
