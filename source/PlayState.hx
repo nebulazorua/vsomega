@@ -3633,8 +3633,13 @@ class PlayState extends MusicBeatState
 							altAnim = '-alt';
 					}
 
-					if(modchart.susHeal || !daNote.isSustainNote)
-						health -= modchart.opponentHPDrain;
+					if(modchart.susHeal || !daNote.isSustainNote){}
+						var drain = modchart.opponentHPDrain;
+						if(ItemState.equipped.contains("resistance"))
+							drain-=drain*.5;
+						
+						health -= drain;
+					}
 
 					var anim = "";
 
