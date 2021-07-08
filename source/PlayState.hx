@@ -504,8 +504,16 @@ class PlayState extends MusicBeatState
 		          case 'pico' | 'blammed' | 'philly-nice':
                         {
 		                  curStage = 'philly';
-
-
+											if(currentOptions.picoShaders){
+												try{
+													var grayscale = new GrayscaleEffect();
+													grayscale.influence=1;
+													grayscale.update();
+													modchart.addCamEffect(grayscale);
+												}catch(e:Any){
+													trace(e);
+												}
+											}
 		                  var bg:FlxSprite = new FlxSprite(-100).loadGraphic(Paths.image('philly/sky'));
 		                  bg.scrollFactor.set(0.1, 0.1);
 		                  add(bg);
@@ -520,16 +528,18 @@ class PlayState extends MusicBeatState
 		                  var streetBehind:FlxSprite = new FlxSprite(-40, 50).loadGraphic(Paths.image('philly/behindTrain'));
 		                  add(streetBehind);
 
-	                          phillyTrain = new FlxSprite(2000, 120).loadGraphic(Paths.image('philly/train'));
-		                  add(phillyTrain);
-
-		                  trainSound = new FlxSound().loadEmbedded(Paths.sound('train_passes'));
-		                  FlxG.sound.list.add(trainSound);
 
 		                  // var cityLights:FlxSprite = new FlxSprite().loadGraphic(AssetPaths.win0.png);
 
 		                  var street:FlxSprite = new FlxSprite(-40, streetBehind.y).loadGraphic(Paths.image('philly/street'));
 	                          add(street);
+
+
+                      phillyTrain = new FlxSprite(2000, 170).loadGraphic(Paths.image('philly/train'));
+                add(phillyTrain);
+
+                trainSound = new FlxSound().loadEmbedded(Paths.sound('train_passes'));
+                FlxG.sound.list.add(trainSound);
 		          }
 		          case 'milf' | 'satin-panties' | 'high':
 		          {
@@ -1583,6 +1593,8 @@ class PlayState extends MusicBeatState
 				mika.visible=false;
 			}
 		}
+
+
 		add(boyfriend);
 
 		if(dad.curCharacter=='noke'){
@@ -1837,6 +1849,21 @@ class PlayState extends MusicBeatState
 		iconP2 = new HealthIcon((SONG.song.toLowerCase()=='after-the-ashes' && SONG.player2=='omega')?'omegafriendly':SONG.player2, false);
 		iconP2.y = healthBar.y - (iconP2.height / 2);
 		add(iconP2);
+
+		if(curStage=='philly'){
+			if(currentOptions.picoShaders){
+				try{
+					var grayscale = new GrayscaleEffect();
+					grayscale.influence=1;
+					grayscale.update();
+					iconP1.shader = grayscale.shader;
+					iconP2.shader = grayscale.shader;
+					healthBar.shader = grayscale.shader;
+				}catch(e:Any){
+					trace(e);
+				}
+			}
+		}
 
 		add(highComboTxt);
 		add(sicksTxt);
@@ -3050,9 +3077,9 @@ class PlayState extends MusicBeatState
 			salemBurnTicker+=elapsed;
 			if(salemBurnTicker>=.3){
 				salemBurnTicker-=.3;
-				if(health>.01){
+				/*if(health>.01){
 					health-=.01;
-				}
+				}*/
 			}
 		}
 

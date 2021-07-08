@@ -55,6 +55,7 @@ class OptionsMenu extends MusicBeatState
 			new ToggleOption("freeplayPreview","Songs preview in menus"),
 			new OptionCategory("Effects",[
 				new ToggleOption("picoCamshake","Week 3 cam shake"),
+				new ToggleOption("picoShaders","Week 3 shaders"),
 				new ToggleOption("senpaiShaders","Week 6 shaders"),
 				new ToggleOption("dishonorShaders","Dishonor shaders"),
 			])
