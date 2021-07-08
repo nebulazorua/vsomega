@@ -2133,14 +2133,6 @@ class PlayState extends MusicBeatState
 	var startTimer:FlxTimer;
 	var perfectMode:Bool = false;
 
-	public function grayscaleNotes(){
-
-	}
-
-	public function ungrayscaleNotes(){
-
-	}
-
 
 	function cumBreakNotes(){
 		var plrBrokenNotes=[];
@@ -2887,13 +2879,13 @@ class PlayState extends MusicBeatState
 		if(isGrayscale){
 			grayscaleDadStrums.alpha=FlxMath.lerp(grayscaleDadStrums.alpha,1,0.06);
 			grayscalePlayerStrums.alpha=FlxMath.lerp(grayscalePlayerStrums.alpha,1,0.06);
-			dadStrums.alpha=FlxMath.lerp(grayscaleDadStrums.alpha,0,0.06);
-			playerStrums.alpha=FlxMath.lerp(grayscaleDadStrums.alpha,0,0.06);
+			dadStrums.alpha=FlxMath.lerp(dadStrums.alpha,0,0.06);
+			playerStrums.alpha=FlxMath.lerp(playerStrums.alpha,0,0.06);
 		}else{
 			grayscaleDadStrums.alpha=FlxMath.lerp(grayscaleDadStrums.alpha,0,0.06);
 			grayscalePlayerStrums.alpha=FlxMath.lerp(grayscalePlayerStrums.alpha,0,0.06);
-			dadStrums.alpha=FlxMath.lerp(grayscaleDadStrums.alpha,1,0.06);
-			playerStrums.alpha=FlxMath.lerp(grayscaleDadStrums.alpha,1,0.06);
+			dadStrums.alpha=FlxMath.lerp(dadStrums.alpha,1,0.06);
+			playerStrums.alpha=FlxMath.lerp(playerStrums.alpha,1,0.06);
 		}
 		modchart.update(elapsed);
 
@@ -3637,7 +3629,7 @@ class PlayState extends MusicBeatState
 						var drain = modchart.opponentHPDrain;
 						if(ItemState.equipped.contains("resistance"))
 							drain-=drain*.5;
-						
+
 						health -= drain;
 					}
 
@@ -3841,6 +3833,7 @@ class PlayState extends MusicBeatState
 
 			grayscaleDadStrums.members[spr.ID].x = spr.x;
 			grayscaleDadStrums.members[spr.ID].y = spr.y;
+			grayscaleDadStrums.members[spr.ID].angle = spr.angle;
 			grayscaleDadStrums.members[spr.ID].offset.set(spr.offset.x,spr.offset.y);
 		});
 
@@ -4436,6 +4429,7 @@ class PlayState extends MusicBeatState
 
 					grayscalePlayerStrums.members[spr.ID].x = spr.x;
 					grayscalePlayerStrums.members[spr.ID].y = spr.y;
+					grayscalePlayerStrums.members[spr.ID].angle = spr.angle;
 					grayscalePlayerStrums.members[spr.ID].offset.set(spr.offset.x,spr.offset.y);
 			});
 
