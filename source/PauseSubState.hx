@@ -17,7 +17,7 @@ class PauseSubState extends MusicBeatSubstate
 {
 	var grpMenuShit:FlxTypedGroup<Alphabet>;
 
-	var menuItems:Array<String> = ['Resume', 'Restart Song', 'Exit to menu'];
+	var menuItems:Array<String> = ['Resume', 'Restart Song', 'Restart Song with Cutscene', 'Exit to menu'];
 	var curSelected:Int = 0;
 
 	var pauseMusic:FlxSound;
@@ -107,18 +107,22 @@ class PauseSubState extends MusicBeatSubstate
 					close();
 				case "Restart Song":
 					FlxG.resetState();
+				case "Restart Song with Cutscene":
+					PlayState.didIntro=false;
+					PlayState.doIntro=true;
+					FlxG.resetState();
 				case "Exit to menu":
 					PlayState.didIntro=false;
-					FlxG.switchState(new MainMenuState());
+					var state:MusicBeatState = new MainMenuState();
+					if(UnlockingItemState.unlocking.length>0){
+						state = new UnlockingItemState();
+					}
+
+					FlxG.switchState(state);
 
 			}
 		}
 
-		if (FlxG.keys.justPressed.J)
-		{
-			// for reference later!
-			// PlayerSettings.player1.controls.replaceBinding(Control.LEFT, Keys, FlxKey.J, null);
-		}
 	}
 
 	override function destroy()

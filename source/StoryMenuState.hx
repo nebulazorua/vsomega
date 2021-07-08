@@ -118,9 +118,12 @@ class StoryMenuState extends MusicBeatState
 			if(encounterableCameos.length==0 || FlxG.save.data.cameos.contains("Oxidation")){
 				encounterableCameos.push("Oxidation");
 			}
-			trace(encounterableCameos);
 		}
 
+		if(FlxG.save.data.cameos.contains("Oxidation") && encounterableCameos.length>1){
+			baseCameoChance=0;
+		}
+		
 		if (FlxG.sound.music != null)
 		{
 			if (!FlxG.sound.music.playing)

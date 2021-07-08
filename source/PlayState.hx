@@ -61,6 +61,8 @@ class PlayState extends MusicBeatState
 	public static var curStage:String = '';
 	public static var SONG:SwagSong;
 	public static var didIntro:Bool = false;
+	public static var doIntro:Bool=false;
+
 	public static var isStoryMode:Bool = false;
 	public static var storyWeek:Int = 0;
 	public static var storyPlaylist:Array<String> = [];
@@ -1876,7 +1878,7 @@ class PlayState extends MusicBeatState
 		startingSong = true;
 
 
-		if (isStoryMode && !didIntro)
+		if ((isStoryMode || doIntro) && !didIntro)
 		{
 			didIntro=true;
 			switch (curSong.toLowerCase())
@@ -1937,7 +1939,7 @@ class PlayState extends MusicBeatState
 				default:
 					startCountdown();
 			}
-		}else if(isStoryMode && didIntro && SONG.song.toLowerCase()=='last-stand' && blueballs>0){
+		}else if((isStoryMode || doIntro) && didIntro && SONG.song.toLowerCase()=='last-stand' && blueballs>0){
 			var shit = CoolUtil.coolTextFile(Paths.txt('last-stand/deathsdialogue'));
 			var dialogue = [];
 			for(idx in 0...shit.length){
