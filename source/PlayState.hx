@@ -3413,6 +3413,9 @@ class PlayState extends MusicBeatState
 					FlxG.sound.play(Paths.music('gameOverEnd-pixel'));
 				else
 					FlxG.sound.play(Paths.music('gameOverEnd'));
+
+				score-=12500;
+				hitNotes-=6;
 				burnTimer=0;
 				beenSavedByResistance=true;
 				health = 1;
@@ -4053,7 +4056,7 @@ class PlayState extends MusicBeatState
 			if(ItemState.equipped.contains("flippy")){
 				switch(daRating){
 					case 'bad' | 'shit':
-						beenSavedByResistance = false;
+						beenSavedByResistance = true;
 						health = -2;
 					case 'good':
 						health -= .5;
