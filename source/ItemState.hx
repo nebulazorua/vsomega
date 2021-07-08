@@ -129,9 +129,9 @@ class ItemState extends MusicBeatState
 	];
 	public static var itemDescs:Map<String,String> = [
 		"sword" =>  "You gain 50% more health when hitting notes.",
-		"arrow" => "You get revived with 50% HP the first time you die, and you take 50% less \"physical\" damage",
+		"arrow" => "You get revived with 50% HP the first time you die, and you take 50% less \"physical\" damage.",
 		"twat" => "When you get below 90% accuracy, you die.",
-		"depressed" => "Missing deals 50% less damage.",
+		"depressed" => "Missing deals 50% less damage, and you take 50% less \"magical\" damage.",
 		"flippy" => "You take damage when getting goods, and die on a bad, shit or miss.",
 		"drunk" => "Every song has a modchart akin to You Are a Fool's"
 	];

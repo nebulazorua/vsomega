@@ -3625,7 +3625,7 @@ class PlayState extends MusicBeatState
 							altAnim = '-alt';
 					}
 
-					if(modchart.susHeal || !daNote.isSustainNote){}
+					if(modchart.susHeal || !daNote.isSustainNote){
 						var drain = modchart.opponentHPDrain;
 						if(ItemState.equipped.contains("resistance"))
 							drain-=drain*.5;
@@ -3655,7 +3655,10 @@ class PlayState extends MusicBeatState
 							if(goldOverlayTween!=null)
 								goldOverlayTween.cancel();
 							goldOverlayTween = FlxTween.tween(goldOverlay, {alpha: 0}, .25);
-							health -= .25;
+							if(ItemState.equipped.contains("depressed"))
+								health -= .125;
+							else
+								health -= .25;
 					}
 
 					if(daNote.noteType==4){
@@ -3671,13 +3674,20 @@ class PlayState extends MusicBeatState
 							boyfriend.playAnim("dischargeScared",true);
 							gf.playAnim("scared",true);
 							discharging=true;
-							dischargeHP=health;
+							if(ItemState.equipped.contains("depressed"))
+								dischargeHP=health/2;
+							else
+								dischargeHP=health;
+
 							camGame.shake(.01,.4);
 							camHUD.shake(.01,.4);
 							FlxG.sound.play(Paths.sound('discharge'), 1);
 						});
 					}else if (daNote.noteType==6){
-						health-=.015;
+						if(ItemState.equipped.contains("depressed"))
+							health-=.01;
+						else
+							health-=.02;
 					}else if (daNote.noteType==7){
 						health=.01;
 					}
