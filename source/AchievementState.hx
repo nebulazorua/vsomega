@@ -328,7 +328,7 @@ class AchievementState extends MusicBeatState
       }else{
         bigMedal.loadGraphic(Paths.image('sex_mark'));
       }
-      if(data.rarity!='hidden'){
+      if(data.rarity!='hidden' || unlockedMedals.contains(data.name)){
         badgeDesc.text = data.desc;
         badgeName.text = data.name;
       }else{
