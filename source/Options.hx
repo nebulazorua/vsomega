@@ -136,7 +136,7 @@ class Options
 	public var dishonorShaders:Bool = true;
 	public var controls:Array<FlxKey> = [FlxKey.A,FlxKey.S,FlxKey.K,FlxKey.L,FlxKey.R];
 	public var controlsSixK:Array<FlxKey> = [FlxKey.A,FlxKey.S,FlxKey.D,FlxKey.J,FlxKey.K,FlxKey.L,FlxKey.R];
-	public var ghosttapping:Bool = false;
+	public var ghosttapping:Bool = true;
 	public var failForMissing:Bool = false;
 	public var loadModcharts:Bool = true;
 	public var pauseHoldAnims:Bool = true;

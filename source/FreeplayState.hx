@@ -287,10 +287,11 @@ class FreeplayState extends MusicBeatState
 	function changeDiff(change:Int = 0)
 	{
 		curDifficulty += change;
-
+		var max = 2;
+		if(FlxG.save.data.canGlitch) max=3;
 		if (curDifficulty < 0)
-			curDifficulty = 3;
-		if (curDifficulty > 3)
+			curDifficulty = max;
+		if (curDifficulty > max)
 			curDifficulty = 0;
 
 		#if !switch

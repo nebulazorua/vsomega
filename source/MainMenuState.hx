@@ -92,8 +92,6 @@ class MainMenuState extends MusicBeatState
 		add(iconSpr);
 
 		if(FlxG.save.data.daddyTimeTime){
-			FlxG.save.data.daddyTimeTime=false;
-			FlxG.save.data.foundFatherTime=true;
 			FlxG.mouse.visible=true;
 			var paper:FlxSprite = new FlxSprite(0,0).loadGraphic(Paths.image("paperBG"));
 			paper.scrollFactor.set(.01,.01);
@@ -284,6 +282,7 @@ class MainMenuState extends MusicBeatState
 
 		if(fatherTimeButton!=null){
 			if(FlxG.mouse.overlaps(fatherTimeButton) && FlxG.mouse.justPressed){
+				FlxG.save.data.daddyTimeTime=false;
 				PlayState.blueballs=0;
 				LoadingState.loadAndSwitchState(new CutsceneState(CoolUtil.coolTextFile(Paths.txt('father-time/found')),new PlayState()));
 			}

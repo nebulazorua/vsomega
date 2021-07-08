@@ -129,7 +129,7 @@ class DialogueBox extends FlxSpriteGroup
 		portraitLeft.visible = false;
 
 		portraitRight = new FlxSprite(Std.int(FlxG.width/2), 40);
-		if(PlayState.SONG.song.toLowerCase()=='thorns' || PlayState.SONG.song.toLowerCase()=='roses' || PlayState.SONG.song.toLowerCase()=='senpai' || PlayState.SONG.song.toLowerCase()=='2v200')
+		if(PlayState.SONG.song.toLowerCase()=='thorns' || PlayState.SONG.song.toLowerCase()=='roses' || PlayState.SONG.song.toLowerCase()=='senpai')
 		{
 			portraitRight.x = 0;
 			portraitRight.frames = Paths.getSparrowAtlas('weeb/bfPortrait');

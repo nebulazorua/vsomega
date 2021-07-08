@@ -265,7 +265,7 @@ class ItemState extends MusicBeatState
 		var conditions = [
       FlxG.save.data.omegaGoodEnding,
       FlxG.save.data.getResistance,
-      FlxG.save.data.becomeATwat,
+      FlxG.save.data.beATwat,
       FlxG.save.data.omegaBadEnding,
       FlxG.save.data.drunk,
 			true

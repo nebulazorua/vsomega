@@ -1439,7 +1439,7 @@ class PlayState extends MusicBeatState
 				boyfriend = new Boyfriend(770, 450, SONG.player1);
 			}
 		}else{
-			boyfriend = new Boyfriend(770, 450, SONG.player1);
+			boyfriend = new Boyfriend(770, 450, 'bf-pixel');
 		}
 
 
@@ -3841,7 +3841,7 @@ class PlayState extends MusicBeatState
 			#end
 		}
 		blueballs=0;
-		if(accuracy>=.9){
+		if(accuracy>=.9 && !FlxG.save.data.beATwat){
 			FlxG.save.data.beATwat=true;
 			UnlockingItemState.unlocking.push('twatmode');
 		}
