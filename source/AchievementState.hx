@@ -97,7 +97,7 @@ class AchievementState extends MusicBeatState
 
     {name: "Temporal Overlord", desc: "Your story truly ends here.", rarity: "legendary", condition: "custom"},
     {name: "Temporal Expert", desc: "Strike down all of your opponents without even a single mistake.", rarity: "legendary", condition: "fcall"},
-    {name: "Gobbledygook", desc: "Even in the face of a broken, lethal challenge, come out on top.", rarity: "legendary", condition: "custom"},
+    {name: "Gobbledygook", desc: "Even in the face of a broken, lethal challenge, come out on top.", rarity: "legendary", condition: "glitchfcall"},
     {name: "Dance of Death", desc: "Defeat the swordsman without so much as a scratch on you.", rarity: "legendary", condition: "fcLast-Stand"},
     {name: "Two-Man Army", desc: "Crush the royal fleet in perfect unison.", rarity: "legendary", condition: "fc2v200"},
     {name: "All in the Family", desc: "Sing this final song with immaculate skill and prove your worth once and for all.", rarity: "legendary", condition: "fcFather-Time"},
@@ -165,6 +165,8 @@ class AchievementState extends MusicBeatState
       var finishedSongs:Array<String> = FlxG.save.data.finishedSongs;
       var perfectedSongs:Array<String> = FlxG.save.data.perfectedSongs;
       var flashySongs:Array<String> = FlxG.save.data.flashySongs;
+      var glitchSongs:Array<String> = FlxG.save.data.glitchSongs;
+
 
       for(idx in 0...achievementData.length){
         var data = achievementData[idx];
@@ -215,13 +217,22 @@ class AchievementState extends MusicBeatState
         if(data.condition=='flashyfcall'){
           unlocked=true;
           for(shit in songs){
-            if(!FlxG.save.data.flashySongs.contains(shit.toLowerCase())){
+            if(!flashySongs.contains(shit.toLowerCase())){
               unlocked=false;
               break;
             }
           }
         }
 
+        if(data.condition=='glitchfcall'){
+          unlocked=true;
+          for(shit in songs){
+            if(!glitchSongs.contains(shit.toLowerCase())){
+              unlocked=false;
+              break;
+            }
+          }
+        }
         if(FlxG.save.data.unlocked.contains(data.name))
           unlocked=true;
 

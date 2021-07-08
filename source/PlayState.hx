@@ -3885,6 +3885,9 @@ class PlayState extends MusicBeatState
 		if(ItemState.equipped.contains("twat") && isHard && !FlxG.save.data.flashySongs.contains(SONG.song.toLowerCase()) ){
 			FlxG.save.data.flashySongs.push(SONG.song.toLowerCase());
 		}
+		if(storyDifficulty==3 && !FlxG.save.data.glitchSongs.contains(SONG.song.toLowerCase()) ){
+			FlxG.save.data.glitchSongs.push(SONG.song.toLowerCase());
+		}
 		if(songScore==69420){
 			AchievementState.toUnlock.push("LOL");
 			FlxG.save.data.unlocked.push("LOL");

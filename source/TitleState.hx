@@ -57,6 +57,9 @@ class TitleState extends MusicBeatState
 		if(FlxG.save.data.flashySongs==null)
 			FlxG.save.data.flashySongs=[];
 
+		if(FlxG.save.data.glitchSongs==null)
+			FlxG.save.data.glitchSongs=[];
+
 		if(FlxG.save.data.unlockedOmegaSongs==null)
 			FlxG.save.data.unlockedOmegaSongs=[];
 
