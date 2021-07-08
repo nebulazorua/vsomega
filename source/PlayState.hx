@@ -518,7 +518,7 @@ class PlayState extends MusicBeatState
 		                  var streetBehind:FlxSprite = new FlxSprite(-40, 50).loadGraphic(Paths.image('philly/behindTrain'));
 		                  add(streetBehind);
 
-	                          phillyTrain = new FlxSprite(2000, 360).loadGraphic(Paths.image('philly/train'));
+	                          phillyTrain = new FlxSprite(2000, 120).loadGraphic(Paths.image('philly/train'));
 		                  add(phillyTrain);
 
 		                  trainSound = new FlxSound().loadEmbedded(Paths.sound('train_passes'));

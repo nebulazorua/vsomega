@@ -23,7 +23,7 @@ class FreeplayState extends MusicBeatState
 	var trackedAssets:Array<Dynamic> = [];
 	public static var unlockables=['Last-Stand','Curse-Eternal','2v200','After-the-Ashes','Father-Time','Dishonor','Hivemind'];
 	public static var unlockableChars = ['angry-omega','mika','army','omega','father','king','babyvase'];
-	var songs:Array<SongMetadata> = [];
+	var songs:Array<SongMetadata> = [new SongMetadata("prelude",-1,"gf")];
 
 	var selector:FlxText;
 	var curSelected:Int = 0;
@@ -288,11 +288,19 @@ class FreeplayState extends MusicBeatState
 	{
 		curDifficulty += change;
 		var max = 2;
+		var min = 0;
 		if(FlxG.save.data.canGlitch) max=3;
-		if (curDifficulty < 0)
+		if(songs[curSelected].songName=="Dishonor"){
+			max=1;
+			min=1;
+		}else if(songs[curSelected].songName=="Hivemind"){
+			min=1;
+			max=2;
+		}
+		if (curDifficulty < min)
 			curDifficulty = max;
 		if (curDifficulty > max)
-			curDifficulty = 0;
+			curDifficulty = min;
 
 		#if !switch
 		intendedScore = Highscore.getScore(songs[curSelected].songName, curDifficulty);
@@ -305,7 +313,7 @@ class FreeplayState extends MusicBeatState
 			case 1:
 				diffText.text = 'NORMAL';
 			case 2:
-				diffText.text = "HARD";
+				diffText.text = songs[curSelected].songName=='Hivemind'?"ALPHA":"HARD";
 			case 3:
 				diffText.text = "GLITCH";
 		}
@@ -326,6 +334,8 @@ class FreeplayState extends MusicBeatState
 			curSelected = songs.length - 1;
 		if (curSelected >= songs.length)
 			curSelected = 0;
+
+		changeDiff();
 
 		// selector.y = (70 * curSelected) + 30;
 
