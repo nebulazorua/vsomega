@@ -3061,7 +3061,12 @@ class PlayState extends MusicBeatState
 			if(burnTimer<0)burnTimer=0;
 			if(burnTicker>=burnTicks){
 				burnTicker-=burnTicks;
-				health-=.05;
+				if(ItemState.equipped.contains("depressed")){
+					health-=.025;
+				}else{
+					health-=.05;
+				}
+
 			}
 		}
 
@@ -3414,7 +3419,7 @@ class PlayState extends MusicBeatState
 				else
 					FlxG.sound.play(Paths.music('gameOverEnd'));
 
-				score-=12500;
+				songScore-=12500;
 				hitNotes-=6;
 				burnTimer=0;
 				beenSavedByResistance=true;
@@ -3688,9 +3693,9 @@ class PlayState extends MusicBeatState
 						});
 					}else if (daNote.noteType==6){
 						if(ItemState.equipped.contains("depressed"))
-							health-=.01;
+							health-=.0075;
 						else
-							health-=.02;
+							health-=.015;
 					}else if (daNote.noteType==7){
 						health=.01;
 					}
