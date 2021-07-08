@@ -3917,17 +3917,11 @@ class PlayState extends MusicBeatState
 					}else{
 						FlxG.switchState(new StoryMenuState());
 					}
-					//unloadAssets();
 
-
-
-
-					// if ()
 					StoryMenuState.weekUnlocked[Std.int(Math.min(storyWeek + 1, StoryMenuState.weekUnlocked.length - 1))] = true;
 
 					if (SONG.validScore)
 					{
-						//NGio.unlockMedal(60961);
 						Highscore.saveWeekScore(storyWeek, campaignScore, storyDifficulty);
 					}
 
@@ -3984,13 +3978,30 @@ class PlayState extends MusicBeatState
 		}
 		else
 		{
-			AchievementState.checkUnlocks();
-			trace('WENT BACK TO FREEPLAY??');
+			if(SONG.song.toLowerCase()=='father-time'){
+				var state:MusicBeatState = new MainMenuState();
+				if(!FlxG.save.data.canGlitch){
+					UnlockingItemState.unlocking.push('glitchdiff');
+					state = new UnlockingItemState();
+					FlxG.save.data.canGlitch=true;
+				}
+			}
 			var state:MusicBeatState = new FreeplayState();
 			if(UnlockingItemState.unlocking.length>0){
 				state = new UnlockingItemState();
 			}
-			FlxG.switchState(state);
+			if(doIntro && SONG.song.toLowerCase()=='father-time'){
+				AchievementState.checkUnlocks();
+				if(SkinState.selectedSkin=='bfside'){
+					LoadingState.loadAndSwitchState(new CutsceneState(CoolUtil.coolTextFile(Paths.txt('father-time/fatherPOUNDED')),new VideoState('assets/videos/DO NOT DELETE OR GAME WILL CRASH/YouFoundSomethingYouShouldntHave.webm', state)));
+				}else{
+					LoadingState.loadAndSwitchState(new CutsceneState(CoolUtil.coolTextFile(Paths.txt('father-time/fatherPOUNDED')),state));
+				}
+			}else{
+				AchievementState.checkUnlocks();
+				trace('WENT BACK TO FREEPLAY??');
+				FlxG.switchState(state);
+			}
 		}
 
 	}

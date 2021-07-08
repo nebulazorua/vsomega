@@ -121,9 +121,9 @@ class StoryMenuState extends MusicBeatState
 		}
 
 		if(FlxG.save.data.cameos.contains("Oxidation") && encounterableCameos.length>1){
-			baseCameoChance=0;
+			baseCameoChance=5;
 		}
-		
+
 		if (FlxG.sound.music != null)
 		{
 			if (!FlxG.sound.music.playing)
@@ -507,7 +507,7 @@ class StoryMenuState extends MusicBeatState
 			new FlxTimer().start(1, function(tmr:FlxTimer)
 			{
 				if(curWeek==7 && !hasCameo){
-					if(FlxG.save.data.omegaGoodEnding || FlxG.save.data.omegaBadEnding)
+					if(FlxG.save.data.unlockedOmegaSongs.contains("guardian"))
 						LoadingState.loadAndSwitchState(new CutsceneState(CoolUtil.coolTextFile(Paths.txt('mercenary/playedbefore')),new PlayState()));
 					else
 						LoadingState.loadAndSwitchState(new CutsceneState(CoolUtil.coolTextFile(Paths.txt('mercenary/pre')),new PlayState()));
