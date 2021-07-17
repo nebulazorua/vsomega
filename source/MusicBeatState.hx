@@ -36,6 +36,8 @@ class MusicBeatState extends FlxUIState
 			fuck+=elapsed;
 			if(fuck>=1){
 				shit=true;
+				persistentDraw=true;
+				persistentUpdate=true;
 				AchievementState.doUnlock();
 			}
 		}

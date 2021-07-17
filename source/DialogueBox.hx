@@ -113,7 +113,7 @@ class DialogueBox extends FlxSpriteGroup
 
 		portraitLeft = new FlxSprite(0, 40);
 
-		if(PlayState.SONG.song.toLowerCase()=='thorns' || PlayState.SONG.song.toLowerCase()=='roses' || PlayState.SONG.song.toLowerCase()=='senpai' || PlayState.SONG.song.toLowerCase()=='2v200')
+		if(PlayState.SONG.song.toLowerCase()=='thorns' || PlayState.SONG.song.toLowerCase()=='roses' || PlayState.SONG.song.toLowerCase()=='senpai')
 		{
 			portraitLeft.frames = Paths.getSparrowAtlas('weeb/senpaiPortrait');
 			portraitLeft.animation.addByPrefix('enter', 'Senpai Portrait Enter', 24, false);

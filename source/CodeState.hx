@@ -40,6 +40,8 @@ class CodeState extends MusicBeatState
     {code: "mikeeey",reward:"skin:mikeeey"},
     {code: "tgr",reward:"skin:tgr"},
     {code: "erderithefox",reward:"skin:erderi"},
+    {code: "deadlyduet",reward:"song:Last-Stand-Beta"}
+    //{code: "cocksleeve",reward:"skin:bf-neb"}, // idk i need a notif for it lmao
     //{code: "acai28",reward:"skin:acai28"},
   ];
 
@@ -95,7 +97,19 @@ class CodeState extends MusicBeatState
         var exists=false;
         for(codeData in codes){
           if(text==codeData.code){
-            if(codeData.reward.startsWith("skin:")){
+            if(codeData.reward.startsWith("song:")){
+              var song = codeData.reward.substring(5,codeData.reward.length);
+              var sound = 'GeneralUnlock';
+              trace(song);
+              if(!FlxG.save.data.unlockedOmegaSongs.contains(song)){
+                FlxG.save.data.unlockedOmegaSongs.push(song);
+              }else{
+                sound='alreadyHave';
+              }
+              notifSound.loadEmbedded(Paths.sound('${sound}'), false, true);
+              notifSound.volume = 1;
+              notifSound.play(true,0);
+            }else if(codeData.reward.startsWith("skin:")){
               var skin = codeData.reward.substring(5,codeData.reward.length);
               var sound = 'GeneralUnlock';
               switch(skin){

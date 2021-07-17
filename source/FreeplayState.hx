@@ -21,8 +21,8 @@ using StringTools;
 class FreeplayState extends MusicBeatState
 {
 	var trackedAssets:Array<Dynamic> = [];
-	public static var unlockables=['Last-Stand','Curse-Eternal','2v200','After-the-Ashes','Father-Time','Dishonor','Hivemind'];
-	public static var unlockableChars = ['angry-omega','mika','army','omega','father','king','babyvase'];
+	public static var unlockables=['Last-Stand','Curse-Eternal','2v200','After-the-Ashes','Father-Time','Dishonor','Hivemind','Last-Stand-Beta'];
+	public static var unlockableChars = ['angry-omega','mika','army','omega','father','king','thehivemind','angry-omega'];
 	var songs:Array<SongMetadata> = [new SongMetadata("prelude",-1,"gf")];
 
 	var selector:FlxText;
@@ -293,6 +293,9 @@ class FreeplayState extends MusicBeatState
 		if(songs[curSelected].songName=="Dishonor"){
 			max=1;
 			min=1;
+		}else if(songs[curSelected].songName=="Father-Time"){
+			min=2;
+			max=2;
 		}else if(songs[curSelected].songName=="Hivemind"){
 			min=1;
 			max=2;

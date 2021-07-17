@@ -39,6 +39,19 @@ class GrayscaleEffect {
 
 }
 
+class ChromaticAbberationEffect {
+  public var shader:ChromaticAbberationShader = new ChromaticAbberationShader();
+  public var strength:Float = 0;
+  public function new(){
+    shader.distortion.value = [0];
+  }
+
+  public function update(){
+    shader.distortion.value[0]=strength;
+  }
+
+}
+
 class GrayscaleShader extends FlxShader
 {
   @:glFragmentSource('
@@ -53,6 +66,47 @@ class GrayscaleShader extends FlxShader
     {
       vec4 color = flixel_texture2D(bitmap,openfl_TextureCoordv);
     	gl_FragColor = vec4(grayscale(color),color.a);
+    }
+  ')
+  public function new()
+  {
+    super();
+  }
+}
+
+class ChromaticAbberationShader extends FlxShader // https://www.shadertoy.com/view/wsdBWM
+{
+  @:glFragmentSource('
+    #pragma header
+    uniform float distortion;
+    vec2 PincushionDistortion(in vec2 uv, float strength)
+    {
+    	vec2 st = uv - vec2(0.5);
+        float uva = atan(st.x, st.y);
+        float uvd = sqrt(dot(st, st));
+        float distortAmount = strength * (-1.0);
+        uvd = uvd * (1.0 + distortAmount * uvd * uvd);
+        vec2 distortedUVs = vec2(0.5) + vec2(sin(uva), cos(uva)) * uvd;
+        return distortedUVs;
+    }
+
+    vec4 ChromaticAbberation(sampler2D tex, in vec2 uv)
+    {
+    	float rChannel = flixel_texture2D(tex, PincushionDistortion(uv, 0.3 * distortion)).r;
+      float gChannel = flixel_texture2D(tex, PincushionDistortion(uv, 0.15 * distortion)).g;
+      float bChannel = flixel_texture2D(tex, PincushionDistortion(uv, 0.075 * distortion)).b;
+      float aChannel = flixel_texture2D(tex, PincushionDistortion(uv, 0)).a;
+      vec4 retColor = vec4(rChannel, gChannel, bChannel, aChannel);
+      return retColor;
+    }
+
+    void main()
+    {
+      // Time varying pixel color
+      vec4 col = ChromaticAbberation(bitmap,openfl_TextureCoordv);
+
+      // Output to screen
+      gl_FragColor = col;
     }
   ')
   public function new()

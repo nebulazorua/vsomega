@@ -63,6 +63,7 @@ class ChartingState extends MusicBeatState
 	var dummyArrow:FlxSprite;
 	var useHitSounds = false;
 	var curRenderedNotes:FlxTypedGroup<Note>;
+	var noteIcons:FlxTypedGroup<HealthIcon>;
 	var curRenderedSustains:FlxTypedGroup<Note>;
 	var gridBlackLine:FlxSprite;
 	var gridBG:FlxSprite;
@@ -110,6 +111,7 @@ class ChartingState extends MusicBeatState
 
 		curRenderedNotes = new FlxTypedGroup<Note>();
 		curRenderedSustains = new FlxTypedGroup<Note>();
+		noteIcons = new FlxTypedGroup<HealthIcon>();
 
 		if (PlayState.SONG != null)
 			_song = PlayState.SONG;
@@ -171,6 +173,7 @@ class ChartingState extends MusicBeatState
 		addNoteUI();
 
 		add(curRenderedNotes);
+		add(noteIcons);
 		add(curRenderedSustains);
 		curSection = 0;
 		updateSectionUI();
@@ -568,14 +571,6 @@ class ChartingState extends MusicBeatState
 		}
 
 		curRenderedNotes.forEach(function(note:Note){
-			switch(note.whoSingsShit){
-				case '0':
-					note.color = 0xFFFFFF;
-				case '1':
-					note.color = FlxColor.PURPLE;
-				case '2':
-					note.color = FlxColor.CYAN;
-			}
 			if(note.strumTime<=Conductor.songPosition){
 				if(!note.wasGoodHit){
 					note.wasGoodHit=true;
@@ -836,7 +831,7 @@ class ChartingState extends MusicBeatState
 		{
 			var strum = note[0] + Conductor.stepCrochet * (_song.notes[daSec].lengthInSteps * sectionNum);
 
-			var copiedNote:Array<Dynamic> = [strum, note[1], note[2]];
+			var copiedNote:Array<Dynamic> = [strum, note[1], note[2], note[3], note[4], note[5], note[6], note[7], note[8]];
 			_song.notes[daSec].sectionNotes.push(copiedNote);
 		}
 
@@ -893,6 +888,11 @@ class ChartingState extends MusicBeatState
 			curRenderedSustains.remove(curRenderedSustains.members[0], true);
 		}
 
+		while (noteIcons.members.length>0)
+		{
+			noteIcons.remove(noteIcons.members[0],true);
+		}
+
 		var sectionInfo:Array<Dynamic> = _song.notes[curSection].sectionNotes;
 
 		if (_song.notes[curSection].changeBPM && _song.notes[curSection].bpm > 0)
@@ -910,20 +910,6 @@ class ChartingState extends MusicBeatState
 			Conductor.changeBPM(daBPM);
 		}
 
-		/* // PORT BULLSHIT, INCASE THERE'S NO SUSTAIN DATA FOR A NOTE
-			for (sec in 0..._song.notes.length)
-			{
-				for (notesse in 0..._song.notes[sec].sectionNotes.length)
-				{
-					if (_song.notes[sec].sectionNotes[notesse][2] == null)
-					{
-						trace('SUS NULL');
-						_song.notes[sec].sectionNotes[notesse][2] = 0;
-					}
-				}
-			}
-		 */
-
 		 var oldNote:Note;
 		 for (i in sectionInfo)
  		{
@@ -932,6 +918,7 @@ class ChartingState extends MusicBeatState
  			var daSus = i[2];
 
  			var note:Note = new Note(daStrumTime, daNoteInfo % noteAmount, null, false, false, i[3], i[4], i[5], i[6], i[7], i[8]);
+
  			note.rawNoteData = daNoteInfo;
  			note.sustainLength = daSus;
  			note.beingCharted = true;
@@ -946,6 +933,22 @@ class ChartingState extends MusicBeatState
  			note.y = getYfromStrum((daStrumTime - sectionStartTime()) % (Conductor.stepCrochet * _song.notes[curSection].lengthInSteps));
 
  			curRenderedNotes.add(note);
+			var indicator:HealthIcon;
+			if(i[5]!='bf' && i[5]!=0){
+				if(i[5]==1 || i[5]=='omega'){
+					indicator = new HealthIcon('omega');
+				}else{
+					indicator = new HealthIcon('omegabf');
+				}
+				indicator.alpha = .9;
+				indicator.setGraphicSize(GRID_SIZE,GRID_SIZE);
+				indicator.updateHitbox();
+				indicator.scale.x *= .9;
+				indicator.scale.y *= .9;
+				indicator.note = note;
+				noteIcons.add(indicator);
+			}
+
 
  			if (daSus > 0)
  			{

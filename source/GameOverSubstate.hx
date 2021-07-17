@@ -6,7 +6,10 @@ import flixel.FlxSubState;
 import flixel.math.FlxPoint;
 import flixel.util.FlxColor;
 import flixel.util.FlxTimer;
+import flixel.math.FlxMath;
 using StringTools;
+import openfl.filters.ShaderFilter;
+import Shaders;
 
 class GameOverSubstate extends MusicBeatSubstate
 {
@@ -14,10 +17,14 @@ class GameOverSubstate extends MusicBeatSubstate
 	var camFollow:FlxObject;
 
 	var stageSuffix:String = "";
-
-	public function new(x:Float, y:Float, ?bfVer:String='bf')
+	var chromaticAbberation:ChromaticAbberationEffect;
+	public function new(x:Float, y:Float, ?bfVer:String='bf', ?glitchNoteDeath:Bool=false)
 	{
 		PlayState.currentPState.modchart.clearCamEffects();
+		if(glitchNoteDeath){
+			chromaticAbberation = new ChromaticAbberationEffect();
+			FlxG.camera.setFilters([new ShaderFilter(chromaticAbberation.shader)]);
+		}
 		var daStage = PlayState.curStage;
 		var daBf:String = '';
 		switch (daStage)
@@ -70,8 +77,6 @@ class GameOverSubstate extends MusicBeatSubstate
 					FlxG.sound.play(Paths.sound('NotHowYouDoIt'));
 				}
 				FlxG.sound.play(Paths.sound('fnf_loss_sfx' + stageSuffix));
-
-
 		}
 
 
@@ -89,6 +94,10 @@ class GameOverSubstate extends MusicBeatSubstate
 	{
 		super.update(elapsed);
 
+		if(chromaticAbberation!=null){
+			chromaticAbberation.strength = FlxMath.lerp(chromaticAbberation.strength,1,.06);
+			chromaticAbberation.update();
+		}
 		if (controls.ACCEPT && (bf.curCharacter!='bf-FUCKING-DIES' || FlxG.save.data.seenLastStandOmegaGameOver))
 		{
 			endBullshit();

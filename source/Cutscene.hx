@@ -137,6 +137,7 @@ class Cutscene extends FlxSpriteGroup {
           break;
         }
       }
+
       if(newCutsceneData!=null){
         resetCutscene(newCutsceneData);
         return;
@@ -214,7 +215,6 @@ class Cutscene extends FlxSpriteGroup {
   			PlayState.storyWeek = week;
       }else if(action.startsWith('setstory:')){
         var names = action.replace("setstory:","").split(",");
-        //PlayState.storyPlaylist.push(name);
         var name = names[0];
         var difficulty:String = "";
 
@@ -223,6 +223,9 @@ class Cutscene extends FlxSpriteGroup {
 
 				if (PlayState.storyDifficulty == 2)
 					difficulty = '-hard';
+
+        if (PlayState.storyDifficulty == 3)
+					difficulty = '-glitch';
 
         PlayState.SONG = Song.loadFromJson(name + difficulty, name);
         FlxG.sound.music.stop();

@@ -323,7 +323,7 @@ class StoryMenuState extends MusicBeatState
 		cameoShit.add(marcant);
 
 
-		var cumfart = ["Oxidation","Fragmented-Surreality","New-Retro","No-Arm-Shogun","57.5hz","Free-Soul","Dishonor","Hivemind"];
+		var cumfart = ["Oxidation","Fragmented-Surreality","New-Retro","No-Arm-Shogun","57.5Hz","Free-Soul","Dishonor","Hivemind"];
 		var shit:Array<FlxSprite> = [andrs,noker,femboy,flecky,deme,marcant,kong,vase];
 		for(idx in 0...cumfart.length){
 			var song = cumfart[idx];
@@ -529,19 +529,23 @@ class StoryMenuState extends MusicBeatState
 			curDifficulty = max;
 		if (curDifficulty > max)
 			curDifficulty = 0;
-
+			
+		sprDifficulty.centerOffsets();
 		sprDifficulty.offset.x = 0;
 
 		switch (curDifficulty)
 		{
 			case 0:
 				sprDifficulty.animation.play('easy');
+				sprDifficulty.offset.y = 0;
 				sprDifficulty.offset.x = 20;
 			case 1:
 				sprDifficulty.animation.play('normal');
+				sprDifficulty.offset.y = 0;
 				sprDifficulty.offset.x = 70;
 			case 2:
 				sprDifficulty.animation.play('hard');
+				sprDifficulty.offset.y = 0;
 				sprDifficulty.offset.x = 20;
 			case 3:
 				sprDifficulty.animation.play('glitch');

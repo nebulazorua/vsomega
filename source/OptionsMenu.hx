@@ -42,6 +42,7 @@ class OptionsMenu extends MusicBeatState
 			]),
 			new ScrollOption("ratingWindow",0,OptionUtils.ratingWindowNames.length-1,OptionUtils.ratingWindowNames),
 			new ToggleOption("ghosttapping","Ghost-tapping"),
+			new ToggleOption("botPlay","BotPlay"),
 			new StateOption("Calibrate Offset",new SoundOffsetState()),
 		]),
 		new OptionCategory("Preferences",[

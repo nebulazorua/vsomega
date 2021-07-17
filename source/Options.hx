@@ -24,7 +24,7 @@ class OptionUtils
 	];
 	public static var ratingWindowTypes:Array<Array<Float>> = [ // TODO: make these all properly scale w/ the safeZoneOffset n shit
 		[ // Vanilla
-			22, // epic
+			18, // epic
 			32, // sick
 			123, // good
 			148, // bad
@@ -140,7 +140,8 @@ class Options
 	public var failForMissing:Bool = false;
 	public var loadModcharts:Bool = true;
 	public var pauseHoldAnims:Bool = true;
-
+	public var botPlay:Bool = false;
+	
 	public var dummy:Bool = false;
 	public var dummyInt:Int = 0;
 	public var ratingWindow:Int = 0;

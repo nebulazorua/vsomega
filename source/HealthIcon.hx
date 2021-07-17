@@ -9,6 +9,7 @@ class HealthIcon extends FlxSprite
 	 */
 	public var iWidth:Float = 150;
 	public var sprTracker:FlxSprite;
+	public var note:Note;
 
 	public function changeCharacter(char:String){
 		antialiasing=true;
@@ -21,9 +22,12 @@ class HealthIcon extends FlxSprite
 		animation.play("icon",true,false,1);
 		if(char=="omega" || char=="angry-omega" || char=="omegabf" || char=="flexy" || char=="omegafriendly" || char=="senpai" || char=="senpai-angry" || char=="spirit" || char=="bf-pixel"){
 			iWidth = width*.8;
-			centerOffsets();
+		}else{
+			iWidth = width;
 		}
+		centerOffsets();
 		setGraphicSize(Std.int(iWidth));
+		updateHitbox();
 		scrollFactor.set(1,1);
 	}
 
@@ -40,5 +44,8 @@ class HealthIcon extends FlxSprite
 
 		if (sprTracker != null)
 			setPosition(sprTracker.x + sprTracker.width + 10, sprTracker.y - 30);
+		else if(note!=null){
+			setPosition(note.x,note.y);
+		}
 	}
 }

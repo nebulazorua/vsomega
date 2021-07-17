@@ -58,8 +58,6 @@ class AchievementState extends MusicBeatState
     "2v200",
     "After-the-Ashes",
     "Father-Time",
-    "Dishonor",
-    "Salem"
   ];
 
   var selectionRing:FlxSprite;
@@ -93,7 +91,7 @@ class AchievementState extends MusicBeatState
     {name: "Defy the Odds", desc: "Dismantle the army that has subjugated all opposition.", rarity: "epic", condition: "beat2v200"},
     {name: "Down with the Patriarch", desc: "Find the root of the problem", rarity: "epic", condition: "beatFather-Time"},
     {name: "Dethroned", desc: "Deny responsibility and face the consequences", rarity: "epic", condition: "beatDishonor"},
-    {name: "Full Playthrough", desc: "Your story ends here, but there’s still more mysteries to uncover.", rarity: "epic", condition: "custom"},
+    {name: "Full Playthrough", desc: "Your story ends here, but there’s still more mysteries to uncover.", rarity: "epic", condition: "finishomega"},
 
     {name: "Temporal Overlord", desc: "Your story truly ends here.", rarity: "legendary", condition: "custom"},
     {name: "Temporal Expert", desc: "Strike down all of your opponents without even a single mistake.", rarity: "legendary", condition: "fcall"},
@@ -144,7 +142,7 @@ class AchievementState extends MusicBeatState
   }
 
   public static function doUnlock(){
-    var rarity = 0;
+    var rarity = -1;
     var unlocked = '';
     for(shit in toUnlock){
       var data = dataFromName(shit);
@@ -181,7 +179,7 @@ class AchievementState extends MusicBeatState
           if(song=='cameos'){
             unlocked=true;
             for(shit in StoryMenuState.cameos){
-              if(!FlxG.save.data.perfectedSongs.contains(shit.toLowerCase())){
+              if(!finishedSongs.contains(shit.toLowerCase())){
                 unlocked=false;
                 break;
               }
