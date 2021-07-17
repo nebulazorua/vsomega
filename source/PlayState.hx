@@ -68,7 +68,10 @@ class PlayState extends MusicBeatState
 	public static var storyPlaylist:Array<String> = [];
 	public static var storyDifficulty:Int = 1;
 	public var dontSync:Bool=false;
+	public var currentTrackPos:Float = 0;
+	public var currentVisPos:Float = 0;
 	var beenSavedByResistance:Bool = false;
+	var currentSVIndex:Int = 0;
 
 	var halloweenLevel:Bool = false;
 
@@ -289,6 +292,8 @@ class PlayState extends MusicBeatState
 	var bads:Float = 0;
 	var shits:Float = 0;
 
+	var velocityMarkers:Array<Float>=[];
+
 
 	public static var campaignScore:Int = 0;
 
@@ -354,6 +359,12 @@ class PlayState extends MusicBeatState
 
 		if (SONG == null)
 			SONG = Song.loadFromJson('tutorial');
+
+		SONG.initialSpeed=SONG.speed*.45;
+		if(SONG.sliderVelocities!=null){
+			SONG.sliderVelocities.sort((a,b)->Std.int(a.startTime-b.startTime));
+		}
+		mapVelocityChanges();
 
 		// should probably make this switch/case
 		// .. whatever lmao
@@ -2518,7 +2529,7 @@ class PlayState extends MusicBeatState
 					}
 				}
 				var swagNote:Note = new Note(daStrumTime, daNoteData, oldNote, gottaHitNote, false, songNotes[3], songNotes[4], songNotes[5],songNotes[6],songNotes[7],songNotes[8],currentOptions.downScroll,grayscale);
-
+				swagNote.initialPos = getPosFromTime(daStrumTime);
 				swagNote.sustainLength = songNotes[2];
 				swagNote.scrollFactor.set(0, 0);
 
@@ -2533,6 +2544,7 @@ class PlayState extends MusicBeatState
 					oldNote = unspawnNotes[Std.int(unspawnNotes.length - 1)];
 
 					var sustainNote:Note = new Note(daStrumTime + (Conductor.stepCrochet * susNote) + Conductor.stepCrochet, daNoteData, oldNote, gottaHitNote, true, songNotes[3],songNotes[4], songNotes[5],songNotes[6],songNotes[7],songNotes[8],currentOptions.downScroll,grayscale);
+					sustainNote.initialPos = getPosFromTime(sustainNote.strumTime);
 					sustainNote.scrollFactor.set();
 					unspawnNotes.push(sustainNote);
 
@@ -2569,6 +2581,18 @@ class PlayState extends MusicBeatState
 	{
 		return FlxSort.byValues(FlxSort.ASCENDING, Obj1.strumTime, Obj2.strumTime);
 	}
+
+	function mapVelocityChanges(){
+		if(SONG.sliderVelocities.length==0)
+			return;
+
+		var pos:Float = SONG.sliderVelocities[0].startTime*(SONG.initialSpeed);
+		velocityMarkers.push(pos);
+		for(i in 1...SONG.sliderVelocities.length){
+			pos+=(SONG.sliderVelocities[i].startTime-SONG.sliderVelocities[i-1].startTime)*(SONG.initialSpeed*SONG.sliderVelocities[i-1].multiplier);
+			velocityMarkers.push(pos);
+		}
+	};
 
 	private function generateStaticArrows(player:Int,?grayscale:Bool=false):Void
 	{
@@ -2833,6 +2857,67 @@ class PlayState extends MusicBeatState
 		num = Math.round( num ) / Math.pow(10, precision);
 		return num;
 	}
+
+	//public float GetSpritePosition(long offset, float initialPos) => HitPosition + ((initialPos - offset) * (ScrollDirection.Equals(ScrollDirection.Down) ? -HitObjectManagerKeys.speed : HitObjectManagerKeys.speed) / HitObjectManagerKeys.TrackRounding);
+	// ADAPTED FROM QUAVER!!!
+	// COOL GUYS FOR OPEN SOURCING
+	// https://github.com/Quaver/Quaver
+	// https://github.com/Quaver/Quaver
+	// https://github.com/Quaver/Quaver
+	function getPosFromTime(strumTime:Float):Float{
+		var idx:Int = 0;
+		while(idx<SONG.sliderVelocities.length){
+			if(strumTime<SONG.sliderVelocities[idx].startTime)
+				break;
+			idx++;
+		}
+		return getPosFromTimeSV(strumTime,idx);
+	}
+
+	public static function getSVFromTime(strumTime:Float):Float{
+		var idx:Int = 0;
+		while(idx<SONG.sliderVelocities.length){
+			if(strumTime<SONG.sliderVelocities[idx].startTime)
+				break;
+			idx++;
+		}
+		idx--;
+		if(idx<=0)
+			return SONG.initialSpeed;
+		return SONG.initialSpeed*SONG.sliderVelocities[idx].multiplier;
+	}
+
+	function getPosFromTimeSV(strumTime:Float,?svIdx:Int=0):Float{
+		if(svIdx==0)
+			return strumTime*SONG.initialSpeed;
+
+		svIdx--;
+		var curPos = velocityMarkers[svIdx];
+		curPos += ((strumTime-SONG.sliderVelocities[svIdx].startTime)*(SONG.initialSpeed*SONG.sliderVelocities[svIdx].multiplier));
+		return curPos;
+	}
+
+	function updatePositions(){
+		currentVisPos = Conductor.songPosition-currentOptions.noteOffset;
+		while(currentSVIndex<SONG.sliderVelocities.length && currentVisPos>=SONG.sliderVelocities[currentSVIndex].startTime)
+			currentSVIndex++;
+
+		currentTrackPos = getPosFromTimeSV(currentVisPos,currentSVIndex);
+	}
+
+	function getYPosition(note:Note):Float{
+		var hitPos = playerStrumLines.members[note.noteData];
+		if(!note.mustPress){
+			hitPos = opponentStrumLines.members[note.noteData];
+		}
+		return hitPos.y + ((note.initialPos-currentTrackPos) * (currentOptions.downScroll?-1:1));
+	}
+
+	// ADAPTED FROM QUAVER!!!
+	// COOL GUYS FOR OPEN SOURCING
+	// https://github.com/Quaver/Quaver
+	// https://github.com/Quaver/Quaver
+	// https://github.com/Quaver/Quaver
 
 	var disconnectTextTimer:Float = 0;
 	function NokeDisconnect(){
@@ -3237,6 +3322,7 @@ class PlayState extends MusicBeatState
 			if (startedCountdown)
 			{
 				Conductor.songPosition += FlxG.elapsed * 1000;
+				updatePositions();
 				if (Conductor.songPosition >= 0)
 					startSong();
 			}
@@ -3245,6 +3331,7 @@ class PlayState extends MusicBeatState
 		{
 			// Conductor.songPosition = FlxG.sound.music.time;
 			Conductor.songPosition += FlxG.elapsed * 1000;
+			updatePositions();
 
 			if (!paused)
 			{
@@ -3620,8 +3707,8 @@ class PlayState extends MusicBeatState
 					daNote.canBeHit=false;
 				}
 				var brr = strumLine.y + width/2;
+				daNote.y = getYPosition(daNote);
 				if(currentOptions.downScroll){
-					daNote.y = (strumLine.y + 0.45 * (Conductor.songPosition - daNote.strumTime) * FlxMath.roundDecimal(SONG.speed, 2));
 					if(daNote.isSustainNote){
 						if(daNote.animation.curAnim.name.endsWith("end") && daNote.prevNote!=null){
 							daNote.y += daNote.prevNote.height;
@@ -3640,7 +3727,6 @@ class PlayState extends MusicBeatState
 						daNote.clipRect = swagRect;
 					}
 				}else{
-					daNote.y = (strumLine.y - 0.45 * (Conductor.songPosition - daNote.strumTime) * FlxMath.roundDecimal(SONG.speed, 2));
 					if (daNote.isSustainNote
 						&& daNote.y + daNote.offset.y * Math.abs(daNote.scale.y) <= brr
 						&& (!daNote.mustPress && daNote.canBeHit || (daNote.wasGoodHit || (daNote.prevNote.wasGoodHit && !daNote.canBeHit))))
@@ -4146,7 +4232,7 @@ class PlayState extends MusicBeatState
 					case 'good':
 						health -= .5;
 					case 'epic':
-						health += .25;
+						health += .1;
 				}
 			}
 		}
@@ -4603,6 +4689,9 @@ class PlayState extends MusicBeatState
 		if(ItemState.equipped.contains("depressed")){
 			missDmg = missDmg-(missDmg*.5); // 50% less for cold heart
 		}
+
+		if(fuckedUpReceptors>0)
+			health*=1.5;
 
 		health -= missDmg;
 

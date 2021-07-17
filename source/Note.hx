@@ -32,6 +32,7 @@ class Note extends FlxSprite
 	public var canMiss:Bool=false;
 	public var beingCharted:Bool=false;
 	public var keyAmount = 4;
+	public var initialPos:Float = 0;
 
 	public var isSword:Bool = false;
 	public var isGlitch:Bool=false;
@@ -48,10 +49,11 @@ class Note extends FlxSprite
 	public static var BLUE_NOTE:Int = 1;
 	public static var RED_NOTE:Int = 3;
 
-	public function new(strumTime:Float, noteData:Int, ?prevNote:Note, ?gottaHitNote:Bool=false, ?sustainNote:Bool = false, ?sword:Bool = false, ?glitch:Bool = false, ?singingShit:String = "0", ?shield:Bool=false,?discharge:Bool=false,?type:Int=0,?downscroll:Bool=false,?grayscale:Bool=false)
+	public function new(strumTime:Float, noteData:Int, ?prevNote:Note, ?gottaHitNote:Bool=false, ?sustainNote:Bool = false, ?sword:Bool = false, ?glitch:Bool = false, ?singingShit:String = "0", ?shield:Bool=false,?discharge:Bool=false,?type:Int=0,?downscroll:Bool=false,?grayscale:Bool=false,?beingCharted:Bool=false)
 	{
 		super();
 
+		this.beingCharted=beingCharted;
 		if (prevNote == null)
 			prevNote = this;
 
@@ -479,8 +481,8 @@ class Note extends FlxSprite
 			{
 				prevNote.lastSustainPiece=false;
 				prevNote.animation.play(names[noteData]+"hold");
-
-				prevNote.scale.y *= Conductor.stepCrochet / 100 * 1.5 * FlxMath.roundDecimal(PlayState.SONG.speed,2) * (1/scale);
+				if(!beingCharted)
+					prevNote.scale.y = Conductor.stepCrochet / 100 * prevNote.scale.y * 1.5 * ((PlayState.getSVFromTime(strumTime)*(1/.45))) * (1/scale);
 
 				prevNote.updateHitbox();
 				prevNote.offset.x *= scale;

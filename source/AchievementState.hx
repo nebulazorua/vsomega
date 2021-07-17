@@ -59,6 +59,23 @@ class AchievementState extends MusicBeatState
     "After-the-Ashes",
     "Father-Time",
   ];
+  public static var glitchSongs = [
+    "Prelude",
+    "New-Retro", // Kapi
+    "57.5hz", // Demi
+    "Free-Soul", // Merch
+    "No-Arm-Shogun", // Flexy
+    "Fragmented-Surreality", // Noke
+    "Oxidation", // Anders
+    'Mercenary',
+    'Odd-Job',
+    'Guardian',
+    'Last-Stand',
+    'Curse-Eternal',
+    '2v200',
+    'After-the-Ashes',
+    "Salem"
+  ];
 
   var selectionRing:FlxSprite;
   var medals:FlxTypedGroup<FlxSprite>;
@@ -163,7 +180,7 @@ class AchievementState extends MusicBeatState
       var finishedSongs:Array<String> = FlxG.save.data.finishedSongs;
       var perfectedSongs:Array<String> = FlxG.save.data.perfectedSongs;
       var flashySongs:Array<String> = FlxG.save.data.flashySongs;
-      var glitchSongs:Array<String> = FlxG.save.data.glitchSongs;
+      var fcglitchSongs:Array<String> = FlxG.save.data.glitchSongs;
 
 
       for(idx in 0...achievementData.length){
@@ -224,7 +241,7 @@ class AchievementState extends MusicBeatState
 
         if(data.condition=='glitchfcall'){
           unlocked=true;
-          for(shit in songs){
+          for(shit in fcglitchSongs){
             if(!glitchSongs.contains(shit.toLowerCase())){
               unlocked=false;
               break;

@@ -23,7 +23,7 @@ class FreeplayState extends MusicBeatState
 	var trackedAssets:Array<Dynamic> = [];
 	public static var unlockables=['Last-Stand','Curse-Eternal','2v200','After-the-Ashes','Father-Time','Dishonor','Hivemind','Last-Stand-Beta'];
 	public static var unlockableChars = ['angry-omega','mika','army','omega','father','king','thehivemind','angry-omega'];
-	var songs:Array<SongMetadata> = [new SongMetadata("prelude",-1,"gf")];
+	var songs:Array<SongMetadata> = [new SongMetadata("Prelude",-1,"gf")];
 
 	var selector:FlxText;
 	var curSelected:Int = 0;
@@ -309,17 +309,14 @@ class FreeplayState extends MusicBeatState
 		intendedScore = Highscore.getScore(songs[curSelected].songName, curDifficulty);
 		#end
 
-		switch (curDifficulty)
-		{
-			case 0:
-				diffText.text = "EASY";
-			case 1:
-				diffText.text = 'NORMAL';
-			case 2:
-				diffText.text = songs[curSelected].songName=='Hivemind'?"ALPHA":"HARD";
-			case 3:
-				diffText.text = "GLITCH";
+		var difficultyNames = ["EASY","NORMAL","HARD","GLITCH"];
+		switch(songs[curSelected].songName){
+			case 'Hivemind':
+				difficultyNames[2] = 'ALPHA';
+			case 'Dishonor':
+				difficultyNames[1] = "CHECKMATE";
 		}
+		diffText.text= difficultyNames[curDifficulty];
 	}
 
 	function changeSelection(change:Int = 0)
