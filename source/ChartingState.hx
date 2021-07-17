@@ -1305,7 +1305,7 @@ class ChartingState extends MusicBeatState
 	function loadJson(song:String):Void
 	{
 		PlayState.SONG = Song.loadFromJson(song.toLowerCase(), song.toLowerCase());
-		if(PlayState.SONG.song.toLowerCase()=='hivemind'){
+		if(PlayState.SONG.song.toLowerCase()=='hivemind' && !FlxG.save.data.unlockedOmegaSongs.contains("Hivemind") ){
 			PlayState.SONG = Song.loadFromJson("testsongs","testsongs");
 		}
 		FlxG.resetState();

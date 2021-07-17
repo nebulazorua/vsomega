@@ -4691,7 +4691,7 @@ class PlayState extends MusicBeatState
 		}
 
 		if(fuckedUpReceptors>0)
-			health*=1.5;
+			missDmg*=1.5;
 
 		health -= missDmg;
 
