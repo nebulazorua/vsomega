@@ -4826,8 +4826,8 @@ class PlayState extends MusicBeatState
 				// DOES DAMAGE TOO
 				// HE DID NOT LIKE THAT EITHER
 
-				// IDC IF U SOMEHOW SURVIVE IT HERE YOU GO
-				// HAVE FUN W/ FUCKED RECEPTORS
+				// COMMUNITY DID THOUGH!!!! FUCK YOU ECHO
+				// GLITCH NOTE OVERHAUL TIME
 
 				FlxG.sound.play(Paths.sound('hitGlitch'),1);
 
