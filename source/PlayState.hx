@@ -4686,7 +4686,7 @@ class PlayState extends MusicBeatState
 				missDmg = 0.04;
 		}
 
-		if(ItemState.equipped.contains("depressed")){
+		if(ItemState.equipped.contains("depressed") && fuckedUpReceptors<=0){
 			missDmg = missDmg-(missDmg*.5); // 50% less for cold heart
 		}
 
