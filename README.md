@@ -14,7 +14,7 @@ class HiveCharts
 IF IT COMPLAINS ABOUT SECRETSHIT THEN
 
 ```haxe
-import flixel.input.keyboard.FlxKeyboard
+import flixel.input.keyboard.FlxKeyboard;
 class SecretShit extends FlxKeyboard
 {}
 ```
