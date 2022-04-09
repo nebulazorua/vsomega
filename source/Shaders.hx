@@ -95,7 +95,7 @@ class ChromaticAbberationShader extends FlxShader // https://www.shadertoy.com/v
     	float rChannel = flixel_texture2D(tex, PincushionDistortion(uv, 0.3 * distortion)).r;
       float gChannel = flixel_texture2D(tex, PincushionDistortion(uv, 0.15 * distortion)).g;
       float bChannel = flixel_texture2D(tex, PincushionDistortion(uv, 0.075 * distortion)).b;
-      float aChannel = flixel_texture2D(tex, PincushionDistortion(uv, 0)).a;
+      float aChannel = flixel_texture2D(tex, PincushionDistortion(uv, 0.0)).a;
       vec4 retColor = vec4(rChannel, gChannel, bChannel, aChannel);
       return retColor;
     }
