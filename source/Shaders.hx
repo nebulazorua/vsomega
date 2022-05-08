@@ -34,7 +34,7 @@ class GrayscaleEffect {
   }
 
   public function update(){
-    shader.influence.value[0]=influence;
+    
   }
 
 }
@@ -47,7 +47,7 @@ class ChromaticAbberationEffect {
   }
 
   public function update(){
-    shader.distortion.value[0]=strength;
+    
   }
 
 }
